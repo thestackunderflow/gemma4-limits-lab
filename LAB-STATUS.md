@@ -70,8 +70,8 @@ Lab stage only (measurements). No filming, no render, nothing pushed. Numbers be
 
 ## Resume from here
 `scripts/night.sh` (started ~05:45 UTC 11 Nov) runs unattended: waits for stage 2 (P15 temp 0 + P-AUD + P14), then
-stage 3 (P15 temp-1.0 x5, P16 needle e4b + 12b-qat), closes Chrome/Firefox, stage 4 (26B: DEF, FIT f16/q8_0, tools,
-needle short set), regenerates every `out/pNN/RESULTS.md` + `results.json`, archives logs to
+closes Chrome/Firefox and runs stage 4 (26B: DEF, FIT f16/q8_0, tools, needle short set) only if it is still before
+07:00 local, then stage 3 (P15 temp-1.0 x5, P16 needle e4b + 12b-qat), regenerates every `out/pNN/RESULTS.md` + `results.json`, archives logs to
 `E:\2026-SomaPersonal\StackUnderflow-archive\gemma4-limits-lab\logs`, commits locally, restarts
 `mcp-canvas-mcp-server-1` and `katha-kokoro`, and writes `NIGHT-DONE` to `out/logs/night.out`.
 To check: `tail -3 out/logs/night.out; grep -a -E "^[0-9]{2}:" out/logs/stage{2,3,4}.out | tail`. If a stage failed,

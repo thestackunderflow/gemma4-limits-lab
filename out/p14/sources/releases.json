@@ -1,0 +1,64 @@
+{
+ "ollama": {
+  "name": "Ollama",
+  "repo": "ollama/ollama",
+  "status": 200,
+  "tag": "v0.40.16",
+  "release_name": "v0.40.16",
+  "published_at": "2026-11-09T18:21:19Z",
+  "url": "https://github.com/ollama/ollama/releases/tag/v0.40.16",
+  "body": "## Ripple Preview\r\n\r\n[Ripple Preview](https://ollama.com/library/ripple-preview) from Ricursive Intelligence is a 65B dense model built for agentic coding.\r\n\r\n```sh\r\nollama run ripple-preview\r\n```\r\n\r\n## What's Changed\r\n\r\n- Qwen3.8 Flash Next uses about 27 GiB less memory on Apple silicon\r\n- `ollama launch claude` always routes Claude Code to the selected model\r\n- `ollama launch` explains when a cloud model has been retired\r\n- `/v1/responses` respects `truncation` and no longer silently truncates by default\r\n- `/v1/models` returns an empty list instead of `null` when no models are installed\r\n- CUDA 13.5 support for Windows on ARM\r\n- Updated llama.cpp\r\n\r\n**Full Changelog**: https://github.com/ollama/ollama/compare/v0.40.15...v0.40.16",
+  "fetched": "2026-11-11T05:58:14Z"
+ },
+ "node": {
+  "name": "Node.js",
+  "repo": "nodejs/node",
+  "status": 200,
+  "tag": "v26.13.0",
+  "release_name": "2026-10-28, Version 26.13.0 'Lithium' (LTS), @richardlau",
+  "published_at": "2026-10-28T16:57:41Z",
+  "url": "https://github.com/nodejs/node/releases/tag/v26.13.0",
+  "body": "### Notable Changes\r\n\r\nThis release marks the transition of Node.js 26.x into Long Term Support (LTS)\r\nwith the codename 'Lithium'. It will continue to receive updates through to\r\nthe end of April 2029.\r\n\r\nOther than updating metadata, such as the `process.release` object, to reflect\r\nthat the release is LTS, no further changes from Node.js 26.12.1 are included.\r\n\r\nIf you are updating from an earlier Long Term Support release (e.g. Node.js 24\r\nor 22 or earlier) please note that since Node.js 25 the official binaries for\r\nLinux are linked against libatomic, which may need to be installed separately\r\ndepending on your Linux distribution.",
+  "fetched": "2026-11-11T05:58:14Z"
+ },
+ "kubernetes": {
+  "name": "Kubernetes",
+  "repo": "kubernetes/kubernetes",
+  "status": 200,
+  "tag": "v1.37.2",
+  "release_name": "v1.37.2",
+  "published_at": "2026-10-28T04:37:53Z",
+  "url": "https://github.com/kubernetes/kubernetes/releases/tag/v1.37.2",
+  "body": "\nSee [kubernetes-announce@](https://groups.google.com/forum/#!forum/kubernetes-announce). Additional binary downloads are linked in the [CHANGELOG](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.37.md).\n\nSee the [CHANGELOG](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.37.md) for more details.\n\n\n\n",
+  "fetched": "2026-11-11T05:58:14Z"
+ },
+ "rust": {
+  "name": "Rust",
+  "repo": "rust-lang/rust",
+  "status": 200,
+  "tag": "1.99.1",
+  "release_name": "Rust 1.99.1",
+  "published_at": "2026-10-16T04:47:44Z",
+  "url": "https://github.com/rust-lang/rust/releases/tag/1.99.1",
+  "body": "<a id=\"1.99.1\"></a>\n\n- [library: fix missing symbol `wcslen` on UEFI and embedded targets](https://github.com/rust-lang/rust/issues/163614)\n- [rustc: fix miscompilation of FFI `bool` return values on x86\\_64](https://github.com/rust-lang/rust/issues/163911)\n- [rust-lld: add the rpath for `libLLVM` on macOS](https://github.com/rust-lang/rust/issues/163947)\n",
+  "fetched": "2026-11-11T05:58:15Z"
+ },
+ "vscode": {
+  "name": "Visual Studio Code",
+  "repo": "microsoft/vscode",
+  "status": 200,
+  "tag": "1.145.3",
+  "release_name": "1.145.3",
+  "published_at": "2026-11-10T18:53:52Z",
+  "url": "https://github.com/microsoft/vscode/releases/tag/1.145.3",
+  "body": "https://code.visualstudio.com/updates/v1_145",
+  "fetched": "2026-11-11T05:58:15Z"
+ },
+ "gemma": {
+  "name": "Gemma",
+  "tag": "Gemma 4",
+  "body": "Gemma 4 model card (Google), https://ai.google.dev/gemma/docs/core/model_card_4, fetched 10 Nov 2026: \"Gemma 4 models are multimodal, handling text and image input (with audio supported on E2B, E4B, and 12B models) and generating text output.\" \"The small models feature a 128K context window, while the medium models support 256K.\"",
+  "url": "https://ai.google.dev/gemma/docs/core/model_card_4",
+  "fetched": "2026-11-11T03:27Z (plan ACCURACY S1)"
+ }
+}

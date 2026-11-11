@@ -1,0 +1,14 @@
+{"model": "e4b", "section": "ocr", "temperature": 0.0, "rep": 1, "seed": 42, "result": [10, 10]}
+{"model": "e4b", "section": "charts", "temperature": 0.0, "rep": 1, "seed": 42, "result": [2, 5]}
+{"model": "e4b", "section": "pairs", "temperature": 0.0, "rep": 1, "seed": 42, "result": [5, 5]}
+{"model": "e4b", "section": "tools", "temperature": 0.0, "rep": 1, "seed": 42, "result": [10, 10]}
+{"model": "e4b", "section": "coding", "temperature": 0.0, "rep": 1, "seed": 42, "result": [10, 10]}
+{"model": "e4b", "section": "multilingual", "temperature": 0.0, "rep": 1, "seed": 42, "result": [10, 10]}
+{"model": "e4b", "section": "thinking", "temperature": 0.0, "rep": 1, "seed": 42, "result": {"off": {"passed": 9, "total": 10, "seconds_total": 33.7}, "on": {"passed": 10, "total": 10, "seconds_total": 45.6}}}
+{"model": "e4b", "section": "json", "temperature": 0.0, "rep": 1, "seed": 42, "result": [9, 10]}
+{"model": "12b-qat", "section": "ocr", "temperature": 0.0, "rep": 1, "seed": 42, "result": [10, 10]}
+{"model": "12b-qat", "section": "charts", "temperature": 0.0, "rep": 1, "seed": 42, "result": [3, 5]}
+{"model": "12b-qat", "section": "pairs", "temperature": 0.0, "rep": 1, "seed": 42, "result": [5, 5]}
+{"model": "12b-qat", "section": "tools", "temperature": 0.0, "rep": 1, "seed": 42, "result": [10, 10]}
+{"model": "12b-qat", "section": "coding", "temperature": 0.0, "rep": 1, "seed": 42, "result": [10, 10]}
+{"model": "12b-qat", "section": "multilingual", "temperature": 0.0, "rep": 1, "seed": 42, "result": [10, 10]}

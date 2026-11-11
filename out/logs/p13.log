@@ -259,3 +259,56 @@ requests.exceptions.ConnectionError: ('Connection aborted.', RemoteDisconnected(
 04:08:58 DEF e2b 4096 100% GPU (36, 36)
 04:09:10 DEF e4b 4096 100% GPU (43, 43)
 04:09:22 DEF 12b-qat 4096 3%/97% CPU/GPU (38, 49)
+04:09:36 TRUNC e4b 1 chat start None None 200 2051 False [{'limit': 2051, 'prompt': 9644, 'keep': 5, 'new': 2051}]
+04:09:55 TRUNC e4b 1 chat end None None 200 2051 True [{'limit': 2051, 'prompt': 9644, 'keep': 5, 'new': 2051}]
+04:10:11 TRUNC e4b 1 generate start None None 200 2051 False [{'limit': 2051, 'prompt': 9644, 'keep': 5, 'new': 2051}]
+04:10:28 TRUNC e4b 1 generate end None None 200 2051 True [{'limit': 2051, 'prompt': 9644, 'keep': 5, 'new': 2051}]
+04:10:28 waiting: Windows free 1.54 GB
+04:10:51 TRUNC e4b 1 openai start None None 200 2051 False [{'limit': 2051, 'prompt': 9644, 'keep': 5, 'new': 2051}]
+04:11:13 TRUNC e4b 1 openai end None None 200 2051 True [{'limit': 2051, 'prompt': 9644, 'keep': 5, 'new': 2051}]
+04:11:30 TRUNC e4b 1 chat start {'truncate': False} None 400 None False []
+04:11:45 TRUNC e4b 1 generate start {'truncate': False} None 400 None False []
+04:12:06 TRUNC e4b 1 chat start {'shift': False} None 400 None False []
+04:14:13 TRUNC e4b 1 generate start {'shift': False} None 400 None False []
+04:14:25 TRUNC e4b 1 chat start None 16384 200 9644 True []
+04:14:38 TRUNC e4b 1 chat end None 16384 200 9644 True []
+04:14:56 TRUNC 12b-qat 1 chat start None None 200 2051 False [{'limit': 2051, 'prompt': 9648, 'keep': 5, 'new': 2051}]
+04:15:08 TRUNC 12b-qat 1 chat end None None 200 2051 True [{'limit': 2051, 'prompt': 9648, 'keep': 5, 'new': 2051}]
+04:15:21 TRUNC 12b-qat 1 openai start None None 200 2051 False [{'limit': 2051, 'prompt': 9648, 'keep': 5, 'new': 2051}]
+04:15:33 TRUNC 12b-qat 1 openai end None None 200 2051 True [{'limit': 2051, 'prompt': 9648, 'keep': 5, 'new': 2051}]
+04:15:53 TRUNC 12b-qat 1 chat start None 16384 200 9648 True []
+04:16:13 TRUNC 12b-qat 1 chat end None 16384 200 9648 True []
+04:16:25 TRUNC e4b 2 chat start None None 200 2051 False [{'limit': 2051, 'prompt': 9644, 'keep': 5, 'new': 2051}]
+04:16:37 TRUNC e4b 2 chat end None None 200 2051 True [{'limit': 2051, 'prompt': 9644, 'keep': 5, 'new': 2051}]
+04:16:49 TRUNC e4b 2 generate start None None 200 2051 False [{'limit': 2051, 'prompt': 9644, 'keep': 5, 'new': 2051}]
+04:17:01 TRUNC e4b 2 generate end None None 200 2051 True [{'limit': 2051, 'prompt': 9644, 'keep': 5, 'new': 2051}]
+04:17:23 TRUNC e4b 2 openai start None None 200 2051 False [{'limit': 2051, 'prompt': 9644, 'keep': 5, 'new': 2051}]
+04:17:42 TRUNC e4b 2 openai end None None 200 2051 True [{'limit': 2051, 'prompt': 9644, 'keep': 5, 'new': 2051}]
+04:17:59 TRUNC e4b 2 chat start {'truncate': False} None 400 None False []
+04:18:10 TRUNC e4b 2 generate start {'truncate': False} None 400 None False []
+04:18:22 TRUNC e4b 2 chat start {'shift': False} None 400 None False []
+04:18:34 TRUNC e4b 2 generate start {'shift': False} None 400 None False []
+04:18:47 TRUNC e4b 2 chat start None 16384 200 9644 True []
+04:18:59 TRUNC e4b 2 chat end None 16384 200 9644 True []
+04:19:12 TRUNC e4b 3 chat start None None 200 2051 False [{'limit': 2051, 'prompt': 9644, 'keep': 5, 'new': 2051}]
+04:19:26 TRUNC e4b 3 chat end None None 200 2051 True [{'limit': 2051, 'prompt': 9644, 'keep': 5, 'new': 2051}]
+04:19:38 TRUNC e4b 3 generate start None None 200 2051 False [{'limit': 2051, 'prompt': 9644, 'keep': 5, 'new': 2051}]
+04:19:51 TRUNC e4b 3 generate end None None 200 2051 True [{'limit': 2051, 'prompt': 9644, 'keep': 5, 'new': 2051}]
+04:20:06 TRUNC e4b 3 openai start None None 200 2051 False [{'limit': 2051, 'prompt': 9644, 'keep': 5, 'new': 2051}]
+04:20:21 TRUNC e4b 3 openai end None None 200 2051 True [{'limit': 2051, 'prompt': 9644, 'keep': 5, 'new': 2051}]
+04:20:34 TRUNC e4b 3 chat start {'truncate': False} None 400 None False []
+04:20:46 TRUNC e4b 3 generate start {'truncate': False} None 400 None False []
+04:20:58 TRUNC e4b 3 chat start {'shift': False} None 400 None False []
+04:21:10 TRUNC e4b 3 generate start {'shift': False} None 400 None False []
+04:21:32 TRUNC e4b 3 chat start None 16384 200 9644 True []
+04:21:44 TRUNC e4b 3 chat end None 16384 200 9644 True []
+04:21:57 TRUNC t1 None 0 2051 False
+04:22:13 TRUNC t1 None 1 2051 False
+04:22:29 TRUNC t1 None 2 2051 False
+04:22:48 TRUNC t1 None 3 2051 False
+04:23:38 TRUNC t1 None 4 2051 False
+04:23:52 TRUNC t1 16384 0 9644 True
+04:24:04 TRUNC t1 16384 1 9644 True
+04:24:16 TRUNC t1 16384 2 9644 True
+04:24:28 TRUNC t1 16384 3 9644 True
+04:24:40 TRUNC t1 16384 4 9644 True

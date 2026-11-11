@@ -42,13 +42,13 @@ case "${1:-}" in
         rm -f out/samples/STOP
         echo "epoch,gpu_mem_used_mib,gpu_util_pct" > "out/samples/${name}.gpu.csv"
         echo "epoch,ollama_mem,windows_free_gb" > "out/samples/${name}.mem.csv"
-        (
+        ( set +eo pipefail
           while [ ! -f out/samples/STOP ]; do
             echo "$(date +%s),$(nvidia-smi --query-gpu=memory.used,utilization.gpu --format=csv,noheader,nounits | tr -d ' \r' | head -1)" >> "out/samples/${name}.gpu.csv"
             sleep 1
           done
         ) > /dev/null 2>&1 &
-        (
+        ( set +eo pipefail
           low=0
           while [ ! -f out/samples/STOP ]; do
             m="$(docker stats --no-stream --format '{{.MemUsage}}' "$OLLAMA" 2>/dev/null | cut -d/ -f1 | tr -d ' ')"

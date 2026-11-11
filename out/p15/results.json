@@ -1,0 +1,388 @@
+{
+ "can": [
+  {
+   "model": "e4b",
+   "section": "ocr",
+   "temperature": 0.0,
+   "rep": 1,
+   "seed": 42,
+   "result": [
+    10,
+    10
+   ]
+  },
+  {
+   "model": "e4b",
+   "section": "charts",
+   "temperature": 0.0,
+   "rep": 1,
+   "seed": 42,
+   "result": [
+    2,
+    5
+   ]
+  },
+  {
+   "model": "e4b",
+   "section": "pairs",
+   "temperature": 0.0,
+   "rep": 1,
+   "seed": 42,
+   "result": [
+    5,
+    5
+   ]
+  },
+  {
+   "model": "e4b",
+   "section": "tools",
+   "temperature": 0.0,
+   "rep": 1,
+   "seed": 42,
+   "result": [
+    10,
+    10
+   ]
+  },
+  {
+   "model": "e4b",
+   "section": "coding",
+   "temperature": 0.0,
+   "rep": 1,
+   "seed": 42,
+   "result": [
+    10,
+    10
+   ]
+  },
+  {
+   "model": "e4b",
+   "section": "multilingual",
+   "temperature": 0.0,
+   "rep": 1,
+   "seed": 42,
+   "result": [
+    10,
+    10
+   ]
+  },
+  {
+   "model": "e4b",
+   "section": "thinking",
+   "temperature": 0.0,
+   "rep": 1,
+   "seed": 42,
+   "result": {
+    "off": {
+     "passed": 9,
+     "total": 10,
+     "seconds_total": 33.7
+    },
+    "on": {
+     "passed": 10,
+     "total": 10,
+     "seconds_total": 45.6
+    }
+   }
+  },
+  {
+   "model": "e4b",
+   "section": "json",
+   "temperature": 0.0,
+   "rep": 1,
+   "seed": 42,
+   "result": [
+    9,
+    10
+   ]
+  },
+  {
+   "model": "12b-qat",
+   "section": "ocr",
+   "temperature": 0.0,
+   "rep": 1,
+   "seed": 42,
+   "result": [
+    10,
+    10
+   ]
+  },
+  {
+   "model": "12b-qat",
+   "section": "charts",
+   "temperature": 0.0,
+   "rep": 1,
+   "seed": 42,
+   "result": [
+    3,
+    5
+   ]
+  },
+  {
+   "model": "12b-qat",
+   "section": "pairs",
+   "temperature": 0.0,
+   "rep": 1,
+   "seed": 42,
+   "result": [
+    5,
+    5
+   ]
+  },
+  {
+   "model": "12b-qat",
+   "section": "tools",
+   "temperature": 0.0,
+   "rep": 1,
+   "seed": 42,
+   "result": [
+    10,
+    10
+   ]
+  },
+  {
+   "model": "12b-qat",
+   "section": "coding",
+   "temperature": 0.0,
+   "rep": 1,
+   "seed": 42,
+   "result": [
+    10,
+    10
+   ]
+  },
+  {
+   "model": "12b-qat",
+   "section": "multilingual",
+   "temperature": 0.0,
+   "rep": 1,
+   "seed": 42,
+   "result": [
+    10,
+    10
+   ]
+  }
+ ],
+ "audio": [
+  {
+   "model": "e2b",
+   "item": "no-clip-control",
+   "route": "/api/chat",
+   "status": 200,
+   "has_audio_capability": null,
+   "wer": null,
+   "answer": "I'm sorry, I cannot fulfill that request. I need an audio input to transcribe. Please provide the audio.",
+   "error": null,
+   "body": null
+  },
+  {
+   "model": "e2b",
+   "item": "espeak",
+   "route": "/api/chat images field",
+   "status": 200,
+   "has_audio_capability": true,
+   "wer": 0.278,
+   "answer": "A quick brown fox jumps over the lazy dog. Alarmeran's Gemma 4 on an 8 gigabyte card.",
+   "error": null,
+   "body": null
+  },
+  {
+   "model": "e2b",
+   "item": "espeak",
+   "route": "/v1/audio/transcriptions",
+   "status": 200,
+   "has_audio_capability": null,
+   "wer": 0.278,
+   "answer": "A quick brown fox jumps over the lazy dog. Alarma runs Gemma 4 on an 8 GB card.",
+   "error": null,
+   "body": "{\"text\":\"A quick brown fox jumps over the lazy dog. Alarma runs Gemma 4 on an 8 GB card.\"}"
+  },
+  {
+   "model": "e2b",
+   "item": "librivox",
+   "route": "/api/chat images field",
+   "status": 200,
+   "has_audio_capability": true,
+   "wer": 0.217,
+   "answer": "Chapter one of Pride and Prejudice This is a Librivox recording All Librivox recordings are in the public domain For more information or to volunteer please visit librivox.org Recording by Elizabeth Clet Pride and Prejudice by Jane Austen Chapter one It is a truth universally acknowledged that a single man in possession of a good fortune",
+   "error": null,
+   "body": null
+  },
+  {
+   "model": "e2b",
+   "item": "librivox",
+   "route": "/v1/audio/transcriptions",
+   "status": 200,
+   "has_audio_capability": null,
+   "wer": 0.183,
+   "answer": "Chapter 1 of Pride and Prejudice This is a Librivox recording All Librivox recordings are in the public domain For more information or to volunteer please visit librivox.org Recording by Elizabeth Clute Pride and Prejudice by Jane Austen Chapter 1 It is a truth universally acknowledged that a single man in possession of a good fortune",
+   "error": null,
+   "body": "{\"text\":\"Chapter 1 of Pride and Prejudice This is a Librivox recording All Librivox recordings are in the public domain For more information or to volunteer please visit librivox.org Recording by Elizabeth Clute Pride and Prejudice by Jane Austen Chapter 1 It is a truth universally acknowledged that a single man in possession of a good fortune\"}"
+  },
+  {
+   "model": "e4b",
+   "item": "no-clip-control",
+   "route": "/api/chat",
+   "status": 200,
+   "has_audio_capability": null,
+   "wer": null,
+   "answer": "I am sorry, but I cannot transcribe the audio because you have not provided me with any audio. Please provide the audio you would like me to transcribe.",
+   "error": null,
+   "body": null
+  },
+  {
+   "model": "e4b",
+   "item": "espeak",
+   "route": "/api/chat images field",
+   "status": 200,
+   "has_audio_capability": true,
+   "wer": 0.278,
+   "answer": "A quick brown fox jumps over the lazy dog. All armor runs Gemma 4 on an 8 gigabyte card.",
+   "error": null,
+   "body": null
+  },
+  {
+   "model": "e4b",
+   "item": "espeak",
+   "route": "/v1/audio/transcriptions",
+   "status": 200,
+   "has_audio_capability": null,
+   "wer": 0.222,
+   "answer": "A quick brown fox jumps over the lazy dog. Almera runs Gemma 4 on an 8 gigabyte card.",
+   "error": null,
+   "body": "{\"text\":\"A quick brown fox jumps over the lazy dog. Almera runs Gemma 4 on an 8 gigabyte card.\"}"
+  },
+  {
+   "model": "e4b",
+   "item": "librivox",
+   "route": "/api/chat images field",
+   "status": 200,
+   "has_audio_capability": true,
+   "wer": 0.183,
+   "answer": "Chapter 1 of Pride and Prejudice. This is a LibriVox recording. All LibriVox recordings are in the public domain. For more information or to volunteer, please visit librivox.org. Recording by Elizabeth Clarke. Pride and Prejudice by Jane Austen. Chapter 1. It is a truth universally acknowledged that a single man in possession of a good fortune.",
+   "error": null,
+   "body": null
+  },
+  {
+   "model": "e4b",
+   "item": "librivox",
+   "route": "/v1/audio/transcriptions",
+   "status": 200,
+   "has_audio_capability": null,
+   "wer": 0.183,
+   "answer": "chapter 1 of pride and prejudice this is a librivox recording all librivox recordings are in the public domain for more information or to volunteer please visit librivox.org recording by elizabeth clatt pride and prejudice by jane austen chapter 1 it is a truth universally acknowledged that a single man in possession of a good fortune",
+   "error": null,
+   "body": "{\"text\":\"chapter 1 of pride and prejudice this is a librivox recording all librivox recordings are in the public domain for more information or to volunteer please visit librivox.org recording by elizabeth clatt pride and prejudice by jane austen chapter 1 it is a truth universally acknowledged that a single man in possession of a good fortune\"}"
+  },
+  {
+   "model": "12b-q4",
+   "item": "no-clip-control",
+   "route": "/api/chat",
+   "status": 200,
+   "has_audio_capability": null,
+   "wer": null,
+   "answer": "I can certainly help you with that! However, you haven't provided the audio file or the link to the content you'd like me to transcribe yet.\n\n**Please upload the audio file, provide a YouTube link, or paste the text/audio source here.**\n\nOnce you provide it, let me know if you have any specific requirements, such as:\n1.  **Verbatim:** Including every \"um,\" \"ah,\" and stutter.\n2.  **Clean Read:** Removing filler words for a polished transcript.\n3.  **Timecodes:** Adding timestamps at specific intervals (e.g., every 30 seconds or every speaker change).\n4.  **Speaker Identification:** Labeling different people (e.g., Speaker 1, Speaker 2).",
+   "error": null,
+   "body": null
+  },
+  {
+   "model": "12b-q4",
+   "item": "espeak",
+   "route": "/api/chat images field",
+   "status": 200,
+   "has_audio_capability": true,
+   "wer": 1.0,
+   "answer": "I'm sorry, I can't provide a translation for that phrase.",
+   "error": null,
+   "body": null
+  },
+  {
+   "model": "12b-q4",
+   "item": "espeak",
+   "route": "/v1/audio/transcriptions",
+   "status": 200,
+   "has_audio_capability": null,
+   "wer": 1.0,
+   "answer": "write 1.7 and not point seven. write 3 instead of three.",
+   "error": null,
+   "body": "{\"text\":\"write 1.7 and not point seven. write 3 instead of three.\"}"
+  },
+  {
+   "model": "12b-q4",
+   "item": "librivox",
+   "route": "/api/chat images field",
+   "status": 200,
+   "has_audio_capability": true,
+   "wer": 0.617,
+   "answer": "It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.",
+   "error": null,
+   "body": null
+  },
+  {
+   "model": "12b-q4",
+   "item": "librivox",
+   "route": "/v1/audio/transcriptions",
+   "status": 200,
+   "has_audio_capability": null,
+   "wer": 0.183,
+   "answer": "chapter 1 of pride and prejudice this is a librivox recording all librivox recordings are in the public domain for more information or to volunteer please visit librivox.org recording by elizabeth clutts pride and prejudice by jane austen chapter 1 it is a truth universally acknowledged that a single man in possession of a good fortune",
+   "error": null,
+   "body": "{\"text\":\"chapter 1 of pride and prejudice this is a librivox recording all librivox recordings are in the public domain for more information or to volunteer please visit librivox.org recording by elizabeth clutts pride and prejudice by jane austen chapter 1 it is a truth universally acknowledged that a single man in possession of a good fortune\"}"
+  },
+  {
+   "model": "12b-qat",
+   "item": "no-clip-control",
+   "route": "/api/chat",
+   "status": 200,
+   "has_audio_capability": null,
+   "wer": null,
+   "answer": "Please provide the audio or video file you would like me to transcribe. Once you provide it, I will transcribe the words exactly as spoken.",
+   "error": null,
+   "body": null
+  },
+  {
+   "model": "12b-qat",
+   "item": "espeak",
+   "route": "/api/chat images field",
+   "status": 200,
+   "has_audio_capability": true,
+   "wer": 0.556,
+   "answer": "That quick brown fox jumps over the lazy dog.",
+   "error": null,
+   "body": null
+  },
+  {
+   "model": "12b-qat",
+   "item": "espeak",
+   "route": "/v1/audio/transcriptions",
+   "status": 200,
+   "has_audio_capability": null,
+   "wer": 0.5,
+   "answer": "The quick brown fox jumps over the lazy dog.",
+   "error": null,
+   "body": "{\"text\":\"The quick brown fox jumps over the lazy dog.\"}"
+  },
+  {
+   "model": "12b-qat",
+   "item": "librivox",
+   "route": "/api/chat images field",
+   "status": 200,
+   "has_audio_capability": true,
+   "wer": 0.617,
+   "answer": "It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.",
+   "error": null,
+   "body": null
+  },
+  {
+   "model": "12b-qat",
+   "item": "librivox",
+   "route": "/v1/audio/transcriptions",
+   "status": 200,
+   "has_audio_capability": null,
+   "wer": 0.067,
+   "answer": "Chapter 1 of Pride and Prejudice. This is a Librivox recording. All Librivox recordings are in the public domain. For more information or to volunteer, please visit librivox.org. Recording by Elizabeth Clutts. Pride and Prejudice by Jane Austen. Chapter 1. It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.",
+   "error": null,
+   "body": "{\"text\":\"Chapter 1 of Pride and Prejudice. This is a Librivox recording. All Librivox recordings are in the public domain. For more information or to volunteer, please visit librivox.org. Recording by Elizabeth Clutts. Pride and Prejudice by Jane Austen. Chapter 1. It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.\"}"
+  }
+ ]
+}

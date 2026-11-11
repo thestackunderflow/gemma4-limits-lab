@@ -1,0 +1,11 @@
+time=2026-11-11T03:56:10.544Z level=INFO source=routes.go:2586 msg="vram-based default context" total_vram="8.0 GiB" default_num_ctx=4096
+time=2026-11-11T04:00:20.512Z level=INFO source=sched.go:1244 msg="disabling mmap for llama-server load due to host memory pressure" model=/root/.ollama/models/blobs/sha256-370c2879f17648d337b0ab4e208fdce348e24d1060064e93d7645daafd56d39c model_size="5.1 GiB" loaded_mmap_size="0 B" headroom="7.5 GiB" system_free="11.6 GiB" system_total="16.0 GiB" predicted_vram="5.5 GiB" available_vram="6.9 GiB"
+time=2026-11-11T04:00:20.564Z level=INFO source=llama_server.go:467 msg="starting llama-server" cmd="/usr/lib/ollama/llama-server --model BLOB --port 46017 --host 127.0.0.1 --no-webui --offline -c 4096 -np 1 --log-verbosity 4 --no-log-prefix --no-log-timestamps --no-jinja --chat-template chatml --mmproj /root/.ollama/models/blobs/sha256-4cb21b935cd7e79daed76f3154e82f2f160ad7a9d8d22cb5f14c7b93d5fb38ba --spec-type draft-mtp --spec-draft-n-max 3 --spec-draft-backend-sampling --spec-draft-model /root/.ollama/models/blobs/sha256-05612e54110f8f68bade01dfcc546cdc6914d11dde0b650a65f263f0f87bbbd2 --load-mode none --cache-type-k f16 --cache-type-v f16 --flash-attn on -b 512 -ub 512 --context-shift --keep 4"
+time=2026-11-11T04:00:20.564Z level=INFO source=sched.go:658 msg="gpu memory" id=0 library=CUDA available="6.5 GiB" free="6.9 GiB" minimum="457.0 MiB" overhead="0 B"
+time=2026-11-11T04:01:07.088Z level=WARN source=llama_server.go:344 msg="truncating input prompt" limit=2051 prompt=9644 keep=5 new=2051
+llama_kv_cache: size =   64.00 MiB (  4096 cells,   4 layers,  1/1 seqs), K (f16):   32.00 MiB, V (f16):   32.00 MiB
+llama_kv_cache: size =   40.00 MiB (  1024 cells,  20 layers,  1/1 seqs), K (f16):   20.00 MiB, V (f16):   20.00 MiB
+common_speculative_init_result: loading draft model '/root/.ollama/models/blobs/sha256-05612e54110f8f68bade01dfcc546cdc6914d11dde0b650a65f263f0f87bbbd2'
+load_tensors: offloading output layer to GPU
+load_tensors: offloading 41 repeating layers to GPU
+load_tensors: offloaded 43/43 layers to GPU

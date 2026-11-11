@@ -1,0 +1,60 @@
+# Gemma 4 limits lab (Gemma Series Parts 13-16): every service runs in Docker; nothing is installed on the host.
+# Pinned: ollama/ollama 0.40.16 by tag AND digest. Pattern: gemma4-26b-moe-8gb-lab.
+# MODELS_VOLUME: the lab run reuses the Part 11/12 labs' volume (gemma-lab-models) so the blobs are the same files.
+name: gemma4-limits-lab
+
+services:
+  ollama:
+    image: ollama/ollama:0.40.16@sha256:910d0d8107b538fb0894e63163eb195de0cc7aefcbc666dc62d3b18f71124592
+    container_name: gemma4-limits-ollama
+    # Lab safety on this host (32 GB Windows, WSL capped at 24 GB): page cache of the mmapped model counts here too.
+    mem_limit: 16g
+    # The server log is teed to out/logs/server.log so the runner can read the lines a request produced
+    # (default-context line, truncation WARN, KV cache type, offload split).
+    entrypoint: ["/bin/sh", "-c", "exec /bin/ollama serve 2>&1 | tee -a /logs/server.log"]
+    environment:
+      OLLAMA_NUM_PARALLEL: "1"        # one request slot, so the KV cache = num_ctx
+      OLLAMA_MAX_LOADED_MODELS: "1"   # one model on the card at a time
+      OLLAMA_KEEP_ALIVE: "0"          # unload unless a request asks to stay loaded (fresh loads by default)
+      OLLAMA_DEBUG: "${OLLAMA_DEBUG:-1}"
+      OLLAMA_FLASH_ATTENTION: "${OLLAMA_FLASH_ATTENTION:-1}"
+      OLLAMA_KV_CACHE_TYPE: "${OLLAMA_KV_CACHE_TYPE:-f16}"
+    volumes:
+      - models:/root/.ollama
+      - nvcache:/root/.nv
+      - ./out/logs:/logs
+    ports:
+      - "127.0.0.1:11437:11434"
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+
+  runner:
+    build: ./docker/runner
+    image: gemma4-limits-lab-runner:1
+    profiles: ["tools"]
+    volumes:
+      - .:/work
+    working_dir: /work
+    environment:
+      OLLAMA_URL: http://ollama:11434
+      OLLAMA_VERSION_EXPECTED: "0.40.16"
+      PYTHONDONTWRITEBYTECODE: "1"
+
+volumes:
+  models:
+    name: ${MODELS_VOLUME:-gemma-lab-models}
+    external: true
+  nvcache:
+    name: gemma-lab-nvcache
+    external: true
+
+# This host ran out of Docker address pools (32 networks); the lab reuses the Part 12 lab's (idle) network.
+networks:
+  default:
+    name: gemma4-moe-lab_default
+    external: true

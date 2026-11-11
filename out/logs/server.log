@@ -23902,3 +23902,21 @@ slot print_timing: id  0 | task 9046 | n_gen =   4694, tg =  18.56 t/s, tg_3s = 
 slot print_timing: id  0 | task 9046 | n_gen =   4748, tg =  18.55 t/s, tg_3s =  17.73 t/s
 slot print_timing: id  0 | task 9046 | n_gen =   4802, tg =  18.54 t/s, tg_3s =  17.79 t/s
 sched_graph_realloc: graph reallocation: nodes = 1991 (changed = 0), splits = 2, n_same = 51, n_diff = 0
+slot print_timing: id  0 | task 9046 | n_gen =   4856, tg =  18.53 t/s, tg_3s =  17.80 t/s
+slot print_timing: id  0 | task 9046 | n_gen =   4908, tg =  18.51 t/s, tg_3s =  17.30 t/s
+slot print_timing: id  0 | task 9046 | n_gen =   4962, tg =  18.51 t/s, tg_3s =  17.81 t/s
+slot print_timing: id  0 | task 9046 | n_gen =   5016, tg =  18.50 t/s, tg_3s =  17.81 t/s
+sched_graph_realloc: graph reallocation: nodes = 1991 (changed = 0), splits = 2, n_same = 52, n_diff = 0
+slot print_timing: id  0 | task 9046 | n_gen =   5070, tg =  18.49 t/s, tg_3s =  17.71 t/s
+slot print_timing: id  0 | task 9046 | n_gen =   5123, tg =  18.48 t/s, tg_3s =  17.65 t/s
+slot print_timing: id  0 | task 9046 | n_gen =   5177, tg =  18.48 t/s, tg_3s =  17.98 t/s
+slot print_timing: id  0 | task 9046 | n_gen =   5231, tg =  18.47 t/s, tg_3s =  17.88 t/s
+slot print_timing: id  0 | task 9046 | n_gen =   5284, tg =  18.46 t/s, tg_3s =  17.67 t/s
+sched_graph_realloc: graph reallocation: nodes = 1991 (changed = 0), splits = 2, n_same = 53, n_diff = 0
+slot print_timing: id  0 | task 9046 | n_gen =   5338, tg =  18.45 t/s, tg_3s =  17.82 t/s
+slot print_timing: id  0 | task 9046 | n_gen =   5391, tg =  18.45 t/s, tg_3s =  17.59 t/s
+slot print_timing: id  0 | task 9046 | n_gen =   5444, tg =  18.44 t/s, tg_3s =  17.51 t/s
+slot print_timing: id  0 | task 9046 | n_gen =   5498, tg =  18.43 t/s, tg_3s =  17.74 t/s
+slot print_timing: id  0 | task 9046 | n_gen =   5552, tg =  18.42 t/s, tg_3s =  17.81 t/s
+sched_graph_realloc: graph reallocation: nodes = 1991 (changed = 0), splits = 2, n_same = 54, n_diff = 0
+slot print_timing: id  0 | task 9046 | n_gen =   5604, tg =  18.41 t/s, tg_3s =  17.13 t/s

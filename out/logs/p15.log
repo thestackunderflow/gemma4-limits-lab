@@ -14,3 +14,17 @@
 05:25:30 AUD v1 12b-qat espeak 200 The quick brown fox jumps over the lazy dog.
 05:25:37 AUD chat 12b-qat librivox 200 It is a truth universally acknowledged, that a single man in possession of a goo
 05:25:47 AUD v1 12b-qat librivox 200 Chapter 1 of Pride and Prejudice. This is a Librivox recording. All Librivox rec
+05:26:11 CAN e4b ocr temp 0.0 rep 1 (10, 10)
+05:26:24 CAN e4b charts temp 0.0 rep 1 (2, 5)
+05:26:37 CAN e4b pairs temp 0.0 rep 1 (5, 5)
+05:26:54 CAN e4b tools temp 0.0 rep 1 (10, 10)
+05:27:13 CAN e4b coding temp 0.0 rep 1 (10, 10)
+05:27:25 CAN e4b multilingual temp 0.0 rep 1 (10, 10)
+05:28:48 CAN e4b thinking temp 0.0 rep 1 {'off': {'passed': 9, 'total': 10, 'seconds_total': 33.7}, 'on': {'passed': 10, 'total': 10, 'seconds_total': 45.6}}
+05:29:03 CAN e4b json temp 0.0 rep 1 (9, 10)
+05:29:36 CAN 12b-qat ocr temp 0.0 rep 1 (10, 10)
+05:30:01 CAN 12b-qat charts temp 0.0 rep 1 (3, 5)
+05:30:19 CAN 12b-qat pairs temp 0.0 rep 1 (5, 5)
+05:31:05 CAN 12b-qat tools temp 0.0 rep 1 (10, 10)
+05:32:09 CAN 12b-qat coding temp 0.0 rep 1 (10, 10)
+05:32:25 CAN 12b-qat multilingual temp 0.0 rep 1 (10, 10)

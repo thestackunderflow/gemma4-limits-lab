@@ -1,0 +1,346 @@
+{
+ "default": [
+  {
+   "model": "e2b",
+   "tag": "gemma4:e2b-it-q4_K_M",
+   "digest": "b37049369adf",
+   "ps_context_length": 4096,
+   "processor": "100% GPU",
+   "offload": [
+    36,
+    36
+   ],
+   "server_default": {
+    "total_vram": "8.0 GiB",
+    "default_num_ctx": 4096
+   },
+   "mtp_draft": true,
+   "kv_type": "f16"
+  },
+  {
+   "model": "e4b",
+   "tag": "gemma4:e4b-it-q4_K_M",
+   "digest": "dc35e8d9c606",
+   "ps_context_length": 4096,
+   "processor": "100% GPU",
+   "offload": [
+    43,
+    43
+   ],
+   "server_default": {
+    "total_vram": "8.0 GiB",
+    "default_num_ctx": 4096
+   },
+   "mtp_draft": true,
+   "kv_type": "f16"
+  },
+  {
+   "model": "12b-qat",
+   "tag": "gemma4:12b-it-qat",
+   "digest": "38044be4f923",
+   "ps_context_length": 4096,
+   "processor": "3%/97% CPU/GPU",
+   "offload": [
+    38,
+    49
+   ],
+   "server_default": {
+    "total_vram": "8.0 GiB",
+    "default_num_ctx": 4096
+   },
+   "mtp_draft": false,
+   "kv_type": "f16"
+  }
+ ],
+ "truncation": [
+  {
+   "model": "e4b",
+   "endpoint": "chat",
+   "fact": "start",
+   "extra": "{}",
+   "num_ctx": "default (no option)",
+   "sampling": "temp 0",
+   "runs": 1,
+   "status": [
+    200
+   ],
+   "prompt_eval_count": [
+    2051
+   ],
+   "correct": 0,
+   "warn": {
+    "limit": 2051,
+    "prompt": 9644,
+    "keep": 5,
+    "new": 2051
+   },
+   "fresh_all": true,
+   "error": null,
+   "reply_keys": [
+    "created_at",
+    "done",
+    "done_reason",
+    "eval_count",
+    "eval_duration",
+    "load_duration",
+    "message",
+    "model",
+    "prompt_eval_cached_count",
+    "prompt_eval_count",
+    "prompt_eval_duration",
+    "total_duration"
+   ],
+   "answer_example": "I do not have access to any information about a vault or an access code in the t"
+  },
+  {
+   "model": "e4b",
+   "endpoint": "chat",
+   "fact": "end",
+   "extra": "{}",
+   "num_ctx": "default (no option)",
+   "sampling": "temp 0",
+   "runs": 1,
+   "status": [
+    200
+   ],
+   "prompt_eval_count": [
+    2051
+   ],
+   "correct": 1,
+   "warn": {
+    "limit": 2051,
+    "prompt": 9644,
+    "keep": 5,
+    "new": 2051
+   },
+   "fresh_all": true,
+   "error": null,
+   "reply_keys": [
+    "created_at",
+    "done",
+    "done_reason",
+    "eval_count",
+    "eval_duration",
+    "load_duration",
+    "message",
+    "model",
+    "prompt_eval_cached_count",
+    "prompt_eval_count",
+    "prompt_eval_duration",
+    "total_duration"
+   ],
+   "answer_example": "K-77"
+  },
+  {
+   "model": "e4b",
+   "endpoint": "generate",
+   "fact": "start",
+   "extra": "{}",
+   "num_ctx": "default (no option)",
+   "sampling": "temp 0",
+   "runs": 1,
+   "status": [
+    200
+   ],
+   "prompt_eval_count": [
+    2051
+   ],
+   "correct": 0,
+   "warn": {
+    "limit": 2051,
+    "prompt": 9644,
+    "keep": 5,
+    "new": 2051
+   },
+   "fresh_all": true,
+   "error": null,
+   "reply_keys": [
+    "context",
+    "created_at",
+    "done",
+    "done_reason",
+    "eval_count",
+    "eval_duration",
+    "load_duration",
+    "model",
+    "prompt_eval_cached_count",
+    "prompt_eval_count",
+    "prompt_eval_duration",
+    "response",
+    "total_duration"
+   ],
+   "answer_example": "I do not have access to any information about a vault or an access code in the t"
+  },
+  {
+   "model": "e4b",
+   "endpoint": "generate",
+   "fact": "end",
+   "extra": "{}",
+   "num_ctx": "default (no option)",
+   "sampling": "temp 0",
+   "runs": 1,
+   "status": [
+    200
+   ],
+   "prompt_eval_count": [
+    2051
+   ],
+   "correct": 1,
+   "warn": {
+    "limit": 2051,
+    "prompt": 9644,
+    "keep": 5,
+    "new": 2051
+   },
+   "fresh_all": true,
+   "error": null,
+   "reply_keys": [
+    "context",
+    "created_at",
+    "done",
+    "done_reason",
+    "eval_count",
+    "eval_duration",
+    "load_duration",
+    "model",
+    "prompt_eval_cached_count",
+    "prompt_eval_count",
+    "prompt_eval_duration",
+    "response",
+    "total_duration"
+   ],
+   "answer_example": "K-77"
+  },
+  {
+   "model": "e4b",
+   "endpoint": "openai",
+   "fact": "start",
+   "extra": "{}",
+   "num_ctx": "default (no option)",
+   "sampling": "temp 0",
+   "runs": 1,
+   "status": [
+    200
+   ],
+   "prompt_eval_count": [
+    2051
+   ],
+   "correct": 0,
+   "warn": {
+    "limit": 2051,
+    "prompt": 9644,
+    "keep": 5,
+    "new": 2051
+   },
+   "fresh_all": true,
+   "error": null,
+   "reply_keys": [
+    "choices",
+    "created",
+    "id",
+    "model",
+    "object",
+    "system_fingerprint",
+    "usage"
+   ],
+   "answer_example": "I do not have access to any information about a vault or an access code in the t"
+  },
+  {
+   "model": "e4b",
+   "endpoint": "openai",
+   "fact": "end",
+   "extra": "{}",
+   "num_ctx": "default (no option)",
+   "sampling": "temp 0",
+   "runs": 1,
+   "status": [
+    200
+   ],
+   "prompt_eval_count": [
+    2051
+   ],
+   "correct": 1,
+   "warn": {
+    "limit": 2051,
+    "prompt": 9644,
+    "keep": 5,
+    "new": 2051
+   },
+   "fresh_all": true,
+   "error": null,
+   "reply_keys": [
+    "choices",
+    "created",
+    "id",
+    "model",
+    "object",
+    "system_fingerprint",
+    "usage"
+   ],
+   "answer_example": "K-77"
+  },
+  {
+   "model": "e4b",
+   "endpoint": "chat",
+   "fact": "start",
+   "extra": "{\"truncate\": false}",
+   "num_ctx": "default (no option)",
+   "sampling": "temp 0",
+   "runs": 1,
+   "status": [
+    400
+   ],
+   "prompt_eval_count": [],
+   "correct": 0,
+   "warn": null,
+   "fresh_all": true,
+   "error": "request (9644 tokens) exceeds the available context size (4096 tokens), try increasing it",
+   "reply_keys": [
+    "error"
+   ],
+   "answer_example": ""
+  },
+  {
+   "model": "e4b",
+   "endpoint": "generate",
+   "fact": "start",
+   "extra": "{\"truncate\": false}",
+   "num_ctx": "default (no option)",
+   "sampling": "temp 0",
+   "runs": 1,
+   "status": [
+    400
+   ],
+   "prompt_eval_count": [],
+   "correct": 0,
+   "warn": null,
+   "fresh_all": true,
+   "error": "request (9644 tokens) exceeds the available context size (4096 tokens), try increasing it",
+   "reply_keys": [
+    "error"
+   ],
+   "answer_example": ""
+  },
+  {
+   "model": "e4b",
+   "endpoint": "chat",
+   "fact": "start",
+   "extra": "{\"shift\": false}",
+   "num_ctx": "default (no option)",
+   "sampling": "temp 0",
+   "runs": 1,
+   "status": [
+    400
+   ],
+   "prompt_eval_count": [],
+   "correct": 0,
+   "warn": null,
+   "fresh_all": true,
+   "error": "the prompt is longer than the context length currently available to the model; shorten the prompt, adjust the context length in settings, or use a model with a longer context length",
+   "reply_keys": [
+    "error"
+   ],
+   "answer_example": ""
+  }
+ ]
+}

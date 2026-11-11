@@ -1,0 +1,17 @@
+ Container gemma4-limits-ollama  Recreate
+ Container gemma4-limits-ollama  Recreated
+ Container gemma4-limits-ollama  Starting
+ Container gemma4-limits-ollama  Started
+04:08:58 DEF e2b 4096 100% GPU (36, 36)
+04:09:10 DEF e4b 4096 100% GPU (43, 43)
+04:09:22 DEF 12b-qat 4096 3%/97% CPU/GPU (38, 49)
+04:09:36 TRUNC e4b 1 chat start None None 200 2051 False [{'limit': 2051, 'prompt': 9644, 'keep': 5, 'new': 2051}]
+04:09:55 TRUNC e4b 1 chat end None None 200 2051 True [{'limit': 2051, 'prompt': 9644, 'keep': 5, 'new': 2051}]
+04:10:11 TRUNC e4b 1 generate start None None 200 2051 False [{'limit': 2051, 'prompt': 9644, 'keep': 5, 'new': 2051}]
+04:10:28 TRUNC e4b 1 generate end None None 200 2051 True [{'limit': 2051, 'prompt': 9644, 'keep': 5, 'new': 2051}]
+04:10:28 waiting: Windows free 1.54 GB
+04:10:51 TRUNC e4b 1 openai start None None 200 2051 False [{'limit': 2051, 'prompt': 9644, 'keep': 5, 'new': 2051}]
+04:11:13 TRUNC e4b 1 openai end None None 200 2051 True [{'limit': 2051, 'prompt': 9644, 'keep': 5, 'new': 2051}]
+04:11:30 TRUNC e4b 1 chat start {'truncate': False} None 400 None False []
+04:11:45 TRUNC e4b 1 generate start {'truncate': False} None 400 None False []
+04:12:06 TRUNC e4b 1 chat start {'shift': False} None 400 None False []

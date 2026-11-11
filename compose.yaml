@@ -8,7 +8,10 @@ services:
     image: ollama/ollama:0.40.16@sha256:910d0d8107b538fb0894e63163eb195de0cc7aefcbc666dc62d3b18f71124592
     container_name: gemma4-limits-ollama
     # Lab safety on this host (32 GB Windows, WSL capped at 24 GB): page cache of the mmapped model counts here too.
-    mem_limit: 16g
+    # 10 Nov run: Windows had ~3-10 GB free (vmmemWSL already held 13.6 GB) and a 12B no-mmap load at 16g took Windows
+    # to 0.72 GB free (the watcher stopped it). 12g keeps the VM inside the memory it already holds. Override with
+    # OLLAMA_MEM_LIMIT for the 26B rows (its CPU-side part does not fit in 12g).
+    mem_limit: ${OLLAMA_MEM_LIMIT:-12g}
     # The server log is teed to out/logs/server.log so the runner can read the lines a request produced
     # (default-context line, truncation WARN, KV cache type, offload split).
     entrypoint: ["/bin/sh", "-c", "exec /bin/ollama serve 2>&1 | tee -a /logs/server.log"]
@@ -37,6 +40,9 @@ services:
     build: ./docker/runner
     image: gemma4-limits-lab-runner:1
     profiles: ["tools"]
+    # privileged only to write /proc/sys/vm/drop_caches between loads (the VM page cache from reading a model file
+    # otherwise stays in the WSL VM and comes out of Windows' free RAM)
+    privileged: true
     volumes:
       - .:/work
     working_dir: /work

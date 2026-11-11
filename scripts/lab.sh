@@ -37,22 +37,28 @@ case "${1:-}" in
   sampler)
     case "${2:-}" in
       start)
+        # two loops: GPU every ~1 s (nvidia-smi is fast), container RAM + Windows free every ~4 s (slow commands)
         name="${3:-run}"
-        f="out/samples/${name}.csv"
-        echo "epoch,gpu_mem_used_mib,gpu_util_pct,ollama_mem,windows_free_gb" > "$f"
+        rm -f out/samples/STOP
+        echo "epoch,gpu_mem_used_mib,gpu_util_pct" > "out/samples/${name}.gpu.csv"
+        echo "epoch,ollama_mem,windows_free_gb" > "out/samples/${name}.mem.csv"
         (
           while [ ! -f out/samples/STOP ]; do
-            g="$(nvidia-smi --query-gpu=memory.used,utilization.gpu --format=csv,noheader,nounits | tr -d ' \r' | head -1)"
-            m="$(docker stats --no-stream --format '{{.MemUsage}}' "$OLLAMA" 2>/dev/null | cut -d/ -f1 | tr -d ' ')"
-            w="$(windows_free_gb)"
-            echo "$(date +%s),$g,${m:-NA},$w" >> "$f"
-            # owner rule: Windows above 1 GB free; stop the lab container if it stays under
-            if awk -v x="$w" 'BEGIN{exit !(x<1.0)}'; then
-              low=$(( ${low:-0} + 1 )); else low=0; fi
-            if [ "${low:-0}" -ge 3 ]; then echo "$(date '+%F %T') STOP low RAM $w" >> out/logs/safety.log; docker stop "$OLLAMA" >/dev/null 2>&1; low=0; fi
+            echo "$(date +%s),$(nvidia-smi --query-gpu=memory.used,utilization.gpu --format=csv,noheader,nounits | tr -d ' \r' | head -1)" >> "out/samples/${name}.gpu.csv"
             sleep 1
           done
-          rm -f out/samples/STOP
+        ) > /dev/null 2>&1 &
+        (
+          low=0
+          while [ ! -f out/samples/STOP ]; do
+            m="$(docker stats --no-stream --format '{{.MemUsage}}' "$OLLAMA" 2>/dev/null | cut -d/ -f1 | tr -d ' ')"
+            w="$(windows_free_gb)"
+            echo "$(date +%s),${m:-NA},$w" >> "out/samples/${name}.mem.csv"
+            # owner rule: keep Windows above 1 GB free; stop the lab container if it stays under for 3 samples
+            if awk -v x="$w" 'BEGIN{exit !(x<1.0)}'; then low=$((low+1)); else low=0; fi
+            if [ "$low" -ge 3 ]; then echo "$(date '+%F %T') STOP low RAM $w" >> out/logs/safety.log; docker stop "$OLLAMA" >/dev/null 2>&1; low=0; fi
+            sleep 1
+          done
         ) > /dev/null 2>&1 &
         echo "$name" > out/samples/CURRENT
         ;;

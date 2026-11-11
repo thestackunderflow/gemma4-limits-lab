@@ -1,0 +1,21 @@
+04:05:49 FIT e2b q8_0 4096 speed 1 200 100% GPU (36, 36) 737.3 130.4 None None
+04:05:54 FIT e2b q8_0 4096 speed 2 200 100% GPU (36, 36) 4500.1 109.0 None None
+04:06:01 FIT e2b q8_0 4096 speed 3 200 100% GPU (36, 36) 1108.0 111.1 None None
+04:06:05 FIT e2b q8_0 16384 speed 1 200 100% GPU (36, 36) 11058.6 138.8 None None
+04:06:10 FIT e2b q8_0 16384 speed 2 200 100% GPU (36, 36) 10622.0 127.4 None None
+04:06:15 FIT e2b q8_0 16384 speed 3 200 100% GPU (36, 36) 11778.5 116.0 None None
+04:06:21 FIT e2b q8_0 32768 speed 1 200 100% GPU (36, 36) 11458.3 96.2 None None
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/work/lab/p_fit.py", line 74, in <module>
+    run(a["kv"], a.get("models", "e2b,e4b,12b-qat,26b").split(","), int(a.get("reps", 3)), a.get("maxfill", "1") == "1")
+  File "/work/lab/p_fit.py", line 53, in run
+    r = cell(key, nc, min(nc // 2, 16384), kv, rep, w)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/lab/p_fit.py", line 40, in cell
+    w.write(row)
+  File "/work/lab/rows.py", line 24, in write
+    with open(self.path, "a", encoding="utf-8") as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/work/out/p13/fit.jsonl'

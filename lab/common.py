@@ -37,9 +37,39 @@ def say(*a):
     print(time.strftime("%H:%M:%S"), *a, flush=True)
 
 
+MIN_WINDOWS_FREE_GB = 2.0   # owner rule: never start a load with Windows under 2 GB free
+
+
+def drop_caches():
+    try:
+        os.system("sync")
+        with open("/proc/sys/vm/drop_caches", "w") as f:
+            f.write("3")
+        return True
+    except OSError:
+        return False
+
+
+def windows_free():
+    s = samples.read()
+    return s[-1]["win_free_gb"] if s and time.time() - s[-1]["t"] < 60 else None
+
+
 def fresh():
-    """Unload everything; True when nothing is loaded (the next request is a fresh load)."""
-    return o.unload_all()
+    """Unload everything, drop the VM page cache, wait for Windows free RAM >= 2 GB (up to 10 min).
+    True when nothing is loaded (the next request is a fresh load)."""
+    ok = o.unload_all()
+    drop_caches()
+    for _ in range(120):
+        w = windows_free()
+        if w is None or w >= MIN_WINDOWS_FREE_GB:
+            break
+        say("waiting: Windows free", w, "GB")
+        time.sleep(5)
+        drop_caches()
+    else:
+        raise SystemExit("Windows free RAM stayed under %.1f GB" % MIN_WINDOWS_FREE_GB)
+    return ok
 
 
 def provenance(tag, log, num_ctx=None, temperature=0, fresh_load=True, **extra):

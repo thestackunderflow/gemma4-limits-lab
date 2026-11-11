@@ -36,9 +36,8 @@ def ctx_arg(log):
 
 
 def offload(log):
-    m = None
-    for m in re.finditer(r"offloaded (\d+)/(\d+) layers to GPU", log):
-        pass
+    """The main model's line (the first one; the MTP draft model loads after it and prints its own)."""
+    m = re.search(r"offloaded (\d+)/(\d+) layers to GPU", log)
     return (int(m.group(1)), int(m.group(2))) if m else None
 
 
@@ -57,3 +56,7 @@ def gpu_available_gib(log):
 
 def errors(log):
     return [l for l in log.splitlines() if "level=ERROR" in l or "out of memory" in l.lower()][:5]
+
+
+def offload_all(log):
+    return [(int(a), int(b)) for a, b in re.findall(r"offloaded (\d+)/(\d+) layers to GPU", log)]

@@ -1,4 +1,5 @@
-"""Host sampler file (scripts/lab.sh sampler): epoch,gpu_mem_used_mib,gpu_util_pct,ollama_mem,windows_free_gb."""
+"""Host sampler files (scripts/lab.sh sampler): <run>.gpu.csv (epoch,gpu_mem_used_mib,gpu_util_pct, ~1 s) and
+<run>.mem.csv (epoch,ollama_mem,windows_free_gb, ~4 s)."""
 import os
 import re
 
@@ -15,31 +16,53 @@ def mem_mib(s):
                       "GB": 1024}[u], 1)
 
 
-def read(path=None):
-    if path is None:
-        cur = os.path.join(DIR, "CURRENT")
-        if not os.path.exists(cur):
-            return []
-        path = os.path.join(DIR, open(cur).read().strip() + ".csv")
-    if not os.path.exists(path):
+def _current():
+    cur = os.path.join(DIR, "CURRENT")
+    return open(cur).read().strip() if os.path.exists(cur) else None
+
+
+def _rows(path):
+    if not path or not os.path.exists(path):
         return []
     out = []
     for line in open(path, encoding="utf-8", errors="replace"):
         p = line.strip().split(",")
-        if len(p) < 5 or not p[0].isdigit():
-            continue
-        try:
-            out.append({"t": int(p[0]), "gpu_mib": float(p[1]), "util": float(p[2]), "ram_mib": mem_mib(p[3]),
-                        "win_free_gb": float(p[4])})
-        except ValueError:
-            continue
+        if len(p) >= 3 and p[0].isdigit():
+            out.append(p)
     return out
 
 
-def window(t0, t1, samples=None):
-    s = [x for x in (samples if samples is not None else read()) if t0 - 1 <= x["t"] <= t1 + 1]
-    if not s:
-        return {"n_samples": 0}
-    ram = [x["ram_mib"] for x in s if x["ram_mib"] is not None]
-    return {"n_samples": len(s), "gpu_mib_max": max(x["gpu_mib"] for x in s),
-            "ram_mib_max": max(ram) if ram else None, "win_free_gb_min": min(x["win_free_gb"] for x in s)}
+def gpu(name=None):
+    name = name or _current()
+    out = []
+    for p in _rows(name and os.path.join(DIR, name + ".gpu.csv")):
+        try:
+            out.append({"t": int(p[0]), "gpu_mib": float(p[1]), "util": float(p[2])})
+        except ValueError:
+            pass
+    return out
+
+
+def mem(name=None):
+    name = name or _current()
+    out = []
+    for p in _rows(name and os.path.join(DIR, name + ".mem.csv")):
+        try:
+            out.append({"t": int(p[0]), "ram_mib": mem_mib(p[1]), "win_free_gb": float(p[2])})
+        except ValueError:
+            pass
+    return out
+
+
+def read():
+    """Latest memory samples (Windows free RAM), used by the load guard."""
+    return mem()
+
+
+def window(t0, t1):
+    g = [x for x in gpu() if t0 - 1 <= x["t"] <= t1 + 1]
+    m = [x for x in mem() if t0 - 2 <= x["t"] <= t1 + 2]
+    ram = [x["ram_mib"] for x in m if x["ram_mib"] is not None]
+    return {"n_gpu": len(g), "gpu_mib_max": max((x["gpu_mib"] for x in g), default=None),
+            "gpu_mib_before": None, "n_mem": len(m), "ram_mib_max": max(ram) if ram else None,
+            "win_free_gb_min": min((x["win_free_gb"] for x in m), default=None)}

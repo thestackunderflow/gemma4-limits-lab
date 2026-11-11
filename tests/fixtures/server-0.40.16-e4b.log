@@ -9,3 +9,5 @@ common_speculative_init_result: loading draft model '/root/.ollama/models/blobs/
 load_tensors: offloading output layer to GPU
 load_tensors: offloading 41 repeating layers to GPU
 load_tensors: offloaded 43/43 layers to GPU
+
+load_tensors: offloaded 5/5 layers to GPU

@@ -10,9 +10,9 @@ QUESTION = "What is the access code for the vault? Answer with the code only."
 OPTS = {"temperature": 0, "seed": 42, "num_predict": 64}
 
 
-def p_def():
+def p_def(models):
     w = c.writer("p13", "def")
-    for key in ["e2b", "e4b", "12b-qat", "26b"]:
+    for key in models:
         tag = c.TAGS[key]
         f = c.fresh()
         m, t0 = o.log_mark(), time.time()
@@ -99,6 +99,6 @@ if __name__ == "__main__":
     cmd = sys.argv[1]
     a = c.args(sys.argv[2:])
     if cmd == "def":
-        p_def()
+        p_def(a.get("models", "e2b,e4b,12b-qat").split(","))
     elif cmd == "trunc":
         p_trunc(int(a.get("reps", 3)))

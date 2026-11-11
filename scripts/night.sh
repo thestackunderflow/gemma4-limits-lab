@@ -5,7 +5,7 @@
 set -u
 export MSYS_NO_PATHCONV=1
 cd "$(dirname "$0")/.."
-until grep -aq "STAGE2-DONE" out/logs/stage2.out 2>/dev/null; do sleep 30; done
+scripts/stage2b.sh > out/logs/stage2.out 2>&1
 # The 26B stage needs the browsers closed; only do that while the owner is asleep (local time before 07:00).
 if [ "$(date +%H)" -lt 7 ]; then
   powershell -NoProfile -Command "foreach (\$n in 'chrome','firefox') { Get-Process -Name \$n -ErrorAction SilentlyContinue | ForEach-Object { [void]\$_.CloseMainWindow() } }; Start-Sleep 20; [math]::Round((Get-CimInstance Win32_OperatingSystem).FreePhysicalMemory/1MB,2)" > out/logs/browsers-closed.txt 2>&1

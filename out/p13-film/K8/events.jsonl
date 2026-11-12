@@ -1,0 +1,5 @@
+{"t": 0.051, "event": "recording started"}
+{"t": 2.861, "event": "pane 0: ollama run", "text": "ollama run gemma4:e4b-it-q4_K_M --think=false"}
+{"t": 15.593, "event": "set num_ctx", "text": "/set parameter num_ctx 16384"}
+{"t": 18.978, "event": "save", "text": "/save gemma4-e4b-16k"}
+{"t": 22.173, "event": "bye", "text": "/bye"}

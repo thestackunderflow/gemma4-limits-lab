@@ -1,0 +1,5 @@
+{"t": 0.053, "event": "recording started"}
+{"t": 2.866, "event": "pane 0: grep -m1 'vram-based default context' /lab/out/logs/server-20261111T040329Z.log | fold -w 44", "text": "grep -m1 'vram-based default context' /lab/out/logs/server-20261111T040329Z.log | fold -w 44"}
+{"t": 10.047, "event": "pane 0: grep -m1 'truncating input prompt' /lab/out/logs/server-20261111T040329Z.log | fold -w 44", "text": "grep -m1 'truncating input prompt' /lab/out/logs/server-20261111T040329Z.log | fold -w 44"}
+{"t": 17.168, "event": "pane 0: clear", "text": "clear"}
+{"t": 20.321, "event": "pane 0: grep -m1 'truncating input prompt' /film/server-live-K5.log | fold -w 44", "text": "grep -m1 'truncating input prompt' /film/server-live-K5.log | fold -w 44"}

@@ -1,0 +1,3 @@
+{"t": 0.066, "event": "recording started"}
+{"t": 2.876, "event": "pane 0: jq -c 'select(.model==\"26b\") | {kv_type,num_ctx,write_tok_s,error}' /lab/out/p13/fit.jsonl", "text": "jq -c 'select(.model==\"26b\") | {kv_type,num_ctx,write_tok_s,error}' /lab/out/p13/fit.jsonl"}
+{"t": 11.006, "event": "pane 0: grep STOP /lab/out/logs/safety.log | tail -3", "text": "grep STOP /lab/out/logs/safety.log | tail -3"}

@@ -1,0 +1,5 @@
+{"t": 0.058, "event": "recording started"}
+{"t": 2.867, "event": "pane 0: jq -c .options /film/req-16k.json", "text": "jq -c .options /film/req-16k.json"}
+{"t": 6.661, "event": "pane 0: curl -s $OLLAMA_HOST/api/chat -d @/film/req-16k.json | jq '.prompt_eval_count, .message.content'", "text": "curl -s $OLLAMA_HOST/api/chat -d @/film/req-16k.json | jq '.prompt_eval_count, .message.content'"}
+{"t": 24.018, "event": "pane 0: clear", "text": "clear"}
+{"t": 27.168, "event": "pane 0: curl -s $OLLAMA_HOST/api/chat -d @/film/req-16k.json | jq '.prompt_eval_count, .message.content'", "text": "curl -s $OLLAMA_HOST/api/chat -d @/film/req-16k.json | jq '.prompt_eval_count, .message.content'"}

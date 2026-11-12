@@ -1,0 +1,18 @@
+$ jq -r 'select(.model=="e4b" and .kind=="max-fill" and .num_ctx==131072) | [.kv_type,.prefill_s,.write_tok_s,(.offload|tostring)] | @tsv' /lab/out/p13/fit.jsonl
+f16     52.32   35.5    [40,43]
+q8_0    79.28   23.4    [43,43]
+$ jq -r 'select(.model=="e4b" and .kind=="speed" and .num_ctx==131072) | [.kv_type,.write_tok_s,.prefill_tok_s] | @tsv' /lab/out/p13/fit.jsonl
+f16     61.1    3844.1
+f16     59.1    3767.3
+f16     63.2    3751.1
+q8_0    61.5    2164.0
+q8_0    63.0    2166.1
+q8_0    69.2    2194.3
+$ 
+
+
+
+
+
+
+

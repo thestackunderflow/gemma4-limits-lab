@@ -1,0 +1,5 @@
+{"t": 0.07, "event": "recording started"}
+{"t": 2.878, "event": "pane 0: ollama show gemma4:e4b-it-q4_K_M", "text": "ollama show gemma4:e4b-it-q4_K_M"}
+{"t": 6.648, "event": "pane 0: ollama show gemma4:e4b-it-q4_K_M | grep -i context", "text": "ollama show gemma4:e4b-it-q4_K_M | grep -i context"}
+{"t": 10.864, "event": "pane 1: ollama run gemma4:e4b-it-q4_K_M --keepalive 2m --think=false \"Say OK.\"", "text": "ollama run gemma4:e4b-it-q4_K_M --keepalive 2m --think=false \"Say OK.\""}
+{"t": 27.058, "event": "pane 1: ollama ps", "text": "ollama ps"}

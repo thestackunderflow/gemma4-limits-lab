@@ -1,0 +1,4 @@
+{"t": 0.05, "event": "recording started"}
+{"t": 2.858, "event": "pane 0: jq -c '.options, .truncate' /film/req-trunc-false.json", "text": "jq -c '.options, .truncate' /film/req-trunc-false.json"}
+{"t": 7.143, "event": "pane 0: curl -s -o /tmp/r.json -w '%{http_code}\\n' $OLLAMA_HOST/api/chat -d @/film/req-trunc-false.json", "text": "curl -s -o /tmp/r.json -w '%{http_code}\\n' $OLLAMA_HOST/api/chat -d @/film/req-trunc-false.json"}
+{"t": 20.473, "event": "pane 0: jq -r .error /tmp/r.json", "text": "jq -r .error /tmp/r.json"}

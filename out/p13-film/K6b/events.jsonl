@@ -1,0 +1,2 @@
+{"t": 0.038, "event": "recording started"}
+{"t": 2.854, "event": "pane 0: jq -c 'select(.endpoint==\"chat\" and .position==\"start\")' /lab/out/p13/trunc.jsonl | head -1 | jq -c '{status, reply_keys}'", "text": "jq -c 'select(.endpoint==\"chat\" and .position==\"start\")' /lab/out/p13/trunc.jsonl | head -1 | jq -c '{status, reply_keys}'"}

@@ -1,0 +1,3 @@
+{"t": 0.033, "event": "recording started"}
+{"t": 2.843, "event": "pane 0: curl -s $OLLAMA_HOST/api/generate -d '{\"model\":\"gemma4:e4b-it-q4_K_M\",\"prompt\":\"Say OK.\",\"stream\":false,\"think\":false,\"keep_alive\":\"2m\",\"options\":{\"num_ctx\":16384}}' | jq -r .response", "text": "curl -s $OLLAMA_HOST/api/generate -d '{\"model\":\"gemma4:e4b-it-q4_K_M\",\"prompt\":\"Say OK.\",\"stream\":false,\"think\":false,\"keep_alive\":\"2m\",\"options\":{\"num_ctx\":16384}}' | jq -r .response"}
+{"t": 18.312, "event": "pane 0: ollama ps", "text": "ollama ps"}

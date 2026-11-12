@@ -1,0 +1,5 @@
+{"t": 0.057, "event": "recording started"}
+{"t": 2.873, "event": "pane 0: jq -r 'select(.model==\"12b-qat\" and .kind==\"speed\" and .kv_type==\"f16\") | [.num_ctx,(.offload|tostring),.write_tok_s] | @tsv' /lab/out/p13/fit.jsonl", "text": "jq -r 'select(.model==\"12b-qat\" and .kind==\"speed\" and .kv_type==\"f16\") | [.num_ctx,(.offload|tostring),.write_tok_s] | @tsv' /lab/out/p13/fit.jsonl"}
+{"t": 12.366, "event": "pane 0: clear", "text": "clear"}
+{"t": 15.523, "event": "pane 0: jq -r 'select(.model==\"12b-qat\" and .kind==\"max-fill\") | [.kv_type,.num_ctx,(.offload|tostring),.prefill_s,.write_tok_s] | @tsv' /lab/out/p13/fit.jsonl", "text": "jq -r 'select(.model==\"12b-qat\" and .kind==\"max-fill\") | [.kv_type,.num_ctx,(.offload|tostring),.prefill_s,.write_tok_s] | @tsv' /lab/out/p13/fit.jsonl"}
+{"t": 24.049, "event": "pane 0: jq -c 'select(.model==\"12b-qat\") | {model, offload}' /lab/out/p13/def.jsonl", "text": "jq -c 'select(.model==\"12b-qat\") | {model, offload}' /lab/out/p13/def.jsonl"}

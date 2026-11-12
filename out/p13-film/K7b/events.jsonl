@@ -1,0 +1,3 @@
+{"t": 0.039, "event": "recording started"}
+{"t": 2.848, "event": "pane 0: ollama ps", "text": "ollama ps"}
+{"t": 6.096, "event": "pane 0: nvidia-smi", "text": "nvidia-smi"}

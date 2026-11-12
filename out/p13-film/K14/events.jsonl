@@ -1,0 +1,6 @@
+{"t": 0.053, "event": "recording started"}
+{"t": 2.861, "event": "pane 0: grep -n 'FLASH_ATTENTION\\|KV_CACHE_TYPE' /lab/compose.yaml", "text": "grep -n 'FLASH_ATTENTION\\|KV_CACHE_TYPE' /lab/compose.yaml"}
+{"t": 9.239, "event": "pane 0: grep -m1 'K (q8_0)' /lab/out/logs/server-20261111T052301Z.log | fold -w 44", "text": "grep -m1 'K (q8_0)' /lab/out/logs/server-20261111T052301Z.log | fold -w 44"}
+{"t": 16.026, "event": "pane 0: clear", "text": "clear"}
+{"t": 19.176, "event": "pane 0: jq -r 'select(.model==\"e4b\" and .kind==\"max-fill\" and .num_ctx==131072) | [.kv_type,.prefill_s,.write_tok_s,(.offload|tostring)] | @tsv' /lab/out/p13/fit.jsonl", "text": "jq -r 'select(.model==\"e4b\" and .kind==\"max-fill\" and .num_ctx==131072) | [.kv_type,.prefill_s,.write_tok_s,(.offload|tostring)] | @tsv' /lab/out/p13/fit.jsonl"}
+{"t": 28.901, "event": "pane 0: jq -r 'select(.model==\"e4b\" and .kind==\"speed\" and .num_ctx==131072) | [.kv_type,.write_tok_s,.prefill_tok_s] | @tsv' /lab/out/p13/fit.jsonl", "text": "jq -r 'select(.model==\"e4b\" and .kind==\"speed\" and .num_ctx==131072) | [.kv_type,.write_tok_s,.prefill_tok_s] | @tsv' /lab/out/p13/fit.jsonl"}

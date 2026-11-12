@@ -1,0 +1,19 @@
+$ jq -c '.options, .truncate' /film/req-trunc-false.json
+{"temperature":0,"seed":42,"num_predict":64}
+false
+$ curl -s -o /tmp/r.json -w '%{http_code}\n' $OLLAMA_HOST/api/chat -d @/film/req-trunc-false.json
+400
+$ jq -r .error /tmp/r.json
+request (9644 tokens) exceeds the available context size (4096 tokens), try increasing it
+$ 
+
+
+
+
+
+
+
+
+
+
+

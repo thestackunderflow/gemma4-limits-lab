@@ -1,0 +1,18 @@
+$ jq -c 'select(.endpoint=="chat" and .position=="start")' /lab/out/p13/trunc.jsonl | head -1 | jq -c '{status, reply_keys}'
+{"status":200,"reply_keys":["created_at","done","done_reason","eval_count","eval_duration","load_duration","message","model","prompt_eval_cached_count","prompt_eval_count","prompt_eval_duration","total_duration"]}
+$ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

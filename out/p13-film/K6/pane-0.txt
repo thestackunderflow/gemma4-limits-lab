@@ -1,0 +1,21 @@
+$ grep -m1 'truncating input prompt' /film/server-live-K5.log | fold -w 44
+time=2026-11-12T19:44:34.483Z level=WARN sou
+rce=llama_server.go:344 msg="truncating inpu
+t prompt" limit=2051 prompt=9644 keep=5 new=
+2051
+$ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

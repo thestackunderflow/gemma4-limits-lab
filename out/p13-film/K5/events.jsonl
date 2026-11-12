@@ -1,0 +1,5 @@
+{"t": 0.044, "event": "recording started"}
+{"t": 2.852, "event": "pane 0: wc -w /film/vault-start.txt", "text": "wc -w /film/vault-start.txt"}
+{"t": 6.513, "event": "pane 0: head -c 40 /film/vault-start.txt", "text": "head -c 40 /film/vault-start.txt"}
+{"t": 10.295, "event": "pane 0: tail -1 /film/vault-start.txt; echo", "text": "tail -1 /film/vault-start.txt; echo"}
+{"t": 14.131, "event": "pane 0: ollama run gemma4:e4b-it-q4_K_M --verbose --think=false < /film/vault-start.txt", "text": "ollama run gemma4:e4b-it-q4_K_M --verbose --think=false < /film/vault-start.txt"}

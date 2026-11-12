@@ -1,0 +1,20 @@
+$ wc -w /film/vault-start.txt
+7584 /film/vault-start.txt
+$ head -c 40 /film/vault-start.txt
+The access code for the vault is K-77.
+
+$ tail -1 /film/vault-start.txt; echo
+What is the access code for the vault? Answer with the code only.
+$ ollama run gemma4:e4b-it-q4_K_M --verbose --think=false < /film/vault-start.txt
+I am sorry, but there is no mention of a vault or an access code in    
+the text you provided.
+
+total duration:       14.879400809s
+load duration:        13.209090595s
+prompt eval count:    2051 token(s)
+prompt eval duration: 1.414281s
+prompt eval rate:     1450.21 tokens/s
+eval count:           23 token(s)
+eval duration:        202.251ms
+eval rate:            113.72 tokens/s
+$ 

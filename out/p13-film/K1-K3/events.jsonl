@@ -1,0 +1,6 @@
+{"t": 0.043, "event": "recording started"}
+{"t": 2.858, "event": "pane 0: ollama --version", "text": "ollama --version"}
+{"t": 6.275, "event": "pane 0: nvidia-smi --query-gpu=name,memory.total --format=csv,noheader", "text": "nvidia-smi --query-gpu=name,memory.total --format=csv,noheader"}
+{"t": 10.78, "event": "pane 0: clear", "text": "clear"}
+{"t": 13.935, "event": "pane 0: ollama list", "text": "ollama list"}
+{"t": 18.736, "event": "pane 0: ollama list | grep gemma4", "text": "ollama list | grep gemma4"}

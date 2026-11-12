@@ -1,0 +1,17 @@
+$ ollama ps
+NAME                    ID              SIZE      PROCESSOR    CONTEXT    RUNNER      UNTIL                   
+gemma4:e4b-it-q4_K_M    dc35e8d9c606    458 MB    100% GPU     131072     llamacpp    About a minute from now    
+$ 
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,4 @@
+{"t": 0.038, "event": "recording started"}
+{"t": 2.848, "event": "pane 0: jq -r 'select(.model==\"e2b\" and .kind==\"speed\") | [.kv_type,.num_ctx,(.offload|tostring),.write_tok_s] | @tsv' /lab/out/p13/fit.jsonl", "text": "jq -r 'select(.model==\"e2b\" and .kind==\"speed\") | [.kv_type,.num_ctx,(.offload|tostring),.write_tok_s] | @tsv' /lab/out/p13/fit.jsonl"}
+{"t": 11.999, "event": "pane 0: clear", "text": "clear"}
+{"t": 15.148, "event": "pane 0: jq -r 'select(.model==\"e4b\" and .kind==\"speed\") | [.kv_type,.num_ctx,(.offload|tostring),.write_tok_s] | @tsv' /lab/out/p13/fit.jsonl", "text": "jq -r 'select(.model==\"e4b\" and .kind==\"speed\") | [.kv_type,.num_ctx,(.offload|tostring),.write_tok_s] | @tsv' /lab/out/p13/fit.jsonl"}

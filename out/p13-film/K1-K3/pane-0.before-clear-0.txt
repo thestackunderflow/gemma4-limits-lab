@@ -1,0 +1,21 @@
+$ ollama --version
+ollama version is 0.40.16
+$ nvidia-smi --query-gpu=name,memory.total --format=csv,noheader
+NVIDIA GeForce RTX 4060, 8188 MiB
+$ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

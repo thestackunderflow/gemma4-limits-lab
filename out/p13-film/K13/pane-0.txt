@@ -1,0 +1,18 @@
+$ jq -r 'select(.model=="12b-qat" and .kind=="max-fill") | [.kv_type,.num_ctx,(.offload|tostring),.prefill_s,.write_tok_s] | @tsv' /lab/out/p13/fit.jsonl
+f16     262144  [19,49] 836.42  1.4
+q8_0    262144  [23,49] 779.55  4.2
+$ jq -c 'select(.model=="12b-qat") | {model, offload}' /lab/out/p13/def.jsonl
+{"model":"12b-qat","offload":[38,49]}
+$ 
+
+
+
+
+
+
+
+
+
+
+
+

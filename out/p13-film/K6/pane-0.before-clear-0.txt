@@ -1,0 +1,19 @@
+$ grep -m1 'vram-based default context' /lab/out/logs/server-20261111T040329Z.log | fold -w 44
+time=2026-11-11T03:56:10.544Z level=INFO sou
+rce=routes.go:2586 msg="vram-based default c
+ontext" total_vram="8.0 GiB" default_num_ctx
+=4096
+$ grep -m1 'truncating input prompt' /lab/out/logs/server-20261111T040329Z.log | fold -w 44
+time=2026-11-11T04:01:07.088Z level=WARN sou
+rce=llama_server.go:344 msg="truncating inpu
+t prompt" limit=2051 prompt=9644 keep=5 new=
+2051
+$ 
+
+
+
+
+
+
+
+

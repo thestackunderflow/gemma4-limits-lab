@@ -1,0 +1,20 @@
+$ jq -c .options /film/req-16k.json
+{"temperature":0,"seed":42,"num_predict":64,"num_ctx":16384}
+$ curl -s $OLLAMA_HOST/api/chat -d @/film/req-16k.json | jq '.prompt_eval_count, .message.content'
+9644
+"K-77"
+$ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+

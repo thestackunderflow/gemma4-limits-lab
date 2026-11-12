@@ -4,3 +4,8 @@ __pycache__/
 out/tmp/
 data/*.txt
 out/logs/server.log
+# Part 13 film takes: videos/images stay local (sha256 in TAKES.md); prompt text is regenerable
+out/p13-film/**/*.mp4
+out/p13-film/**/*.png
+out/p13-film/vault-start.txt
+out/p13-film/req-*.json

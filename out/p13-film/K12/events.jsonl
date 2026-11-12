@@ -1,0 +1,5 @@
+{"t": 0.022, "event": "recording started"}
+{"t": 2.834, "event": "pane 1: nvidia-smi --query-gpu=memory.used,memory.total --format=csv -l 1", "text": "nvidia-smi --query-gpu=memory.used,memory.total --format=csv -l 1"}
+{"t": 8.377, "event": "pane 0: curl -s $OLLAMA_HOST/api/generate -d '{\"model\":\"gemma4:e4b-it-q4_K_M\",\"prompt\":\"Say OK.\",\"stream\":false,\"think\":false,\"keep_alive\":\"2m\",\"options\":{\"num_ctx\":131072}}' | jq -r .response", "text": "curl -s $OLLAMA_HOST/api/generate -d '{\"model\":\"gemma4:e4b-it-q4_K_M\",\"prompt\":\"Say OK.\",\"stream\":false,\"think\":false,\"keep_alive\":\"2m\",\"options\":{\"num_ctx\":131072}}' | jq -r .response"}
+{"t": 25.697, "event": "pane 2: ollama ps", "text": "ollama ps"}
+{"t": 28.937, "event": "pane 0: grep offloaded /film/server-live-K12.log | tail -2", "text": "grep offloaded /film/server-live-K12.log | tail -2"}

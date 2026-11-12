@@ -1,0 +1,15 @@
+$ curl -s $OLLAMA_HOST/api/generate -d '{"model":"gemma4:e4b-it-q4_K_M","prompt":"Say OK.","stream":false,"think":false,"keep_alive":"2m","options":{"num_ctx":131072}}' | jq -r .response
+OK.
+$ grep offloaded /film/server-live-K12.log | tail -2
+load_tensors: offloaded 40/43 layers to GPU
+load_tensors: offloaded 5/5 layers to GPU
+$ 
+
+
+
+
+
+
+
+
+

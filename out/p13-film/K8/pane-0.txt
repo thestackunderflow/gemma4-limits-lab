@@ -1,0 +1,21 @@
+$ ollama run gemma4:e4b-it-q4_K_M --think=false
+>>> /set parameter num_ctx 16384
+Set parameter 'num_ctx' to '16384'
+>>> /save gemma4-e4b-16k        
+Error: pull model manifest: file does not exist
+$ /bye
+bash: /bye: No such file or directory
+$ 
+
+
+
+
+
+
+
+
+
+
+
+
+

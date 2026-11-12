@@ -1,0 +1,24 @@
+$ curl -s $OLLAMA_HOST/api/generate -d '{"model":"gemma4:e4b-it-q4_K_M","prompt":"Say OK.","stream":false,"think":false,"keep_alive":"2m","options":{"num_ctx":16384}}' | jq -r .response
+OK.
+$ ollama ps
+NAME                    ID              SIZE      PROCESSOR    CONTEXT    RUNNER      UNTIL                   
+gemma4:e4b-it-q4_K_M    dc35e8d9c606    362 MB    100% GPU     16384      llamacpp    About a minute from now    
+$ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

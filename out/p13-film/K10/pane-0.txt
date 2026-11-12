@@ -1,0 +1,20 @@
+$ curl -s $OLLAMA_HOST/api/chat -d @/film/req-16k.json | jq '.prompt_eval_count, .message.content'
+9644
+"K-77"
+$ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,21 @@
+$ ollama list
+NAME                    ID              SIZE      MODIFIED     
+gemma4:e2b-it-q4_K_M    b37049369adf    4.6 GB    40 hours ago    
+gemma4:26b              001e5dafc3c7    18 GB     3 weeks ago     
+gemma4:12b-nvfp4        ded7a2735003    7.7 GB    3 weeks ago     
+gemma3:12b-it-qat       c615ec41b385    8.9 GB    3 weeks ago     
+gemma4:12b-it-q4_K_M    6114515d63c1    8.0 GB    3 weeks ago     
+gemma4:12b-it-qat       38044be4f923    7.2 GB    3 weeks ago     
+gemma4:e4b-it-q4_K_M    dc35e8d9c606    6.6 GB    3 weeks ago     
+$ ollama list | grep gemma4
+gemma4:e2b-it-q4_K_M    b37049369adf    4.6 GB    40 hours ago    
+gemma4:26b              001e5dafc3c7    18 GB     3 weeks ago     
+gemma4:12b-nvfp4        ded7a2735003    7.7 GB    3 weeks ago     
+gemma4:12b-it-q4_K_M    6114515d63c1    8.0 GB    3 weeks ago     
+gemma4:12b-it-qat       38044be4f923    7.2 GB    3 weeks ago     
+gemma4:e4b-it-q4_K_M    dc35e8d9c606    6.6 GB    3 weeks ago     
+$ 
+
+
+
+

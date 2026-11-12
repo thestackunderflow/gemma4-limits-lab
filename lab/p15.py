@@ -10,7 +10,7 @@ import time
 import jsonschema
 import requests
 
-from lab import common as c, graders as g, images, logparse, ollama as o, tasks
+from lab import common as c, graders as g, images, logparse, ollama as o, samples, tasks
 
 OUT = os.path.join(c.ROOT, "out", "p15")
 KEEP = "15m"   # P-CAN runs warm (one load per model per section); only the first row of a section is a fresh load
@@ -26,6 +26,12 @@ class Session:
         self.first = c.fresh()
 
     def chat(self, messages, think=False, num_predict=1024, **extra):
+        # llama-server keeps a host-RAM prompt cache that grows over a long warm session (2.3 -> 4.7 GiB in 25 min
+        # on 11 Nov, which took Windows under 1 GB free once): reload when the container passes 6 GiB.
+        last = samples.mem()[-1:] if samples.mem() else []
+        if last and (last[0]["ram_mib"] or 0) > 6144:
+            c.say("container RAM", last[0]["ram_mib"], "MiB: reloading")
+            self.first = c.fresh()
         m = o.log_mark()
         st, js, dt = o.chat(self.tag, messages, {"temperature": self.temp, "seed": self.seed,
                                                  "num_predict": num_predict, "num_ctx": 8192},

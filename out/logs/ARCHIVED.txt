@@ -1,0 +1,2 @@
+server.log fe2c9b91d0c1efe6289edeb8772bfb3f728ebc33b97518b8386a20abd756198b 12422133 bytes -> E:\2026-SomaPersonal\StackUnderflow-archive\gemma4-limits-lab\logs\
+server-20261112T065131Z.log 00a45168b034d6577788cd6b959aca368369a4fd323f2669957731d7cafbd035 8257820 bytes -> E:\2026-SomaPersonal\StackUnderflow-archive\gemma4-limits-lab\logs\

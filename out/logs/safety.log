@@ -1,3 +1,12 @@
 2026-11-10 23:04:37 STOP low RAM 0.72
 2026-11-11 00:58:02 STOP low RAM 0.98
 2026-11-11 00:59:36 closed chrome+firefox gracefully (owner allowed closing apps); Windows free 7.09 GB after
+2026-11-11 01:05:15 samplers restarted (the first stage2 run's late 'sampler stop' stopped them ~2 min)
+2026-11-11 07:06:53 Windows Update reboot at 01:29 (event 1074, not RAM); 12b-qat thinking rows from stage2b set aside as can-12b-thinking-partial-reboot.jsonl; resuming night.sh
+2026-11-11 07:36:35 Claude Code reaped night.sh for low host RAM (Windows 3.8 GB free); lab containers stopped; waiting for the owner
+2026-11-11 20:36:25 07:36 reaped rows (12b-qat thinking x19) set aside as can-12b-thinking-partial-reaped-0736.jsonl; tonight.sh scheduled
+2026-11-11 23:00:23 tonight.sh: closed chrome+firefox at start; Windows free GB: 8.69
+closed chrome+firefox gracefully at 2026-11-12 01:51:28; Windows free GB after: 9.54
+2026-11-12 01:52:07 STOP low RAM 0.56
+2026-11-12 01:52:28 STOP low RAM 0.61
+2026-11-12 01:55:13 STOP low RAM 0.75

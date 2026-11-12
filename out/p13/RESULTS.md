@@ -2,7 +2,7 @@
 
 - Engine: `ollama/ollama:0.40.16@sha256:910d0d8107b538fb0894e63163eb195de0cc7aefcbc666dc62d3b18f71124592` (version reported by every row: ['0.40.16'])
 - Host: RTX 4060 8 GB (about 3.0 GB held by the Windows desktop before any load), driver 610.88, Docker Desktop WSL 2, Ollama container cap 12g (16g for the 26B stage), OLLAMA_FLASH_ATTENTION=1, OLLAMA_NUM_PARALLEL=1, OLLAMA_KEEP_ALIVE=0
-- Tags (tag, digest, MTP draft): `gemma4:12b-it-qat` 38044be4f923 draft=False; `gemma4:e2b-it-q4_K_M` b37049369adf draft=True; `gemma4:e4b-it-q4_K_M` dc35e8d9c606 draft=True
+- Tags (tag, digest, MTP draft): `gemma4:12b-it-qat` 38044be4f923 draft=False; `gemma4:26b` 001e5dafc3c7 draft=True; `gemma4:e2b-it-q4_K_M` b37049369adf draft=True; `gemma4:e4b-it-q4_K_M` dc35e8d9c606 draft=True
 - Commands: `scripts/stage1.sh` = `scripts/lab.sh up f16; scripts/lab.sh run p13 def --models e2b,e4b,12b-qat; scripts/lab.sh run p13 trunc --reps 3; scripts/lab.sh run p_fit --kv f16 --models e2b,e4b,12b-qat; scripts/lab.sh up q8_0; scripts/lab.sh run p_fit --kv q8_0 --models e2b,e4b,12b-qat`; 26B rows: `scripts/stage4.sh`
 - Server logs: `out/logs/` (archive: see LAB-STATUS.md)
 
@@ -48,6 +48,7 @@
 | 12b-qat | q8_0 | 131072 | speed | 3/3 | ['q8_0'] | ['5%/95% CPU/GPU'] | [(30, 49)] | 7181.0 | 1958.9 | 16216 | 775.5 | 11.4 | 20.9 |  |
 | 12b-qat | q8_0 | 262144 | max-fill | 1/1 | ['q8_0'] | ['8%/92% CPU/GPU'] | [(23, 49)] | 7231.0 | 2927.6 | 251709 | 322.9 | 4.2 | 779.5 |  |
 | 12b-qat | q8_0 | 262144 | speed | 3/3 | ['q8_0'] | ['8%/92% CPU/GPU'] | [(23, 49)] | 7229.0 | 2816.0 | 16216 | 667.7 | 9.5 | 24.3 |  |
+| 26b | q8_0 | 65536 | speed | 1/2 | ['q8_0'] | ['21%/79% CPU/GPU'] | [(31, 31)] | 7587.0 | 15001.6 | 16216 | 285.3 | 17.6 | 56.8 | ConnectionError(ProtocolError('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))) |
 | e2b | f16 | 4096 | speed | 3/3 | ['f16'] | ['100% GPU'] | [(36, 36)] | 4198.0 | 1157.1 | 2168 | 5371.9 | 115.9 | 0.4 |  |
 | e2b | f16 | 16384 | speed | 3/3 | ['f16'] | ['100% GPU'] | [(36, 36)] | 4436.0 | 1216.5 | 8086 | 10051.4 | 125.5 | 0.8 |  |
 | e2b | f16 | 32768 | speed | 3/3 | ['f16'] | ['100% GPU'] | [(36, 36)] | 4596.0 | 1381.4 | 16212 | 11377.0 | 109.1 | 1.4 |  |

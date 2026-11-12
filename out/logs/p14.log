@@ -175,3 +175,336 @@ Traceback (most recent call last):
   File "/usr/local/lib/python3.12/site-packages/requests/adapters.py", line 700, in send
     raise ConnectionError(e, request=request)
 requests.exceptions.ConnectionError: HTTPConnectionPool(host='ollama', port=11434): Max retries exceeded with url: /api/ps (Caused by NameResolutionError("HTTPConnection(host='ollama', port=11434): Failed to resolve 'ollama' ([Errno -2] Name or service not known)"))
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/urllib3/connection.py", line 239, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/urllib3/util/connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/socket.py", line 978, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno -2] Name or service not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 793, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 499, in _make_request
+    conn.request(
+  File "/usr/local/lib/python3.12/site-packages/urllib3/connection.py", line 567, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.12/http/client.py", line 1353, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.12/http/client.py", line 1113, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.12/http/client.py", line 1057, in send
+    self.connect()
+  File "/usr/local/lib/python3.12/site-packages/urllib3/connection.py", line 398, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/urllib3/connection.py", line 246, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+urllib3.exceptions.NameResolutionError: HTTPConnection(host='gemma4-limits-tok', port=8080): Failed to resolve 'gemma4-limits-tok' ([Errno -2] Name or service not known)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 847, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/urllib3/util/retry.py", line 555, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='gemma4-limits-tok', port=8080): Max retries exceeded with url: /tokenize (Caused by NameResolutionError("HTTPConnection(host='gemma4-limits-tok', port=8080): Failed to resolve 'gemma4-limits-tok' ([Errno -2] Name or service not known)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/work/lab/p14.py", line 232, in <module>
+    tokens(a.get("url", "http://gemma4-limits-tok:8080"))
+  File "/work/lab/p14.py", line 215, in tokens
+    r = requests.post(f"{url}/tokenize", json={"content": w_, "with_pieces": True, "add_special": False},
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/requests/adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='gemma4-limits-tok', port=8080): Max retries exceeded with url: /tokenize (Caused by NameResolutionError("HTTPConnection(host='gemma4-limits-tok', port=8080): Failed to resolve 'gemma4-limits-tok' ([Errno -2] Name or service not known)"))
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/urllib3/connection.py", line 239, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/urllib3/util/connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/socket.py", line 978, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno -2] Name or service not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 793, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 499, in _make_request
+    conn.request(
+  File "/usr/local/lib/python3.12/site-packages/urllib3/connection.py", line 567, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.12/http/client.py", line 1353, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.12/http/client.py", line 1113, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.12/http/client.py", line 1057, in send
+    self.connect()
+  File "/usr/local/lib/python3.12/site-packages/urllib3/connection.py", line 398, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/urllib3/connection.py", line 246, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+urllib3.exceptions.NameResolutionError: HTTPConnection(host='ollama', port=11434): Failed to resolve 'ollama' ([Errno -2] Name or service not known)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 847, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/urllib3/util/retry.py", line 555, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='ollama', port=11434): Max retries exceeded with url: /api/ps (Caused by NameResolutionError("HTTPConnection(host='ollama', port=11434): Failed to resolve 'ollama' ([Errno -2] Name or service not known)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/work/lab/p14.py", line 229, in <module>
+    run(a.get("models", "e4b,12b-qat").split(","), int(a.get("t1reps", 5)),
+  File "/work/lab/p14.py", line 189, in run
+    s = Session(key, temp, seed, w, sec)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/lab/p15.py", line 26, in __init__
+    self.first = c.fresh()
+                 ^^^^^^^^^
+  File "/work/lab/common.py", line 61, in fresh
+    ok = o.unload_all()
+         ^^^^^^^^^^^^^^
+  File "/work/lab/ollama.py", line 57, in unload_all
+    for m in ps():
+             ^^^^
+  File "/work/lab/ollama.py", line 53, in ps
+    return parse_ps(requests.get(f"{URL}/api/ps", timeout=60).json())
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/requests/adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='ollama', port=11434): Max retries exceeded with url: /api/ps (Caused by NameResolutionError("HTTPConnection(host='ollama', port=11434): Failed to resolve 'ollama' ([Errno -2] Name or service not known)"))
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/urllib3/connection.py", line 239, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/urllib3/util/connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/socket.py", line 978, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno -2] Name or service not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 793, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 499, in _make_request
+    conn.request(
+  File "/usr/local/lib/python3.12/site-packages/urllib3/connection.py", line 567, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.12/http/client.py", line 1353, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.12/http/client.py", line 1113, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.12/http/client.py", line 1057, in send
+    self.connect()
+  File "/usr/local/lib/python3.12/site-packages/urllib3/connection.py", line 398, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/urllib3/connection.py", line 246, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+urllib3.exceptions.NameResolutionError: HTTPConnection(host='ollama', port=11434): Failed to resolve 'ollama' ([Errno -2] Name or service not known)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 847, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/urllib3/util/retry.py", line 555, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='ollama', port=11434): Max retries exceeded with url: /api/ps (Caused by NameResolutionError("HTTPConnection(host='ollama', port=11434): Failed to resolve 'ollama' ([Errno -2] Name or service not known)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/work/lab/p14.py", line 229, in <module>
+    run(a.get("models", "e4b,12b-qat").split(","), int(a.get("t1reps", 5)),
+  File "/work/lab/p14.py", line 189, in run
+    s = Session(key, temp, seed, w, sec)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/lab/p15.py", line 26, in __init__
+    self.first = c.fresh()
+                 ^^^^^^^^^
+  File "/work/lab/common.py", line 61, in fresh
+    ok = o.unload_all()
+         ^^^^^^^^^^^^^^
+  File "/work/lab/ollama.py", line 57, in unload_all
+    for m in ps():
+             ^^^^
+  File "/work/lab/ollama.py", line 53, in ps
+    return parse_ps(requests.get(f"{URL}/api/ps", timeout=60).json())
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/requests/adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='ollama', port=11434): Max retries exceeded with url: /api/ps (Caused by NameResolutionError("HTTPConnection(host='ollama', port=11434): Failed to resolve 'ollama' ([Errno -2] Name or service not known)"))
+04:34:46 CANT {'model': 'e4b', 'section': 'mul', 'think': False, 'temp': 0.0, 'rep': 1, 'passed': 1, 'total': 20}
+04:35:38 CANT {'model': 'e4b', 'section': 'mul', 'think': True, 'temp': 0.0, 'rep': 1, 'passed': 12, 'total': 20}
+04:35:46 CANT {'model': 'e4b', 'section': 'mul', 'fix': 'calculator tool', 'temp': 0.0, 'rep': 1, 'passed': 0, 'total': 20}
+04:36:01 CANT {'model': 'e4b', 'section': 'letters', 'temp': 0.0, 'rep': 1, 'passed': 14, 'total': 20}
+04:36:14 CANT {'model': 'e4b', 'section': 'letters', 'fix': 'spell first', 'temp': 0.0, 'rep': 1, 'passed': 20, 'total': 20}
+04:36:28 CANT {'model': 'e4b', 'section': 'dates', 'temp': 0.0, 'rep': 1, 'passed': 0, 'total': 10}
+04:36:31 CANT {'model': 'e4b', 'section': 'dates', 'fix': 'date in system prompt', 'temp': 0.0, 'rep': 1, 'passed': 9, 'total': 10}
+04:36:42 CANT {'model': 'e4b', 'section': 'cutoff', 'temp': 0.0, 'rep': 1, 'passed': 0, 'total': 6}
+04:36:44 CANT {'model': 'e4b', 'section': 'cutoff', 'fix': 'paste the source', 'temp': 0.0, 'rep': 1, 'passed': 6, 'total': 6}
+04:37:02 CANT {'model': 'e4b', 'section': 'cite', 'temp': 0.0, 'rep': 1, 'listed': 10, 'doi_resolves': 9, 'title_matches': 1}
+04:37:19 CANT {'model': 'e4b', 'section': 'mul', 'think': False, 'temp': 1.0, 'rep': 1, 'passed': 1, 'total': 20}
+04:38:41 CANT {'model': 'e4b', 'section': 'mul', 'think': True, 'temp': 1.0, 'rep': 1, 'passed': 13, 'total': 20}
+04:38:48 CANT {'model': 'e4b', 'section': 'mul', 'fix': 'calculator tool', 'temp': 1.0, 'rep': 1, 'passed': 0, 'total': 20}
+04:39:04 CANT {'model': 'e4b', 'section': 'letters', 'temp': 1.0, 'rep': 1, 'passed': 14, 'total': 20}
+04:39:16 CANT {'model': 'e4b', 'section': 'letters', 'fix': 'spell first', 'temp': 1.0, 'rep': 1, 'passed': 20, 'total': 20}
+04:39:30 CANT {'model': 'e4b', 'section': 'dates', 'temp': 1.0, 'rep': 1, 'passed': 0, 'total': 10}
+04:39:33 CANT {'model': 'e4b', 'section': 'dates', 'fix': 'date in system prompt', 'temp': 1.0, 'rep': 1, 'passed': 9, 'total': 10}
+04:39:45 CANT {'model': 'e4b', 'section': 'cutoff', 'temp': 1.0, 'rep': 1, 'passed': 0, 'total': 6}
+04:39:47 CANT {'model': 'e4b', 'section': 'cutoff', 'fix': 'paste the source', 'temp': 1.0, 'rep': 1, 'passed': 6, 'total': 6}
+04:40:06 CANT {'model': 'e4b', 'section': 'cite', 'temp': 1.0, 'rep': 1, 'listed': 10, 'doi_resolves': 9, 'title_matches': 0}
+04:40:23 CANT {'model': 'e4b', 'section': 'mul', 'think': False, 'temp': 1.0, 'rep': 2, 'passed': 0, 'total': 20}
+04:41:32 CANT {'model': 'e4b', 'section': 'mul', 'think': True, 'temp': 1.0, 'rep': 2, 'passed': 10, 'total': 20}
+04:41:40 CANT {'model': 'e4b', 'section': 'mul', 'fix': 'calculator tool', 'temp': 1.0, 'rep': 2, 'passed': 0, 'total': 20}
+04:41:55 CANT {'model': 'e4b', 'section': 'letters', 'temp': 1.0, 'rep': 2, 'passed': 14, 'total': 20}
+04:42:07 CANT {'model': 'e4b', 'section': 'letters', 'fix': 'spell first', 'temp': 1.0, 'rep': 2, 'passed': 20, 'total': 20}
+04:42:21 CANT {'model': 'e4b', 'section': 'dates', 'temp': 1.0, 'rep': 2, 'passed': 0, 'total': 10}
+04:42:24 CANT {'model': 'e4b', 'section': 'dates', 'fix': 'date in system prompt', 'temp': 1.0, 'rep': 2, 'passed': 9, 'total': 10}
+04:42:36 CANT {'model': 'e4b', 'section': 'cutoff', 'temp': 1.0, 'rep': 2, 'passed': 0, 'total': 6}
+04:42:38 CANT {'model': 'e4b', 'section': 'cutoff', 'fix': 'paste the source', 'temp': 1.0, 'rep': 2, 'passed': 6, 'total': 6}
+04:42:56 CANT {'model': 'e4b', 'section': 'cite', 'temp': 1.0, 'rep': 2, 'listed': 10, 'doi_resolves': 7, 'title_matches': 0}
+04:43:12 CANT {'model': 'e4b', 'section': 'mul', 'think': False, 'temp': 1.0, 'rep': 3, 'passed': 0, 'total': 20}
+04:44:41 CANT {'model': 'e4b', 'section': 'mul', 'think': True, 'temp': 1.0, 'rep': 3, 'passed': 11, 'total': 20}
+04:44:49 CANT {'model': 'e4b', 'section': 'mul', 'fix': 'calculator tool', 'temp': 1.0, 'rep': 3, 'passed': 0, 'total': 20}
+04:45:05 CANT {'model': 'e4b', 'section': 'letters', 'temp': 1.0, 'rep': 3, 'passed': 14, 'total': 20}
+04:45:17 CANT {'model': 'e4b', 'section': 'letters', 'fix': 'spell first', 'temp': 1.0, 'rep': 3, 'passed': 19, 'total': 20}
+04:45:31 CANT {'model': 'e4b', 'section': 'dates', 'temp': 1.0, 'rep': 3, 'passed': 0, 'total': 10}
+04:45:34 CANT {'model': 'e4b', 'section': 'dates', 'fix': 'date in system prompt', 'temp': 1.0, 'rep': 3, 'passed': 9, 'total': 10}
+04:45:46 CANT {'model': 'e4b', 'section': 'cutoff', 'temp': 1.0, 'rep': 3, 'passed': 0, 'total': 6}
+04:45:48 CANT {'model': 'e4b', 'section': 'cutoff', 'fix': 'paste the source', 'temp': 1.0, 'rep': 3, 'passed': 6, 'total': 6}
+04:46:06 CANT {'model': 'e4b', 'section': 'cite', 'temp': 1.0, 'rep': 3, 'listed': 10, 'doi_resolves': 8, 'title_matches': 2}
+04:46:23 CANT {'model': 'e4b', 'section': 'mul', 'think': False, 'temp': 1.0, 'rep': 4, 'passed': 0, 'total': 20}
+04:47:27 CANT {'model': 'e4b', 'section': 'mul', 'think': True, 'temp': 1.0, 'rep': 4, 'passed': 10, 'total': 20}
+04:47:35 CANT {'model': 'e4b', 'section': 'mul', 'fix': 'calculator tool', 'temp': 1.0, 'rep': 4, 'passed': 0, 'total': 20}
+04:47:50 CANT {'model': 'e4b', 'section': 'letters', 'temp': 1.0, 'rep': 4, 'passed': 14, 'total': 20}
+04:48:03 CANT {'model': 'e4b', 'section': 'letters', 'fix': 'spell first', 'temp': 1.0, 'rep': 4, 'passed': 20, 'total': 20}
+04:48:16 CANT {'model': 'e4b', 'section': 'dates', 'temp': 1.0, 'rep': 4, 'passed': 0, 'total': 10}
+04:48:20 CANT {'model': 'e4b', 'section': 'dates', 'fix': 'date in system prompt', 'temp': 1.0, 'rep': 4, 'passed': 9, 'total': 10}
+04:48:32 CANT {'model': 'e4b', 'section': 'cutoff', 'temp': 1.0, 'rep': 4, 'passed': 0, 'total': 6}
+04:48:34 CANT {'model': 'e4b', 'section': 'cutoff', 'fix': 'paste the source', 'temp': 1.0, 'rep': 4, 'passed': 6, 'total': 6}
+04:48:53 CANT {'model': 'e4b', 'section': 'cite', 'temp': 1.0, 'rep': 4, 'listed': 10, 'doi_resolves': 10, 'title_matches': 1}
+04:49:10 CANT {'model': 'e4b', 'section': 'mul', 'think': False, 'temp': 1.0, 'rep': 5, 'passed': 0, 'total': 20}
+04:50:31 CANT {'model': 'e4b', 'section': 'mul', 'think': True, 'temp': 1.0, 'rep': 5, 'passed': 11, 'total': 20}
+04:50:39 CANT {'model': 'e4b', 'section': 'mul', 'fix': 'calculator tool', 'temp': 1.0, 'rep': 5, 'passed': 0, 'total': 20}
+04:50:54 CANT {'model': 'e4b', 'section': 'letters', 'temp': 1.0, 'rep': 5, 'passed': 14, 'total': 20}
+04:51:07 CANT {'model': 'e4b', 'section': 'letters', 'fix': 'spell first', 'temp': 1.0, 'rep': 5, 'passed': 19, 'total': 20}
+04:51:20 CANT {'model': 'e4b', 'section': 'dates', 'temp': 1.0, 'rep': 5, 'passed': 0, 'total': 10}
+04:51:23 CANT {'model': 'e4b', 'section': 'dates', 'fix': 'date in system prompt', 'temp': 1.0, 'rep': 5, 'passed': 9, 'total': 10}
+04:51:36 CANT {'model': 'e4b', 'section': 'cutoff', 'temp': 1.0, 'rep': 5, 'passed': 0, 'total': 6}
+04:51:38 CANT {'model': 'e4b', 'section': 'cutoff', 'fix': 'paste the source', 'temp': 1.0, 'rep': 5, 'passed': 6, 'total': 6}
+04:51:57 CANT {'model': 'e4b', 'section': 'cite', 'temp': 1.0, 'rep': 5, 'listed': 10, 'doi_resolves': 9, 'title_matches': 0}
+04:52:33 CANT {'model': '12b-qat', 'section': 'mul', 'think': False, 'temp': 0.0, 'rep': 1, 'passed': 0, 'total': 20}
+06:02:59 container RAM 6383.6 MiB: reloading
+06:43:06 CANT {'model': '12b-qat', 'section': 'mul', 'think': True, 'temp': 0.0, 'rep': 1, 'passed': 6, 'total': 20}
+06:43:59 CANT {'model': '12b-qat', 'section': 'mul', 'fix': 'calculator tool', 'temp': 0.0, 'rep': 1, 'passed': 20, 'total': 20}
+06:44:24 CANT {'model': '12b-qat', 'section': 'letters', 'temp': 0.0, 'rep': 1, 'passed': 14, 'total': 20}
+06:45:24 CANT {'model': '12b-qat', 'section': 'letters', 'fix': 'spell first', 'temp': 0.0, 'rep': 1, 'passed': 20, 'total': 20}
+06:45:47 CANT {'model': '12b-qat', 'section': 'dates', 'temp': 0.0, 'rep': 1, 'passed': 0, 'total': 10}
+06:45:55 CANT {'model': '12b-qat', 'section': 'dates', 'fix': 'date in system prompt', 'temp': 0.0, 'rep': 1, 'passed': 9, 'total': 10}
+06:46:09 CANT {'model': '12b-qat', 'section': 'cutoff', 'temp': 0.0, 'rep': 1, 'passed': 0, 'total': 6}
+06:46:16 CANT {'model': '12b-qat', 'section': 'cutoff', 'fix': 'paste the source', 'temp': 0.0, 'rep': 1, 'passed': 6, 'total': 6}
+06:46:49 CANT {'model': '12b-qat', 'section': 'cite', 'temp': 0.0, 'rep': 1, 'listed': 10, 'doi_resolves': 10, 'title_matches': 1}
+06:51:07 TOK strawberry [{'id': 115137, 'piece': 'strawberry'}]
+06:51:07 TOK mississippi [{'id': 6204, 'piece': 'miss'}, {'id': 31142, 'piece': 'issippi'}]
+06:51:07 TOK bookkeeper [{'id': 3070, 'piece': 'book'}, {'id': 46815, 'piece': 'keeper'}]
+06:51:07 TOK embarrassment [{'id': 156413, 'piece': 'embar'}, {'id': 22863, 'piece': 'rass'}, {'id': 658, 'piece': 'ment'}]
+06:51:07 TOK hippopotamus [{'id': 110988, 'piece': 'hipp'}, {'id': 64981, 'piece': 'opot'}, {'id': 55569, 'piece': 'amus'}]
+06:51:07 TOK  strawberry [{'id': 35324, 'piece': ' strawberry'}]
+06:51:07 TOK Strawberry [{'id': 174809, 'piece': 'Strawberry'}]
+06:51:07 TOK 4821 × 7293 [{'id': 236812, 'piece': '4'}, {'id': 236828, 'piece': '8'}, {'id': 236778, 'piece': '2'}, {'id': 236770, 'piece': '1'}, {'id': 15666, 'piece': ' ×'}, {'id': 236743, 'piece': ' '}, {'id': 236832, 'piece': '7'}, {'id': 236778, 'piece': '2'}, {'id': 236819, 'piece': '9'}, {'id': 236800, 'piece': '3'}]
+06:51:07 TOK 35159553 [{'id': 236800, 'piece': '3'}, {'id': 236810, 'piece': '5'}, {'id': 236770, 'piece': '1'}, {'id': 236810, 'piece': '5'}, {'id': 236819, 'piece': '9'}, {'id': 236810, 'piece': '5'}, {'id': 236810, 'piece': '5'}, {'id': 236800, 'piece': '3'}]
+06:51:07 TOK 12,345,678 [{'id': 236770, 'piece': '1'}, {'id': 236778, 'piece': '2'}, {'id': 236764, 'piece': ','}, {'id': 236800, 'piece': '3'}, {'id': 236812, 'piece': '4'}, {'id': 236810, 'piece': '5'}, {'id': 236764, 'piece': ','}, {'id': 236825, 'piece': '6'}, {'id': 236832, 'piece': '7'}, {'id': 236828, 'piece': '8'}]
+06:51:07 TOK 2026-11-10 [{'id': 236778, 'piece': '2'}, {'id': 236771, 'piece': '0'}, {'id': 236778, 'piece': '2'}, {'id': 236825, 'piece': '6'}, {'id': 236772, 'piece': '-'}, {'id': 236770, 'piece': '1'}, {'id': 236770, 'piece': '1'}, {'id': 236772, 'piece': '-'}, {'id': 236770, 'piece': '1'}, {'id': 236771, 'piece': '0'}]
+06:51:07 TOK strawberry [{'id': 115137, 'piece': 'strawberry'}]
+06:51:07 TOK banana [{'id': 50044, 'piece': 'banana'}]
+06:51:07 TOK mississippi [{'id': 6204, 'piece': 'miss'}, {'id': 31142, 'piece': 'issippi'}]
+06:51:07 TOK committee [{'id': 59416, 'piece': 'committee'}]
+06:51:07 TOK bookkeeper [{'id': 3070, 'piece': 'book'}, {'id': 46815, 'piece': 'keeper'}]

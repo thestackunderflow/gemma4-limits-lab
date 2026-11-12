@@ -945,6 +945,34 @@
    "estimate_minutes": null
   },
   {
+   "model": "26b",
+   "kv_set": "q8_0",
+   "num_ctx": 65536,
+   "kind": "speed",
+   "loads": "1/2",
+   "kv_read_back": [
+    "q8_0"
+   ],
+   "processor": [
+    "21%/79% CPU/GPU"
+   ],
+   "offload": [
+    [
+     31,
+     31
+    ]
+   ],
+   "gpu_mib_max_median": 7587.0,
+   "container_ram_mib_max_median": 15001.6,
+   "prompt_tokens": 16216,
+   "prefill_tok_s_median": 285.3,
+   "write_tok_s_median": 17.6,
+   "prefill_s_median": 56.8,
+   "load_s_median": 32.2,
+   "error": "ConnectionError(ProtocolError('Connection aborted.', RemoteDisconnected('Remote end closed connection without response')))",
+   "estimate_minutes": null
+  },
+  {
    "model": "e2b",
    "kv_set": "f16",
    "num_ctx": 4096,

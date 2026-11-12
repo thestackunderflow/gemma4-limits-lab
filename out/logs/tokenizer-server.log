@@ -1,0 +1,3 @@
+0.05.380.445 I srv    load_model: initializing, n_slots = 4, n_ctx_slot = 512, kv_unified = 'true'
+0.05.385.329 I srv  llama_server: model loaded
+0.05.385.347 I srv  llama_server: listening on http://0.0.0.0:8080

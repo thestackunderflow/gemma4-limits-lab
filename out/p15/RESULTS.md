@@ -23,6 +23,83 @@
 | 12b-qat | tools | 0.0 | 1 | 10/10 |
 | 12b-qat | coding | 0.0 | 1 | 10/10 |
 | 12b-qat | multilingual | 0.0 | 1 | 10/10 |
+| 12b-qat | thinking | 0.0 | 1 | {"off": {"passed": 10, "total": 10, "seconds_total": 163.9}, "on": {"passed": 7, "total": 10, "seconds_total": 1816.6}} |
+| 12b-qat | json | 0.0 | 1 | 9/10 |
+| e4b | ocr | 1.0 | 1 | 10/10 |
+| e4b | charts | 1.0 | 1 | 2/5 |
+| e4b | pairs | 1.0 | 1 | 5/5 |
+| e4b | tools | 1.0 | 1 | 10/10 |
+| e4b | coding | 1.0 | 1 | 10/10 |
+| e4b | multilingual | 1.0 | 1 | 10/10 |
+| e4b | thinking | 1.0 | 1 | {"off": {"passed": 10, "total": 10, "seconds_total": 36.5}, "on": {"passed": 10, "total": 10, "seconds_total": 52.0}} |
+| e4b | json | 1.0 | 1 | 9/10 |
+| e4b | ocr | 1.0 | 2 | 10/10 |
+| e4b | charts | 1.0 | 2 | 2/5 |
+| e4b | pairs | 1.0 | 2 | 5/5 |
+| e4b | tools | 1.0 | 2 | 10/10 |
+| e4b | coding | 1.0 | 2 | 10/10 |
+| e4b | multilingual | 1.0 | 2 | 10/10 |
+| e4b | thinking | 1.0 | 2 | {"off": {"passed": 8, "total": 10, "seconds_total": 38.4}, "on": {"passed": 10, "total": 10, "seconds_total": 54.4}} |
+| e4b | json | 1.0 | 2 | 10/10 |
+| e4b | ocr | 1.0 | 3 | 10/10 |
+| e4b | charts | 1.0 | 3 | 1/5 |
+| e4b | pairs | 1.0 | 3 | 5/5 |
+| e4b | tools | 1.0 | 3 | 10/10 |
+| e4b | coding | 1.0 | 3 | 10/10 |
+| e4b | multilingual | 1.0 | 3 | 10/10 |
+| e4b | thinking | 1.0 | 3 | {"off": {"passed": 10, "total": 10, "seconds_total": 37.2}, "on": {"passed": 10, "total": 10, "seconds_total": 50.9}} |
+| e4b | json | 1.0 | 3 | 9/10 |
+| e4b | ocr | 1.0 | 4 | 10/10 |
+| e4b | charts | 1.0 | 4 | 2/5 |
+| e4b | pairs | 1.0 | 4 | 5/5 |
+| e4b | tools | 1.0 | 4 | 10/10 |
+| e4b | coding | 1.0 | 4 | 9/10 |
+| e4b | multilingual | 1.0 | 4 | 10/10 |
+| e4b | thinking | 1.0 | 4 | {"off": {"passed": 9, "total": 10, "seconds_total": 80.8}, "on": {"passed": 10, "total": 10, "seconds_total": 52.3}} |
+| e4b | json | 1.0 | 4 | 9/10 |
+| e4b | ocr | 1.0 | 5 | 9/10 |
+| e4b | charts | 1.0 | 5 | 1/5 |
+| e4b | pairs | 1.0 | 5 | 5/5 |
+| e4b | tools | 1.0 | 5 | 10/10 |
+| e4b | coding | 1.0 | 5 | 10/10 |
+| e4b | multilingual | 1.0 | 5 | 10/10 |
+| e4b | thinking | 1.0 | 5 | {"off": {"passed": 9, "total": 10, "seconds_total": 34.2}, "on": {"passed": 10, "total": 10, "seconds_total": 51.3}} |
+| e4b | json | 1.0 | 5 | 9/10 |
+| 12b-qat | ocr | 1.0 | 1 | 10/10 |
+| 12b-qat | charts | 1.0 | 1 | 4/5 |
+| 12b-qat | pairs | 1.0 | 1 | 5/5 |
+| 12b-qat | tools | 1.0 | 1 | 10/10 |
+| 12b-qat | coding | 1.0 | 1 | 10/10 |
+| 12b-qat | multilingual | 1.0 | 1 | 10/10 |
+| 12b-qat | json | 1.0 | 1 | 9/10 |
+| 12b-qat | ocr | 1.0 | 2 | 10/10 |
+| 12b-qat | charts | 1.0 | 2 | 3/5 |
+| 12b-qat | pairs | 1.0 | 2 | 5/5 |
+| 12b-qat | tools | 1.0 | 2 | 10/10 |
+| 12b-qat | coding | 1.0 | 2 | 10/10 |
+| 12b-qat | multilingual | 1.0 | 2 | 10/10 |
+| 12b-qat | json | 1.0 | 2 | 9/10 |
+| 12b-qat | ocr | 1.0 | 3 | 10/10 |
+| 12b-qat | charts | 1.0 | 3 | 4/5 |
+| 12b-qat | pairs | 1.0 | 3 | 5/5 |
+| 12b-qat | tools | 1.0 | 3 | 10/10 |
+| 12b-qat | coding | 1.0 | 3 | 10/10 |
+| 12b-qat | multilingual | 1.0 | 3 | 10/10 |
+| 12b-qat | json | 1.0 | 3 | 9/10 |
+| 12b-qat | ocr | 1.0 | 4 | 10/10 |
+| 12b-qat | charts | 1.0 | 4 | 5/5 |
+| 12b-qat | pairs | 1.0 | 4 | 5/5 |
+| 12b-qat | tools | 1.0 | 4 | 10/10 |
+| 12b-qat | coding | 1.0 | 4 | 10/10 |
+| 12b-qat | multilingual | 1.0 | 4 | 10/10 |
+| 12b-qat | json | 1.0 | 4 | 9/10 |
+| 12b-qat | ocr | 1.0 | 5 | 10/10 |
+| 12b-qat | charts | 1.0 | 5 | 4/5 |
+| 12b-qat | pairs | 1.0 | 5 | 5/5 |
+| 12b-qat | tools | 1.0 | 5 | 10/10 |
+| 12b-qat | coding | 1.0 | 5 | 10/10 |
+| 12b-qat | multilingual | 1.0 | 5 | 10/10 |
+| 12b-qat | json | 1.0 | 5 | 9/10 |
 
 ### P-AUD
 | model | clip | route | HTTP | WER | reply / error |

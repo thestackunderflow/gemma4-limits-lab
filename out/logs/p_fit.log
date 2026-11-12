@@ -105,3 +105,180 @@ FileNotFoundError: [Errno 2] No such file or directory: '/work/out/p13/fit.jsonl
 05:08:52 FIT 12b-qat q8_0 262144 speed 2 200 8%/92% CPU/GPU (23, 49) 668.8 9.4 7229.0 2817.0
 05:09:33 FIT 12b-qat q8_0 262144 speed 3 200 8%/92% CPU/GPU (23, 49) 664.4 9.5 7231.0 2816.0
 05:23:01 FIT 12b-qat q8_0 262144 max-fill 1 200 8%/92% CPU/GPU (23, 49) 322.9 4.2 7231.0 2927.6
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/urllib3/connection.py", line 239, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/urllib3/util/connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/socket.py", line 978, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno -2] Name or service not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 793, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 499, in _make_request
+    conn.request(
+  File "/usr/local/lib/python3.12/site-packages/urllib3/connection.py", line 567, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.12/http/client.py", line 1353, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.12/http/client.py", line 1113, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.12/http/client.py", line 1057, in send
+    self.connect()
+  File "/usr/local/lib/python3.12/site-packages/urllib3/connection.py", line 398, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/urllib3/connection.py", line 246, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+urllib3.exceptions.NameResolutionError: HTTPConnection(host='ollama', port=11434): Failed to resolve 'ollama' ([Errno -2] Name or service not known)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 847, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/urllib3/util/retry.py", line 555, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='ollama', port=11434): Max retries exceeded with url: /api/ps (Caused by NameResolutionError("HTTPConnection(host='ollama', port=11434): Failed to resolve 'ollama' ([Errno -2] Name or service not known)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/work/lab/p_fit.py", line 74, in <module>
+    run(a["kv"], a.get("models", "e2b,e4b,12b-qat,26b").split(","), int(a.get("reps", 3)), a.get("maxfill", "1") == "1")
+  File "/work/lab/p_fit.py", line 53, in run
+    r = cell(key, nc, min(nc // 2, 16384), kv, rep, w)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/lab/p_fit.py", line 21, in cell
+    f = c.fresh()
+        ^^^^^^^^^
+  File "/work/lab/common.py", line 61, in fresh
+    ok = o.unload_all()
+         ^^^^^^^^^^^^^^
+  File "/work/lab/ollama.py", line 57, in unload_all
+    for m in ps():
+             ^^^^
+  File "/work/lab/ollama.py", line 53, in ps
+    return parse_ps(requests.get(f"{URL}/api/ps", timeout=60).json())
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/requests/adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='ollama', port=11434): Max retries exceeded with url: /api/ps (Caused by NameResolutionError("HTTPConnection(host='ollama', port=11434): Failed to resolve 'ollama' ([Errno -2] Name or service not known)"))
+06:52:44 waiting: Windows free 0.44 GB
+06:52:49 waiting: Windows free 1.96 GB
+06:54:28 FIT 26b q8_0 65536 speed 1 200 21%/79% CPU/GPU (31, 31) 285.3 17.6 7587.0 15001.6
+06:54:29 waiting: Windows free 1.51 GB
+06:54:34 waiting: Windows free 1.84 GB
+06:55:24 FIT 26b q8_0 65536 speed 2 0 None (31, 31) None None 7333.0 14991.4
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/urllib3/connection.py", line 239, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/urllib3/util/connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/socket.py", line 978, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno -2] Name or service not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 793, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 499, in _make_request
+    conn.request(
+  File "/usr/local/lib/python3.12/site-packages/urllib3/connection.py", line 567, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.12/http/client.py", line 1353, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.12/http/client.py", line 1113, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.12/http/client.py", line 1057, in send
+    self.connect()
+  File "/usr/local/lib/python3.12/site-packages/urllib3/connection.py", line 398, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/urllib3/connection.py", line 246, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+urllib3.exceptions.NameResolutionError: HTTPConnection(host='ollama', port=11434): Failed to resolve 'ollama' ([Errno -2] Name or service not known)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 847, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/urllib3/util/retry.py", line 555, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='ollama', port=11434): Max retries exceeded with url: /api/ps (Caused by NameResolutionError("HTTPConnection(host='ollama', port=11434): Failed to resolve 'ollama' ([Errno -2] Name or service not known)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/work/lab/p_fit.py", line 74, in <module>
+    run(a["kv"], a.get("models", "e2b,e4b,12b-qat,26b").split(","), int(a.get("reps", 3)), a.get("maxfill", "1") == "1")
+  File "/work/lab/p_fit.py", line 53, in run
+    r = cell(key, nc, min(nc // 2, 16384), kv, rep, w)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/lab/p_fit.py", line 43, in cell
+    c.fresh()
+  File "/work/lab/common.py", line 61, in fresh
+    ok = o.unload_all()
+         ^^^^^^^^^^^^^^
+  File "/work/lab/ollama.py", line 57, in unload_all
+    for m in ps():
+             ^^^^
+  File "/work/lab/ollama.py", line 53, in ps
+    return parse_ps(requests.get(f"{URL}/api/ps", timeout=60).json())
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/requests/adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='ollama', port=11434): Max retries exceeded with url: /api/ps (Caused by NameResolutionError("HTTPConnection(host='ollama', port=11434): Failed to resolve 'ollama' ([Errno -2] Name or service not known)"))

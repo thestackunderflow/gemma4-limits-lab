@@ -116,3 +116,167 @@ Traceback (most recent call last):
   File "/usr/local/lib/python3.12/site-packages/requests/adapters.py", line 682, in send
     raise ConnectionError(err, request=request)
 requests.exceptions.ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+04:33:40 CAN 12b-qat thinking temp 0.0 rep 1 {'off': {'passed': 10, 'total': 10, 'seconds_total': 163.9}, 'on': {'passed': 7, 'total': 10, 'seconds_total': 1816.6}}
+04:34:23 CAN 12b-qat json temp 0.0 rep 1 (9, 10)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/urllib3/connection.py", line 239, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/urllib3/util/connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/socket.py", line 978, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno -2] Name or service not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 793, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 499, in _make_request
+    conn.request(
+  File "/usr/local/lib/python3.12/site-packages/urllib3/connection.py", line 567, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.12/http/client.py", line 1353, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.12/http/client.py", line 1113, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.12/http/client.py", line 1057, in send
+    self.connect()
+  File "/usr/local/lib/python3.12/site-packages/urllib3/connection.py", line 398, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/urllib3/connection.py", line 246, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+urllib3.exceptions.NameResolutionError: HTTPConnection(host='ollama', port=11434): Failed to resolve 'ollama' ([Errno -2] Name or service not known)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 847, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/urllib3/util/retry.py", line 555, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='ollama', port=11434): Max retries exceeded with url: /api/ps (Caused by NameResolutionError("HTTPConnection(host='ollama', port=11434): Failed to resolve 'ollama' ([Errno -2] Name or service not known)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/work/lab/p15.py", line 309, in <module>
+    can(models, a.get("sections", ",".join(SECTIONS)).split(","), float(a.get("temp", 0)), int(a.get("reps", 1)))
+  File "/work/lab/p15.py", line 227, in can
+    s = Session(key, temp, seed, w, sec)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/lab/p15.py", line 26, in __init__
+    self.first = c.fresh()
+                 ^^^^^^^^^
+  File "/work/lab/common.py", line 61, in fresh
+    ok = o.unload_all()
+         ^^^^^^^^^^^^^^
+  File "/work/lab/ollama.py", line 57, in unload_all
+    for m in ps():
+             ^^^^
+  File "/work/lab/ollama.py", line 53, in ps
+    return parse_ps(requests.get(f"{URL}/api/ps", timeout=60).json())
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/requests/adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='ollama', port=11434): Max retries exceeded with url: /api/ps (Caused by NameResolutionError("HTTPConnection(host='ollama', port=11434): Failed to resolve 'ollama' ([Errno -2] Name or service not known)"))
+06:55:43 waiting: Windows free 1.09 GB
+06:56:02 CAN e4b ocr temp 1.0 rep 1 (10, 10)
+06:56:16 CAN e4b charts temp 1.0 rep 1 (2, 5)
+06:56:28 CAN e4b pairs temp 1.0 rep 1 (5, 5)
+06:56:46 CAN e4b tools temp 1.0 rep 1 (10, 10)
+06:57:04 CAN e4b coding temp 1.0 rep 1 (10, 10)
+06:57:16 CAN e4b multilingual temp 1.0 rep 1 (10, 10)
+06:58:49 CAN e4b thinking temp 1.0 rep 1 {'off': {'passed': 10, 'total': 10, 'seconds_total': 36.5}, 'on': {'passed': 10, 'total': 10, 'seconds_total': 52.0}}
+06:59:04 CAN e4b json temp 1.0 rep 1 (9, 10)
+06:59:18 CAN e4b ocr temp 1.0 rep 2 (10, 10)
+06:59:31 CAN e4b charts temp 1.0 rep 2 (2, 5)
+06:59:43 CAN e4b pairs temp 1.0 rep 2 (5, 5)
+07:00:01 CAN e4b tools temp 1.0 rep 2 (10, 10)
+07:00:19 CAN e4b coding temp 1.0 rep 2 (10, 10)
+07:00:31 CAN e4b multilingual temp 1.0 rep 2 (10, 10)
+07:02:09 CAN e4b thinking temp 1.0 rep 2 {'off': {'passed': 8, 'total': 10, 'seconds_total': 38.4}, 'on': {'passed': 10, 'total': 10, 'seconds_total': 54.4}}
+07:02:24 CAN e4b json temp 1.0 rep 2 (10, 10)
+07:02:38 CAN e4b ocr temp 1.0 rep 3 (10, 10)
+07:02:51 CAN e4b charts temp 1.0 rep 3 (1, 5)
+07:03:02 CAN e4b pairs temp 1.0 rep 3 (5, 5)
+07:03:20 CAN e4b tools temp 1.0 rep 3 (10, 10)
+07:03:39 CAN e4b coding temp 1.0 rep 3 (10, 10)
+07:03:51 CAN e4b multilingual temp 1.0 rep 3 (10, 10)
+07:05:23 CAN e4b thinking temp 1.0 rep 3 {'off': {'passed': 10, 'total': 10, 'seconds_total': 37.2}, 'on': {'passed': 10, 'total': 10, 'seconds_total': 50.9}}
+07:05:38 CAN e4b json temp 1.0 rep 3 (9, 10)
+07:05:53 CAN e4b ocr temp 1.0 rep 4 (10, 10)
+07:06:06 CAN e4b charts temp 1.0 rep 4 (2, 5)
+07:06:18 CAN e4b pairs temp 1.0 rep 4 (5, 5)
+07:06:36 CAN e4b tools temp 1.0 rep 4 (10, 10)
+07:06:55 CAN e4b coding temp 1.0 rep 4 (9, 10)
+07:07:08 CAN e4b multilingual temp 1.0 rep 4 (10, 10)
+07:09:25 CAN e4b thinking temp 1.0 rep 4 {'off': {'passed': 9, 'total': 10, 'seconds_total': 80.8}, 'on': {'passed': 10, 'total': 10, 'seconds_total': 52.3}}
+07:09:40 CAN e4b json temp 1.0 rep 4 (9, 10)
+07:09:55 CAN e4b ocr temp 1.0 rep 5 (9, 10)
+07:10:08 CAN e4b charts temp 1.0 rep 5 (1, 5)
+07:10:19 CAN e4b pairs temp 1.0 rep 5 (5, 5)
+07:10:37 CAN e4b tools temp 1.0 rep 5 (10, 10)
+07:10:55 CAN e4b coding temp 1.0 rep 5 (10, 10)
+07:11:07 CAN e4b multilingual temp 1.0 rep 5 (10, 10)
+07:12:37 CAN e4b thinking temp 1.0 rep 5 {'off': {'passed': 9, 'total': 10, 'seconds_total': 34.2}, 'on': {'passed': 10, 'total': 10, 'seconds_total': 51.3}}
+07:12:52 CAN e4b json temp 1.0 rep 5 (9, 10)
+07:13:28 CAN 12b-qat ocr temp 1.0 rep 1 (10, 10)
+07:13:53 CAN 12b-qat charts temp 1.0 rep 1 (4, 5)
+07:14:11 CAN 12b-qat pairs temp 1.0 rep 1 (5, 5)
+07:14:56 CAN 12b-qat tools temp 1.0 rep 1 (10, 10)
+07:15:59 CAN 12b-qat coding temp 1.0 rep 1 (10, 10)
+07:16:15 CAN 12b-qat multilingual temp 1.0 rep 1 (10, 10)
+07:16:55 CAN 12b-qat json temp 1.0 rep 1 (9, 10)
+07:17:28 CAN 12b-qat ocr temp 1.0 rep 2 (10, 10)
+07:17:50 CAN 12b-qat charts temp 1.0 rep 2 (3, 5)
+07:18:08 CAN 12b-qat pairs temp 1.0 rep 2 (5, 5)
+07:18:53 CAN 12b-qat tools temp 1.0 rep 2 (10, 10)
+07:19:55 CAN 12b-qat coding temp 1.0 rep 2 (10, 10)
+07:20:11 CAN 12b-qat multilingual temp 1.0 rep 2 (10, 10)
+07:20:50 CAN 12b-qat json temp 1.0 rep 2 (9, 10)
+07:21:24 CAN 12b-qat ocr temp 1.0 rep 3 (10, 10)
+07:21:46 CAN 12b-qat charts temp 1.0 rep 3 (4, 5)
+07:22:04 CAN 12b-qat pairs temp 1.0 rep 3 (5, 5)
+07:22:50 CAN 12b-qat tools temp 1.0 rep 3 (10, 10)
+07:23:54 CAN 12b-qat coding temp 1.0 rep 3 (10, 10)
+07:24:10 CAN 12b-qat multilingual temp 1.0 rep 3 (10, 10)
+07:24:49 CAN 12b-qat json temp 1.0 rep 3 (9, 10)
+07:25:23 CAN 12b-qat ocr temp 1.0 rep 4 (10, 10)
+07:25:46 CAN 12b-qat charts temp 1.0 rep 4 (5, 5)
+07:26:04 CAN 12b-qat pairs temp 1.0 rep 4 (5, 5)
+07:26:49 CAN 12b-qat tools temp 1.0 rep 4 (10, 10)
+07:27:55 CAN 12b-qat coding temp 1.0 rep 4 (10, 10)
+07:28:11 CAN 12b-qat multilingual temp 1.0 rep 4 (10, 10)
+07:28:51 CAN 12b-qat json temp 1.0 rep 4 (9, 10)
+07:29:24 CAN 12b-qat ocr temp 1.0 rep 5 (10, 10)
+07:29:49 CAN 12b-qat charts temp 1.0 rep 5 (4, 5)
+07:30:06 CAN 12b-qat pairs temp 1.0 rep 5 (5, 5)
+07:30:51 CAN 12b-qat tools temp 1.0 rep 5 (10, 10)
+07:31:54 CAN 12b-qat coding temp 1.0 rep 5 (10, 10)
+07:32:10 CAN 12b-qat multilingual temp 1.0 rep 5 (10, 10)
+07:32:50 CAN 12b-qat json temp 1.0 rep 5 (9, 10)

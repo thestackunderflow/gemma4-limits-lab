@@ -1,0 +1,70 @@
+{"model": "e4b", "section": "mul", "think": false, "temp": 0.0, "rep": 1, "passed": 1, "total": 20}
+{"model": "e4b", "section": "mul", "think": true, "temp": 0.0, "rep": 1, "passed": 12, "total": 20}
+{"model": "e4b", "section": "mul", "fix": "calculator tool", "temp": 0.0, "rep": 1, "passed": 0, "total": 20}
+{"model": "e4b", "section": "letters", "temp": 0.0, "rep": 1, "passed": 14, "total": 20}
+{"model": "e4b", "section": "letters", "fix": "spell first", "temp": 0.0, "rep": 1, "passed": 20, "total": 20}
+{"model": "e4b", "section": "dates", "temp": 0.0, "rep": 1, "passed": 0, "total": 10}
+{"model": "e4b", "section": "dates", "fix": "date in system prompt", "temp": 0.0, "rep": 1, "passed": 9, "total": 10}
+{"model": "e4b", "section": "cutoff", "temp": 0.0, "rep": 1, "passed": 0, "total": 6}
+{"model": "e4b", "section": "cutoff", "fix": "paste the source", "temp": 0.0, "rep": 1, "passed": 6, "total": 6}
+{"model": "e4b", "section": "cite", "temp": 0.0, "rep": 1, "listed": 10, "doi_resolves": 9, "title_matches": 1}
+{"model": "e4b", "section": "mul", "think": false, "temp": 1.0, "rep": 1, "passed": 1, "total": 20}
+{"model": "e4b", "section": "mul", "think": true, "temp": 1.0, "rep": 1, "passed": 13, "total": 20}
+{"model": "e4b", "section": "mul", "fix": "calculator tool", "temp": 1.0, "rep": 1, "passed": 0, "total": 20}
+{"model": "e4b", "section": "letters", "temp": 1.0, "rep": 1, "passed": 14, "total": 20}
+{"model": "e4b", "section": "letters", "fix": "spell first", "temp": 1.0, "rep": 1, "passed": 20, "total": 20}
+{"model": "e4b", "section": "dates", "temp": 1.0, "rep": 1, "passed": 0, "total": 10}
+{"model": "e4b", "section": "dates", "fix": "date in system prompt", "temp": 1.0, "rep": 1, "passed": 9, "total": 10}
+{"model": "e4b", "section": "cutoff", "temp": 1.0, "rep": 1, "passed": 0, "total": 6}
+{"model": "e4b", "section": "cutoff", "fix": "paste the source", "temp": 1.0, "rep": 1, "passed": 6, "total": 6}
+{"model": "e4b", "section": "cite", "temp": 1.0, "rep": 1, "listed": 10, "doi_resolves": 9, "title_matches": 0}
+{"model": "e4b", "section": "mul", "think": false, "temp": 1.0, "rep": 2, "passed": 0, "total": 20}
+{"model": "e4b", "section": "mul", "think": true, "temp": 1.0, "rep": 2, "passed": 10, "total": 20}
+{"model": "e4b", "section": "mul", "fix": "calculator tool", "temp": 1.0, "rep": 2, "passed": 0, "total": 20}
+{"model": "e4b", "section": "letters", "temp": 1.0, "rep": 2, "passed": 14, "total": 20}
+{"model": "e4b", "section": "letters", "fix": "spell first", "temp": 1.0, "rep": 2, "passed": 20, "total": 20}
+{"model": "e4b", "section": "dates", "temp": 1.0, "rep": 2, "passed": 0, "total": 10}
+{"model": "e4b", "section": "dates", "fix": "date in system prompt", "temp": 1.0, "rep": 2, "passed": 9, "total": 10}
+{"model": "e4b", "section": "cutoff", "temp": 1.0, "rep": 2, "passed": 0, "total": 6}
+{"model": "e4b", "section": "cutoff", "fix": "paste the source", "temp": 1.0, "rep": 2, "passed": 6, "total": 6}
+{"model": "e4b", "section": "cite", "temp": 1.0, "rep": 2, "listed": 10, "doi_resolves": 7, "title_matches": 0}
+{"model": "e4b", "section": "mul", "think": false, "temp": 1.0, "rep": 3, "passed": 0, "total": 20}
+{"model": "e4b", "section": "mul", "think": true, "temp": 1.0, "rep": 3, "passed": 11, "total": 20}
+{"model": "e4b", "section": "mul", "fix": "calculator tool", "temp": 1.0, "rep": 3, "passed": 0, "total": 20}
+{"model": "e4b", "section": "letters", "temp": 1.0, "rep": 3, "passed": 14, "total": 20}
+{"model": "e4b", "section": "letters", "fix": "spell first", "temp": 1.0, "rep": 3, "passed": 19, "total": 20}
+{"model": "e4b", "section": "dates", "temp": 1.0, "rep": 3, "passed": 0, "total": 10}
+{"model": "e4b", "section": "dates", "fix": "date in system prompt", "temp": 1.0, "rep": 3, "passed": 9, "total": 10}
+{"model": "e4b", "section": "cutoff", "temp": 1.0, "rep": 3, "passed": 0, "total": 6}
+{"model": "e4b", "section": "cutoff", "fix": "paste the source", "temp": 1.0, "rep": 3, "passed": 6, "total": 6}
+{"model": "e4b", "section": "cite", "temp": 1.0, "rep": 3, "listed": 10, "doi_resolves": 8, "title_matches": 2}
+{"model": "e4b", "section": "mul", "think": false, "temp": 1.0, "rep": 4, "passed": 0, "total": 20}
+{"model": "e4b", "section": "mul", "think": true, "temp": 1.0, "rep": 4, "passed": 10, "total": 20}
+{"model": "e4b", "section": "mul", "fix": "calculator tool", "temp": 1.0, "rep": 4, "passed": 0, "total": 20}
+{"model": "e4b", "section": "letters", "temp": 1.0, "rep": 4, "passed": 14, "total": 20}
+{"model": "e4b", "section": "letters", "fix": "spell first", "temp": 1.0, "rep": 4, "passed": 20, "total": 20}
+{"model": "e4b", "section": "dates", "temp": 1.0, "rep": 4, "passed": 0, "total": 10}
+{"model": "e4b", "section": "dates", "fix": "date in system prompt", "temp": 1.0, "rep": 4, "passed": 9, "total": 10}
+{"model": "e4b", "section": "cutoff", "temp": 1.0, "rep": 4, "passed": 0, "total": 6}
+{"model": "e4b", "section": "cutoff", "fix": "paste the source", "temp": 1.0, "rep": 4, "passed": 6, "total": 6}
+{"model": "e4b", "section": "cite", "temp": 1.0, "rep": 4, "listed": 10, "doi_resolves": 10, "title_matches": 1}
+{"model": "e4b", "section": "mul", "think": false, "temp": 1.0, "rep": 5, "passed": 0, "total": 20}
+{"model": "e4b", "section": "mul", "think": true, "temp": 1.0, "rep": 5, "passed": 11, "total": 20}
+{"model": "e4b", "section": "mul", "fix": "calculator tool", "temp": 1.0, "rep": 5, "passed": 0, "total": 20}
+{"model": "e4b", "section": "letters", "temp": 1.0, "rep": 5, "passed": 14, "total": 20}
+{"model": "e4b", "section": "letters", "fix": "spell first", "temp": 1.0, "rep": 5, "passed": 19, "total": 20}
+{"model": "e4b", "section": "dates", "temp": 1.0, "rep": 5, "passed": 0, "total": 10}
+{"model": "e4b", "section": "dates", "fix": "date in system prompt", "temp": 1.0, "rep": 5, "passed": 9, "total": 10}
+{"model": "e4b", "section": "cutoff", "temp": 1.0, "rep": 5, "passed": 0, "total": 6}
+{"model": "e4b", "section": "cutoff", "fix": "paste the source", "temp": 1.0, "rep": 5, "passed": 6, "total": 6}
+{"model": "e4b", "section": "cite", "temp": 1.0, "rep": 5, "listed": 10, "doi_resolves": 9, "title_matches": 0}
+{"model": "12b-qat", "section": "mul", "think": false, "temp": 0.0, "rep": 1, "passed": 0, "total": 20}
+{"model": "12b-qat", "section": "mul", "think": true, "temp": 0.0, "rep": 1, "passed": 6, "total": 20}
+{"model": "12b-qat", "section": "mul", "fix": "calculator tool", "temp": 0.0, "rep": 1, "passed": 20, "total": 20}
+{"model": "12b-qat", "section": "letters", "temp": 0.0, "rep": 1, "passed": 14, "total": 20}
+{"model": "12b-qat", "section": "letters", "fix": "spell first", "temp": 0.0, "rep": 1, "passed": 20, "total": 20}
+{"model": "12b-qat", "section": "dates", "temp": 0.0, "rep": 1, "passed": 0, "total": 10}
+{"model": "12b-qat", "section": "dates", "fix": "date in system prompt", "temp": 0.0, "rep": 1, "passed": 9, "total": 10}
+{"model": "12b-qat", "section": "cutoff", "temp": 0.0, "rep": 1, "passed": 0, "total": 6}
+{"model": "12b-qat", "section": "cutoff", "fix": "paste the source", "temp": 0.0, "rep": 1, "passed": 6, "total": 6}
+{"model": "12b-qat", "section": "cite", "temp": 0.0, "rep": 1, "listed": 10, "doi_resolves": 10, "title_matches": 1}

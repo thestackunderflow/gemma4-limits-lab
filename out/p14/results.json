@@ -1,0 +1,527 @@
+{
+ "counts": [
+  {
+   "model": "e4b",
+   "section": "mul",
+   "fix": "None",
+   "think": "False",
+   "temp0": 1,
+   "total": 20,
+   "temp1_range": "0-1",
+   "temp1_runs": 5
+  },
+  {
+   "model": "e4b",
+   "section": "mul",
+   "fix": "None",
+   "think": "True",
+   "temp0": 12,
+   "total": 20,
+   "temp1_range": "10-13",
+   "temp1_runs": 5
+  },
+  {
+   "model": "e4b",
+   "section": "mul",
+   "fix": "calculator tool",
+   "think": "None",
+   "temp0": 0,
+   "total": 20,
+   "temp1_range": "0-0",
+   "temp1_runs": 5
+  },
+  {
+   "model": "e4b",
+   "section": "letters",
+   "fix": "None",
+   "think": "None",
+   "temp0": 14,
+   "total": 20,
+   "temp1_range": "14-14",
+   "temp1_runs": 5
+  },
+  {
+   "model": "e4b",
+   "section": "letters",
+   "fix": "spell first",
+   "think": "None",
+   "temp0": 20,
+   "total": 20,
+   "temp1_range": "19-20",
+   "temp1_runs": 5
+  },
+  {
+   "model": "e4b",
+   "section": "dates",
+   "fix": "None",
+   "think": "None",
+   "temp0": 0,
+   "total": 10,
+   "temp1_range": "0-0",
+   "temp1_runs": 5
+  },
+  {
+   "model": "e4b",
+   "section": "dates",
+   "fix": "date in system prompt",
+   "think": "None",
+   "temp0": 9,
+   "total": 10,
+   "temp1_range": "9-9",
+   "temp1_runs": 5
+  },
+  {
+   "model": "e4b",
+   "section": "cutoff",
+   "fix": "None",
+   "think": "None",
+   "temp0": 0,
+   "total": 6,
+   "temp1_range": "0-0",
+   "temp1_runs": 5
+  },
+  {
+   "model": "e4b",
+   "section": "cutoff",
+   "fix": "paste the source",
+   "think": "None",
+   "temp0": 6,
+   "total": 6,
+   "temp1_range": "6-6",
+   "temp1_runs": 5
+  },
+  {
+   "model": "e4b",
+   "section": "cite",
+   "fix": "None",
+   "think": "None",
+   "temp0": 1,
+   "total": 10,
+   "temp1_range": "0-2",
+   "temp1_runs": 5,
+   "doi_resolves_temp0": 9,
+   "doi_resolves_temp1_range": "7-10",
+   "listed_temp0": 10
+  },
+  {
+   "model": "12b-qat",
+   "section": "mul",
+   "fix": "None",
+   "think": "False",
+   "temp0": 0,
+   "total": 20,
+   "temp1_range": null,
+   "temp1_runs": 0
+  },
+  {
+   "model": "12b-qat",
+   "section": "mul",
+   "fix": "None",
+   "think": "True",
+   "temp0": 6,
+   "total": 20,
+   "temp1_range": null,
+   "temp1_runs": 0
+  },
+  {
+   "model": "12b-qat",
+   "section": "mul",
+   "fix": "calculator tool",
+   "think": "None",
+   "temp0": 20,
+   "total": 20,
+   "temp1_range": null,
+   "temp1_runs": 0
+  },
+  {
+   "model": "12b-qat",
+   "section": "letters",
+   "fix": "None",
+   "think": "None",
+   "temp0": 14,
+   "total": 20,
+   "temp1_range": null,
+   "temp1_runs": 0
+  },
+  {
+   "model": "12b-qat",
+   "section": "letters",
+   "fix": "spell first",
+   "think": "None",
+   "temp0": 20,
+   "total": 20,
+   "temp1_range": null,
+   "temp1_runs": 0
+  },
+  {
+   "model": "12b-qat",
+   "section": "dates",
+   "fix": "None",
+   "think": "None",
+   "temp0": 0,
+   "total": 10,
+   "temp1_range": null,
+   "temp1_runs": 0
+  },
+  {
+   "model": "12b-qat",
+   "section": "dates",
+   "fix": "date in system prompt",
+   "think": "None",
+   "temp0": 9,
+   "total": 10,
+   "temp1_range": null,
+   "temp1_runs": 0
+  },
+  {
+   "model": "12b-qat",
+   "section": "cutoff",
+   "fix": "None",
+   "think": "None",
+   "temp0": 0,
+   "total": 6,
+   "temp1_range": null,
+   "temp1_runs": 0
+  },
+  {
+   "model": "12b-qat",
+   "section": "cutoff",
+   "fix": "paste the source",
+   "think": "None",
+   "temp0": 6,
+   "total": 6,
+   "temp1_range": null,
+   "temp1_runs": 0
+  },
+  {
+   "model": "12b-qat",
+   "section": "cite",
+   "fix": "None",
+   "think": "None",
+   "temp0": 1,
+   "total": 10,
+   "temp1_range": null,
+   "temp1_runs": 0,
+   "doi_resolves_temp0": 10,
+   "doi_resolves_temp1_range": null,
+   "listed_temp0": 10
+  }
+ ],
+ "tokenizer": {
+  "source": "http://gemma4-limits-tok:8080",
+  "items": [
+   {
+    "text": "strawberry",
+    "tokens": [
+     {
+      "id": 115137,
+      "piece": "strawberry"
+     }
+    ]
+   },
+   {
+    "text": "mississippi",
+    "tokens": [
+     {
+      "id": 6204,
+      "piece": "miss"
+     },
+     {
+      "id": 31142,
+      "piece": "issippi"
+     }
+    ]
+   },
+   {
+    "text": "bookkeeper",
+    "tokens": [
+     {
+      "id": 3070,
+      "piece": "book"
+     },
+     {
+      "id": 46815,
+      "piece": "keeper"
+     }
+    ]
+   },
+   {
+    "text": "embarrassment",
+    "tokens": [
+     {
+      "id": 156413,
+      "piece": "embar"
+     },
+     {
+      "id": 22863,
+      "piece": "rass"
+     },
+     {
+      "id": 658,
+      "piece": "ment"
+     }
+    ]
+   },
+   {
+    "text": "hippopotamus",
+    "tokens": [
+     {
+      "id": 110988,
+      "piece": "hipp"
+     },
+     {
+      "id": 64981,
+      "piece": "opot"
+     },
+     {
+      "id": 55569,
+      "piece": "amus"
+     }
+    ]
+   },
+   {
+    "text": " strawberry",
+    "tokens": [
+     {
+      "id": 35324,
+      "piece": " strawberry"
+     }
+    ]
+   },
+   {
+    "text": "Strawberry",
+    "tokens": [
+     {
+      "id": 174809,
+      "piece": "Strawberry"
+     }
+    ]
+   },
+   {
+    "text": "4821 × 7293",
+    "tokens": [
+     {
+      "id": 236812,
+      "piece": "4"
+     },
+     {
+      "id": 236828,
+      "piece": "8"
+     },
+     {
+      "id": 236778,
+      "piece": "2"
+     },
+     {
+      "id": 236770,
+      "piece": "1"
+     },
+     {
+      "id": 15666,
+      "piece": " ×"
+     },
+     {
+      "id": 236743,
+      "piece": " "
+     },
+     {
+      "id": 236832,
+      "piece": "7"
+     },
+     {
+      "id": 236778,
+      "piece": "2"
+     },
+     {
+      "id": 236819,
+      "piece": "9"
+     },
+     {
+      "id": 236800,
+      "piece": "3"
+     }
+    ]
+   },
+   {
+    "text": "35159553",
+    "tokens": [
+     {
+      "id": 236800,
+      "piece": "3"
+     },
+     {
+      "id": 236810,
+      "piece": "5"
+     },
+     {
+      "id": 236770,
+      "piece": "1"
+     },
+     {
+      "id": 236810,
+      "piece": "5"
+     },
+     {
+      "id": 236819,
+      "piece": "9"
+     },
+     {
+      "id": 236810,
+      "piece": "5"
+     },
+     {
+      "id": 236810,
+      "piece": "5"
+     },
+     {
+      "id": 236800,
+      "piece": "3"
+     }
+    ]
+   },
+   {
+    "text": "12,345,678",
+    "tokens": [
+     {
+      "id": 236770,
+      "piece": "1"
+     },
+     {
+      "id": 236778,
+      "piece": "2"
+     },
+     {
+      "id": 236764,
+      "piece": ","
+     },
+     {
+      "id": 236800,
+      "piece": "3"
+     },
+     {
+      "id": 236812,
+      "piece": "4"
+     },
+     {
+      "id": 236810,
+      "piece": "5"
+     },
+     {
+      "id": 236764,
+      "piece": ","
+     },
+     {
+      "id": 236825,
+      "piece": "6"
+     },
+     {
+      "id": 236832,
+      "piece": "7"
+     },
+     {
+      "id": 236828,
+      "piece": "8"
+     }
+    ]
+   },
+   {
+    "text": "2026-11-10",
+    "tokens": [
+     {
+      "id": 236778,
+      "piece": "2"
+     },
+     {
+      "id": 236771,
+      "piece": "0"
+     },
+     {
+      "id": 236778,
+      "piece": "2"
+     },
+     {
+      "id": 236825,
+      "piece": "6"
+     },
+     {
+      "id": 236772,
+      "piece": "-"
+     },
+     {
+      "id": 236770,
+      "piece": "1"
+     },
+     {
+      "id": 236770,
+      "piece": "1"
+     },
+     {
+      "id": 236772,
+      "piece": "-"
+     },
+     {
+      "id": 236770,
+      "piece": "1"
+     },
+     {
+      "id": 236771,
+      "piece": "0"
+     }
+    ]
+   },
+   {
+    "text": "strawberry",
+    "tokens": [
+     {
+      "id": 115137,
+      "piece": "strawberry"
+     }
+    ]
+   },
+   {
+    "text": "banana",
+    "tokens": [
+     {
+      "id": 50044,
+      "piece": "banana"
+     }
+    ]
+   },
+   {
+    "text": "mississippi",
+    "tokens": [
+     {
+      "id": 6204,
+      "piece": "miss"
+     },
+     {
+      "id": 31142,
+      "piece": "issippi"
+     }
+    ]
+   },
+   {
+    "text": "committee",
+    "tokens": [
+     {
+      "id": 59416,
+      "piece": "committee"
+     }
+    ]
+   },
+   {
+    "text": "bookkeeper",
+    "tokens": [
+     {
+      "id": 3070,
+      "piece": "book"
+     },
+     {
+      "id": 46815,
+      "piece": "keeper"
+     }
+    ]
+   }
+  ]
+ }
+}

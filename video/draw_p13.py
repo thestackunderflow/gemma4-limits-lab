@@ -6,11 +6,13 @@ grey. Text 44 px+. Numbers only from SCRIPT-13.md section 5 (NUMBERS).
   card-desk-1..4   F3: desk = graphics card memory, books = layers; the notepad; tokens written; "KV cache"
   card-window-1..3 F4: numbered lines; the bracket "context window = num_ctx"; the torn-out lines (front), end kept
   card-bar-1..2    F6: a bar of 9,644 tokens; the first 5 + the end lit (2,051), the middle grey with K-77 inside
+  card-bar-3..5    F6 (cut 3): the 9 runs table from out/p13/trunc.jsonl: frame, line 1 0 of 9, last line 9 of 9
+  ov-sub           F10 (cut 3): a small Like + Subscribe lower-third, no Next
   card-fix-1..3    F8: API options.num_ctx; OLLAMA_CONTEXT_LENGTH; (grey) or fail loudly: next
   ov-like          F10: RGBA lower-fifth band: like + subscribe for Part 14
   card-recap-1..2  F12: the desk again: a bigger notepad, books to the cabinet (system memory), the speed dial drops
   card-q8          F13: 16-bit -> 8-bit numbers (the notepad's handwriting smaller)
-  card-rule-1..3   F15: the three rule lines, one at a time
+  card-rule-1..4   F15: the four rule lines, one at a time (cut 3: --verbose first)
   card-end         F16: Gemma Series Part 13, the Part 14 tile, the playlist (room left for the end screen)
 Run in the draw image:  docker run --rm -v "<lab>:/lab" -w /lab cad3way-draw:1 python3 video/draw_p13.py"""
 import os
@@ -199,6 +201,68 @@ def card_bar():
         save(im, f'card-bar-{step}')
 
 
+def trunc_counts():
+    """F6 (cut 3): E4B at the default window, temperature 0, no extra options: right answers per position and API,
+    from out/p13/trunc.jsonl (RESULTS.md P-TRUNC rows 1-6). n must be 9 per position (3 APIs x 3 runs)."""
+    import json
+    out = {}
+    for ln in open(os.path.join(LAB, 'out', 'p13', 'trunc.jsonl'), encoding='utf-8'):
+        r = json.loads(ln)
+        if r['model'] != 'e4b' or not str(r['num_ctx']).startswith('default') or r['extra'] or r['temperature'] != 0:
+            continue
+        c = out.setdefault(r['position'], {}).setdefault(r['endpoint'], [0, 0])
+        c[0] += bool(r['correct'])
+        c[1] += 1
+    for pos in ('start', 'end'):
+        assert sorted(out[pos]) == ['chat', 'generate', 'openai'] and all(v[1] == 3 for v in out[pos].values()), out
+    return out
+
+
+def card_runs():
+    """F6 cut 3: the 9 runs as a table that builds as it is spoken: 3 = the frame (APIs, positions, empty cells),
+    4 = line 1's counts (0 of 9), 5 = the last line's (9 of 9)."""
+    c = trunc_counts()
+    apis = ['chat', 'generate', 'openai']
+    rows = [('start', 'code on line 1', ORANGE, ORANGEFILL), ('end', 'code on the last line', GREEN, GREENFILL)]
+    for step in (3, 4, 5):
+        im, d = canvas('Gemma 4 E4B, default window: 3 APIs x 3 runs')
+        x0, cw, y0, rh = 160, 340, 330, 230
+        xs = [x0 + 760 + k * cw for k in range(3)]
+        tot_x = xs[-1] + cw + 20
+        for k, a in enumerate(apis):
+            text(d, (xs[k] + cw / 2, y0 + 60), a, 56, fill=GREY, path=M, anchor='ms')
+        text(d, (tot_x + 190, y0 + 60), 'found', 56, fill=GREY, anchor='ms')
+        for i, (pos, name, col_, fill) in enumerate(rows):
+            y = y0 + 120 + i * (rh + 40)
+            shown = (step >= 4 and i == 0) or step >= 5
+            d.rounded_rectangle([x0, y, 2400, y + rh], 24, fill=(fill if shown else DONEFILL),
+                                outline=(col_ if shown else DONE), width=6)
+            text(d, (x0 + 40, y + rh / 2 + 22), name, 60, fill=INK, anchor='ls')
+            if shown:
+                for k, a in enumerate(apis):
+                    r, n = c[pos][a]
+                    text(d, (xs[k] + cw / 2, y + rh / 2 + 26), f'{r} of {n}', 72, fill=INK, path=M, anchor='ms')
+                r = sum(v[0] for v in c[pos].values())
+                n = sum(v[1] for v in c[pos].values())
+                text(d, (tot_x + 190, y + rh / 2 + 30), f'{r} of {n}', 96, fill=col_, anchor='ms')
+        text(d, (x0, 1330), 'the same prompt, the same code: only its place changed', 52, fill=GREY, path=R, anchor='ls')
+        save(im, f'card-bar-{step}')
+
+
+def ov_sub():
+    """F10 cut 3: a small lower-third (Like + Subscribe), no 'Next' (that is on the end card only): the footage keeps
+    playing above it, so it does not read as the end."""
+    im = Image.new('RGBA', (W, H), (0, 0, 0, 0))
+    d = ImageDraw.Draw(im)
+    d.rounded_rectangle([60, 1226, 1000, 1376], 28, fill=(255, 255, 255, 236), outline=BLUE + (255,), width=5)
+    d.rounded_rectangle([90, 1248, 410, 1354], 22, fill=BLUEFILL + (255,), outline=BLUE + (255,), width=5)
+    text(d, (250, 1322), 'Like', 60, fill=BLUE, anchor='ms')
+    d.rounded_rectangle([440, 1248, 970, 1354], 22, fill=(204, 0, 0, 255))
+    text(d, (705, 1322), 'Subscribe', 60, fill=(255, 255, 255), anchor='ms')
+    os.makedirs(OUT, exist_ok=True)
+    im.save(os.path.join(OUT, 'ov-sub.png'))
+
+
 def card_fix():
     lines = [('API', '"options": {"num_ctx": 16384}'), ('server', 'OLLAMA_CONTEXT_LENGTH=16384'),
              ('or', 'fail loudly: next')]
@@ -257,16 +321,17 @@ def card_q8():
 
 
 def card_rule():
-    lines = ['1. raise num_ctx: eval count grows = cut', '2. num_ctx bigger than the prompt',
-             '3. log: offloaded N/M (E2B, E4B, 12B)']
-    for step in (1, 2, 3):
+    """F15 (cut 3: four lines, the --verbose step was said but not on the card)."""
+    lines = ['1. --verbose: note prompt eval count', '2. raise num_ctx: count grows = cut',
+             '3. num_ctx bigger than the prompt', '4. log: offloaded N/M (E2B, E4B, 12B)']
+    for step in (1, 2, 3, 4):
         im, d = canvas('Check it yourself')
         for k in range(step):
-            y = 300 + k * 300
+            y = 260 + k * 270
             cur = (k == step - 1)
-            d.rounded_rectangle([160, y, 2400, y + 220], 24, fill=(BLUEFILL if cur else DONEFILL),
+            d.rounded_rectangle([160, y, 2400, y + 210], 24, fill=(BLUEFILL if cur else DONEFILL),
                                 outline=(BLUE if cur else DONE), width=6)
-            text(d, (220, y + 140), lines[k], 76, fill=(INK if cur else GREY), path=M, anchor='ls')
+            text(d, (220, y + 135), lines[k], 76, fill=(INK if cur else GREY), path=M, anchor='ls')
         save(im, f'card-rule-{step}')
 
 
@@ -284,7 +349,7 @@ def card_end():
 
 
 if __name__ == '__main__':
-    card_f0(); card_sizes(); card_desk(); card_window(); card_bar(); card_fix(); ov_like(); card_recap(); card_q8()
+    card_f0(); card_sizes(); card_desk(); card_window(); card_bar(); card_runs(); card_fix(); ov_like(); ov_sub(); card_recap(); card_q8()
     card_rule(); card_end()
     print('cards:', sorted(os.listdir(OUT)))
     if PROBLEMS:

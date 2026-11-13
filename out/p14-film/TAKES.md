@@ -14,7 +14,11 @@ memwatch.sh not run (no background chains, as P13). No browser or owner app was 
 
 Per take folder: `screen.mp4` (not committed; sha256 below), `pane-N.txt` / `pane-N.before-clear-K.txt` (terminal text,
 the verification copy), `events.jsonl`, `record.json`, `cursor.jsonl`, `end.png`, `nvidia-start.txt` (model takes),
-`reply.json` (C4) / `reply1.json` (C6, the step-1 reply). `server-live-<shot>.log` = `docker logs` during the take.
+`reply.json` (C4) / `reply1.json` (C6, the step-1 reply). `server-live-<shot>.log` = `docker logs --since <record t0> --until <t0 + duration + 3 s>` (re-cut after the shoot:
+the P13-style `docker logs -f &` follower was never killed under Git Bash, so each live log kept every later take's
+lines, and the 8 P13 server-live logs had picked up 10 lines each from the container restart; those were reverted to
+their committed state. `run.sh` now reads the log once after the take). Empty for the no-model takes. Model load
+metadata in these logs carries the publisher's build path (`/Users/...` imatrix keys); not on screen in any take.
 
 ## C0 (no camera): request files
 

@@ -9,3 +9,6 @@ out/p13-film/**/*.mp4
 out/p13-film/**/*.png
 out/p13-film/vault-start.txt
 out/p13-film/req-*.json
+# Part 14 film takes: videos/images stay local (sha256 in TAKES.md)
+out/p14-film/**/*.mp4
+out/p14-film/**/*.png

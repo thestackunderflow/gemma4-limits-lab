@@ -1,0 +1,20 @@
+$ jq -r '.messages[-1].content' /film/date-none.json | fold -w 44
+What day of the week is it today? Answer wit
+h the weekday name only.
+$ curl -s $OLLAMA_HOST/api/chat -d @/film/date-none.json | jq -r .message.content | fold -w 44
+I do not have access to the current date, so
+ I cannot tell you what day of the week it i
+s today.
+$ 
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,26 @@
+$ jq -r 'select(.model=="e4b" and .section=="cite" and .temperature==0) | .citations[1] | .line, .doi_title' cant.jsonl
+Reformer: The Efficient Transformer | 10.48550/arXiv.2001.01210
+Examples of varieties with index one on $C_1$-fields
+$ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

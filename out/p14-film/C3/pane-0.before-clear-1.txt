@@ -1,0 +1,20 @@
+$ jq -c 'select(.model=="e4b" and .section=="mul") | {think, fix, temp, passed}' cant-summary.jsonl
+{"think":false,"fix":null,"temp":0.0,"passed":1}
+{"think":true,"fix":null,"temp":0.0,"passed":12}
+{"think":null,"fix":"calculator tool","temp":0.0,"passed":0}
+{"think":false,"fix":null,"temp":1.0,"passed":1}
+{"think":true,"fix":null,"temp":1.0,"passed":13}
+{"think":null,"fix":"calculator tool","temp":1.0,"passed":0}
+{"think":false,"fix":null,"temp":1.0,"passed":0}
+{"think":true,"fix":null,"temp":1.0,"passed":10}
+{"think":null,"fix":"calculator tool","temp":1.0,"passed":0}
+{"think":false,"fix":null,"temp":1.0,"passed":0}
+{"think":true,"fix":null,"temp":1.0,"passed":11}
+{"think":null,"fix":"calculator tool","temp":1.0,"passed":0}
+{"think":false,"fix":null,"temp":1.0,"passed":0}
+{"think":true,"fix":null,"temp":1.0,"passed":10}
+{"think":null,"fix":"calculator tool","temp":1.0,"passed":0}
+{"think":false,"fix":null,"temp":1.0,"passed":0}
+{"think":true,"fix":null,"temp":1.0,"passed":11}
+{"think":null,"fix":"calculator tool","temp":1.0,"passed":0}
+$ 

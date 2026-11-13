@@ -1,0 +1,27 @@
+$ jq -r '.ollama.tag, .ollama.fetched' sources/releases.json
+v0.40.16
+2026-11-11T05:58:14Z
+$ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

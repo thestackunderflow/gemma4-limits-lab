@@ -1,0 +1,20 @@
+$ jq -r '.messages[0].content' /film/cut-ollama-paste.json | head -3
+Use the source below to answer.
+
+Source:
+$ jq -r '.messages[0].content' /film/cut-ollama-paste.json | wc -l
+25
+$ curl -s $OLLAMA_HOST/api/chat -d @/film/cut-ollama-paste.json | jq -r .message.content
+v0.40.16
+$ 
+
+
+
+
+
+
+
+
+
+
+

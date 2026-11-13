@@ -1,0 +1,25 @@
+$ cd /lab/out/p14
+$ jq -r 'select(.model=="12b-qat" and .section=="dates" and .fix==null) | [.item, .answer[-24:]] | @tsv' cant.jsonl
+today_weekday   he current date or time.
+plus10_weekday  day of the week for you.
+today_date       current real-time date.
+tomorrow_date   tomorrow's date for you.
+yesterday_weekday       e week it was yesterday.
+days_to_new_year        911
+year    2025
+month   -time clock information.
+minus30_date    2025-04-23
+next_friday     2025-05-23
+$ jq -r 'select(.model=="e4b" and .item=="year" and .temperature==0 and .fix==null) | [.item, .answer[-24:]] | @tsv' cant.jsonl
+year    2024
+$ 
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,7 @@
+{"t": 0.058, "event": "recording started"}
+{"t": 2.871, "event": "pane 0: jq -c '.model, .tools[0].function.name' /film/tool-12b.json", "text": "jq -c '.model, .tools[0].function.name' /film/tool-12b.json"}
+{"t": 7.284, "event": "pane 0: curl -s $OLLAMA_HOST/api/chat -d @/film/tool-12b.json | tee /tmp/r1.json | jq -c '.message.tool_calls[0].function'", "text": "curl -s $OLLAMA_HOST/api/chat -d @/film/tool-12b.json | tee /tmp/r1.json | jq -c '.message.tool_calls[0].function'"}
+{"t": 23.21, "event": "pane 0: echo $((2824 * 1409))", "text": "echo $((2824 * 1409))"}
+{"t": 26.747, "event": "pane 0: clear", "text": "clear"}
+{"t": 29.897, "event": "pane 0: cat /film/send-result.sh", "text": "cat /film/send-result.sh"}
+{"t": 33.493, "event": "pane 0: /film/send-result.sh 3979016", "text": "/film/send-result.sh 3979016"}

@@ -1,0 +1,20 @@
+$ jq -c '.model, .tools[0].function.name' /film/tool-12b.json
+"gemma4:12b-it-qat"
+"multiply"
+$ curl -s $OLLAMA_HOST/api/chat -d @/film/tool-12b.json | tee /tmp/r1.json | jq -c '.message.tool_calls[0].function'
+{"index":0,"name":"multiply","arguments":{"a":2824,"b":1409}}
+$ echo $((2824 * 1409))
+3979016
+$ 
+
+
+
+
+
+
+
+
+
+
+
+

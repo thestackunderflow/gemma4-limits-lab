@@ -1,0 +1,8 @@
+{"t": 0.06, "event": "recording started"}
+{"t": 2.868, "event": "pane 0: cd /lab/out/p14", "text": "cd /lab/out/p14"}
+{"t": 6.246, "event": "pane 0: jq -r 'select(.model==\"12b-qat\" and .section==\"dates\" and .fix==null) | [.item, .answer[-24:]] | @tsv' cant.jsonl", "text": "jq -r 'select(.model==\"12b-qat\" and .section==\"dates\" and .fix==null) | [.item, .answer[-24:]] | @tsv' cant.jsonl"}
+{"t": 11.919, "event": "pane 0: jq -r 'select(.model==\"e4b\" and .item==\"year\" and .temperature==0 and .fix==null) | [.item, .answer[-24:]] | @tsv' cant.jsonl", "text": "jq -r 'select(.model==\"e4b\" and .item==\"year\" and .temperature==0 and .fix==null) | [.item, .answer[-24:]] | @tsv' cant.jsonl"}
+{"t": 19.889, "event": "pane 0: clear", "text": "clear"}
+{"t": 23.049, "event": "pane 0: jq -r 'select(.model==\"12b-qat\" and .section==\"cutoff\" and .fix==null) | [.item, .answer[-20:], .want] | @tsv' cant.jsonl", "text": "jq -r 'select(.model==\"12b-qat\" and .section==\"cutoff\" and .fix==null) | [.item, .answer[-20:], .want] | @tsv' cant.jsonl"}
+{"t": 30.918, "event": "pane 0: clear", "text": "clear"}
+{"t": 34.081, "event": "pane 0: jq -r '.ollama.tag, .ollama.fetched' sources/releases.json", "text": "jq -r '.ollama.tag, .ollama.fetched' sources/releases.json"}

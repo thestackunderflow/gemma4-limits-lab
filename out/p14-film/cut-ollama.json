@@ -1,0 +1,18 @@
+{
+ "model": "gemma4:12b-it-qat",
+ "messages": [
+  {
+   "role": "user",
+   "content": "What is the latest stable release version of Ollama? Answer with the version number only."
+  }
+ ],
+ "stream": false,
+ "keep_alive": "2m",
+ "options": {
+  "temperature": 0.0,
+  "seed": 42,
+  "num_predict": 256,
+  "num_ctx": 8192
+ },
+ "think": false
+}

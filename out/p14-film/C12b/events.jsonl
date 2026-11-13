@@ -1,0 +1,4 @@
+{"t": 0.031, "event": "recording started"}
+{"t": 2.844, "event": "pane 0: jq -r '.messages[0].content' /film/cut-ollama-paste.json | head -3", "text": "jq -r '.messages[0].content' /film/cut-ollama-paste.json | head -3"}
+{"t": 7.411, "event": "pane 0: jq -r '.messages[0].content' /film/cut-ollama-paste.json | wc -l", "text": "jq -r '.messages[0].content' /film/cut-ollama-paste.json | wc -l"}
+{"t": 11.936, "event": "pane 0: curl -s $OLLAMA_HOST/api/chat -d @/film/cut-ollama-paste.json | jq -r .message.content", "text": "curl -s $OLLAMA_HOST/api/chat -d @/film/cut-ollama-paste.json | jq -r .message.content"}

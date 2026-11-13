@@ -1,0 +1,18 @@
+$ jq -s '[.[] | select(.model=="12b-qat" and .think==true and .eval_count==8156)] | length' cant.jsonl
+14
+$ jq -s '[.[] | select(.model=="12b-qat" and .fix=="calculator tool")] | {rows: length, used: map(select(.used_tool)) | length, right: map(select(.passed)) | length}' -c cant.jsonl
+{"rows":20,"used":20,"right":20}
+$ 
+
+
+
+
+
+
+
+
+
+
+
+
+

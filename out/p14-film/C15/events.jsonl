@@ -1,0 +1,5 @@
+{"t": 0.064, "event": "recording started"}
+{"t": 3.069, "event": "address bar", "keys": "ctrl+l"}
+{"t": 4.306, "event": "type the DOI", "text": "doi.org/10.48550/arXiv.2001.01210"}
+{"t": 7.219, "event": "enter", "keys": "Return"}
+{"t": 17.839, "event": "landed"}

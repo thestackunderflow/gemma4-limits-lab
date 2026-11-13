@@ -1,0 +1,4 @@
+{"t": 0.054, "event": "recording started"}
+{"t": 2.866, "event": "pane 0: jq -r .model /film/tool-e4b.json", "text": "jq -r .model /film/tool-e4b.json"}
+{"t": 6.646, "event": "pane 0: jq -r '.messages[0].content' /film/tool-e4b.json | fold -w 44", "text": "jq -r '.messages[0].content' /film/tool-e4b.json | fold -w 44"}
+{"t": 11.107, "event": "pane 0: curl -s $OLLAMA_HOST/api/chat -d @/film/tool-e4b.json | jq -c '.message.tool_calls, .message.content'", "text": "curl -s $OLLAMA_HOST/api/chat -d @/film/tool-e4b.json | jq -c '.message.tool_calls, .message.content'"}

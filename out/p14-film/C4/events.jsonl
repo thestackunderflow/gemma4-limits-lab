@@ -1,0 +1,4 @@
+{"t": 0.046, "event": "recording started"}
+{"t": 2.857, "event": "pane 0: curl -s $OLLAMA_HOST/api/chat -d @/film/mul00-think.json | tee /tmp/t.json | jq -r .message.thinking | head -3", "text": "curl -s $OLLAMA_HOST/api/chat -d @/film/mul00-think.json | tee /tmp/t.json | jq -r .message.thinking | head -3"}
+{"t": 11.205, "event": "pane 0: jq -r .message.thinking /tmp/t.json | wc -l", "text": "jq -r .message.thinking /tmp/t.json | wc -l"}
+{"t": 15.249, "event": "pane 0: jq -r '.message.content, .eval_count' /tmp/t.json", "text": "jq -r '.message.content, .eval_count' /tmp/t.json"}

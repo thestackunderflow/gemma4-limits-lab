@@ -1,0 +1,20 @@
+$ curl -s $OLLAMA_HOST/api/chat -d @/film/mul00-think.json | tee /tmp/t.json | jq -r .message.thinking | head -3
+The user wants me to calculate the product of 2824 and 1409.
+
+$2824 \times 1409$
+$ jq -r .message.thinking /tmp/t.json | wc -l
+42
+$ jq -r '.message.content, .eval_count' /tmp/t.json
+3979016
+488
+$ 
+
+
+
+
+
+
+
+
+
+

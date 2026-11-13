@@ -1,0 +1,18 @@
+{
+ "model": "gemma4:12b-it-qat",
+ "messages": [
+  {
+   "role": "user",
+   "content": "Use the source below to answer.\n\nSource:\nRelease page https://github.com/ollama/ollama/releases/tag/v0.40.16 (fetched 2026-11-11T05:58:14Z): v0.40.16 (tag v0.40.16), published 2026-11-09T18:21:19Z.\n## Ripple Preview\r\n\r\n[Ripple Preview](https://ollama.com/library/ripple-preview) from Ricursive Intelligence is a 65B dense model built for agentic coding.\r\n\r\n```sh\r\nollama run ripple-preview\r\n```\r\n\r\n## What's Changed\r\n\r\n- Qwen3.8 Flash Next uses about 27 GiB less memory on Apple silicon\r\n- `ollama launch claude` always routes Claude Code to the selected model\r\n- `ollama launch` explains when a cloud model has been retired\r\n- `/v1/responses` respects `truncation` and no longer silently truncates by default\r\n- `/v1/models` returns an empty list instead of `null` when no models are installed\r\n- CUDA 13.5 support for Windows on ARM\r\n- Updated llama.cpp\r\n\r\n**Full Changelog**: https://github.com/ollama/ollama/compare/v0.40.15...v0.40.16\n\nQuestion: What is the latest stable release version of Ollama? Answer with the version number only."
+  }
+ ],
+ "stream": false,
+ "keep_alive": "2m",
+ "options": {
+  "temperature": 0.0,
+  "seed": 42,
+  "num_predict": 256,
+  "num_ctx": 8192
+ },
+ "think": false
+}

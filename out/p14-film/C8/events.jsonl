@@ -1,0 +1,7 @@
+{"t": 0.055, "event": "recording started"}
+{"t": 2.862, "event": "pane 0: cd /lab/out/p14", "text": "cd /lab/out/p14"}
+{"t": 6.236, "event": "pane 0: jq -r 'first(.items[] | select(.text==\"bookkeeper\")) | .text + \" \u2192 \" + ([.tokens[].piece] | join(\" \u00b7 \"))' tokenizer-dump.json", "text": "jq -r 'first(.items[] | select(.text==\"bookkeeper\")) | .text + \" \u2192 \" + ([.tokens[].piece] | join(\" \u00b7 \"))' tokenizer-dump.json"}
+{"t": 13.65, "event": "pane 0: jq -r 'first(.items[] | select(.text==\"strawberry\")) | .text + \" \u2192 \" + ([.tokens[].piece] | join(\" \u00b7 \"))' tokenizer-dump.json", "text": "jq -r 'first(.items[] | select(.text==\"strawberry\")) | .text + \" \u2192 \" + ([.tokens[].piece] | join(\" \u00b7 \"))' tokenizer-dump.json"}
+{"t": 21.061, "event": "pane 0: jq -r 'first(.items[] | select(.text==\"4821 \u00d7 7293\")) | .text + \" \u2192 \" + ([.tokens[].piece] | join(\" \u00b7 \"))' tokenizer-dump.json", "text": "jq -r 'first(.items[] | select(.text==\"4821 \u00d7 7293\")) | .text + \" \u2192 \" + ([.tokens[].piece] | join(\" \u00b7 \"))' tokenizer-dump.json"}
+{"t": 28.51, "event": "pane 0: clear", "text": "clear"}
+{"t": 31.654, "event": "pane 0: jq -c 'select(.model==\"e4b\" and .item==\"let_bookkeeper\" and .temperature==0 and .fix==null) | {answer, want, passed}' cant.jsonl", "text": "jq -c 'select(.model==\"e4b\" and .item==\"let_bookkeeper\" and .temperature==0 and .fix==null) | {answer, want, passed}' cant.jsonl"}

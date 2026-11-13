@@ -1,0 +1,26 @@
+$ cd /lab/out/p14
+$ jq -r 'select(.model=="e4b" and .section=="cite" and .temperature==0) | .citations[] | [(.line[:24]), .doi_resolves, .title_matches] | @tsv' cant.jsonl
+Sparse Attention: A Surv        false   false
+Reformer: The Efficient         true    false
+Longformer: The Long-Doc        true    false
+Linformer: Self-Attentio        true    false
+Performer: Rethinking At        true    false
+BigBird: Transformers fo        true    false
+FlashAttention: Fast and        true    false
+Autoformer: Auto-Correla        true    false
+Transformer-XL: Attentiv        true    true
+Efficiently Training Lan        true    false
+$ 
+
+
+
+
+
+
+
+
+
+
+
+
+

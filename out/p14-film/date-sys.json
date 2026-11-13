@@ -1,0 +1,22 @@
+{
+ "model": "gemma4:e4b-it-q4_K_M",
+ "messages": [
+  {
+   "role": "system",
+   "content": "Today's date is Tuesday, 10 November 2026 (2026-11-10)."
+  },
+  {
+   "role": "user",
+   "content": "What day of the week is it today? Answer with the weekday name only."
+  }
+ ],
+ "stream": false,
+ "keep_alive": "2m",
+ "options": {
+  "temperature": 0.0,
+  "seed": 42,
+  "num_predict": 256,
+  "num_ctx": 8192
+ },
+ "think": false
+}

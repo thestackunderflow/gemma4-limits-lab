@@ -1,0 +1,26 @@
+$ jq -c 'select(.section=="cite") | {model, temperature, n_listed, n_doi_resolves, n_title_matches}' cant.jsonl
+{"model":"e4b","temperature":0.0,"n_listed":10,"n_doi_resolves":9,"n_title_matches":1}
+{"model":"e4b","temperature":1.0,"n_listed":10,"n_doi_resolves":9,"n_title_matches":0}
+{"model":"e4b","temperature":1.0,"n_listed":10,"n_doi_resolves":7,"n_title_matches":0}
+{"model":"e4b","temperature":1.0,"n_listed":10,"n_doi_resolves":8,"n_title_matches":2}
+{"model":"e4b","temperature":1.0,"n_listed":10,"n_doi_resolves":10,"n_title_matches":1}
+{"model":"e4b","temperature":1.0,"n_listed":10,"n_doi_resolves":9,"n_title_matches":0}
+{"model":"12b-qat","temperature":0.0,"n_listed":10,"n_doi_resolves":10,"n_title_matches":1}
+$ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

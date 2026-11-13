@@ -1,0 +1,16 @@
+$ jq -s '[.[] | select(.model=="e4b" and .section=="mul" and .temperature==0 and .fix==null)] | group_by(.think) | map({think: .[0].think, median_s: (map(.seconds) | sort | .[length/2|floor])})' -c cant.jsonl
+[{"think":false,"median_s":0.2},{"think":true,"median_s":2.6}]
+$ jq -s '[.[] | select(.model=="e4b" and .fix=="calculator tool")] | {rows: length, used: map(select(.used_tool)) | length}' -c cant.jsonl
+{"rows":120,"used":0}
+$ jq -s '[.[] | select(.model=="e4b" and (.item=="mul1" or .item=="mul2"))] | {rows: length, multiply: map(select(.calls[0].name=="multiply")) | length}' -c ../p15/can.jsonl
+{"rows":12,"multiply":12}
+$ 
+
+
+
+
+
+
+
+
+

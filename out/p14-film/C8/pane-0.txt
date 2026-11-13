@@ -1,0 +1,20 @@
+$ jq -c 'select(.model=="e4b" and .item=="let_bookkeeper" and .temperature==0 and .fix==null) | {answer, want, passed}' cant.jsonl
+{"answer":"4","want":3,"passed":false}
+$ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

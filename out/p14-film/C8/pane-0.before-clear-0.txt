@@ -1,0 +1,18 @@
+$ cd /lab/out/p14
+$ jq -r 'first(.items[] | select(.text=="bookkeeper")) | .text + " → " + ([.tokens[].piece] | join(" · "))' tokenizer-dump.json
+bookkeeper → book · keeper
+$ jq -r 'first(.items[] | select(.text=="strawberry")) | .text + " → " + ([.tokens[].piece] | join(" · "))' tokenizer-dump.json
+strawberry → strawberry
+$ jq -r 'first(.items[] | select(.text=="4821 × 7293")) | .text + " → " + ([.tokens[].piece] | join(" · "))' tokenizer-dump.json
+4821 × 7293 → 4 · 8 · 2 · 1 ·  × ·   · 7 · 2 · 9 · 3
+$ 
+
+
+
+
+
+
+
+
+
+

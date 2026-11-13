@@ -1,0 +1,23 @@
+$ cd /lab/out/p14
+$ jq -r 'select(.model=="e4b" and .section=="mul" and .think==false and .temperature==0) | [.answer, .want, .passed] | @tsv' cant.jsonl
+3978816 3979016 false
+27607112        27596072        false
+15248802        15302902        false
+26608465        26615865        false
+19135888        19178688        false
+2261760 2261760 true
+11616970        11615370        false
+44718869        44641269        false
+6098898 6104538 false
+78078824        78163144        false
+38448849        38543349        false
+6143842 6146042 false
+28638360        28645260        false
+36578848        36498848        false
+16034889        16057269        false
+17408896        17418436        false
+18167856        18197256        false
+17778824        17780504        false
+35348855        35384455        false
+14588997        14589697        false
+$ 

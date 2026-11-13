@@ -1,0 +1,6 @@
+{"t": 0.055, "event": "recording started"}
+{"t": 2.863, "event": "pane 0: cd /lab/out/p14", "text": "cd /lab/out/p14"}
+{"t": 6.236, "event": "pane 0: jq -r 'select(.model==\"12b-qat\" and .section==\"mul\" and .think==true) | [.item, .eval_count, .passed, .seconds] | @tsv' cant.jsonl", "text": "jq -r 'select(.model==\"12b-qat\" and .section==\"mul\" and .think==true) | [.item, .eval_count, .passed, .seconds] | @tsv' cant.jsonl"}
+{"t": 14.28, "event": "pane 0: clear", "text": "clear"}
+{"t": 17.423, "event": "pane 0: jq -s '[.[] | select(.model==\"12b-qat\" and .think==true and .eval_count==8156)] | length' cant.jsonl", "text": "jq -s '[.[] | select(.model==\"12b-qat\" and .think==true and .eval_count==8156)] | length' cant.jsonl"}
+{"t": 22.756, "event": "pane 0: jq -s '[.[] | select(.model==\"12b-qat\" and .fix==\"calculator tool\")] | {rows: length, used: map(select(.used_tool)) | length, right: map(select(.passed)) | length}' -c cant.jsonl", "text": "jq -s '[.[] | select(.model==\"12b-qat\" and .fix==\"calculator tool\")] | {rows: length, used: map(select(.used_tool)) | length, right: map(select(.passed)) | length}' -c cant.jsonl"}

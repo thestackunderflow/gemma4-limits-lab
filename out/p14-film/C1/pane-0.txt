@@ -1,0 +1,20 @@
+$ jq -r '.model, .messages[0].content' /film/mul00.json
+gemma4:e4b-it-q4_K_M
+What is 2824 × 1409? Answer with the number only.
+$ curl -s $OLLAMA_HOST/api/chat -d @/film/mul00.json | jq -r .message.content
+3978816
+$ echo $((2824 * 1409))
+3979016
+$ 
+
+
+
+
+
+
+
+
+
+
+
+

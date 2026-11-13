@@ -1,0 +1,20 @@
+$ jq -r .model /film/tool-e4b.json
+gemma4:e4b-it-q4_K_M
+$ jq -r '.messages[0].content' /film/tool-e4b.json | fold -w 44
+What is 2824 × 1409? Answer with the number
+ only.
+$ curl -s $OLLAMA_HOST/api/chat -d @/film/tool-e4b.json | jq -c '.message.tool_calls, .message.content'
+null
+"3978816"
+$ 
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,3 @@
+{"t": 0.058, "event": "recording started"}
+{"t": 2.877, "event": "pane 0: jq -c '.messages[0]' /film/date-sys.json | fold -w 44", "text": "jq -c '.messages[0]' /film/date-sys.json | fold -w 44"}
+{"t": 7.143, "event": "pane 0: curl -s $OLLAMA_HOST/api/chat -d @/film/date-sys.json | jq -r .message.content", "text": "curl -s $OLLAMA_HOST/api/chat -d @/film/date-sys.json | jq -r .message.content"}

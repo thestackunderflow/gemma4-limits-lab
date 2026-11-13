@@ -1,0 +1,26 @@
+$ jq -r 'select(.model=="12b-qat" and .section=="cutoff" and .fix==null) | [.item, .answer[-20:], .want] | @tsv' cant.jsonl
+cut_ollama      0.5.7   0.40.16
+cut_node        22.11.0 26.13.0
+cut_kubernetes  1.31    1.37.2
+cut_rust        1.84.1  1.99.1
+cut_vscode      1.93.3  1.145.3
+cut_gemma       Gemma 2 gemma 4
+$ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

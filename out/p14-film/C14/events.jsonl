@@ -1,0 +1,7 @@
+{"t": 0.056, "event": "recording started"}
+{"t": 2.872, "event": "pane 0: cd /lab/out/p14", "text": "cd /lab/out/p14"}
+{"t": 6.256, "event": "pane 0: jq -r 'select(.model==\"e4b\" and .section==\"cite\" and .temperature==0) | .citations[] | [(.line[:24]), .doi_resolves, .title_matches] | @tsv' cant.jsonl", "text": "jq -r 'select(.model==\"e4b\" and .section==\"cite\" and .temperature==0) | .citations[] | [(.line[:24]), .doi_resolves, .title_matches] | @tsv' cant.jsonl"}
+{"t": 14.814, "event": "pane 0: clear", "text": "clear"}
+{"t": 17.972, "event": "pane 0: jq -r 'select(.model==\"e4b\" and .section==\"cite\" and .temperature==0) | .citations[1] | .line, .doi_title' cant.jsonl", "text": "jq -r 'select(.model==\"e4b\" and .section==\"cite\" and .temperature==0) | .citations[1] | .line, .doi_title' cant.jsonl"}
+{"t": 25.738, "event": "pane 0: clear", "text": "clear"}
+{"t": 28.893, "event": "pane 0: jq -c 'select(.section==\"cite\") | {model, temperature, n_listed, n_doi_resolves, n_title_matches}' cant.jsonl", "text": "jq -c 'select(.section==\"cite\") | {model, temperature, n_listed, n_doi_resolves, n_title_matches}' cant.jsonl"}

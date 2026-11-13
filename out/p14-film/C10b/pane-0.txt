@@ -1,0 +1,20 @@
+$ jq -c '.messages[0]' /film/date-sys.json | fold -w 44
+{"role":"system","content":"Today's date is 
+Tuesday, 10 November 2026 (2026-11-10)."}
+$ curl -s $OLLAMA_HOST/api/chat -d @/film/date-sys.json | jq -r .message.content
+Tuesday
+$ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+

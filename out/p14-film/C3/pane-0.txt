@@ -1,0 +1,20 @@
+$ jq -c 'select(.model=="e4b" and .section!="mul" and .section!="cite" and .temp==0) | {section, fix, passed, total}' cant-summary.jsonl
+{"section":"letters","fix":null,"passed":14,"total":20}
+{"section":"letters","fix":"spell first","passed":20,"total":20}
+{"section":"dates","fix":null,"passed":0,"total":10}
+{"section":"dates","fix":"date in system prompt","passed":9,"total":10}
+{"section":"cutoff","fix":null,"passed":0,"total":6}
+{"section":"cutoff","fix":"paste the source","passed":6,"total":6}
+$ 
+
+
+
+
+
+
+
+
+
+
+
+

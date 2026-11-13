@@ -1,0 +1,23 @@
+$ cd /lab/out/p14
+$ jq -r 'select(.model=="12b-qat" and .section=="mul" and .think==true) | [.item, .eval_count, .passed, .seconds] | @tsv' cant.jsonl
+mul00   960     true    47.3
+mul01   597     true    29.2
+mul02   8156    false   443.6
+mul03   8156    false   443.0
+mul04   8156    false   441.8
+mul05   754     true    37.0
+mul06   8156    false   443.0
+mul07   8156    false   441.4
+mul08   8156    false   442.8
+mul09   2405    true    123.8
+mul10   8156    false   442.8
+mul11   8156    false   443.7
+mul12   8156    false   443.7
+mul13   8156    false   451.9
+mul14   8156    false   442.7
+mul15   8156    false   442.8
+mul16   8156    false   443.9
+mul17   1137    true    56.6
+mul18   8156    false   444.0
+mul19   2389    true    123.4
+$ 

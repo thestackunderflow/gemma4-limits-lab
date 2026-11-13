@@ -1,0 +1,19 @@
+$ cp /lab/out/p15/images/ocr_00.png /tmp/my.png
+$ cat /film/want-ocr00.txt
+$ docker compose up -d
+Error response from daemon: port 8080 is already allocated
+$ ollama run --think=false gemma4:e4b-it-q4_K_M "Transcribe all the text in this image exactly as written, keeping the line breaks. Output only the text. /tmp/my.png" | tee /tmp/got.txt
+Added image '/tmp/my.png'
+$ docker compose up -d
+Error response from daemon: port 8080 is already allocated
+
+$ diff -wB /film/want-ocr00.txt /tmp/got.txt
+$ 
+
+
+
+
+
+
+
+

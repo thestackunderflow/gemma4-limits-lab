@@ -67,6 +67,7 @@ ocr00.json d1ba8fce0c204456; chart04.json 0dc5a3db5e765f28; tools-e4b.json 59ad9
 | V14b | V14b | 38.6 | 130eeee9481255f3 | 12b-q4 and 12b-qat images field ending "must be in want of a wife."; 12b-qat transcription also; 12b-q4 transcription ends "a good fortune"; e4b images-field tail ends "a good fortune."; 12b eSpeak lines incl. 12b-q4 "write 1.7 and not point seven. write 3 instead of three." |
 | V15, V15b | - | - | - | CUT (F18), not filmed |
 | V16 | V16 | 40.3 | febd72da8964818d | see below: **differs from the script** |
+| V16b | V16b | 38.9 | e338bf0da411162e | V16 with `ollama run --think=false`: see below; `diff -wB` prints **nothing** |
 
 ### V16 differs (quote as filmed, not re-taken)
 `ollama run gemma4:e4b-it-q4_K_M "... Output only the text. /tmp/my.png" | tee /tmp/got.txt` on the 0.40.16 client:
@@ -79,6 +80,14 @@ response from daemon: port 8080 is already allocated"). `diff -wB /film/want-ocr
 So F20's "this run: N lines differ" would be **15**, all from the thinking text, not the transcription. Recipe fix to
 consider (not filmed, needs the script gate): `ollama run --think=false ...` or `--hidethinking`; the Windows card's
 `fc /w` would show the same 15 extra lines with the current recipe.
+
+### V16b (13 Nov, the fix take; one attempt)
+`scripts/film15/V16b.sh` = V16.sh with only `--think=false` added after `ollama run` (same E4B tag, same prompt, same
+`/tmp/my.png` copy of ocr_00.png, same `/film/want-ocr00.txt`). Free RAM 4.78 GB before (after cache drop), 2.33 GB after
+(another agent was rendering). Terminal (pane-0.txt): stderr "Added image '/tmp/my.png'", then exactly
+"$ docker compose up -d" / "Error response from daemon: port 8080 is already allocated" and one blank line; no
+"Thinking..." block. `diff -wB /film/want-ocr00.txt /tmp/got.txt` prints **nothing** (prompt returns). got.txt sha256(16)
+fdd6762c5e0ffedf. Server: `POST /api/generate` 200 in 13.84 s (includes the model load). 1920x1080, 30 fps, 38.9 s.
 
 Count: 19 of 19 shots covered (V0, V9 reused takes; 17 take folders). FRESH: 6 of 6 (V1, V5, V7, V8, V13, V16). **Gate
 (§1): V1, V5, V8, V13 repeated their lab rows exactly; V16 (at-home recipe) differs from the script's expectation as

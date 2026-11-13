@@ -1,0 +1,23 @@
+$ cd /lab/out/p15
+$ jq -r 'select(.model=="e4b" and .section=="thinking" and .temperature==0) | "\(.item)  \(.think)  \(.passed)  \(.seconds)"' can.jsonl
+bat_ball  false  true  11.7
+widgets  false  true  1.5
+lily  false  true  0.7
+sisters  false  true  0.8
+sevens  false  true  4.5
+socks  false  true  1.6
+remainder  false  false  6.4
+sheep  false  true  0.5
+squares  false  true  4.6
+weekday  false  true  1.5
+bat_ball  true  true  3.2
+widgets  true  true  4.7
+lily  true  true  2.2
+sisters  true  true  3.1
+sevens  true  true  9.1
+socks  true  true  3.6
+remainder  true  true  10.2
+sheep  true  true  0.6
+squares  true  true  6.6
+weekday  true  true  2.4
+$ 

@@ -1,0 +1,6 @@
+{"t": 0.042, "event": "recording started"}
+{"t": 2.851, "event": "pane 0: cd /lab/out/p15", "text": "cd /lab/out/p15"}
+{"t": 6.228, "event": "pane 0: jq -r 'select((.model==\"12b-qat\" or .model==\"12b-q4\") and .item==\"librivox\") | \"\\(.model) \\(.route[0:12]):\", .answer[-60:]' aud.jsonl | fold -w 44", "text": "jq -r 'select((.model==\"12b-qat\" or .model==\"12b-q4\") and .item==\"librivox\") | \"\\(.model) \\(.route[0:12]):\", .answer[-60:]' aud.jsonl | fold -w 44"}
+{"t": 14.647, "event": "pane 0: jq -r 'select(.model==\"e4b\" and .item==\"librivox\" and .route==\"/api/chat images field\") | \"e4b \\(.route[0:12]):\", .answer[-60:]' aud.jsonl | fold -w 44", "text": "jq -r 'select(.model==\"e4b\" and .item==\"librivox\" and .route==\"/api/chat images field\") | \"e4b \\(.route[0:12]):\", .answer[-60:]' aud.jsonl | fold -w 44"}
+{"t": 24.18, "event": "pane 0: clear", "text": "clear"}
+{"t": 27.326, "event": "pane 0: jq -r 'select((.model==\"12b-qat\" or .model==\"12b-q4\") and .item==\"espeak\") | \"\\(.model) \\(.route[0:12]): \\(.answer)\"' aud.jsonl | fold -w 44", "text": "jq -r 'select((.model==\"12b-qat\" or .model==\"12b-q4\") and .item==\"espeak\") | \"\\(.model) \\(.route[0:12]): \\(.answer)\"' aud.jsonl | fold -w 44"}

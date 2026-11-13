@@ -1,0 +1,3 @@
+{"t": 0.055, "event": "recording started"}
+{"t": 2.864, "event": "pane 0: cd /lab/out/p15", "text": "cd /lab/out/p15"}
+{"t": 6.244, "event": "pane 0: jq -c 'select(.section==\"tools\") | [.model, .seed, .result]' can-summary.jsonl", "text": "jq -c 'select(.section==\"tools\") | [.model, .seed, .result]' can-summary.jsonl"}

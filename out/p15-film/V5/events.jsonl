@@ -1,0 +1,4 @@
+{"t": 0.062, "event": "recording started"}
+{"t": 4.404, "event": "terminal up"}
+{"t": 7.212, "event": "pane 0: curl -s $OLLAMA_HOST/api/chat -d @/film/chart04.json | tee /tmp/c.json | jq -r .message.content", "text": "curl -s $OLLAMA_HOST/api/chat -d @/film/chart04.json | tee /tmp/c.json | jq -r .message.content"}
+{"t": 14.054, "event": "pane 0: jq -c 'select(.model==\"e4b\" and .item==\"chart04\" and .temperature==0) | .want' /lab/out/p15/can.jsonl", "text": "jq -c 'select(.model==\"e4b\" and .item==\"chart04\" and .temperature==0) | .want' /lab/out/p15/can.jsonl"}

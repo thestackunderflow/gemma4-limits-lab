@@ -1,0 +1,5 @@
+{"t": 0.054, "event": "recording started"}
+{"t": 2.866, "event": "pane 0: cp /lab/out/p15/images/ocr_00.png /tmp/my.png", "text": "cp /lab/out/p15/images/ocr_00.png /tmp/my.png"}
+{"t": 6.963, "event": "pane 0: cat /film/want-ocr00.txt", "text": "cat /film/want-ocr00.txt"}
+{"t": 10.566, "event": "pane 0: ollama run gemma4:e4b-it-q4_K_M \"Transcribe all the text in this image exactly as written, keeping the line breaks. Output only the text. /tmp/my.png\" | tee /tmp/got.txt", "text": "ollama run gemma4:e4b-it-q4_K_M \"Transcribe all the text in this image exactly as written, keeping the line breaks. Output only the text. /tmp/my.png\" | tee /tmp/got.txt"}
+{"t": 32.791, "event": "pane 0: diff -wB /film/want-ocr00.txt /tmp/got.txt", "text": "diff -wB /film/want-ocr00.txt /tmp/got.txt"}

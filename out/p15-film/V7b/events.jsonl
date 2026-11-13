@@ -1,0 +1,6 @@
+{"t": 0.054, "event": "recording started"}
+{"t": 2.867, "event": "pane 0: cd /lab/out/p15", "text": "cd /lab/out/p15"}
+{"t": 6.246, "event": "pane 0: jq -r 'select(.model==\"e4b\" and .item==\"pair01\" and .temperature==0) | .want, .answer' can.jsonl", "text": "jq -r 'select(.model==\"e4b\" and .item==\"pair01\" and .temperature==0) | .want, .answer' can.jsonl"}
+{"t": 13.496, "event": "pane 0: grep -n \"WORD-NUMBER\" /lab/lab/images.py | fold -w 44", "text": "grep -n \"WORD-NUMBER\" /lab/lab/images.py | fold -w 44"}
+{"t": 20.766, "event": "pane 0: clear", "text": "clear"}
+{"t": 23.917, "event": "pane 0: jq -c 'select(.section==\"pairs\") | [.model, .seed, .result]' can-summary.jsonl", "text": "jq -c 'select(.section==\"pairs\") | [.model, .seed, .result]' can-summary.jsonl"}

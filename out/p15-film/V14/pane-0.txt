@@ -1,0 +1,20 @@
+$ jq -r 'select(.item=="no-clip-control" and (.model=="e2b" or .model=="e4b")) | .answer[0:80]' aud.jsonl | fold -w 44
+I'm sorry, I cannot fulfill that request. I 
+need an audio input to transcribe. P
+I am sorry, but I cannot transcribe the audi
+o because you have not provided me w
+$ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+

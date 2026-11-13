@@ -12,3 +12,6 @@ out/p13-film/req-*.json
 # Part 14 film takes: videos/images stay local (sha256 in TAKES.md)
 out/p14-film/**/*.mp4
 out/p14-film/**/*.png
+# Part 15 film takes: videos/images stay local (sha256 in TAKES.md)
+out/p15-film/**/*.mp4
+out/p15-film/**/*.png

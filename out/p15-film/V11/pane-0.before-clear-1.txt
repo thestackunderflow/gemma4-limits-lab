@@ -1,0 +1,20 @@
+$ grep -n "Tengo 3 cajas" /lab/lab/tasks.py | fold -w 44
+140:        ("es2", "es", "Tengo 3 cajas con
+ 12 manzanas cada una. ¿Cuántas manzanas t
+engo en total? Responde solo con "
+$ jq -r 'select(.model=="e4b" and .item=="es2" and .temperature==0) | .answer' can.jsonl
+36
+$ 
+
+
+
+
+
+
+
+
+
+
+
+
+

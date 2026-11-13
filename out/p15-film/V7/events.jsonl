@@ -1,0 +1,4 @@
+{"t": 0.054, "event": "recording started"}
+{"t": 4.059, "event": "address bar", "keys": "ctrl+l"}
+{"t": 5.193, "event": "url: pair_01_b.png", "text": "file:///lab/out/p15/images/pair_01_b.png"}
+{"t": 6.722, "event": "open", "keys": "Return"}

@@ -1,0 +1,19 @@
+$ cd /lab/out/p15
+$ jq -c 'select(.model=="e4b" and .section=="ocr" and .temperature==0 and .item=="ocr00") | {want, answer, passed}' can.jsonl | fold -w 44
+{"want":"$ docker compose up -d\nError respo
+nse from daemon: port 8080 is already alloca
+ted","answer":"$ docker compose up -d\nError
+ response from daemon: port 8080 is already 
+allocated","passed":true}
+$ jq -c 'select(.model=="e4b" and .section=="ocr") | {temperature, seed, result}' can-summary.jsonl
+{"temperature":0.0,"seed":42,"result":[10,10]}
+{"temperature":1.0,"seed":1001,"result":[10,10]}
+{"temperature":1.0,"seed":1002,"result":[10,10]}
+{"temperature":1.0,"seed":1003,"result":[10,10]}
+{"temperature":1.0,"seed":1004,"result":[10,10]}
+{"temperature":1.0,"seed":1005,"result":[9,10]}
+$ 
+
+
+
+

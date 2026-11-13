@@ -1,0 +1,77 @@
+time=2026-11-13T13:10:30.162Z level=DEBUG source=sched.go:1417 msg="evaluating already loaded" model=/root/.ollama/models/blobs/sha256-370c2879f17648d337b0ab4e208fdce348e24d1060064e93d7645daafd56d39c
+time=2026-11-13T13:10:30.166Z level=DEBUG source=llama_server.go:1668 msg="llama-server completion request" media=0 prompt_len=1684
+srv  server_strea: conv_id= (empty=1)
+slot get_availabl: id  0 | task -1 |  - checking sim = 0.005 (2/401) > 0.100
+slot get_availabl: id  0 | task -1 | selected slot by LRU, n_tokens = 260, t_last = 176784865278
+srv  get_availabl: updating prompt cache
+srv   prompt_save:  - saving prompt with length 260, total state size = 14.225 MiB (draft: 0.000 MiB)
+srv          load:  - looking for better prompt, base f_keep = 0.008, f_sim = 0.005
+srv          load:    - prompt with length     147, lcp =       2, f_keep = 0.014, f_sim = 0.005
+srv          load:    - prompt with length     260, lcp =       2, f_keep = 0.008, f_sim = 0.005
+srv        update:  - cache state: 2 prompts, 35.183 MiB (limits: 8192.000 MiB, 8192 tokens, 94765 est)
+srv        update:    - prompt 0x38b5d870:     147 tokens, checkpoints:  1,    12.781 MiB
+srv        update:    - prompt 0x535a0160:     260 tokens, checkpoints:  1,    22.402 MiB
+srv  get_availabl: prompt cache update took 15.22 ms
+slot launch_slot_: id  0 | task -1 | sampler chain: logits -> ?penalties -> ?dry -> ?top-n-sigma -> top-k -> ?typical -> top-p -> ?min-p -> ?xtc -> temp-ext -> greedy 
+slot launch_slot_: id  0 | task -1 | sampler params: 
+	repeat_last_n = 64, repeat_penalty = 1.000, frequency_penalty = 0.000, presence_penalty = 0.000
+	dry_multiplier = 0.000, dry_base = 1.750, dry_allowed_length = 2, dry_penalty_last_n = 64
+	top_k = 64, top_p = 0.950, min_p = 0.000, xtc_probability = 0.000, xtc_threshold = 0.100, typical_p = 1.000, top_n_sigma = -1.000, temp = 0.000
+	mirostat = 0, mirostat_lr = 0.100, mirostat_ent = 5.000, adaptive_target = -1.000, adaptive_decay = 0.900
+slot launch_slot_: id  0 | task 27 | processing task, is_child = 0
+slot   operator(): id  0 | task 27 | new prompt, n_ctx_slot = 8192, n_keep = 4, task.n_tokens = 401
+slot   operator(): id  0 | task 27 | checking checkpoint with [0, 208] against 0...
+slot   operator(): id  0 | task 27 | forcing full prompt re-processing due to lack of cache data (likely due to SWA or hybrid/recurrent memory, see https://github.com/ggml-org/llama.cpp/pull/13194#issuecomment-2868343055)
+slot   operator(): id  0 | task 27 | erased invalidated context checkpoint (pos_min = 0, pos_max = 208, n_tokens = 209, n_swa = 512, pos_next = 0, size = 8.177 MiB)
+slot   operator(): id  0 | task 27 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot   operator(): id  0 | task 27 | cached n_tokens = 397, memory_seq_rm [397, end)
+slot init_sampler: id  0 | task 27 | init sampler, took 0.03 ms, tokens: text = 401, total = 401
+slot create_check: id  0 | task 27 | created context checkpoint 1 of 32 (pos_min = 0, pos_max = 396, n_tokens = 397, size = 15.523 MiB)
+slot print_timing: id  0 | task 27 | prompt eval time =     402.46 ms /   401 tokens (    1.00 ms per token,   996.37 tokens per second)
+slot print_timing: id  0 | task 27 |        eval time =     118.66 ms /    21 tokens (    5.93 ms per token,   168.55 tokens per second)
+slot print_timing: id  0 | task 27 |       total time =     521.12 ms /   422 tokens
+slot print_timing: id  0 | task 27 |    graphs reused =         21
+slot print_timing: id  0 | task 27 |   graph reallocs =          0    /     0        (same size) / (changed size)
+slot print_timing: id  0 | task 27 | draft acceptance = 1.00000 (   15 accepted /    15 generated), mean len =  4.00
+slot print_timing: id  0 | task 27 |      acc per pos = (1.000, 1.000, 1.000)
+spec common_specu: statistics        draft-mtp: #calls(b,g,a) =    3     24     24, #gen drafts =     24, #acc drafts =    23, #gen tokens =     72, #acc tokens =    65, #mean acc len = 3.71, #acc rate/pos = (0.958, 0.875, 0.875), dur(b,g,a) = 0.066, 74.649, 0.032 ms
+slot      release: id  0 | task 27 | stop processing: n_tokens = 421, truncated = 0
+srv  update_slots: all slots are idle
+[GIN] 2026/11/13 - 13:10:30 | 200 | 542.93ms |   192.168.192.3 | POST     "/api/chat"
+time=2026-11-13T13:10:30.704Z level=DEBUG source=sched.go:532 msg="context for request finished" runner.name=registry.ollama.ai/library/gemma4:e4b-it-q4_K_M runner.inference="[{ID:0 Library:CUDA}]" runner.pid=399 runner.num_ctx=8192 runner.size="249.2 MiB" runner.vram="249.2 MiB" runner.parallel=1 runner.model=/root/.ollama/models/blobs/sha256-370c2879f17648d337b0ab4e208fdce348e24d1060064e93d7645daafd56d39c
+time=2026-11-13T13:10:30.704Z level=DEBUG source=sched.go:437 msg="runner with non-zero duration has gone idle, adding timer" runner.size="249.2 MiB" runner.vram="249.2 MiB" runner.parallel=1 runner.model=/root/.ollama/models/blobs/sha256-370c2879f17648d337b0ab4e208fdce348e24d1060064e93d7645daafd56d39c duration=2m0s
+time=2026-11-13T13:10:30.704Z level=DEBUG source=sched.go:455 msg="after processing request finished event" runner.size="249.2 MiB" runner.vram="249.2 MiB" runner.parallel=1 runner.model=/root/.ollama/models/blobs/sha256-370c2879f17648d337b0ab4e208fdce348e24d1060064e93d7645daafd56d39c refCount=0
+time=2026-11-13T13:10:37.685Z level=DEBUG source=sched.go:1417 msg="evaluating already loaded" model=/root/.ollama/models/blobs/sha256-370c2879f17648d337b0ab4e208fdce348e24d1060064e93d7645daafd56d39c
+time=2026-11-13T13:10:37.687Z level=DEBUG source=llama_server.go:1668 msg="llama-server completion request" media=0 prompt_len=1823
+srv  server_strea: conv_id= (empty=1)
+slot get_availabl: id  0 | task -1 |  - checking sim = 0.946 (421/445) > 0.100
+slot get_availabl: id  0 | task -1 | selected slot by LCP similarity, f_sim_best = 0.946 (> 0.100 thold), f_keep = 1.000
+slot launch_slot_: id  0 | task -1 | sampler chain: logits -> ?penalties -> ?dry -> ?top-n-sigma -> top-k -> ?typical -> top-p -> ?min-p -> ?xtc -> temp-ext -> greedy 
+slot launch_slot_: id  0 | task -1 | sampler params: 
+	repeat_last_n = 64, repeat_penalty = 1.000, frequency_penalty = 0.000, presence_penalty = 0.000
+	dry_multiplier = 0.000, dry_base = 1.750, dry_allowed_length = 2, dry_penalty_last_n = 64
+	top_k = 64, top_p = 0.950, min_p = 0.000, xtc_probability = 0.000, xtc_threshold = 0.100, typical_p = 1.000, top_n_sigma = -1.000, temp = 0.000
+	mirostat = 0, mirostat_lr = 0.100, mirostat_ent = 5.000, adaptive_target = -1.000, adaptive_decay = 0.900
+slot launch_slot_: id  0 | task 35 | processing task, is_child = 0
+slot   operator(): id  0 | task 35 | new prompt, n_ctx_slot = 8192, n_keep = 4, task.n_tokens = 445
+slot   operator(): id  0 | task 35 | checking checkpoint with [0, 396] against 0...
+slot   operator(): id  0 | task 35 | restored context checkpoint (pos_min = 0, pos_max = 396, n_tokens = 397, n_past = 396, size = 15.523 MiB)
+slot   operator(): id  0 | task 35 | cached n_tokens = 396, memory_seq_rm [396, end)
+slot create_check: id  0 | task 35 | created context checkpoint 2 of 32 (pos_min = 0, pos_max = 395, n_tokens = 396, size = 15.484 MiB)
+slot   operator(): id  0 | task 35 | cached n_tokens = 441, memory_seq_rm [441, end)
+slot init_sampler: id  0 | task 35 | init sampler, took 0.03 ms, tokens: text = 445, total = 445
+slot create_check: id  0 | task 35 | created context checkpoint 3 of 32 (pos_min = 0, pos_max = 440, n_tokens = 441, size = 17.242 MiB)
+slot print_timing: id  0 | task 35 | prompt eval time =     244.12 ms /    49 tokens (    4.98 ms per token,   200.72 tokens per second)
+slot print_timing: id  0 | task 35 |        eval time =     180.84 ms /    29 tokens (    6.46 ms per token,   154.83 tokens per second)
+slot print_timing: id  0 | task 35 |       total time =     424.97 ms /    78 tokens
+slot print_timing: id  0 | task 35 |    graphs reused =         28
+slot print_timing: id  0 | task 35 |   graph reallocs =          0    /     0        (same size) / (changed size)
+slot print_timing: id  0 | task 35 | draft acceptance = 0.83333 (   20 accepted /    24 generated), mean len =  3.50
+slot print_timing: id  0 | task 35 |      acc per pos = (0.875, 0.875, 0.750)
+spec common_specu: statistics        draft-mtp: #calls(b,g,a) =    4     32     32, #gen drafts =     32, #acc drafts =    30, #gen tokens =     96, #acc tokens =    85, #mean acc len = 3.66, #acc rate/pos = (0.938, 0.875, 0.844), dur(b,g,a) = 0.077, 95.866, 0.042 ms
+slot      release: id  0 | task 35 | stop processing: n_tokens = 473, truncated = 0
+srv  update_slots: all slots are idle
+[GIN] 2026/11/13 - 13:10:38 | 200 | 429.43ms |   192.168.192.3 | POST     "/api/chat"
+time=2026-11-13T13:10:38.114Z level=DEBUG source=sched.go:532 msg="context for request finished" runner.name=registry.ollama.ai/library/gemma4:e4b-it-q4_K_M runner.inference="[{ID:0 Library:CUDA}]" runner.pid=399 runner.num_ctx=8192 runner.size="249.2 MiB" runner.vram="249.2 MiB" runner.parallel=1 runner.model=/root/.ollama/models/blobs/sha256-370c2879f17648d337b0ab4e208fdce348e24d1060064e93d7645daafd56d39c
+time=2026-11-13T13:10:38.114Z level=DEBUG source=sched.go:437 msg="runner with non-zero duration has gone idle, adding timer" runner.size="249.2 MiB" runner.vram="249.2 MiB" runner.parallel=1 runner.model=/root/.ollama/models/blobs/sha256-370c2879f17648d337b0ab4e208fdce348e24d1060064e93d7645daafd56d39c duration=2m0s
+time=2026-11-13T13:10:38.114Z level=DEBUG source=sched.go:455 msg="after processing request finished event" runner.size="249.2 MiB" runner.vram="249.2 MiB" runner.parallel=1 runner.model=/root/.ollama/models/blobs/sha256-370c2879f17648d337b0ab4e208fdce348e24d1060064e93d7645daafd56d39c refCount=0

@@ -1,0 +1,18 @@
+$ jq -s '[.[] | select(.model=="e4b" and (.item=="mul1" or .item=="mul2"))] | {rows: length, multiply: map(select(.calls[0].name=="multiply")) | length}' -c /lab/out/p15/can.jsonl
+{"rows":12,"multiply":12}
+$ jq -s '[.[] | select(.model=="e4b" and .fix=="calculator tool")] | {rows: length, used: map(select(.used_tool)) | length}' -c /lab/out/p14/cant.jsonl
+{"rows":120,"used":0}
+$ 
+
+
+
+
+
+
+
+
+
+
+
+
+

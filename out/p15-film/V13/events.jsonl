@@ -1,0 +1,4 @@
+{"t": 0.039, "event": "recording started"}
+{"t": 2.848, "event": "pane 0: curl -s $OLLAMA_HOST/api/show -d '{\"model\":\"gemma4:e4b-it-q4_K_M\"}' | jq -c .capabilities", "text": "curl -s $OLLAMA_HOST/api/show -d '{\"model\":\"gemma4:e4b-it-q4_K_M\"}' | jq -c .capabilities"}
+{"t": 7.948, "event": "pane 0: grep -n \"ESPEAK_TEXT =\" /lab/lab/p15.py | fold -w 44", "text": "grep -n \"ESPEAK_TEXT =\" /lab/lab/p15.py | fold -w 44"}
+{"t": 13.692, "event": "pane 0: curl -s -F model=gemma4:e4b-it-q4_K_M -F \"file=@/lab/out/p15/audio/espeak.wav;type=audio/wav\" $OLLAMA_HOST/v1/audio/transcriptions | jq -r .text | fold -w 44", "text": "curl -s -F model=gemma4:e4b-it-q4_K_M -F \"file=@/lab/out/p15/audio/espeak.wav;type=audio/wav\" $OLLAMA_HOST/v1/audio/transcriptions | jq -r .text | fold -w 44"}

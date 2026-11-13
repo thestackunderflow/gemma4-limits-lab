@@ -1,0 +1,19 @@
+$ cd /lab/out/p15
+$ jq -r 'select((.model=="12b-qat" or .model=="12b-q4") and .item=="librivox") | "\(.model) \(.route[0:12]):", .answer[-60:]' aud.jsonl | fold -w 44
+12b-q4 /api/chat im:
+ in possession of a good fortune, must be in
+ want of a wife.
+12b-q4 /v1/audio/tr:
+knowledged that a single man in possession o
+f a good fortune
+12b-qat /api/chat im:
+ in possession of a good fortune, must be in
+ want of a wife.
+12b-qat /v1/audio/tr:
+ in possession of a good fortune, must be in
+ want of a wife.
+$ jq -r 'select(.model=="e4b" and .item=="librivox" and .route=="/api/chat images field") | "e4b \(.route[0:12]):", .answer[-60:]' aud.jsonl | fold -w 44
+e4b /api/chat im:
+nowledged that a single man in possession of
+ a good fortune.
+$ 

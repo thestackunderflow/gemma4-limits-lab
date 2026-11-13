@@ -1,0 +1,18 @@
+$ jq -s '[.[] | select(.section=="charts")] | {rows: length, within5: map(select(.within_5[0]==.within_5[1])) | length}' -c can.jsonl
+{"rows":60,"within5":60}
+$ jq -s '[.[] | select(.section=="charts") | .answer as $a | ($a | gsub("```(json)?"; "") | fromjson) as $g | .want | to_entries[] | (($g[.key] - .value) | fabs)] | max' can.jsonl
+3
+$ 
+
+
+
+
+
+
+
+
+
+
+
+
+

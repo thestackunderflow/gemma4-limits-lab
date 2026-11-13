@@ -1,0 +1,20 @@
+$ cd /lab/out/p15
+$ jq -r 'select(.model=="e4b" and .section=="ocr" and .temperature==0) | "\(.item)  \(.passed)"' can.jsonl
+ocr00  true
+ocr01  true
+ocr02  true
+ocr03  true
+ocr04  true
+ocr05  true
+ocr06  true
+ocr07  true
+ocr08  true
+ocr09  true
+$ 
+
+
+
+
+
+
+

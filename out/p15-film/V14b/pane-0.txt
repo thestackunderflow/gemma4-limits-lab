@@ -1,0 +1,20 @@
+$ jq -r 'select((.model=="12b-qat" or .model=="12b-q4") and .item=="espeak") | "\(.model) \(.route[0:12]): \(.answer)"' aud.jsonl | fold -w 44
+12b-q4 /api/chat im: I'm sorry, I can't prov
+ide a translation for that phrase.
+12b-q4 /v1/audio/tr: write 1.7 and not point
+ seven. write 3 instead of three.
+12b-qat /api/chat im: That quick brown fox j
+umps over the lazy dog.
+12b-qat /v1/audio/tr: The quick brown fox ju
+mps over the lazy dog.
+$ 
+
+
+
+
+
+
+
+
+
+

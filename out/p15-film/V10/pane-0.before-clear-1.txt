@@ -1,0 +1,20 @@
+$ jq -r 'select(.model=="e4b" and .section=="coding" and .temperature==0) | "\(.item[5:])  \(.tests_passed)/\(.tests_total)"' can.jsonl
+is_palindrome  4/4
+fizzbuzz  3/3
+roman_to_int  3/3
+flatten  4/4
+word_freq  3/3
+is_prime  4/4
+merge_intervals  4/4
+binary_search  4/4
+rle_encode  3/3
+second_largest  4/4
+$ 
+
+
+
+
+
+
+
+

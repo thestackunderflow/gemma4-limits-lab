@@ -1,0 +1,11 @@
+{
+ "video": "screen.mp4",
+ "size": [
+  1920,
+  1080
+ ],
+ "fps": 30,
+ "t0_epoch": 1794575453.084532,
+ "t0_source": "debug_ts",
+ "time_base": "seconds from the first frame of screen.mp4"
+}

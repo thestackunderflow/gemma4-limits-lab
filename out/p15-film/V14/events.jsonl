@@ -1,0 +1,5 @@
+{"t": 0.039, "event": "recording started"}
+{"t": 2.848, "event": "pane 0: cd /lab/out/p15", "text": "cd /lab/out/p15"}
+{"t": 6.227, "event": "pane 0: jq -r 'select((.model==\"e2b\" or .model==\"e4b\") and .item==\"librivox\") | \"\\(.model) \\(.route[0:12]): \\(.answer[-40:])\"' aud.jsonl | fold -w 44", "text": "jq -r 'select((.model==\"e2b\" or .model==\"e4b\") and .item==\"librivox\") | \"\\(.model) \\(.route[0:12]): \\(.answer[-40:])\"' aud.jsonl | fold -w 44"}
+{"t": 15.528, "event": "pane 0: clear", "text": "clear"}
+{"t": 18.678, "event": "pane 0: jq -r 'select(.item==\"no-clip-control\" and (.model==\"e2b\" or .model==\"e4b\")) | .answer[0:80]' aud.jsonl | fold -w 44", "text": "jq -r 'select(.item==\"no-clip-control\" and (.model==\"e2b\" or .model==\"e4b\")) | .answer[0:80]' aud.jsonl | fold -w 44"}

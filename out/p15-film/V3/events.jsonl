@@ -1,0 +1,6 @@
+{"t": 0.034, "event": "recording started"}
+{"t": 2.845, "event": "pane 0: cd /lab/out/p15", "text": "cd /lab/out/p15"}
+{"t": 6.224, "event": "pane 0: jq -r 'select(.model==\"e4b\" and .section==\"ocr\" and .temperature==0) | \"\\(.item)  \\(.passed)\"' can.jsonl", "text": "jq -r 'select(.model==\"e4b\" and .section==\"ocr\" and .temperature==0) | \"\\(.item)  \\(.passed)\"' can.jsonl"}
+{"t": 14.662, "event": "pane 0: clear", "text": "clear"}
+{"t": 17.812, "event": "pane 0: jq -c 'select(.model==\"e4b\" and .section==\"ocr\" and .passed==false) | {seed, want: .want[-12:], answer: .answer[-12:]}' can.jsonl", "text": "jq -c 'select(.model==\"e4b\" and .section==\"ocr\" and .passed==false) | {seed, want: .want[-12:], answer: .answer[-12:]}' can.jsonl"}
+{"t": 26.829, "event": "pane 0: jq -c 'select(.model==\"12b-qat\" and .section==\"ocr\") | [.temperature, .seed, .result]' can-summary.jsonl", "text": "jq -c 'select(.model==\"12b-qat\" and .section==\"ocr\") | [.temperature, .seed, .result]' can-summary.jsonl"}

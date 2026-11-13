@@ -1,0 +1,21 @@
+$ jq -r '.messages[0].content' /film/tools-e4b.json
+Multiply 4821 by 7293.
+$ jq '.tools | length' /film/tools-e4b.json
+6
+$ jq '.tools | length' /lab/out/p14-film/tool-e4b.json
+1
+$ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+

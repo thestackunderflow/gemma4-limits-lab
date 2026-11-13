@@ -1,0 +1,18 @@
+$ jq -c 'select(.section=="coding" and .passed==false) | {model, seed, item, tests_passed, tests_total, last_error}' can.jsonl
+{"model":"e4b","seed":1004,"item":"code_roman_to_int","tests_passed":1,"tests_total":3,"last_error":"AssertionError"}
+$ jq -c 'select(.section=="coding") | [.model, .seed, .result]' can-summary.jsonl
+["e4b",42,[10,10]]
+["12b-qat",42,[10,10]]
+["e4b",1001,[10,10]]
+["e4b",1002,[10,10]]
+["e4b",1003,[10,10]]
+["e4b",1004,[9,10]]
+["e4b",1005,[10,10]]
+["12b-qat",1001,[10,10]]
+["12b-qat",1002,[10,10]]
+["12b-qat",1003,[10,10]]
+["12b-qat",1004,[10,10]]
+["12b-qat",1005,[10,10]]
+$ 
+
+

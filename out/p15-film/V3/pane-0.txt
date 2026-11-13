@@ -1,0 +1,19 @@
+$ jq -c 'select(.model=="e4b" and .section=="ocr" and .passed==false) | {seed, want: .want[-12:], answer: .answer[-12:]}' can.jsonl
+{"seed":1005,"want":" (OOMKilled)","answer":" (00MKilled)"}
+$ jq -c 'select(.model=="12b-qat" and .section=="ocr") | [.temperature, .seed, .result]' can-summary.jsonl
+[0.0,42,[10,10]]
+[1.0,1001,[10,10]]
+[1.0,1002,[10,10]]
+[1.0,1003,[10,10]]
+[1.0,1004,[10,10]]
+[1.0,1005,[10,10]]
+$ 
+
+
+
+
+
+
+
+
+

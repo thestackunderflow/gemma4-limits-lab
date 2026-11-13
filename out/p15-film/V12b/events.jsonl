@@ -1,0 +1,5 @@
+{"t": 0.048, "event": "recording started"}
+{"t": 2.857, "event": "pane 0: cd /lab/out/p15", "text": "cd /lab/out/p15"}
+{"t": 6.235, "event": "pane 0: jq -r 'select(.model==\"12b-qat\" and .section==\"thinking\") | \"\\(.item)  \\(.think)  \\(.eval_count)  \\(.passed)  \\(.seconds)\"' can.jsonl", "text": "jq -r 'select(.model==\"12b-qat\" and .section==\"thinking\") | \"\\(.item)  \\(.think)  \\(.eval_count)  \\(.passed)  \\(.seconds)\"' can.jsonl"}
+{"t": 15.349, "event": "pane 0: clear", "text": "clear"}
+{"t": 18.496, "event": "pane 0: jq -c 'select(.model==\"12b-qat\" and .section==\"thinking\") | .result' can-summary.jsonl", "text": "jq -c 'select(.model==\"12b-qat\" and .section==\"thinking\") | .result' can-summary.jsonl"}

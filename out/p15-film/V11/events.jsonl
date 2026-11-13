@@ -1,0 +1,8 @@
+{"t": 0.043, "event": "recording started"}
+{"t": 2.854, "event": "pane 0: cd /lab/out/p15", "text": "cd /lab/out/p15"}
+{"t": 6.244, "event": "pane 0: jq -r 'select(.model==\"e4b\" and .section==\"multilingual\" and .temperature==0) | \"\\(.lang)  \\(.want)  \\(.answer)  \\(.passed)\"' can.jsonl", "text": "jq -r 'select(.model==\"e4b\" and .section==\"multilingual\" and .temperature==0) | \"\\(.lang)  \\(.want)  \\(.answer)  \\(.passed)\"' can.jsonl"}
+{"t": 15.478, "event": "pane 0: clear", "text": "clear"}
+{"t": 18.623, "event": "pane 0: grep -n \"Tengo 3 cajas\" /lab/lab/tasks.py | fold -w 44", "text": "grep -n \"Tengo 3 cajas\" /lab/lab/tasks.py | fold -w 44"}
+{"t": 22.898, "event": "pane 0: jq -r 'select(.model==\"e4b\" and .item==\"es2\" and .temperature==0) | .answer' can.jsonl", "text": "jq -r 'select(.model==\"e4b\" and .item==\"es2\" and .temperature==0) | .answer' can.jsonl"}
+{"t": 29.926, "event": "pane 0: clear", "text": "clear"}
+{"t": 33.081, "event": "pane 0: jq -c 'select(.section==\"multilingual\") | [.model, .seed, .result]' can-summary.jsonl", "text": "jq -c 'select(.section==\"multilingual\") | [.model, .seed, .result]' can-summary.jsonl"}

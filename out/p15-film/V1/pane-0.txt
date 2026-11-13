@@ -1,0 +1,20 @@
+$ jq -r .model /film/ocr00.json
+gemma4:e4b-it-q4_K_M
+$ curl -s $OLLAMA_HOST/api/chat -d @/film/ocr00.json | tee /tmp/o.json | jq -r .message.content
+$ docker compose up -d
+Error response from daemon: port 8080 is already allocated
+$ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,23 @@
+$ cd /lab/out/p15
+$ jq -r 'select(.model=="12b-qat" and .section=="thinking") | "\(.item)  \(.think)  \(.eval_count)  \(.passed)  \(.seconds)"' can.jsonl
+bat_ball  false  293  true  35.9
+widgets  false  149  true  7.4
+lily  false  186  true  9.4
+sisters  false  113  true  5.7
+sevens  false  262  true  12.7
+socks  false  235  true  11.6
+remainder  false  761  true  37.8
+sheep  false  40  true  2.4
+squares  false  629  true  31.0
+weekday  false  198  true  9.9
+bat_ball  true  591  true  29.2
+widgets  true  1035  true  52.1
+lily  true  523  true  25.8
+sisters  true  4003  true  216.7
+sevens  true  8139  false  448.4
+socks  true  619  true  30.9
+remainder  true  8126  false  453.0
+sheep  true  200  true  10.1
+squares  true  1943  true  101.3
+weekday  true  8129  false  449.1
+$ 

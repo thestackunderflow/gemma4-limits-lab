@@ -1,0 +1,8 @@
+{"t": 0.047, "event": "recording started"}
+{"t": 2.859, "event": "pane 0: cd /lab/out/p15", "text": "cd /lab/out/p15"}
+{"t": 6.236, "event": "pane 0: jq -r 'select(.model==\"e4b\" and .item==\"code_merge_intervals\" and .temperature==0) | .answer' can.jsonl | head -8", "text": "jq -r 'select(.model==\"e4b\" and .item==\"code_merge_intervals\" and .temperature==0) | .answer' can.jsonl | head -8"}
+{"t": 14.893, "event": "pane 0: clear", "text": "clear"}
+{"t": 18.04, "event": "pane 0: jq -r 'select(.model==\"e4b\" and .section==\"coding\" and .temperature==0) | \"\\(.item[5:])  \\(.tests_passed)/\\(.tests_total)\"' can.jsonl", "text": "jq -r 'select(.model==\"e4b\" and .section==\"coding\" and .temperature==0) | \"\\(.item[5:])  \\(.tests_passed)/\\(.tests_total)\"' can.jsonl"}
+{"t": 27.18, "event": "pane 0: clear", "text": "clear"}
+{"t": 30.337, "event": "pane 0: jq -c 'select(.section==\"coding\" and .passed==false) | {model, seed, item, tests_passed, tests_total, last_error}' can.jsonl", "text": "jq -c 'select(.section==\"coding\" and .passed==false) | {model, seed, item, tests_passed, tests_total, last_error}' can.jsonl"}
+{"t": 38.267, "event": "pane 0: jq -c 'select(.section==\"coding\") | [.model, .seed, .result]' can-summary.jsonl", "text": "jq -c 'select(.section==\"coding\") | [.model, .seed, .result]' can-summary.jsonl"}

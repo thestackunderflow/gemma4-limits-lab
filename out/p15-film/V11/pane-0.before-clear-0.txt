@@ -1,0 +1,20 @@
+$ cd /lab/out/p15
+$ jq -r 'select(.model=="e4b" and .section=="multilingual" and .temperature==0) | "\(.lang)  \(.want)  \(.answer)  \(.passed)"' can.jsonl
+es  42  42  true
+es  36  36  true
+es  210  210  true
+es  56  56  true
+hi  27  27  true
+hi  54  54  true
+hi  75  75  true
+ja  41  41  true
+ja  40  40  true
+ja  63  63  true
+$ 
+
+
+
+
+
+
+

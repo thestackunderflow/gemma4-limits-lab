@@ -1,0 +1,20 @@
+$ cd /lab/out/p15
+$ jq -r 'select(.model=="e4b" and .item=="pair01" and .temperature==0) | .want, .answer' can.jsonl
+MAPLE-24
+MAPLE-24
+$ grep -n "WORD-NUMBER" /lab/lab/images.py | fold -w 44
+97:            q = "Reply in the form WORD-N
+UMBER, using the word from the first image a
+nd the number from the second."
+100:            q = "Reply in the form WORD-
+NUMBER, using the word from the second image
+ and the number from the first."
+$ 
+
+
+
+
+
+
+
+

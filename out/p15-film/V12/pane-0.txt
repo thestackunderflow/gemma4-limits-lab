@@ -1,0 +1,17 @@
+$ jq -c 'select(.model=="e4b" and .item=="remainder" and .think==false and .temperature==0) | {eval_count, passed}' can.jsonl
+{"eval_count":1024,"passed":false}
+$ jq -c 'select(.model=="e4b" and .section=="thinking" and .temperature==0) | .result' can-summary.jsonl
+{"off":{"passed":9,"total":10,"seconds_total":33.7},"on":{"passed":10,"total":10,"seconds_total":45.6}}
+$ jq -c 'select(.model=="e4b" and .section=="thinking") | [.temperature, .seed, .result.off.passed, .result.on.passed]' can-summary.jsonl
+[0.0,42,9,10]
+[1.0,1001,10,10]
+[1.0,1002,8,10]
+[1.0,1003,10,10]
+[1.0,1004,9,10]
+[1.0,1005,9,10]
+$ 
+
+
+
+
+

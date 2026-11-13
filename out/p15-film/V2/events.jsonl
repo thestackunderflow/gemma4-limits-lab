@@ -1,0 +1,4 @@
+{"t": 0.056, "event": "recording started"}
+{"t": 2.865, "event": "pane 0: cd /lab/out/p15", "text": "cd /lab/out/p15"}
+{"t": 6.244, "event": "pane 0: jq -c 'select(.model==\"e4b\" and .section==\"ocr\" and .temperature==0 and .item==\"ocr00\") | {want, answer, passed}' can.jsonl | fold -w 44", "text": "jq -c 'select(.model==\"e4b\" and .section==\"ocr\" and .temperature==0 and .item==\"ocr00\") | {want, answer, passed}' can.jsonl | fold -w 44"}
+{"t": 15.419, "event": "pane 0: jq -c 'select(.model==\"e4b\" and .section==\"ocr\") | {temperature, seed, result}' can-summary.jsonl", "text": "jq -c 'select(.model==\"e4b\" and .section==\"ocr\") | {temperature, seed, result}' can-summary.jsonl"}

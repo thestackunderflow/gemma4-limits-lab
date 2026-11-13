@@ -1,0 +1,4 @@
+{"t": 0.06, "event": "recording started"}
+{"t": 4.404, "event": "terminal up"}
+{"t": 7.212, "event": "pane 0: jq -r .model /film/ocr00.json", "text": "jq -r .model /film/ocr00.json"}
+{"t": 10.927, "event": "pane 0: curl -s $OLLAMA_HOST/api/chat -d @/film/ocr00.json | tee /tmp/o.json | jq -r .message.content", "text": "curl -s $OLLAMA_HOST/api/chat -d @/film/ocr00.json | tee /tmp/o.json | jq -r .message.content"}

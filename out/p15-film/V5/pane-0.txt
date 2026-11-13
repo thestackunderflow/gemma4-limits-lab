@@ -1,0 +1,19 @@
+$ curl -s $OLLAMA_HOST/api/chat -d @/film/chart04.json | tee /tmp/c.json | jq -r .message.content
+```json
+{
+  "Q1": 10,
+  "Q2": 93,
+  "Q3": 40,
+  "Q4": 92
+}
+```
+$ jq -c 'select(.model=="e4b" and .item=="chart04" and .temperature==0) | .want' /lab/out/p15/can.jsonl
+{"Q1":10,"Q2":95,"Q3":40,"Q4":95}
+$ 
+
+
+
+
+
+
+

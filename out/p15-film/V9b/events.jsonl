@@ -1,0 +1,7 @@
+{"t": 0.015, "event": "recording started"}
+{"t": 2.827, "event": "pane 0: jq -r '.messages[0].content' /film/tools-e4b.json", "text": "jq -r '.messages[0].content' /film/tools-e4b.json"}
+{"t": 6.994, "event": "pane 0: jq '.tools | length' /film/tools-e4b.json", "text": "jq '.tools | length' /film/tools-e4b.json"}
+{"t": 10.973, "event": "pane 0: jq '.tools | length' /lab/out/p14-film/tool-e4b.json", "text": "jq '.tools | length' /lab/out/p14-film/tool-e4b.json"}
+{"t": 17.214, "event": "pane 0: clear", "text": "clear"}
+{"t": 20.371, "event": "pane 0: jq -s '[.[] | select(.model==\"e4b\" and (.item==\"mul1\" or .item==\"mul2\"))] | {rows: length, multiply: map(select(.calls[0].name==\"multiply\")) | length}' -c /lab/out/p15/can.jsonl", "text": "jq -s '[.[] | select(.model==\"e4b\" and (.item==\"mul1\" or .item==\"mul2\"))] | {rows: length, multiply: map(select(.calls[0].name==\"multiply\")) | length}' -c /lab/out/p15/can.jsonl"}
+{"t": 27.527, "event": "pane 0: jq -s '[.[] | select(.model==\"e4b\" and .fix==\"calculator tool\")] | {rows: length, used: map(select(.used_tool)) | length}' -c /lab/out/p14/cant.jsonl", "text": "jq -s '[.[] | select(.model==\"e4b\" and .fix==\"calculator tool\")] | {rows: length, used: map(select(.used_tool)) | length}' -c /lab/out/p14/cant.jsonl"}

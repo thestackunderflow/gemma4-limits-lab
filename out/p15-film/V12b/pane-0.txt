@@ -1,0 +1,19 @@
+$ jq -c 'select(.model=="12b-qat" and .section=="thinking") | .result' can-summary.jsonl
+{"off":{"passed":10,"total":10,"seconds_total":163.9},"on":{"passed":7,"total":10,"seconds_total":1816.6}}
+$ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,18 @@
+$ curl -s $OLLAMA_HOST/api/show -d '{"model":"gemma4:e4b-it-q4_K_M"}' | jq -c .capabilities
+["completion","vision","audio","tools","thinking"]
+$ grep -n "ESPEAK_TEXT =" /lab/lab/p15.py | fold -w 44
+241:ESPEAK_TEXT = "The quick brown fox jumps
+ over the lazy dog. Ollama runs Gemma four o
+n an eight gigabyte card."
+$ curl -s -F model=gemma4:e4b-it-q4_K_M -F "file=@/lab/out/p15/audio/espeak.wav;type=audio/wav" $OLLAMA_HOST/v1/audio/transcriptions | jq -r .text | fold -w 44
+A quick brown fox jumps over the lazy dog. A
+lmera runs Gemma 4 on an 8 gigabyte card.
+$ 
+
+
+
+
+
+
+
+

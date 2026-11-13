@@ -1,0 +1,7 @@
+{"t": 0.046, "event": "recording started"}
+{"t": 2.856, "event": "pane 0: cd /lab/out/p15", "text": "cd /lab/out/p15"}
+{"t": 6.237, "event": "pane 0: jq -r 'select(.model==\"e4b\" and .section==\"thinking\" and .temperature==0) | \"\\(.item)  \\(.think)  \\(.passed)  \\(.seconds)\"' can.jsonl", "text": "jq -r 'select(.model==\"e4b\" and .section==\"thinking\" and .temperature==0) | \"\\(.item)  \\(.think)  \\(.passed)  \\(.seconds)\"' can.jsonl"}
+{"t": 15.354, "event": "pane 0: clear", "text": "clear"}
+{"t": 18.5, "event": "pane 0: jq -c 'select(.model==\"e4b\" and .item==\"remainder\" and .think==false and .temperature==0) | {eval_count, passed}' can.jsonl", "text": "jq -c 'select(.model==\"e4b\" and .item==\"remainder\" and .think==false and .temperature==0) | {eval_count, passed}' can.jsonl"}
+{"t": 24.374, "event": "pane 0: jq -c 'select(.model==\"e4b\" and .section==\"thinking\" and .temperature==0) | .result' can-summary.jsonl", "text": "jq -c 'select(.model==\"e4b\" and .section==\"thinking\" and .temperature==0) | .result' can-summary.jsonl"}
+{"t": 31.772, "event": "pane 0: jq -c 'select(.model==\"e4b\" and .section==\"thinking\") | [.temperature, .seed, .result.off.passed, .result.on.passed]' can-summary.jsonl", "text": "jq -c 'select(.model==\"e4b\" and .section==\"thinking\") | [.temperature, .seed, .result.off.passed, .result.on.passed]' can-summary.jsonl"}

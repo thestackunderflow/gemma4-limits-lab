@@ -1,0 +1,20 @@
+$ cd /lab/out/p15
+$ jq -r 'select((.model=="e2b" or .model=="e4b") and .item=="librivox") | "\(.model) \(.route[0:12]): \(.answer[-40:])"' aud.jsonl | fold -w 44
+e2b /api/chat im: ngle man in possession of 
+a good fortune
+e2b /v1/audio/tr: ngle man in possession of 
+a good fortune
+e4b /api/chat im: gle man in possession of a
+ good fortune.
+e4b /v1/audio/tr: ngle man in possession of 
+a good fortune
+$ 
+
+
+
+
+
+
+
+
+

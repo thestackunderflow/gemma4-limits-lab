@@ -1,0 +1,20 @@
+$ cd /lab/out/p15
+$ jq -r 'select(.model=="e4b" and .item=="code_merge_intervals" and .temperature==0) | .answer' can.jsonl | head -8
+```python
+def merge_intervals(intervals):
+    if not intervals:
+        return []
+
+    intervals.sort(key=lambda x: x[0])
+
+    merged = []
+$ 
+
+
+
+
+
+
+
+
+

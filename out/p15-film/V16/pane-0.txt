@@ -1,0 +1,42 @@
+$ cp /lab/out/p15/images/ocr_00.png /tmp/my.png
+$ cat /film/want-ocr00.txt
+$ docker compose up -d
+Error response from daemon: port 8080 is already allocated
+$ ollama run gemma4:e4b-it-q4_K_M "Transcribe all the text in this image exactly as written, keeping the line breaks. Output only the text. /tmp/my.png" | tee /tmp/got.txt
+Added image '/tmp/my.png'
+Thinking...
+Thinking Process:
+
+1.  **Analyze the request:** The user wants me to transcribe all the text from the provided image exactly as written, maintaining line breaks. I must output only the text.
+2.  **Examine the image:** The image contains a command line prompt and an error message.
+    *   Line 1: `$ docker compose up -d`
+    *   Line 2: `Error response from daemon: port 8080 is already allocated`
+    *   (There is also some stray characters/artifacts visible after the second line, but I should only transcribe the discernible text.)
+3.  **Transcribe and format:**
+    *   $ docker compose up -d
+    *   Error response from daemon: port 8080 is already allocated
+
+4.  **Final Output Generation:** (Ensure no extra commentary or formatting is included.)
+...done thinking.
+
+$ docker compose up -d
+Error response from daemon: port 8080 is already allocated
+
+$ diff -wB /film/want-ocr00.txt /tmp/got.txt
+0a1,15
+> Thinking...
+> Thinking Process:
+> 
+> 1.  **Analyze the request:** The user wants me to transcribe all the text from the provided image exactly as written, maintaining line breaks. I must output only the text.
+> 2.  **Examine the image:** The image contains a command line prompt and an error message.
+>     *   Line 1: `$ docker compose up -d`
+>     *   Line 2: `Error response from daemon: port 8080 is already allocated`
+>     *   (There is also some stray characters/artifacts visible after the second line, but I should only transcribe the discernible text.)
+> 3.  **Transcribe and format:**
+>     *   $ docker compose up -d
+>     *   Error response from daemon: port 8080 is already allocated
+> 
+> 4.  **Final Output Generation:** (Ensure no extra commentary or formatting is included.)
+> ...done thinking.
+> 
+$ 

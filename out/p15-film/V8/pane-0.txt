@@ -1,0 +1,19 @@
+$ jq -c '.model, [.tools[].function.name]' /film/tools-e4b.json
+"gemma4:e4b-it-q4_K_M"
+["get_weather","multiply","convert_currency","get_stock_price","days_between","lookup_capital"]
+$ curl -s $OLLAMA_HOST/api/chat -d @/film/tools-e4b.json | tee /tmp/r1.json | jq -c '.message.tool_calls[0].function'
+{"index":0,"name":"multiply","arguments":{"a":4821,"b":7293}}
+$ echo $((4821 * 7293))
+35159553
+$ /film/send-result.sh 35159553 | fold -w 44
+The result of multiplying 4821 by 7293 is 35
+,159,553.
+$ 
+
+
+
+
+
+
+
+

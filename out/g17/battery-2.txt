@@ -1,0 +1,29 @@
+# G17-FIX at 8K (baseline loses turn 1 at turn 5 there; system + tools + pinned spec = 4,659 fit): temp 0, then 5 Google-sampling reps per arm
+# fix (b) = 32K (no drop at temp 0; drop-32k-t0 is its temp-0 row); baseline 16K reps for the drop-turn range there
+fix-pin-8k-t0 8192 pin false t0 42 5m
+fix-sum-8k-t0 8192 summary false t0 42 5m
+base-8k-g1 8192 none false google 1 5m
+fix-pin-8k-g1 8192 pin false google 1 5m
+fix-ctx32k-g1 32768 none false google 1 5m
+fix-sum-8k-g1 8192 summary false google 1 5m
+base-16k-g1 16384 none false google 1 5m
+base-8k-g2 8192 none false google 2 5m
+fix-pin-8k-g2 8192 pin false google 2 5m
+fix-ctx32k-g2 32768 none false google 2 5m
+fix-sum-8k-g2 8192 summary false google 2 5m
+base-16k-g2 16384 none false google 2 5m
+base-8k-g3 8192 none false google 3 5m
+fix-pin-8k-g3 8192 pin false google 3 5m
+fix-ctx32k-g3 32768 none false google 3 5m
+fix-sum-8k-g3 8192 summary false google 3 5m
+base-16k-g3 16384 none false google 3 5m
+base-8k-g4 8192 none false google 4 5m
+fix-pin-8k-g4 8192 pin false google 4 5m
+fix-ctx32k-g4 32768 none false google 4 5m
+fix-sum-8k-g4 8192 summary false google 4 5m
+base-16k-g4 16384 none false google 4 5m
+base-8k-g5 8192 none false google 5 5m
+fix-pin-8k-g5 8192 pin false google 5 5m
+fix-ctx32k-g5 32768 none false google 5 5m
+fix-sum-8k-g5 8192 summary false google 5 5m
+base-16k-g5 16384 none false google 5 5m

@@ -1,0 +1,190 @@
+{
+ "id": "fix-sum-16k-g2",
+ "provenance": {
+  "tag": "gemma4:e4b-it-q4_K_M",
+  "digest": "dc35e8d9c606",
+  "ollama_version": "0.40.16",
+  "renderer": "gemma4-small",
+  "parser": "gemma4",
+  "num_parallel": "1",
+  "kv_type_env": "f16",
+  "solidcraft": "0.28.0",
+  "t": "2026-11-14T17:31:33Z",
+  "num_ctx": "16384",
+  "fix": "summary",
+  "think": false,
+  "sampling": "google",
+  "options": {
+   "temperature": 1.0,
+   "top_p": 0.95,
+   "top_k": 64,
+   "seed": 2,
+   "num_ctx": 16384
+  },
+  "keep_alive": "5m",
+  "max_iter": 8,
+  "tool_cut": 8000
+ },
+ "n_requests": 82,
+ "minutes": 2.42,
+ "first_message_drop_turn": null,
+ "first_turn1_gone_turn": 6,
+ "first_runner_cut_turn": null,
+ "all_http_200": true,
+ "done_reasons": [
+  "stop"
+ ],
+ "marker_by_turn": {
+  "1": false,
+  "2": false,
+  "3": false,
+  "4": false,
+  "5": false,
+  "6": false,
+  "7": false,
+  "8": false,
+  "9": false,
+  "10": false,
+  "11": false,
+  "12": true,
+  "13": true,
+  "14": false,
+  "15": false,
+  "16": false,
+  "17": false,
+  "18": false,
+  "19": false,
+  "20": false
+ },
+ "tokens_per_turn": {
+  "1": 20122,
+  "2": 51896,
+  "3": 66228,
+  "4": 84685,
+  "5": 103843,
+  "6": 35584,
+  "7": 11387,
+  "8": 85315,
+  "9": 57066,
+  "10": 16521,
+  "11": 33900,
+  "12": 35217,
+  "13": 23683,
+  "14": 37887,
+  "15": 12022,
+  "16": 25288,
+  "17": 20418,
+  "18": 18069,
+  "19": 17351,
+  "20": 36769
+ },
+ "mean_tokens_per_turn": 39662.6,
+ "max_prompt_eval_count": 13811,
+ "tool_calls": 63,
+ "turn20_text": "",
+ "turn20_recall": {
+  "score": 0,
+  "facts": {
+   "name": false,
+   "material": false,
+   "length": false,
+   "width": false,
+   "thickness": false,
+   "holes": false,
+   "hole_d": false,
+   "spacing": false
+  },
+  "missing": [
+   "name",
+   "material",
+   "length",
+   "width",
+   "thickness",
+   "holes",
+   "hole_d",
+   "spacing"
+  ],
+  "stale": []
+ },
+ "turn20_stl": false,
+ "checker": null,
+ "summaries": [
+  {
+   "before_turn": 6,
+   "text": "The original part, BRK-17, was specified as a 60x40x5mm plate in PETG with two 4.5mm holes 36mm apart.\n\nWe have iterated on this design. The latest configuration involves a 70x50x3mm plate, with the hole diameter increased to 6mm, and the distance between the holes adjusted to 30mm.",
+   "recall": {
+    "score": 7,
+    "facts": {
+     "name": true,
+     "material": true,
+     "length": true,
+     "width": true,
+     "thickness": true,
+     "holes": false,
+     "hole_d": true,
+     "spacing": true
+    },
+    "missing": [
+     "holes"
+    ],
+    "stale": [
+     "70",
+     "50",
+     "30"
+    ]
+   }
+  },
+  {
+   "before_turn": 11,
+   "text": "The initial design, BRK-17, was a 60x40x5mm PETG plate with two 4.5mm holes 36mm apart.\n\nThe current variant iteration is a 70x50x8mm plate made of PLA (though material was noted as a request), featuring three 3.2mm diameter holes placed at (17.5, 25), (35, 25), and (52.5, 25).",
+   "recall": {
+    "score": 7,
+    "facts": {
+     "name": true,
+     "material": true,
+     "length": true,
+     "width": true,
+     "thickness": true,
+     "holes": false,
+     "hole_d": true,
+     "spacing": true
+    },
+    "missing": [
+     "holes"
+    ],
+    "stale": [
+     "PLA",
+     "70",
+     "50",
+     "3.2"
+    ]
+   }
+  },
+  {
+   "before_turn": 16,
+   "text": "The initial design, BRK-17, was a $60 \\times 40 \\times 5\\text{mm}$ PETG plate with two $4.5\\text{mm}$ holes $36\\text{mm}$ apart.\n\nThe current iteration centers around an $80 \\times 45\\text{mm}$ base plate. The latest attempted variants have included thickness adjustments (e.g., $8\\text{mm}$, $4\\text{mm}$) and hole diameter changes (e.g., $3.2\\text{mm}$, $5.5\\text{mm}$). Due to API errors, the hole features have not been successfully created or persisted in the final geometry.",
+   "recall": {
+    "score": 7,
+    "facts": {
+     "name": true,
+     "material": true,
+     "length": true,
+     "width": true,
+     "thickness": true,
+     "holes": false,
+     "hole_d": true,
+     "spacing": true
+    },
+    "missing": [
+     "holes"
+    ],
+    "stale": [
+     "80",
+     "45",
+     "3.2",
+     "5.5"
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,201 @@
+{
+ "id": "fix-sum-8k-g4",
+ "provenance": {
+  "tag": "gemma4:e4b-it-q4_K_M",
+  "digest": "dc35e8d9c606",
+  "ollama_version": "0.40.16",
+  "renderer": "gemma4-small",
+  "parser": "gemma4",
+  "num_parallel": "1",
+  "kv_type_env": "f16",
+  "solidcraft": "0.28.0",
+  "t": "2026-11-14T16:52:57Z",
+  "num_ctx": "8192",
+  "fix": "summary",
+  "think": false,
+  "sampling": "google",
+  "options": {
+   "temperature": 1.0,
+   "top_p": 0.95,
+   "top_k": 64,
+   "seed": 4,
+   "num_ctx": 8192
+  },
+  "keep_alive": "5m",
+  "max_iter": 8,
+  "tool_cut": 8000
+ },
+ "n_requests": 40,
+ "minutes": 1.36,
+ "first_message_drop_turn": 3,
+ "first_turn1_gone_turn": 3,
+ "first_runner_cut_turn": null,
+ "all_http_200": true,
+ "done_reasons": [
+  "length",
+  "stop"
+ ],
+ "marker_by_turn": {
+  "1": false,
+  "2": false,
+  "3": false,
+  "4": false,
+  "5": false,
+  "6": true,
+  "7": false,
+  "8": false,
+  "9": true,
+  "10": false,
+  "11": false,
+  "12": false,
+  "13": false,
+  "14": false,
+  "15": false,
+  "16": false,
+  "17": false,
+  "18": true,
+  "19": true,
+  "20": false
+ },
+ "tokens_per_turn": {
+  "1": 9299,
+  "2": 16572,
+  "3": 14807,
+  "4": 8158,
+  "5": 8180,
+  "6": 19715,
+  "7": 6416,
+  "8": 4958,
+  "9": 10970,
+  "10": 21361,
+  "11": 12063,
+  "12": 8129,
+  "13": 8108,
+  "14": 7258,
+  "15": 4752,
+  "16": 5032,
+  "17": 9509,
+  "18": 29324,
+  "19": 13923,
+  "20": 30089
+ },
+ "mean_tokens_per_turn": 12431.1,
+ "max_prompt_eval_count": 8189,
+ "tool_calls": 18,
+ "turn20_text": "I have completed the following steps:\n1.  Started a new design for the original specification (`BRK-17`).\n2.  Recreated the geometry: a 60x40x5mm plate with two 4.5mm holes 36mm apart (assuming hole centers are at (20, 25) and (50, 25) based on the first spec, which has a 40mm width and 60mm length, and 36mm separation).\n3.  Exported this part as an STL file to `/lab/out/plate.stl`.\n\nHere is the list of specifications for the original part, **BRK-17**:\n\n*   **Part Name:** BRK-17\n*   **Material:** PETG\n*   **Length:** 60 mm\n*   **Width:** 40 mm\n*   **Thickness (Height):** 5 mm\n*   **Number of Holes:** 2\n*   **Hole Diameter:** 4.5 mm\n*   **Hole Spacing",
+ "turn20_recall": {
+  "score": 8,
+  "facts": {
+   "name": true,
+   "material": true,
+   "length": true,
+   "width": true,
+   "thickness": true,
+   "holes": true,
+   "hole_d": true,
+   "spacing": true
+  },
+  "missing": [],
+  "stale": [
+   "50"
+  ]
+ },
+ "turn20_stl": true,
+ "checker": {
+  "units": "inch",
+  "size": [
+   5.0,
+   4.5,
+   4.5
+  ],
+  "triangles": 3028,
+  "watertight": true,
+  "volume": 79.486,
+  "size_ok": false,
+  "holes": [],
+  "spacing": null,
+  "volume_expected": 12000,
+  "volume_ok": false,
+  "pass": false
+ },
+ "summaries": [
+  {
+   "before_turn": 6,
+   "text": "The initial spec was for part BRK-17, a 60x40x5mm flat plate in PETG with two 4.5mm holes 36mm apart. Subsequent revisions modified the thickness to 3mm and increased the hole diameter to 6mm. The final change adjusted the center-to-center distance between the holes to 30mm, and the latest version updated the plate dimensions to 70x50mm.",
+   "recall": {
+    "score": 7,
+    "facts": {
+     "name": true,
+     "material": true,
+     "length": true,
+     "width": true,
+     "thickness": true,
+     "holes": false,
+     "hole_d": true,
+     "spacing": true
+    },
+    "missing": [
+     "holes"
+    ],
+    "stale": [
+     "70",
+     "50",
+     "30"
+    ]
+   }
+  },
+  {
+   "before_turn": 11,
+   "text": "Original Spec: Part BRK-17, 60x40x5mm flat plate in PETG with two 4.5mm holes 36mm apart.\n\nCurrent Variant: The plate is now $70 \\times 50\\text{mm}$ and $8\\text{mm}$ thick. It features three $3.2\\text{mm}$ diameter holes positioned at coordinates $(20, 25)$, $(35, 25)$, and $(50, 25)$. The material is specified as PLA for this variant.",
+   "recall": {
+    "score": 7,
+    "facts": {
+     "name": true,
+     "material": true,
+     "length": true,
+     "width": true,
+     "thickness": true,
+     "holes": false,
+     "hole_d": true,
+     "spacing": true
+    },
+    "missing": [
+     "holes"
+    ],
+    "stale": [
+     "PLA",
+     "70",
+     "50",
+     "3.2"
+    ]
+   }
+  },
+  {
+   "before_turn": 16,
+   "text": "The original part, BRK-17, was a 60x40x5mm PETG plate with two 4.5mm holes 36mm apart.\n\nThe current variant is an 80x45x4mm PLA plate. It features two 5.5mm diameter holes located at coordinates (20, 25) and (50, 25).",
+   "recall": {
+    "score": 7,
+    "facts": {
+     "name": true,
+     "material": true,
+     "length": true,
+     "width": true,
+     "thickness": true,
+     "holes": false,
+     "hole_d": true,
+     "spacing": true
+    },
+    "missing": [
+     "holes"
+    ],
+    "stale": [
+     "PLA",
+     "50",
+     "80",
+     "45",
+     "5.5"
+    ]
+   }
+  }
+ ]
+}

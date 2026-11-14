@@ -1,0 +1,8 @@
+# G17-DROP at the windows G17-SIZE allows (system + tools + turn 1 = 4,599 tokens): temp 0, think off, warm 5m
+drop-8k-t0 8192 none false t0 42 5m
+drop-16k-t0 16384 none false t0 42 5m
+drop-32k-t0 32768 none false t0 42 5m
+drop-default-t0 default none false t0 42 5m
+# G17-REUSE extra rows at 16K: think on; unloaded (keep_alive 0 on every request)
+reuse-16k-think 16384 none true t0 42 5m
+reuse-16k-cold 16384 none false t0 42 0

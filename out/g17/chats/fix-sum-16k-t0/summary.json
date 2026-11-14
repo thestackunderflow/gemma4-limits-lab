@@ -1,0 +1,177 @@
+{
+ "id": "fix-sum-16k-t0",
+ "provenance": {
+  "tag": "gemma4:e4b-it-q4_K_M",
+  "digest": "dc35e8d9c606",
+  "ollama_version": "0.40.16",
+  "renderer": "gemma4-small",
+  "parser": "gemma4",
+  "num_parallel": "1",
+  "kv_type_env": "f16",
+  "solidcraft": "0.28.0",
+  "t": "2026-11-14T17:26:02Z",
+  "num_ctx": "16384",
+  "fix": "summary",
+  "think": false,
+  "sampling": "t0",
+  "options": {
+   "temperature": 0,
+   "seed": 42,
+   "num_ctx": 16384
+  },
+  "keep_alive": "5m",
+  "max_iter": 8,
+  "tool_cut": 8000
+ },
+ "n_requests": 50,
+ "minutes": 1.32,
+ "first_message_drop_turn": null,
+ "first_turn1_gone_turn": 6,
+ "first_runner_cut_turn": null,
+ "all_http_200": true,
+ "done_reasons": [
+  "stop"
+ ],
+ "marker_by_turn": {
+  "1": true,
+  "2": true,
+  "3": true,
+  "4": true,
+  "5": true,
+  "6": true,
+  "7": true,
+  "8": true,
+  "9": true,
+  "10": true,
+  "11": true,
+  "12": true,
+  "13": true,
+  "14": true,
+  "15": true,
+  "16": true,
+  "17": true,
+  "18": true,
+  "19": true,
+  "20": true
+ },
+ "tokens_per_turn": {
+  "1": 33423,
+  "2": 20992,
+  "3": 22102,
+  "4": 23460,
+  "5": 24898,
+  "6": 16933,
+  "7": 6157,
+  "8": 18482,
+  "9": 12222,
+  "10": 11910,
+  "11": 7471,
+  "12": 18753,
+  "13": 5858,
+  "14": 11590,
+  "15": 11738,
+  "16": 7343,
+  "17": 5539,
+  "18": 16893,
+  "19": 11294,
+  "20": 19041
+ },
+ "mean_tokens_per_turn": 15305.0,
+ "max_prompt_eval_count": 8480,
+ "tool_calls": 27,
+ "turn20_text": "The batch execution failed because the commands used (`sketch.extrude` and `solid.extrude` with specific entity IDs) are not correctly structured for a headless execution without prior context or a more robust command sequence.\n\nHowever, I have successfully executed the **Export** command in the last step, which means the file `/lab/out/plate.stl` *should* exist if the modeling steps had succeeded.\n\nSince the modeling steps failed due to command structure, I cannot guarantee the STL file is correct, but I can provide the requested specification list based on your initial prompt.\n\n**Specification List for BRK-17:**\n\n*   **Part Name:** BRK-17\n*   **Material:** PETG\n*   **Length:** 60 mm\n*   **Width:** 40 mm\n*   **Thickness:** 5 mm\n*   **Number of Holes:** 2\n*   **Hole Diameter:** 4.5 mm\n*   **Hole Spacing:** 36 mm\n\nI recommend starting SolidCraft to allow the modeling commands to execute correctly and generate the STL file.\n\n-- plate desk",
+ "turn20_recall": {
+  "score": 8,
+  "facts": {
+   "name": true,
+   "material": true,
+   "length": true,
+   "width": true,
+   "thickness": true,
+   "holes": true,
+   "hole_d": true,
+   "spacing": true
+  },
+  "missing": [],
+  "stale": []
+ },
+ "turn20_stl": false,
+ "checker": null,
+ "summaries": [
+  {
+   "before_turn": 6,
+   "text": "The initial request was for part BRK-17, a 60x40x5 mm PETG plate with two 4.5 mm holes 36 mm apart.\n\nThe current variant is a 70x50 mm plate, 3 mm thick, featuring two 6 mm holes spaced 30 mm apart. The design has been iteratively modified based on subsequent requests.",
+   "recall": {
+    "score": 8,
+    "facts": {
+     "name": true,
+     "material": true,
+     "length": true,
+     "width": true,
+     "thickness": true,
+     "holes": true,
+     "hole_d": true,
+     "spacing": true
+    },
+    "missing": [],
+    "stale": [
+     "70",
+     "50",
+     "30"
+    ]
+   }
+  },
+  {
+   "before_turn": 11,
+   "text": "The initial request was for part BRK-17: a 60x40x5 mm PETG plate with two 4.5 mm holes 36 mm apart.\n\nThe current variant is a 70x50 mm plate, 8 mm thick, made of PLA, featuring three holes (two original, one added) with a 3.2 mm diameter. The holes are spaced at 30 mm and 35 mm from the edges, with the third hole centered.",
+   "recall": {
+    "score": 8,
+    "facts": {
+     "name": true,
+     "material": true,
+     "length": true,
+     "width": true,
+     "thickness": true,
+     "holes": true,
+     "hole_d": true,
+     "spacing": true
+    },
+    "missing": [],
+    "stale": [
+     "PLA",
+     "70",
+     "50",
+     "3.2",
+     "30"
+    ]
+   }
+  },
+  {
+   "before_turn": 16,
+   "text": "The initial request was for part BRK-17: a 60x40x5 mm PETG plate with two 4.5 mm holes 36 mm apart.\n\nThe current variant is an 80x45 mm, 4 mm thick PLA plate. It is specified to have three holes, each with a 5.5 mm diameter. The hole locations are defined relative to the edges (30mm and 35mm from edges, with the third centered).",
+   "recall": {
+    "score": 7,
+    "facts": {
+     "name": true,
+     "material": true,
+     "length": true,
+     "width": true,
+     "thickness": true,
+     "holes": false,
+     "hole_d": true,
+     "spacing": true
+    },
+    "missing": [
+     "holes"
+    ],
+    "stale": [
+     "PLA",
+     "80",
+     "45",
+     "5.5",
+     "30"
+    ]
+   }
+  }
+ ]
+}

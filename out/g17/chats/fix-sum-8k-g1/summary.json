@@ -1,0 +1,188 @@
+{
+ "id": "fix-sum-8k-g1",
+ "provenance": {
+  "tag": "gemma4:e4b-it-q4_K_M",
+  "digest": "dc35e8d9c606",
+  "ollama_version": "0.40.16",
+  "renderer": "gemma4-small",
+  "parser": "gemma4",
+  "num_parallel": "1",
+  "kv_type_env": "f16",
+  "solidcraft": "0.28.0",
+  "t": "2026-11-14T16:20:34Z",
+  "num_ctx": "8192",
+  "fix": "summary",
+  "think": false,
+  "sampling": "google",
+  "options": {
+   "temperature": 1.0,
+   "top_p": 0.95,
+   "top_k": 64,
+   "seed": 1,
+   "num_ctx": 8192
+  },
+  "keep_alive": "5m",
+  "max_iter": 8,
+  "tool_cut": 8000
+ },
+ "n_requests": 44,
+ "minutes": 1.57,
+ "first_message_drop_turn": 2,
+ "first_turn1_gone_turn": 2,
+ "first_runner_cut_turn": null,
+ "all_http_200": true,
+ "done_reasons": [
+  "length",
+  "stop"
+ ],
+ "marker_by_turn": {
+  "1": false,
+  "2": true,
+  "3": false,
+  "4": false,
+  "5": false,
+  "6": false,
+  "7": false,
+  "8": false,
+  "9": false,
+  "10": false,
+  "11": false,
+  "12": false,
+  "13": false,
+  "14": false,
+  "15": false,
+  "16": false,
+  "17": false,
+  "18": false,
+  "19": true,
+  "20": false
+ },
+ "tokens_per_turn": {
+  "1": 42274,
+  "2": 27433,
+  "3": 16214,
+  "4": 8011,
+  "5": 8014,
+  "6": 13401,
+  "7": 5506,
+  "8": 11988,
+  "9": 14193,
+  "10": 14533,
+  "11": 19434,
+  "12": 14848,
+  "13": 8079,
+  "14": 8099,
+  "15": 15060,
+  "16": 9438,
+  "17": 5789,
+  "18": 12759,
+  "19": 14088,
+  "20": 19945
+ },
+ "mean_tokens_per_turn": 14455.3,
+ "max_prompt_eval_count": 8150,
+ "tool_calls": 22,
+ "turn20_text": "I encountered an issue during the extrusion step in the batch command because the initial base body was not created before attempting to cut from it. The batch failed, and the design was rolled back.\n\nTo correctly build the plate, I need to first create the base body (the solid plate) and then perform the cuts.\n\nI will perform the construction in a series of steps:\n1.  Create the base sketch (60x40mm).\n2.  Extrude the base sketch to 5mm to create the main body.\n3.  Create the two hole sketches (circles).\n4.  Extrude the hole sketches as \"cut\" operations.\n\nThen I will export it as requested.\n\nPlease confirm if I should proceed with this multi-step rebuild.",
+ "turn20_recall": {
+  "score": 4,
+  "facts": {
+   "name": false,
+   "material": false,
+   "length": true,
+   "width": true,
+   "thickness": true,
+   "holes": true,
+   "hole_d": false,
+   "spacing": false
+  },
+  "missing": [
+   "name",
+   "material",
+   "hole_d",
+   "spacing"
+  ],
+  "stale": []
+ },
+ "turn20_stl": false,
+ "checker": null,
+ "summaries": [
+  {
+   "before_turn": 6,
+   "text": "Our discussion began with a spec for mounting plate BRK-17: 60x40x5mm PETG, featuring two 4.5mm holes 36mm apart.\n\nSubsequent iterations involved changing the thickness to 3mm (though this failed implementation), then updating hole sizes and spacing. The current variant specification is for a 70x50mm plate, with 6mm radius holes positioned 30mm apart, manufactured in PETG.",
+   "recall": {
+    "score": 7,
+    "facts": {
+     "name": true,
+     "material": true,
+     "length": true,
+     "width": true,
+     "thickness": true,
+     "holes": false,
+     "hole_d": true,
+     "spacing": true
+    },
+    "missing": [
+     "holes"
+    ],
+    "stale": [
+     "70",
+     "50",
+     "30"
+    ]
+   }
+  },
+  {
+   "before_turn": 11,
+   "text": "Original spec: Plate BRK-17, 60x40x5mm PETG, with two 4.5mm holes 36mm apart.\n\nCurrent variant specification: A 70x50mm plate, 8mm thick, manufactured from PLA. It features three 3.2mm radius holes, positioned along the center axis (centers at -15mm, 0mm, and 15mm along the axis of the 70mm length).",
+   "recall": {
+    "score": 7,
+    "facts": {
+     "name": true,
+     "material": true,
+     "length": true,
+     "width": true,
+     "thickness": true,
+     "holes": false,
+     "hole_d": true,
+     "spacing": true
+    },
+    "missing": [
+     "holes"
+    ],
+    "stale": [
+     "PLA",
+     "70",
+     "50",
+     "3.2"
+    ]
+   }
+  },
+  {
+   "before_turn": 16,
+   "text": "**Original Spec:** Plate BRK-17, 60x40x5mm PETG, with two 4.5mm holes 36mm apart.\n\n**Current Variant:** An 80x45mm plate, 5.5mm thick, manufactured from PLA (implied material change, though PLA wasn't explicitly set in the final tool call, we are keeping the size/hole specs), featuring two 5.5mm radius holes positioned along the center axis, 50mm apart.",
+   "recall": {
+    "score": 7,
+    "facts": {
+     "name": true,
+     "material": true,
+     "length": true,
+     "width": true,
+     "thickness": true,
+     "holes": false,
+     "hole_d": true,
+     "spacing": true
+    },
+    "missing": [
+     "holes"
+    ],
+    "stale": [
+     "PLA",
+     "50",
+     "80",
+     "45",
+     "5.5"
+    ]
+   }
+  }
+ ]
+}

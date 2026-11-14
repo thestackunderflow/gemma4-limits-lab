@@ -1,0 +1,181 @@
+{
+ "id": "fix-sum-8k-t0",
+ "provenance": {
+  "tag": "gemma4:e4b-it-q4_K_M",
+  "digest": "dc35e8d9c606",
+  "ollama_version": "0.40.16",
+  "renderer": "gemma4-small",
+  "parser": "gemma4",
+  "num_parallel": "1",
+  "kv_type_env": "f16",
+  "solidcraft": "0.28.0",
+  "t": "2026-11-14T16:12:04Z",
+  "num_ctx": "8192",
+  "fix": "summary",
+  "think": false,
+  "sampling": "t0",
+  "options": {
+   "temperature": 0,
+   "seed": 42,
+   "num_ctx": 8192
+  },
+  "keep_alive": "5m",
+  "max_iter": 8,
+  "tool_cut": 8000
+ },
+ "n_requests": 60,
+ "minutes": 1.24,
+ "first_message_drop_turn": 5,
+ "first_turn1_gone_turn": 5,
+ "first_runner_cut_turn": null,
+ "all_http_200": true,
+ "done_reasons": [
+  "stop"
+ ],
+ "marker_by_turn": {
+  "1": true,
+  "2": true,
+  "3": true,
+  "4": true,
+  "5": true,
+  "6": true,
+  "7": true,
+  "8": true,
+  "9": true,
+  "10": true,
+  "11": true,
+  "12": true,
+  "13": true,
+  "14": true,
+  "15": true,
+  "16": true,
+  "17": true,
+  "18": true,
+  "19": true,
+  "20": true
+ },
+ "tokens_per_turn": {
+  "1": 33423,
+  "2": 20992,
+  "3": 22102,
+  "4": 23460,
+  "5": 24142,
+  "6": 16933,
+  "7": 6157,
+  "8": 25212,
+  "9": 19296,
+  "10": 19036,
+  "11": 8322,
+  "12": 20310,
+  "13": 6122,
+  "14": 18282,
+  "15": 18265,
+  "16": 13969,
+  "17": 17657,
+  "18": 18510,
+  "19": 12224,
+  "20": 31956
+ },
+ "mean_tokens_per_turn": 18818.5,
+ "max_prompt_eval_count": 8166,
+ "tool_calls": 37,
+ "turn20_text": "The STL export to `/lab/out/plate.stl` was attempted, but the build failed, so the file may not contain the correct geometry.\n\nHere is the list of items from your first specification:\n\n*   **Part Name:** BRK-17\n*   **Material:** PETG\n*   **Length:** 60 mm\n*   **Width:** 40 mm\n*   **Thickness:** 5 mm\n*   **Number of Holes:** 2\n*   **Hole Diameter:** 4.5 mm\n*   **Hole Spacing:** 36 mm\n\n-- plate desk",
+ "turn20_recall": {
+  "score": 8,
+  "facts": {
+   "name": true,
+   "material": true,
+   "length": true,
+   "width": true,
+   "thickness": true,
+   "holes": true,
+   "hole_d": true,
+   "spacing": true
+  },
+  "missing": [],
+  "stale": []
+ },
+ "turn20_stl": true,
+ "checker": {
+  "pass": false,
+  "error": "ValueError('zero-size array to reduction operation minimum which has no identity')"
+ },
+ "summaries": [
+  {
+   "before_turn": 6,
+   "text": "The initial request was for part BRK-17, a 60x40x5 mm PETG plate with two 4.5 mm holes 36 mm apart.\n\nThe current variant is a 70x50 mm plate, 3 mm thick, featuring two 6 mm holes spaced 30 mm apart. The design has been iteratively modified based on subsequent requests.",
+   "recall": {
+    "score": 8,
+    "facts": {
+     "name": true,
+     "material": true,
+     "length": true,
+     "width": true,
+     "thickness": true,
+     "holes": true,
+     "hole_d": true,
+     "spacing": true
+    },
+    "missing": [],
+    "stale": [
+     "70",
+     "50",
+     "30"
+    ]
+   }
+  },
+  {
+   "before_turn": 11,
+   "text": "Original spec: BRK-17, 60x40x5 mm PETG plate with two 4.5 mm holes 36 mm apart.\n\nCurrent variant: PLA material, 70x50 mm plate, 8 mm thick, featuring three 3.2 mm holes. The holes are located at 30 mm and 35 mm spacing from each other (based on previous modifications).",
+   "recall": {
+    "score": 7,
+    "facts": {
+     "name": true,
+     "material": true,
+     "length": true,
+     "width": true,
+     "thickness": true,
+     "holes": false,
+     "hole_d": true,
+     "spacing": true
+    },
+    "missing": [
+     "holes"
+    ],
+    "stale": [
+     "PLA",
+     "70",
+     "50",
+     "3.2",
+     "30"
+    ]
+   }
+  },
+  {
+   "before_turn": 16,
+   "text": "Original spec: BRK-17, 60x40x5 mm PETG plate with two 4.5 mm holes 36 mm apart.\n\nCurrent variant: BRK-17, PLA material, 80x45x4 mm plate with two 5.5 mm holes. (Note: The hole spacing was not explicitly set in the last steps, but the plate size, thickness, material, and hole diameter are updated.)",
+   "recall": {
+    "score": 7,
+    "facts": {
+     "name": true,
+     "material": true,
+     "length": true,
+     "width": true,
+     "thickness": true,
+     "holes": false,
+     "hole_d": true,
+     "spacing": true
+    },
+    "missing": [
+     "holes"
+    ],
+    "stale": [
+     "PLA",
+     "80",
+     "45",
+     "5.5"
+    ]
+   }
+  }
+ ]
+}

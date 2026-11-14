@@ -96,7 +96,12 @@ def arm(prefix, t0_id):
                                               / max(len(reps) + bool(t0), 1), 1),
             "seconds_per_turn_all": round(sum(b["seconds_per_turn"] for b in ([t0] if t0 else []) + reps)
                                           / max(len(reps) + bool(t0), 1), 2),
-            "right_total": rights + bool(t0 and t0["right"]), "chats": len(reps) + bool(t0)}
+            "right_total": rights + bool(t0 and t0["right"]), "chats": len(reps) + bool(t0),
+            "recall_total": sum(b["recall"] for b in ([t0] if t0 else []) + reps),
+            "recall8_chats": sum(b["recall"] == 8 for b in ([t0] if t0 else []) + reps),
+            "checker_pass_chats": sum(bool(b["checker_pass"]) for b in ([t0] if t0 else []) + reps),
+            "length_stops": sum(b["length_stops"] for b in ([t0] if t0 else []) + reps),
+            "turn1_gone": [b["turn1_gone_turn"] for b in ([t0] if t0 else []) + reps]}
 
 
 def md(r):
@@ -138,13 +143,15 @@ def md(r):
                   v["from_first_drop"]["reused_pct"], v["drop_requests"]["reused_pct"])) if "before_first_drop" in v else "",
                  v["loads"], v["load_s_total"]))
     L += ["", "## Fixes (G17-FIX): right = checker pass AND 8/8 facts at turn 20",
-          "| arm | temp 0 right | reps right | reps recall | tokens per turn | seconds per turn |", "|---|---|---|---|---|---|"]
+          "| arm | temp 0 right | reps right | reps recall | 8/8 chats | checker pass | length stops | turn 1 gone (t0, reps) | tokens per turn | seconds per turn |", "|---|---|---|---|---|---|---|---|---|---|"]
     for k, v in f.items():
-        L.append("| %s | %s | %s of %s | %s | %s | %s |" % (k, v["t0"] and v["t0"]["right"], v["reps_right"], v["reps_done"],
-                 v["reps_recall"], v["mean_tokens_per_turn_all"], v["seconds_per_turn_all"]))
+        L.append("| %s | %s | %s of %s | %s | %s of %s | %s of %s | %s | %s | %s | %s |" % (k, v["t0"] and v["t0"]["right"],
+                 v["reps_right"], v["reps_done"], v["reps_recall"], v["recall8_chats"], v["chats"], v["checker_pass_chats"],
+                 v["chats"], v["length_stops"], v["turn1_gone"], v["mean_tokens_per_turn_all"], v["seconds_per_turn_all"]))
     w = r["winner"]
     L += ["", "**Winner:** %s (%s right, %s tokens per turn)%s." % (w["arm"], w["right"], w["mean_tokens_per_turn"],
-                                                                 "; " + w["flag"] if w["flag"] else ""), ""]
+                                                                 "; " + w["flag"] if w["flag"] else ""),
+          "Most chats with all 8 facts at turn 20: %s (%s)." % (w["best_recall_arm"], w["best_recall_8of8"]), ""]
     return "\n".join(L)
 
 
@@ -189,8 +196,10 @@ def main():
     res["reuse"] = {cid: reuse(cid) for cid in ("drop-8k-t0", "drop-16k-t0", "drop-32k-t0", "reuse-16k-think",
                                                 "reuse-16k-cold") if chat(cid)}
     res["fix"] = {"baseline_8k": arm("base-8k", "drop-8k-t0"), "a_pin_8k": arm("fix-pin-8k", "fix-pin-8k-t0"),
-                  "b_ctx_32k": arm("fix-ctx32k", "drop-32k-t0"), "c_summary_8k": arm("fix-sum-8k", "fix-sum-8k-t0")}
-    fx = {k: v for k, v in res["fix"].items() if k != "baseline_8k"}
+                  "b_ctx_32k": arm("fix-ctx32k", "drop-32k-t0"), "c_summary_8k": arm("fix-sum-8k", "fix-sum-8k-t0"),
+                  "baseline_16k": arm("base-16k", "drop-16k-t0"), "a_pin_16k": arm("fix-pin-16k", "fix-pin-16k-t0"),
+                  "c_summary_16k": arm("fix-sum-16k", "fix-sum-16k-t0")}
+    fx = {k: v for k, v in res["fix"].items() if not k.startswith("baseline")}
     elig = [k for k, v in fx.items() if v["t0"] and v["t0"]["right"] and v["reps_right"] >= 4]
     if elig:
         win, flag = min(elig, key=lambda k: fx[k]["mean_tokens_per_turn_all"]), None
@@ -198,7 +207,11 @@ def main():
         win = max(fx, key=lambda k: (fx[k]["right_total"], -fx[k]["mean_tokens_per_turn_all"]))
         flag = "no arm met the rule; named by right chats"
     res["winner"] = {"arm": win, "eligible": elig, "flag": flag, "right": f'{fx[win]["right_total"]} of {fx[win]["chats"]}',
-                     "mean_tokens_per_turn": fx[win]["mean_tokens_per_turn_all"]}
+                     "mean_tokens_per_turn": fx[win]["mean_tokens_per_turn_all"],
+                     "best_recall_arm": max(fx, key=lambda k: (fx[k]["recall8_chats"], -fx[k]["mean_tokens_per_turn_all"])),
+}
+    b = res["winner"]["best_recall_arm"]
+    res["winner"]["best_recall_8of8"] = "%d of %d" % (fx[b]["recall8_chats"], fx[b]["chats"])
     json.dump(res, open(os.path.join(OUT, "results.json"), "w", encoding="utf-8"), indent=1, ensure_ascii=False)
     open(os.path.join(OUT, "RESULTS-g17.md"), "w", encoding="utf-8").write(md(res))
     print(json.dumps({"winner": res["winner"], "menu_tokens": res["size"]["menu_tokens"],

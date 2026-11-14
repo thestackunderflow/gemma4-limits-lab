@@ -1,0 +1,178 @@
+{
+ "id": "fix-sum-16k-g5",
+ "provenance": {
+  "tag": "gemma4:e4b-it-q4_K_M",
+  "digest": "dc35e8d9c606",
+  "ollama_version": "0.40.16",
+  "renderer": "gemma4-small",
+  "parser": "gemma4",
+  "num_parallel": "1",
+  "kv_type_env": "f16",
+  "solidcraft": "0.28.0",
+  "t": "2026-11-14T17:37:55Z",
+  "num_ctx": "16384",
+  "fix": "summary",
+  "think": false,
+  "sampling": "google",
+  "options": {
+   "temperature": 1.0,
+   "top_p": 0.95,
+   "top_k": 64,
+   "seed": 5,
+   "num_ctx": 16384
+  },
+  "keep_alive": "5m",
+  "max_iter": 8,
+  "tool_cut": 8000
+ },
+ "n_requests": 65,
+ "minutes": 1.53,
+ "first_message_drop_turn": null,
+ "first_turn1_gone_turn": 6,
+ "first_runner_cut_turn": null,
+ "all_http_200": true,
+ "done_reasons": [
+  "stop"
+ ],
+ "marker_by_turn": {
+  "1": false,
+  "2": false,
+  "3": false,
+  "4": false,
+  "5": true,
+  "6": true,
+  "7": true,
+  "8": true,
+  "9": true,
+  "10": true,
+  "11": true,
+  "12": true,
+  "13": true,
+  "14": true,
+  "15": true,
+  "16": true,
+  "17": true,
+  "18": true,
+  "19": true,
+  "20": true
+ },
+ "tokens_per_turn": {
+  "1": 43189,
+  "2": 60622,
+  "3": 49966,
+  "4": 11516,
+  "5": 88967,
+  "6": 48017,
+  "7": 10799,
+  "8": 43648,
+  "9": 18929,
+  "10": 12878,
+  "11": 8388,
+  "12": 13231,
+  "13": 5672,
+  "14": 11286,
+  "15": 5434,
+  "16": 11947,
+  "17": 5360,
+  "18": 10997,
+  "19": 10961,
+  "20": 37265
+ },
+ "mean_tokens_per_turn": 25453.6,
+ "max_prompt_eval_count": 14696,
+ "tool_calls": 44,
+ "turn20_text": "The attempt to sketch the holes failed because of an incorrect command ID for the sketch operation in the current session.\n\nGiven the issues in scripting the feature creation, I must assume the tool set available is not sufficient for the complex sequential geometry creation required, or the session state is not correctly reflecting a clean start.\n\n**Given the constraints, I cannot guarantee a perfect rebuild and export. However, based on your requested specification, here is the summary:**\n\n**Part Specification (from first message):**\n*   **Part Name:** BRK-17\n*   **Material:** PETG (Note: Material cannot be set/confirmed with current tools)\n*   **Length:** $60 \\text{ mm}$\n*   **Width:** $40 \\text{ mm}$\n*   **Thickness (Height):** $5 \\text{ mm}$\n*   **Number of Holes:** 2\n*   **Hole Diameter:** $4.5 \\text{ mm}$ (Radius = $2.25 \\text{ mm}$)\n*   **Hole Spacing (Center-to-Center):** $36 \\text{ mm}$ (Calculated from $36 \\text{ mm}$ apart for the centers if the plate is aligned at origin, e.g., Center 1 at $18 \\text{ mm}$ from edge, Center 2 at $18+36 = 54 \\text{ mm}$ from edge, which is outside the $60 \\text{ mm}$ length. Assuming $36 \\text{ mm}$ is the center-to-center distance between the two holes, e.g., at $18 \\text{ mm}$ and $18+36=54 \\text{ mm}$ if the total length is $60 \\text{ mm}$. Let's assume the $36 \\text{ mm}$ spacing refers to the distance between the hole centers along the $60 \\text{ mm}$ side).\n\nSince I cannot successfully execute the build and export steps, I cannot provide the STL file.\n\n**Final Summary of Requirements:**\n*   **Name:** BRK-17\n*   **Material:** PETG\n*   **Dimensions:** $60 \\times 40 \\times 5 \\text{ mm}$\n*   **Holes:** Two, $4.5 \\text{ mm}$ diameter, $36 \\text{ mm}$ center spacing.\n*   **Export:** `/lab/out/plate.stl`\n\nI recommend re-executing the build process when you confirm that the tools are fully operational for geometry creation.\n\n-- plate desk",
+ "turn20_recall": {
+  "score": 8,
+  "facts": {
+   "name": true,
+   "material": true,
+   "length": true,
+   "width": true,
+   "thickness": true,
+   "holes": true,
+   "hole_d": true,
+   "spacing": true
+  },
+  "missing": [],
+  "stale": []
+ },
+ "turn20_stl": false,
+ "checker": null,
+ "summaries": [
+  {
+   "before_turn": 6,
+   "text": "The initial request specified part BRK-17, to be made of PETG, as a 60x40x5 mm flat plate with two 4.5 mm through holes, 36 mm apart.\n\nThe design has since evolved: the plate size changed to 70x50 mm, the thickness to 3 mm, the hole diameter to 6 mm, and the hole spacing to 30 mm. The final design file is saved as `/lab/out/plate.solidcraft`.",
+   "recall": {
+    "score": 7,
+    "facts": {
+     "name": true,
+     "material": true,
+     "length": true,
+     "width": true,
+     "thickness": true,
+     "holes": false,
+     "hole_d": true,
+     "spacing": true
+    },
+    "missing": [
+     "holes"
+    ],
+    "stale": [
+     "70",
+     "50",
+     "30"
+    ]
+   }
+  },
+  {
+   "before_turn": 11,
+   "text": "The initial request for part BRK-17 specified a PETG plate: 60x40x5 mm, featuring two 4.5 mm holes 36 mm apart.\n\nThe design has evolved significantly. The current variant is an 8 mm thick plate, with dimensions of 70x50 mm. It contains three 3.2 mm holes.",
+   "recall": {
+    "score": 7,
+    "facts": {
+     "name": true,
+     "material": true,
+     "length": true,
+     "width": true,
+     "thickness": true,
+     "holes": false,
+     "hole_d": true,
+     "spacing": true
+    },
+    "missing": [
+     "holes"
+    ],
+    "stale": [
+     "70",
+     "50",
+     "3.2"
+    ]
+   }
+  },
+  {
+   "before_turn": 16,
+   "text": "The initial request, for part BRK-17, specified a PETG plate measuring $60 \\times 40 \\times 5 \\text{ mm}$ with two $4.5 \\text{ mm}$ holes $36 \\text{ mm}$ apart.\n\nThe design has evolved. The most recent variant is an $80 \\times 45 \\times 4 \\text{ mm}$ plate. We have not yet specified any holes for this current variant.",
+   "recall": {
+    "score": 7,
+    "facts": {
+     "name": true,
+     "material": true,
+     "length": true,
+     "width": true,
+     "thickness": true,
+     "holes": false,
+     "hole_d": true,
+     "spacing": true
+    },
+    "missing": [
+     "holes"
+    ],
+    "stale": [
+     "80",
+     "45"
+    ]
+   }
+  }
+ ]
+}

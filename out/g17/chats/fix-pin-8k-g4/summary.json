@@ -1,0 +1,356 @@
+{
+ "id": "fix-pin-8k-g4",
+ "provenance": {
+  "tag": "gemma4:e4b-it-q4_K_M",
+  "digest": "dc35e8d9c606",
+  "ollama_version": "0.40.16",
+  "renderer": "gemma4-small",
+  "parser": "gemma4",
+  "num_parallel": "1",
+  "kv_type_env": "f16",
+  "solidcraft": "0.28.0",
+  "t": "2026-11-14T16:49:46Z",
+  "num_ctx": "8192",
+  "fix": "pin",
+  "think": false,
+  "sampling": "google",
+  "options": {
+   "temperature": 1.0,
+   "top_p": 0.95,
+   "top_k": 64,
+   "seed": 4,
+   "num_ctx": 8192
+  },
+  "keep_alive": "5m",
+  "max_iter": 8,
+  "tool_cut": 8000
+ },
+ "n_requests": 30,
+ "minutes": 0.89,
+ "first_message_drop_turn": 1,
+ "first_turn1_gone_turn": 1,
+ "first_runner_cut_turn": null,
+ "all_http_200": true,
+ "done_reasons": [
+  "length",
+  "stop"
+ ],
+ "marker_by_turn": {
+  "1": true,
+  "2": false,
+  "3": false,
+  "4": false,
+  "5": false,
+  "6": true,
+  "7": true,
+  "8": false,
+  "9": false,
+  "10": false,
+  "11": true,
+  "12": false,
+  "13": false,
+  "14": false,
+  "15": true,
+  "16": true,
+  "17": true,
+  "18": true,
+  "19": true,
+  "20": false
+ },
+ "tokens_per_turn": {
+  "1": 37837,
+  "2": 8172,
+  "3": 8189,
+  "4": 8108,
+  "5": 8130,
+  "6": 15874,
+  "7": 7770,
+  "8": 7986,
+  "9": 8004,
+  "10": 8023,
+  "11": 8043,
+  "12": 8148,
+  "13": 8164,
+  "14": 8181,
+  "15": 6648,
+  "16": 13682,
+  "17": 6954,
+  "18": 14221,
+  "19": 14592,
+  "20": 15600
+ },
+ "mean_tokens_per_turn": 11116.3,
+ "max_prompt_eval_count": 8189,
+ "tool_calls": 11,
+ "turn20_text": "Here is the summary of the first specification for part BRK-17:\n\n**Part Specifications:**\n*   **Part Name:** BRK-17\n*   **Material:** PETG (Note: Material cannot be set via",
+ "turn20_recall": {
+  "score": 2,
+  "facts": {
+   "name": true,
+   "material": true,
+   "length": false,
+   "width": false,
+   "thickness": false,
+   "holes": false,
+   "hole_d": false,
+   "spacing": false
+  },
+  "missing": [
+   "length",
+   "width",
+   "thickness",
+   "holes",
+   "hole_d",
+   "spacing"
+  ],
+  "stale": []
+ },
+ "turn20_stl": true,
+ "checker": {
+  "units": "mm",
+  "size": [
+   60.0,
+   40.0,
+   5.0
+  ],
+  "triangles": 772,
+  "watertight": true,
+  "volume": 11841.782,
+  "size_ok": true,
+  "holes": [
+   {
+    "sides": 7,
+    "pin": 0.3283,
+    "corner_d": 2.3655,
+    "bbox_w": 1.2203,
+    "min_width": 0.3316,
+    "area": 0.5118,
+    "centre": [
+     -1.7464,
+     -18.8202
+    ],
+    "offset": 24.8672,
+    "centre_ok": false,
+    "pin_centre_shift": [
+     -0.01,
+     -0.0475
+    ],
+    "through": false
+   },
+   {
+    "sides": 5,
+    "pin": 0.0909,
+    "corner_d": 1.0577,
+    "bbox_w": 0.7413,
+    "min_width": 0.0637,
+    "area": 0.0454,
+    "centre": [
+     -1.5577,
+     -16.1887
+    ],
+    "offset": 23.0743,
+    "centre_ok": false,
+    "pin_centre_shift": [
+     0.05,
+     -0.05
+    ],
+    "through": false
+   },
+   {
+    "sides": 18,
+    "pin": 1.5653,
+    "corner_d": 4.6139,
+    "bbox_w": 1.9429,
+    "min_width": 1.7441,
+    "area": 5.6947,
+    "centre": [
+     -1.2216,
+     17.8539
+    ],
+    "offset": 24.5005,
+    "centre_ok": false,
+    "pin_centre_shift": [
+     -0.05,
+     0.05
+    ],
+    "through": false
+   },
+   {
+    "sides": 3,
+    "pin": 0.1232,
+    "corner_d": 0.4485,
+    "bbox_w": 0.3744,
+    "min_width": 0.0109,
+    "area": 0.0022,
+    "centre": [
+     -0.8528,
+     -15.6762
+    ],
+    "offset": 23.2329,
+    "centre_ok": false,
+    "pin_centre_shift": [
+     0.05,
+     -0.05
+    ],
+    "through": false
+   },
+   {
+    "sides": 3,
+    "pin": 0.1057,
+    "corner_d": 0.4644,
+    "bbox_w": 0.4138,
+    "min_width": 0.0116,
+    "area": 0.0024,
+    "centre": [
+     -0.3247,
+     -15.5318
+    ],
+    "offset": 23.5299,
+    "centre_ok": false,
+    "pin_centre_shift": [
+     0.05,
+     -0.05
+    ],
+    "through": false
+   },
+   {
+    "sides": 3,
+    "pin": 0.1021,
+    "corner_d": 0.4665,
+    "bbox_w": 0.417,
+    "min_width": 0.0116,
+    "area": 0.0024,
+    "centre": [
+     -0.2324,
+     15.5203
+    ],
+    "offset": 23.5917,
+    "centre_ok": false,
+    "pin_centre_shift": [
+     0.05,
+     0.05
+    ],
+    "through": false
+   },
+   {
+    "sides": 3,
+    "pin": 0.1021,
+    "corner_d": 0.4665,
+    "bbox_w": 0.417,
+    "min_width": 0.0116,
+    "area": 0.0024,
+    "centre": [
+     0.2324,
+     -15.5203
+    ],
+    "offset": 23.5917,
+    "centre_ok": false,
+    "pin_centre_shift": [
+     -0.05,
+     -0.05
+    ],
+    "through": false
+   },
+   {
+    "sides": 3,
+    "pin": 0.1057,
+    "corner_d": 0.4644,
+    "bbox_w": 0.4138,
+    "min_width": 0.0116,
+    "area": 0.0024,
+    "centre": [
+     0.3247,
+     15.5318
+    ],
+    "offset": 23.5299,
+    "centre_ok": false,
+    "pin_centre_shift": [
+     -0.05,
+     0.05
+    ],
+    "through": false
+   },
+   {
+    "sides": 3,
+    "pin": 0.1232,
+    "corner_d": 0.4485,
+    "bbox_w": 0.3744,
+    "min_width": 0.0109,
+    "area": 0.0022,
+    "centre": [
+     0.8528,
+     15.6762
+    ],
+    "offset": 23.2329,
+    "centre_ok": false,
+    "pin_centre_shift": [
+     -0.05,
+     0.05
+    ],
+    "through": false
+   },
+   {
+    "sides": 18,
+    "pin": 1.5653,
+    "corner_d": 4.6139,
+    "bbox_w": 1.9429,
+    "min_width": 1.7441,
+    "area": 5.6947,
+    "centre": [
+     1.2216,
+     -17.8539
+    ],
+    "offset": 24.5005,
+    "centre_ok": false,
+    "pin_centre_shift": [
+     0.05,
+     -0.05
+    ],
+    "through": false
+   },
+   {
+    "sides": 5,
+    "pin": 0.0909,
+    "corner_d": 1.0577,
+    "bbox_w": 0.7413,
+    "min_width": 0.0637,
+    "area": 0.0454,
+    "centre": [
+     1.5577,
+     16.1887
+    ],
+    "offset": 23.0743,
+    "centre_ok": false,
+    "pin_centre_shift": [
+     -0.05,
+     0.05
+    ],
+    "through": false
+   },
+   {
+    "sides": 7,
+    "pin": 0.3283,
+    "corner_d": 2.3655,
+    "bbox_w": 1.2203,
+    "min_width": 0.3316,
+    "area": 0.5118,
+    "centre": [
+     1.7464,
+     18.8202
+    ],
+    "offset": 24.8672,
+    "centre_ok": false,
+    "pin_centre_shift": [
+     0.01,
+     0.0475
+    ],
+    "through": false
+   }
+  ],
+  "spacing": null,
+  "volume_expected": 11387.977,
+  "volume_ok": false,
+  "pass": false
+ },
+ "summaries": []
+}

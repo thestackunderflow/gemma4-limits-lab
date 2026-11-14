@@ -1,0 +1,165 @@
+{
+ "id": "reuse-16k-cold",
+ "provenance": {
+  "tag": "gemma4:e4b-it-q4_K_M",
+  "digest": "dc35e8d9c606",
+  "ollama_version": "0.40.16",
+  "renderer": "gemma4-small",
+  "parser": "gemma4",
+  "num_parallel": "1",
+  "kv_type_env": "f16",
+  "solidcraft": "0.28.0",
+  "t": "2026-11-14T16:08:38Z",
+  "num_ctx": "16384",
+  "fix": "none",
+  "think": false,
+  "sampling": "t0",
+  "options": {
+   "temperature": 0,
+   "seed": 42,
+   "num_ctx": 16384
+  },
+  "keep_alive": 0,
+  "max_iter": 8,
+  "tool_cut": 8000
+ },
+ "n_requests": 63,
+ "minutes": 6.67,
+ "first_message_drop_turn": 15,
+ "first_turn1_gone_turn": 15,
+ "first_runner_cut_turn": null,
+ "all_http_200": true,
+ "done_reasons": [
+  "length",
+  "stop"
+ ],
+ "marker_by_turn": {
+  "1": true,
+  "2": true,
+  "3": true,
+  "4": true,
+  "5": true,
+  "6": true,
+  "7": true,
+  "8": true,
+  "9": true,
+  "10": true,
+  "11": true,
+  "12": true,
+  "13": true,
+  "14": true,
+  "15": false,
+  "16": true,
+  "17": false,
+  "18": true,
+  "19": true,
+  "20": true
+ },
+ "tokens_per_turn": {
+  "1": 33421,
+  "2": 20989,
+  "3": 22099,
+  "4": 23457,
+  "5": 24895,
+  "6": 25933,
+  "7": 8865,
+  "8": 29044,
+  "9": 31039,
+  "10": 32154,
+  "11": 33525,
+  "12": 34957,
+  "13": 83883,
+  "14": 48082,
+  "15": 48931,
+  "16": 48385,
+  "17": 16349,
+  "18": 48154,
+  "19": 31764,
+  "20": 79922
+ },
+ "mean_tokens_per_turn": 36292.4,
+ "max_prompt_eval_count": 16366,
+ "tool_calls": 43,
+ "turn20_text": "Based on the initial specification (which I have reconstructed in a new design), here is the requested information:\n\n**First Specification Details:**\n\n*   **Part Name:** (Not explicitly named in the first message, but the design is now named `BRK-17_Original`)\n*   **Material:** (Not specified in the first message)\n*   **Length:** 60 mm\n*   **Width:** 40 mm\n*   **Thickness:** 5 mm\n*   **Number of Holes:** 2\n*   **Hole Diameter:** 5.5 mm (Radius: 2.75 mm)\n*   **Hole Spacing:** 30 mm (Center-to-center distance between the two holes: $45 - 15 = 30$ mm)\n\nThe design has been exported as an STL to `/lab/out/plate.stl`.\n\n-- plate desk",
+ "turn20_recall": {
+  "score": 5,
+  "facts": {
+   "name": true,
+   "material": false,
+   "length": true,
+   "width": true,
+   "thickness": true,
+   "holes": true,
+   "hole_d": false,
+   "spacing": false
+  },
+  "missing": [
+   "material",
+   "hole_d",
+   "spacing"
+  ],
+  "stale": [
+   "45",
+   "5.5",
+   "30"
+  ]
+ },
+ "turn20_stl": true,
+ "checker": {
+  "units": "mm",
+  "size": [
+   60.0,
+   40.0,
+   5.0
+  ],
+  "triangles": 1044,
+  "watertight": true,
+  "volume": 11841.581,
+  "size_ok": true,
+  "holes": [
+   {
+    "sides": 44,
+    "pin": 4.4753,
+    "corner_d": 4.5,
+    "bbox_w": 4.5,
+    "min_width": 4.4753,
+    "area": 15.8419,
+    "centre": [
+     -15.0,
+     -0.0
+    ],
+    "offset": 3.0,
+    "centre_ok": false,
+    "pin_centre_shift": [
+     0.0,
+     0.0
+    ],
+    "through": true
+   },
+   {
+    "sides": 44,
+    "pin": 4.4753,
+    "corner_d": 4.5,
+    "bbox_w": 4.5,
+    "min_width": 4.4753,
+    "area": 15.8419,
+    "centre": [
+     15.0,
+     0.0
+    ],
+    "offset": 3.0,
+    "centre_ok": false,
+    "pin_centre_shift": [
+     0.0,
+     0.0
+    ],
+    "through": true
+   }
+  ],
+  "spacing": 30.0,
+  "volume_expected": 11841.497,
+  "volume_ok": true,
+  "pass": false
+ },
+ "summaries": []
+}

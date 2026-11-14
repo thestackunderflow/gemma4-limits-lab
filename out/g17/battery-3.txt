@@ -1,0 +1,14 @@
+# battery 3 (deviation, decided 12:10 from battery 2): at 8K every arm runs out of answer room (done_reason length in 5-17 requests per chat),
+# so fixes (a) and (c) are re-run at 16K, where the baseline still loses turn 1 (temp 0 at turn 20; reps 3-16) with fewer length stops
+fix-pin-16k-t0 16384 pin false t0 42 5m
+fix-pin-16k-g1 16384 pin false google 1 5m
+fix-pin-16k-g2 16384 pin false google 2 5m
+fix-pin-16k-g3 16384 pin false google 3 5m
+fix-pin-16k-g4 16384 pin false google 4 5m
+fix-pin-16k-g5 16384 pin false google 5 5m
+fix-sum-16k-t0 16384 summary false t0 42 5m
+fix-sum-16k-g1 16384 summary false google 1 5m
+fix-sum-16k-g2 16384 summary false google 2 5m
+fix-sum-16k-g3 16384 summary false google 3 5m
+fix-sum-16k-g4 16384 summary false google 4 5m
+fix-sum-16k-g5 16384 summary false google 5 5m

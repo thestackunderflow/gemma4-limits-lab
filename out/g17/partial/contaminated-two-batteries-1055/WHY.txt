@@ -1,0 +1,1 @@
+Two battery-1 processes ran at once 10:50-10:55 (schtasks /end left the first child alive): both wrote drop-8k-t0 and hit the same Ollama. Set aside, not used.

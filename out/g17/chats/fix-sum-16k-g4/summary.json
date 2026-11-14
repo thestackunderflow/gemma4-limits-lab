@@ -1,0 +1,190 @@
+{
+ "id": "fix-sum-16k-g4",
+ "provenance": {
+  "tag": "gemma4:e4b-it-q4_K_M",
+  "digest": "dc35e8d9c606",
+  "ollama_version": "0.40.16",
+  "renderer": "gemma4-small",
+  "parser": "gemma4",
+  "num_parallel": "1",
+  "kv_type_env": "f16",
+  "solidcraft": "0.28.0",
+  "t": "2026-11-14T17:36:20Z",
+  "num_ctx": "16384",
+  "fix": "summary",
+  "think": false,
+  "sampling": "google",
+  "options": {
+   "temperature": 1.0,
+   "top_p": 0.95,
+   "top_k": 64,
+   "seed": 4,
+   "num_ctx": 16384
+  },
+  "keep_alive": "5m",
+  "max_iter": 8,
+  "tool_cut": 8000
+ },
+ "n_requests": 46,
+ "minutes": 1.95,
+ "first_message_drop_turn": null,
+ "first_turn1_gone_turn": 6,
+ "first_runner_cut_turn": null,
+ "all_http_200": true,
+ "done_reasons": [
+  "stop"
+ ],
+ "marker_by_turn": {
+  "1": false,
+  "2": false,
+  "3": false,
+  "4": false,
+  "5": false,
+  "6": true,
+  "7": true,
+  "8": false,
+  "9": false,
+  "10": true,
+  "11": true,
+  "12": true,
+  "13": true,
+  "14": true,
+  "15": true,
+  "16": false,
+  "17": true,
+  "18": true,
+  "19": true,
+  "20": false
+ },
+ "tokens_per_turn": {
+  "1": 9299,
+  "2": 16563,
+  "3": 13666,
+  "4": 14206,
+  "5": 14838,
+  "6": 18412,
+  "7": 5746,
+  "8": 12097,
+  "9": 20123,
+  "10": 15647,
+  "11": 22741,
+  "12": 42801,
+  "13": 22149,
+  "14": 20840,
+  "15": 18813,
+  "16": 11938,
+  "17": 20815,
+  "18": 13575,
+  "19": 13820,
+  "20": 13064
+ },
+ "mean_tokens_per_turn": 17057.7,
+ "max_prompt_eval_count": 11700,
+ "tool_calls": 23,
+ "turn20_text": "",
+ "turn20_recall": {
+  "score": 0,
+  "facts": {
+   "name": false,
+   "material": false,
+   "length": false,
+   "width": false,
+   "thickness": false,
+   "holes": false,
+   "hole_d": false,
+   "spacing": false
+  },
+  "missing": [
+   "name",
+   "material",
+   "length",
+   "width",
+   "thickness",
+   "holes",
+   "hole_d",
+   "spacing"
+  ],
+  "stale": []
+ },
+ "turn20_stl": false,
+ "checker": null,
+ "summaries": [
+  {
+   "before_turn": 6,
+   "text": "The initial specification for part BRK-17 was a 60x40x5mm PETG plate with two 4.5mm holes 36mm apart.\n\nThe current variant has evolved to a 70x50mm plate, with holes of 6mm diameter, positioned 30mm apart along the long side.",
+   "recall": {
+    "score": 7,
+    "facts": {
+     "name": true,
+     "material": true,
+     "length": true,
+     "width": true,
+     "thickness": true,
+     "holes": false,
+     "hole_d": true,
+     "spacing": true
+    },
+    "missing": [
+     "holes"
+    ],
+    "stale": [
+     "70",
+     "50",
+     "30"
+    ]
+   }
+  },
+  {
+   "before_turn": 11,
+   "text": "Initial spec: BRK-17, PETG, 60x40x5mm plate, two 4.5mm holes 36mm apart.\n\nCurrent variant: PLA material, 70x50x8mm plate. It features three 3.2mm diameter holes: two located 30mm apart along the long side, with a third hole centered between them.",
+   "recall": {
+    "score": 8,
+    "facts": {
+     "name": true,
+     "material": true,
+     "length": true,
+     "width": true,
+     "thickness": true,
+     "holes": true,
+     "hole_d": true,
+     "spacing": true
+    },
+    "missing": [],
+    "stale": [
+     "PLA",
+     "70",
+     "50",
+     "3.2",
+     "30"
+    ]
+   }
+  },
+  {
+   "before_turn": 16,
+   "text": "Original Spec: BRK-17, PETG, $60\\times40\\times5\\text{mm}$ plate with two $4.5\\text{mm}$ holes $36\\text{mm}$ apart.\n\nCurrent Variant: PLA material (though no material was locked in for the final iteration), $80\\times45\\times4\\text{mm}$ plate. It features two $5.5\\text{mm}$ diameter holes located at $[15, 22.5]$ and $[65, 22.5]$.",
+   "recall": {
+    "score": 7,
+    "facts": {
+     "name": true,
+     "material": true,
+     "length": true,
+     "width": true,
+     "thickness": true,
+     "holes": false,
+     "hole_d": true,
+     "spacing": true
+    },
+    "missing": [
+     "holes"
+    ],
+    "stale": [
+     "PLA",
+     "80",
+     "45",
+     "65",
+     "5.5"
+    ]
+   }
+  }
+ ]
+}

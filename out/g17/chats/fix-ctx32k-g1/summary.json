@@ -1,0 +1,168 @@
+{
+ "id": "fix-ctx32k-g1",
+ "provenance": {
+  "tag": "gemma4:e4b-it-q4_K_M",
+  "digest": "dc35e8d9c606",
+  "ollama_version": "0.40.16",
+  "renderer": "gemma4-small",
+  "parser": "gemma4",
+  "num_parallel": "1",
+  "kv_type_env": "f16",
+  "solidcraft": "0.28.0",
+  "t": "2026-11-14T16:18:23Z",
+  "num_ctx": "32768",
+  "fix": "none",
+  "think": false,
+  "sampling": "google",
+  "options": {
+   "temperature": 1.0,
+   "top_p": 0.95,
+   "top_k": 64,
+   "seed": 1,
+   "num_ctx": 32768
+  },
+  "keep_alive": "5m",
+  "max_iter": 8,
+  "tool_cut": 8000
+ },
+ "n_requests": 46,
+ "minutes": 1.75,
+ "first_message_drop_turn": 20,
+ "first_turn1_gone_turn": 20,
+ "first_runner_cut_turn": null,
+ "all_http_200": true,
+ "done_reasons": [
+  "length",
+  "stop"
+ ],
+ "marker_by_turn": {
+  "1": false,
+  "2": true,
+  "3": true,
+  "4": true,
+  "5": true,
+  "6": true,
+  "7": true,
+  "8": true,
+  "9": true,
+  "10": true,
+  "11": true,
+  "12": true,
+  "13": true,
+  "14": true,
+  "15": true,
+  "16": true,
+  "17": true,
+  "18": true,
+  "19": true,
+  "20": false
+ },
+ "tokens_per_turn": {
+  "1": 42274,
+  "2": 28186,
+  "3": 19885,
+  "4": 23782,
+  "5": 27703,
+  "6": 29990,
+  "7": 15154,
+  "8": 32405,
+  "9": 36309,
+  "10": 40212,
+  "11": 44165,
+  "12": 48159,
+  "13": 51750,
+  "14": 54972,
+  "15": 58102,
+  "16": 59869,
+  "17": 30051,
+  "18": 61816,
+  "19": 63659,
+  "20": 64745
+ },
+ "mean_tokens_per_turn": 41659.4,
+ "max_prompt_eval_count": 32752,
+ "tool_calls": 27,
+ "turn20_text": "Here is the full summary of the design rebuilt according to your first specification:",
+ "turn20_recall": {
+  "score": 0,
+  "facts": {
+   "name": false,
+   "material": false,
+   "length": false,
+   "width": false,
+   "thickness": false,
+   "holes": false,
+   "hole_d": false,
+   "spacing": false
+  },
+  "missing": [
+   "name",
+   "material",
+   "length",
+   "width",
+   "thickness",
+   "holes",
+   "hole_d",
+   "spacing"
+  ],
+  "stale": []
+ },
+ "turn20_stl": true,
+ "checker": {
+  "units": "mm",
+  "size": [
+   60.0,
+   40.0,
+   5.0
+  ],
+  "triangles": 1044,
+  "watertight": true,
+  "volume": 11841.581,
+  "size_ok": true,
+  "holes": [
+   {
+    "sides": 44,
+    "pin": 4.4753,
+    "corner_d": 4.5,
+    "bbox_w": 4.5,
+    "min_width": 4.4753,
+    "area": 15.8419,
+    "centre": [
+     -18.0,
+     0.0
+    ],
+    "offset": 0.0,
+    "centre_ok": true,
+    "pin_centre_shift": [
+     0.0,
+     0.0
+    ],
+    "through": true
+   },
+   {
+    "sides": 44,
+    "pin": 4.4753,
+    "corner_d": 4.5,
+    "bbox_w": 4.5,
+    "min_width": 4.4753,
+    "area": 15.8419,
+    "centre": [
+     18.0,
+     0.0
+    ],
+    "offset": 0.0,
+    "centre_ok": true,
+    "pin_centre_shift": [
+     0.0,
+     0.0
+    ],
+    "through": true
+   }
+  ],
+  "spacing": 36.0,
+  "volume_expected": 11841.497,
+  "volume_ok": true,
+  "pass": true
+ },
+ "summaries": []
+}

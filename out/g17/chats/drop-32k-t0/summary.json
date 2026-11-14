@@ -1,0 +1,156 @@
+{
+ "id": "drop-32k-t0",
+ "provenance": {
+  "tag": "gemma4:e4b-it-q4_K_M",
+  "digest": "dc35e8d9c606",
+  "ollama_version": "0.40.16",
+  "renderer": "gemma4-small",
+  "parser": "gemma4",
+  "num_parallel": "1",
+  "kv_type_env": "f16",
+  "solidcraft": "0.28.0",
+  "t": "2026-11-14T15:56:40Z",
+  "num_ctx": "32768",
+  "fix": "none",
+  "think": false,
+  "sampling": "t0",
+  "options": {
+   "temperature": 0,
+   "seed": 42,
+   "num_ctx": 32768
+  },
+  "keep_alive": "5m",
+  "max_iter": 8,
+  "tool_cut": 8000
+ },
+ "n_requests": 60,
+ "minutes": 1.06,
+ "first_message_drop_turn": null,
+ "first_turn1_gone_turn": null,
+ "first_runner_cut_turn": null,
+ "all_http_200": true,
+ "done_reasons": [
+  "stop"
+ ],
+ "marker_by_turn": {
+  "1": true,
+  "2": true,
+  "3": true,
+  "4": true,
+  "5": true,
+  "6": true,
+  "7": true,
+  "8": true,
+  "9": true,
+  "10": true,
+  "11": true,
+  "12": true,
+  "13": true,
+  "14": true,
+  "15": true,
+  "16": true,
+  "17": true,
+  "18": true,
+  "19": true,
+  "20": true
+ },
+ "tokens_per_turn": {
+  "1": 33441,
+  "2": 21010,
+  "3": 22120,
+  "4": 23478,
+  "5": 24916,
+  "6": 25954,
+  "7": 8872,
+  "8": 29065,
+  "9": 31060,
+  "10": 32175,
+  "11": 33546,
+  "12": 34978,
+  "13": 51177,
+  "14": 42850,
+  "15": 43970,
+  "16": 44941,
+  "17": 15201,
+  "18": 46486,
+  "19": 31602,
+  "20": 66196
+ },
+ "mean_tokens_per_turn": 33151.9,
+ "max_prompt_eval_count": 17153,
+ "tool_calls": 40,
+ "turn20_text": "The plate has been rebuilt according to the original specification, exported as an STL to `/lab/out/plate.stl`, and the specifications are as follows:\n\n*   **Part Name:** BRK-17\n*   **Material:** PETG (Note: Material cannot be set via CAD commands)\n*   **Length:** 60 mm\n*   **Width:** 40 mm\n*   **Thickness:** 5 mm\n*   **Number of Holes:** 2\n*   **Hole Diameter:** 4.5 mm (Radius: 2.25 mm)\n*   **Hole Spacing:** 36 mm (Centered along the long side)\n\n-- plate desk",
+ "turn20_recall": {
+  "score": 8,
+  "facts": {
+   "name": true,
+   "material": true,
+   "length": true,
+   "width": true,
+   "thickness": true,
+   "holes": true,
+   "hole_d": true,
+   "spacing": true
+  },
+  "missing": [],
+  "stale": []
+ },
+ "turn20_stl": true,
+ "checker": {
+  "units": "mm",
+  "size": [
+   60.0,
+   40.0,
+   5.0
+  ],
+  "triangles": 1044,
+  "watertight": true,
+  "volume": 11841.581,
+  "size_ok": true,
+  "holes": [
+   {
+    "sides": 44,
+    "pin": 4.4753,
+    "corner_d": 4.5,
+    "bbox_w": 4.5,
+    "min_width": 4.4753,
+    "area": 15.8419,
+    "centre": [
+     -18.0,
+     0.0
+    ],
+    "offset": 0.0,
+    "centre_ok": true,
+    "pin_centre_shift": [
+     0.0,
+     0.0
+    ],
+    "through": true
+   },
+   {
+    "sides": 44,
+    "pin": 4.4753,
+    "corner_d": 4.5,
+    "bbox_w": 4.5,
+    "min_width": 4.4753,
+    "area": 15.8419,
+    "centre": [
+     18.0,
+     0.0
+    ],
+    "offset": 0.0,
+    "centre_ok": true,
+    "pin_centre_shift": [
+     0.0,
+     0.0
+    ],
+    "through": true
+   }
+  ],
+  "spacing": 36.0,
+  "volume_expected": 11841.497,
+  "volume_ok": true,
+  "pass": true
+ },
+ "summaries": []
+}

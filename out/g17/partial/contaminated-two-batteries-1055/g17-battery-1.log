@@ -1,0 +1,7 @@
+10:50:20 free RAM 3.66 GB under 4: waiting
+--- restart 10:50:35
+10:50:37 chat drop-8k-t0 8192 none false t0 42 5m
+{"id": "drop-8k-t0", "n_requests": 46, "minutes": 1.89, "first_message_drop_turn": 2, "first_turn1_gone_turn": 2, "first_runner_cut_turn": 5, "mean_tokens_per_turn": 17387.2, "tool_calls": 26, "recall": 0, "pass": null}
+2.8, "tool_calls": 21, "recall": 0, "pass": null}
+10:52:27 free RAM 3.82 GB under 4: waiting
+10:52:33 chat drop-16k-t0 16384 none false t0 42 5m

@@ -1,0 +1,159 @@
+{
+ "id": "drop-16k-t0",
+ "provenance": {
+  "tag": "gemma4:e4b-it-q4_K_M",
+  "digest": "dc35e8d9c606",
+  "ollama_version": "0.40.16",
+  "renderer": "gemma4-small",
+  "parser": "gemma4",
+  "num_parallel": "1",
+  "kv_type_env": "f16",
+  "solidcraft": "0.28.0",
+  "t": "2026-11-14T15:55:34Z",
+  "num_ctx": "16384",
+  "fix": "none",
+  "think": false,
+  "sampling": "t0",
+  "options": {
+   "temperature": 0,
+   "seed": 42,
+   "num_ctx": 16384
+  },
+  "keep_alive": "5m",
+  "max_iter": 8,
+  "tool_cut": 8000
+ },
+ "n_requests": 60,
+ "minutes": 1.1,
+ "first_message_drop_turn": 20,
+ "first_turn1_gone_turn": 20,
+ "first_runner_cut_turn": null,
+ "all_http_200": true,
+ "done_reasons": [
+  "stop"
+ ],
+ "marker_by_turn": {
+  "1": true,
+  "2": true,
+  "3": true,
+  "4": true,
+  "5": true,
+  "6": true,
+  "7": true,
+  "8": true,
+  "9": true,
+  "10": true,
+  "11": true,
+  "12": true,
+  "13": true,
+  "14": true,
+  "15": true,
+  "16": true,
+  "17": true,
+  "18": true,
+  "19": true,
+  "20": true
+ },
+ "tokens_per_turn": {
+  "1": 33421,
+  "2": 20989,
+  "3": 22099,
+  "4": 23457,
+  "5": 24895,
+  "6": 25933,
+  "7": 8865,
+  "8": 29044,
+  "9": 31039,
+  "10": 32154,
+  "11": 33522,
+  "12": 34954,
+  "13": 51149,
+  "14": 42832,
+  "15": 43952,
+  "16": 44920,
+  "17": 15194,
+  "18": 46465,
+  "19": 31588,
+  "20": 63858
+ },
+ "mean_tokens_per_turn": 33016.5,
+ "max_prompt_eval_count": 16059,
+ "tool_calls": 40,
+ "turn20_text": "The plate has been rebuilt according to the initial specifications, exported as an STL to `/lab/out/plate.stl`, and the design has been saved.\n\nHere is the summary of the first specification:\n*   **Part Name:** (Not explicitly named, but the feature is Extrude1)\n*   **Material:** (Not specified, assumed default)\n*   **Length:** 60 mm\n*   **Width:** 40 mm\n*   **Thickness:** 5 mm\n*   **Number of Holes:** 2\n*   **Hole Diameter:** 4.5 mm (Radius of 2.25 mm)\n*   **Hole Spacing:** 36 mm (Center-to-center distance: $48 - 12 = 36$ mm)\n\n-- plate desk",
+ "turn20_recall": {
+  "score": 6,
+  "facts": {
+   "name": false,
+   "material": false,
+   "length": true,
+   "width": true,
+   "thickness": true,
+   "holes": true,
+   "hole_d": true,
+   "spacing": true
+  },
+  "missing": [
+   "name",
+   "material"
+  ],
+  "stale": []
+ },
+ "turn20_stl": true,
+ "checker": {
+  "units": "mm",
+  "size": [
+   60.0,
+   40.0,
+   5.0
+  ],
+  "triangles": 1044,
+  "watertight": true,
+  "volume": 11841.581,
+  "size_ok": true,
+  "holes": [
+   {
+    "sides": 44,
+    "pin": 4.4753,
+    "corner_d": 4.5,
+    "bbox_w": 4.5,
+    "min_width": 4.4753,
+    "area": 15.8419,
+    "centre": [
+     -18.0,
+     0.0
+    ],
+    "offset": 0.0,
+    "centre_ok": true,
+    "pin_centre_shift": [
+     0.0,
+     0.0
+    ],
+    "through": true
+   },
+   {
+    "sides": 44,
+    "pin": 4.4753,
+    "corner_d": 4.5,
+    "bbox_w": 4.5,
+    "min_width": 4.4753,
+    "area": 15.8419,
+    "centre": [
+     18.0,
+     0.0
+    ],
+    "offset": 0.0,
+    "centre_ok": true,
+    "pin_centre_shift": [
+     0.0,
+     0.0
+    ],
+    "through": true
+   }
+  ],
+  "spacing": 36.0,
+  "volume_expected": 11841.497,
+  "volume_ok": true,
+  "pass": true
+ },
+ "summaries": []
+}

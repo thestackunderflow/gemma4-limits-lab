@@ -1,0 +1,164 @@
+{
+ "id": "fix-ctx32k-g4",
+ "provenance": {
+  "tag": "gemma4:e4b-it-q4_K_M",
+  "digest": "dc35e8d9c606",
+  "ollama_version": "0.40.16",
+  "renderer": "gemma4-small",
+  "parser": "gemma4",
+  "num_parallel": "1",
+  "kv_type_env": "f16",
+  "solidcraft": "0.28.0",
+  "t": "2026-11-14T16:51:32Z",
+  "num_ctx": "32768",
+  "fix": "none",
+  "think": false,
+  "sampling": "google",
+  "options": {
+   "temperature": 1.0,
+   "top_p": 0.95,
+   "top_k": 64,
+   "seed": 4,
+   "num_ctx": 32768
+  },
+  "keep_alive": "5m",
+  "max_iter": 8,
+  "tool_cut": 8000
+ },
+ "n_requests": 42,
+ "minutes": 1.73,
+ "first_message_drop_turn": 20,
+ "first_turn1_gone_turn": 20,
+ "first_runner_cut_turn": null,
+ "all_http_200": true,
+ "done_reasons": [
+  "stop"
+ ],
+ "marker_by_turn": {
+  "1": false,
+  "2": false,
+  "3": true,
+  "4": true,
+  "5": true,
+  "6": false,
+  "7": true,
+  "8": true,
+  "9": true,
+  "10": true,
+  "11": true,
+  "12": true,
+  "13": true,
+  "14": true,
+  "15": true,
+  "16": true,
+  "17": true,
+  "18": true,
+  "19": true,
+  "20": true
+ },
+ "tokens_per_turn": {
+  "1": 9299,
+  "2": 16554,
+  "3": 32505,
+  "4": 22041,
+  "5": 25224,
+  "6": 41128,
+  "7": 14035,
+  "8": 30277,
+  "9": 34224,
+  "10": 38189,
+  "11": 42147,
+  "12": 46126,
+  "13": 49734,
+  "14": 52974,
+  "15": 56213,
+  "16": 58098,
+  "17": 29171,
+  "18": 60039,
+  "19": 61878,
+  "20": 62840
+ },
+ "mean_tokens_per_turn": 39134.8,
+ "max_prompt_eval_count": 31741,
+ "tool_calls": 22,
+ "turn20_text": "Here is the summary of the first specified configuration:\n\n**Part Name:** BRK-17\n**Material:** Not specified (Geometric Model only)\n**Length:** 60 mm\n**Width:** 40 mm\n**Thickness:** 5 mm\n**Number of Holes:** 2\n**Hole Diameter:** 6 mm\n**Hole Spacing (Center-to-Center):** 30 mm (15mm from each end)\n\nThe STL file has been exported to `/lab/out/plate.stl`.\n\n-- plate desk",
+ "turn20_recall": {
+  "score": 5,
+  "facts": {
+   "name": true,
+   "material": false,
+   "length": true,
+   "width": true,
+   "thickness": true,
+   "holes": true,
+   "hole_d": false,
+   "spacing": false
+  },
+  "missing": [
+   "material",
+   "hole_d",
+   "spacing"
+  ],
+  "stale": [
+   "30"
+  ]
+ },
+ "turn20_stl": true,
+ "checker": {
+  "units": "mm",
+  "size": [
+   60.0,
+   40.0,
+   5.0
+  ],
+  "triangles": 1044,
+  "watertight": true,
+  "volume": 11841.581,
+  "size_ok": true,
+  "holes": [
+   {
+    "sides": 44,
+    "pin": 4.4753,
+    "corner_d": 4.5,
+    "bbox_w": 4.5,
+    "min_width": 4.4753,
+    "area": 15.8419,
+    "centre": [
+     -15.0,
+     -0.0
+    ],
+    "offset": 3.0,
+    "centre_ok": false,
+    "pin_centre_shift": [
+     0.0,
+     0.0
+    ],
+    "through": true
+   },
+   {
+    "sides": 44,
+    "pin": 4.4753,
+    "corner_d": 4.5,
+    "bbox_w": 4.5,
+    "min_width": 4.4753,
+    "area": 15.8419,
+    "centre": [
+     15.0,
+     0.0
+    ],
+    "offset": 3.0,
+    "centre_ok": false,
+    "pin_centre_shift": [
+     0.0,
+     0.0
+    ],
+    "through": true
+   }
+  ],
+  "spacing": 30.0,
+  "volume_expected": 11841.497,
+  "volume_ok": true,
+  "pass": false
+ },
+ "summaries": []
+}

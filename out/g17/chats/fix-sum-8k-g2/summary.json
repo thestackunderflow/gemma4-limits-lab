@@ -1,0 +1,189 @@
+{
+ "id": "fix-sum-8k-g2",
+ "provenance": {
+  "tag": "gemma4:e4b-it-q4_K_M",
+  "digest": "dc35e8d9c606",
+  "ollama_version": "0.40.16",
+  "renderer": "gemma4-small",
+  "parser": "gemma4",
+  "num_parallel": "1",
+  "kv_type_env": "f16",
+  "solidcraft": "0.28.0",
+  "t": "2026-11-14T16:31:36Z",
+  "num_ctx": "8192",
+  "fix": "summary",
+  "think": false,
+  "sampling": "google",
+  "options": {
+   "temperature": 1.0,
+   "top_p": 0.95,
+   "top_k": 64,
+   "seed": 2,
+   "num_ctx": 8192
+  },
+  "keep_alive": "5m",
+  "max_iter": 8,
+  "tool_cut": 8000
+ },
+ "n_requests": 84,
+ "minutes": 1.62,
+ "first_message_drop_turn": 3,
+ "first_turn1_gone_turn": 3,
+ "first_runner_cut_turn": null,
+ "all_http_200": true,
+ "done_reasons": [
+  "length",
+  "stop"
+ ],
+ "marker_by_turn": {
+  "1": false,
+  "2": false,
+  "3": false,
+  "4": false,
+  "5": false,
+  "6": false,
+  "7": false,
+  "8": false,
+  "9": false,
+  "10": false,
+  "11": false,
+  "12": false,
+  "13": false,
+  "14": false,
+  "15": true,
+  "16": true,
+  "17": false,
+  "18": false,
+  "19": true,
+  "20": false
+ },
+ "tokens_per_turn": {
+  "1": 20122,
+  "2": 51896,
+  "3": 54780,
+  "4": 23709,
+  "5": 8185,
+  "6": 21145,
+  "7": 6787,
+  "8": 11223,
+  "9": 16174,
+  "10": 17360,
+  "11": 15435,
+  "12": 8183,
+  "13": 50945,
+  "14": 58885,
+  "15": 46046,
+  "16": 28677,
+  "17": 8158,
+  "18": 61441,
+  "19": 14193,
+  "20": 56703
+ },
+ "mean_tokens_per_turn": 29002.3,
+ "max_prompt_eval_count": 8190,
+ "tool_calls": 66,
+ "turn20_text": "",
+ "turn20_recall": {
+  "score": 0,
+  "facts": {
+   "name": false,
+   "material": false,
+   "length": false,
+   "width": false,
+   "thickness": false,
+   "holes": false,
+   "hole_d": false,
+   "spacing": false
+  },
+  "missing": [
+   "name",
+   "material",
+   "length",
+   "width",
+   "thickness",
+   "holes",
+   "hole_d",
+   "spacing"
+  ],
+  "stale": []
+ },
+ "turn20_stl": false,
+ "checker": null,
+ "summaries": [
+  {
+   "before_turn": 6,
+   "text": "The original specification for part BRK-17 required a 60x40x5mm PETG plate with two 4.5mm holes 36mm apart.\n\nThe current variant specifications are: a 70x50mm plate, 3mm thick, featuring two 6mm holes placed 30mm apart along the longer side.",
+   "recall": {
+    "score": 8,
+    "facts": {
+     "name": true,
+     "material": true,
+     "length": true,
+     "width": true,
+     "thickness": true,
+     "holes": true,
+     "hole_d": true,
+     "spacing": true
+    },
+    "missing": [],
+    "stale": [
+     "70",
+     "50",
+     "30"
+    ]
+   }
+  },
+  {
+   "before_turn": 11,
+   "text": "Original Spec: BRK-17, PETG, 60x40x5mm plate with two 4.5mm holes 36mm apart.\n\nCurrent Variant Spec: PLA plate, 70x50x8mm, featuring three 3.2mm holes. Two holes are placed 30mm apart along the longer side, and a third hole is centered in between them.",
+   "recall": {
+    "score": 8,
+    "facts": {
+     "name": true,
+     "material": true,
+     "length": true,
+     "width": true,
+     "thickness": true,
+     "holes": true,
+     "hole_d": true,
+     "spacing": true
+    },
+    "missing": [],
+    "stale": [
+     "PLA",
+     "70",
+     "50",
+     "3.2",
+     "30"
+    ]
+   }
+  },
+  {
+   "before_turn": 16,
+   "text": "Original Spec: BRK-17, PETG, 60x40x5mm plate with two 4.5mm holes 36mm apart.\n\nCurrent Variant Spec: PLA plate, 80x45x4mm plate featuring two 5.5mm holes, 30mm apart, on an 80x45mm base. The design includes an extrusion (implied thickness) and cutouts for the specified holes.",
+   "recall": {
+    "score": 7,
+    "facts": {
+     "name": true,
+     "material": true,
+     "length": true,
+     "width": true,
+     "thickness": true,
+     "holes": false,
+     "hole_d": true,
+     "spacing": true
+    },
+    "missing": [
+     "holes"
+    ],
+    "stale": [
+     "PLA",
+     "80",
+     "45",
+     "5.5",
+     "30"
+    ]
+   }
+  }
+ ]
+}

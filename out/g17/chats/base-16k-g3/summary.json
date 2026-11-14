@@ -1,0 +1,110 @@
+{
+ "id": "base-16k-g3",
+ "provenance": {
+  "tag": "gemma4:e4b-it-q4_K_M",
+  "digest": "dc35e8d9c606",
+  "ollama_version": "0.40.16",
+  "renderer": "gemma4-small",
+  "parser": "gemma4",
+  "num_parallel": "1",
+  "kv_type_env": "f16",
+  "solidcraft": "0.28.0",
+  "t": "2026-11-14T16:47:19Z",
+  "num_ctx": "16384",
+  "fix": "none",
+  "think": false,
+  "sampling": "google",
+  "options": {
+   "temperature": 1.0,
+   "top_p": 0.95,
+   "top_k": 64,
+   "seed": 3,
+   "num_ctx": 16384
+  },
+  "keep_alive": "5m",
+  "max_iter": 8,
+  "tool_cut": 8000
+ },
+ "n_requests": 41,
+ "minutes": 1.52,
+ "first_message_drop_turn": 3,
+ "first_turn1_gone_turn": 3,
+ "first_runner_cut_turn": null,
+ "all_http_200": true,
+ "done_reasons": [
+  "length",
+  "stop"
+ ],
+ "marker_by_turn": {
+  "1": false,
+  "2": false,
+  "3": false,
+  "4": false,
+  "5": false,
+  "6": false,
+  "7": false,
+  "8": false,
+  "9": false,
+  "10": false,
+  "11": false,
+  "12": false,
+  "13": false,
+  "14": false,
+  "15": false,
+  "16": false,
+  "17": false,
+  "18": false,
+  "19": false,
+  "20": false
+ },
+ "tokens_per_turn": {
+  "1": 49380,
+  "2": 96920,
+  "3": 31994,
+  "4": 16318,
+  "5": 16340,
+  "6": 32415,
+  "7": 16072,
+  "8": 16158,
+  "9": 16176,
+  "10": 16195,
+  "11": 16215,
+  "12": 16237,
+  "13": 16253,
+  "14": 16270,
+  "15": 16288,
+  "16": 32311,
+  "17": 16020,
+  "18": 32472,
+  "19": 16364,
+  "20": 63181
+ },
+ "mean_tokens_per_turn": 27479.0,
+ "max_prompt_eval_count": 16364,
+ "tool_calls": 24,
+ "turn20_text": "I encountered several issues while trying to fulfill your request:\n\n1.  **Building from First Spec:** The batch execution failed on the dimension commands because the sketch elements were not properly referenced after the initial setup, resulting in the design reverting/failing.\n2.  **Exporting:** The subsequent `export` command failed because, due to the batch failure, the body was not properly created or recognized in the design.\n3.  **Listing Specs:** The `inspect_design` command returned minimal information because the design state was unstable/failed after the batch execution.\n\n**Summary of the original request's specifications (based on the first set of actions):**\n\n*   **Part Name:** (Not specified, but the current design is named BRK-17, and the original request was the first state)\n*   **Material:** Not specified (I cannot set this)\n*   **Length:** 60 mm\n*   **Width:** 40 mm\n*   **Thickness:** 3 mm\n*   **Number of Holes:** 2\n*   **Hole Diameter:** 4.5 mm\n*   **Hole Spacing:** 35.6 mm (Calculated: Center of the rectangle is at [30, 20]. Hole centers were at [12.7, 20] and [47.3, 20]. Spacing = $47.3 - 12.7 = 34.6$ mm. The initial command used these points, which resulted in a 34.6 mm spacing).\n\nSince the geometric operations failed in the last batch, I cannot reliably guarantee the STL export or the accurate design inspection. Would you like me to re-attempt the build process using",
+ "turn20_recall": {
+  "score": 5,
+  "facts": {
+   "name": true,
+   "material": false,
+   "length": true,
+   "width": true,
+   "thickness": false,
+   "holes": true,
+   "hole_d": true,
+   "spacing": false
+  },
+  "missing": [
+   "material",
+   "thickness",
+   "spacing"
+  ],
+  "stale": [
+   "30"
+  ]
+ },
+ "turn20_stl": false,
+ "checker": null,
+ "summaries": []
+}

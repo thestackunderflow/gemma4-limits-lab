@@ -1,0 +1,185 @@
+{
+ "provenance": {
+  "tag": "gemma4:e4b-it-q4_K_M",
+  "digest": "dc35e8d9c606",
+  "ollama_version": "0.40.16",
+  "renderer": "gemma4-small",
+  "parser": "gemma4",
+  "num_parallel": "1",
+  "kv_type_env": "f16",
+  "solidcraft": "0.28.0",
+  "t": "2026-11-14T15:49:38Z"
+ },
+ "n_tools": 19,
+ "tools_json_chars": 18922,
+ "rows": [
+  {
+   "status": 200,
+   "done_reason": "length",
+   "prompt_eval_count": 16,
+   "prompt_eval_cached_count": 0,
+   "prompt_eval_duration": 937915000,
+   "eval_count": 1,
+   "eval_duration": 1000,
+   "load_duration": 1692536,
+   "total_duration": 941313784,
+   "cuts": [],
+   "rendered_chars": 0,
+   "request_bytes": 229,
+   "name": "cube_no_tools"
+  },
+  {
+   "status": 200,
+   "done_reason": "length",
+   "prompt_eval_count": 4485,
+   "prompt_eval_cached_count": 0,
+   "prompt_eval_duration": 1767138000,
+   "eval_count": 1,
+   "eval_duration": 1000,
+   "load_duration": 835200,
+   "total_duration": 1797409352,
+   "cuts": [],
+   "rendered_chars": 0,
+   "request_bytes": 19162,
+   "name": "cube_with_tools"
+  },
+  {
+   "status": 200,
+   "done_reason": "length",
+   "prompt_eval_count": 62,
+   "prompt_eval_cached_count": 0,
+   "prompt_eval_duration": 48430000,
+   "eval_count": 1,
+   "eval_duration": 1000,
+   "load_duration": 500601,
+   "total_duration": 130430197,
+   "cuts": [],
+   "rendered_chars": 0,
+   "request_bytes": 446,
+   "name": "system_cube_no_tools"
+  },
+  {
+   "status": 200,
+   "done_reason": "length",
+   "prompt_eval_count": 4526,
+   "prompt_eval_cached_count": 0,
+   "prompt_eval_duration": 807962000,
+   "eval_count": 1,
+   "eval_duration": 1000,
+   "load_duration": 743679,
+   "total_duration": 840988460,
+   "cuts": [],
+   "rendered_chars": 0,
+   "request_bytes": 19379,
+   "name": "system_cube_with_tools"
+  },
+  {
+   "status": 200,
+   "done_reason": "length",
+   "prompt_eval_count": 4599,
+   "prompt_eval_cached_count": 4514,
+   "prompt_eval_duration": 86598000,
+   "eval_count": 1,
+   "eval_duration": 1000,
+   "load_duration": 711554,
+   "total_duration": 108826783,
+   "cuts": [],
+   "rendered_chars": 0,
+   "request_bytes": 19615,
+   "name": "system_turn1_with_tools"
+  },
+  {
+   "status": 200,
+   "done_reason": "length",
+   "prompt_eval_count": 4659,
+   "prompt_eval_cached_count": 0,
+   "prompt_eval_duration": 825295000,
+   "eval_count": 1,
+   "eval_duration": 1000,
+   "load_duration": 1253375,
+   "total_duration": 919365107,
+   "cuts": [],
+   "rendered_chars": 0,
+   "request_bytes": 19797,
+   "name": "pinned_system_turn1_with_tools"
+  },
+  {
+   "name": "system_turn1_with_tools_default_ctx",
+   "status": 200,
+   "done_reason": "length",
+   "prompt_eval_count": 2051,
+   "prompt_eval_cached_count": 0,
+   "prompt_eval_duration": 962545000,
+   "eval_count": 1,
+   "eval_duration": 1000,
+   "load_duration": 11526235446,
+   "total_duration": 12528315477,
+   "cuts": [
+    {
+     "kind": "messages_dropped",
+     "kept": 1
+    },
+    {
+     "kind": "runner_token_cut",
+     "limit": 2051,
+     "prompt": 4599,
+     "keep": 5,
+     "new": 2051
+    }
+   ],
+   "default_context": null,
+   "ctx_arg": 4096
+  },
+  {
+   "name": "truncate_false_over_window",
+   "status": 400,
+   "error": "request (6290 tokens) exceeds the available context size (2048 tokens), try increasing it",
+   "done_reason": null,
+   "prompt_eval_count": null,
+   "prompt_eval_cached_count": null,
+   "prompt_eval_duration": null,
+   "eval_count": null,
+   "eval_duration": null,
+   "load_duration": null,
+   "total_duration": null
+  },
+  {
+   "name": "context_array_recall",
+   "status": [
+    200,
+    200
+   ],
+   "context_len": 40,
+   "reply": "Part BRK-17 is a plate that is **60 x 40 x 5 mm** and is made of **PETG**.",
+   "recall": {
+    "score": 5,
+    "facts": {
+     "name": true,
+     "material": true,
+     "length": true,
+     "width": true,
+     "thickness": true,
+     "holes": false,
+     "hole_d": false,
+     "spacing": false
+    },
+    "missing": [
+     "holes",
+     "hole_d",
+     "spacing"
+    ],
+    "stale": []
+   },
+   "deprecated_warn": true,
+   "returned_context": true,
+   "done_reason": "stop",
+   "prompt_eval_count": 61,
+   "prompt_eval_cached_count": 34,
+   "prompt_eval_duration": 38044000,
+   "eval_count": 32,
+   "eval_duration": 197012000,
+   "load_duration": 459274,
+   "total_duration": 238670380
+  }
+ ]
+}

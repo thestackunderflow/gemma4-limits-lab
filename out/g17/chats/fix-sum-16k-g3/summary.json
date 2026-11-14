@@ -1,0 +1,194 @@
+{
+ "id": "fix-sum-16k-g3",
+ "provenance": {
+  "tag": "gemma4:e4b-it-q4_K_M",
+  "digest": "dc35e8d9c606",
+  "ollama_version": "0.40.16",
+  "renderer": "gemma4-small",
+  "parser": "gemma4",
+  "num_parallel": "1",
+  "kv_type_env": "f16",
+  "solidcraft": "0.28.0",
+  "t": "2026-11-14T17:34:20Z",
+  "num_ctx": "16384",
+  "fix": "summary",
+  "think": false,
+  "sampling": "google",
+  "options": {
+   "temperature": 1.0,
+   "top_p": 0.95,
+   "top_k": 64,
+   "seed": 3,
+   "num_ctx": 16384
+  },
+  "keep_alive": "5m",
+  "max_iter": 8,
+  "tool_cut": 8000
+ },
+ "n_requests": 75,
+ "minutes": 2.74,
+ "first_message_drop_turn": 3,
+ "first_turn1_gone_turn": 3,
+ "first_runner_cut_turn": null,
+ "all_http_200": true,
+ "done_reasons": [
+  "length",
+  "stop"
+ ],
+ "marker_by_turn": {
+  "1": false,
+  "2": false,
+  "3": false,
+  "4": false,
+  "5": false,
+  "6": false,
+  "7": false,
+  "8": false,
+  "9": false,
+  "10": false,
+  "11": false,
+  "12": false,
+  "13": false,
+  "14": true,
+  "15": true,
+  "16": true,
+  "17": true,
+  "18": true,
+  "19": true,
+  "20": false
+ },
+ "tokens_per_turn": {
+  "1": 49380,
+  "2": 96920,
+  "3": 31994,
+  "4": 16318,
+  "5": 16340,
+  "6": 35932,
+  "7": 5635,
+  "8": 62786,
+  "9": 55812,
+  "10": 49695,
+  "11": 62332,
+  "12": 88225,
+  "13": 41741,
+  "14": 29299,
+  "15": 37265,
+  "16": 21018,
+  "17": 7066,
+  "18": 25843,
+  "19": 12853,
+  "20": 11994
+ },
+ "mean_tokens_per_turn": 37922.4,
+ "max_prompt_eval_count": 16340,
+ "tool_calls": 54,
+ "turn20_text": "",
+ "turn20_recall": {
+  "score": 0,
+  "facts": {
+   "name": false,
+   "material": false,
+   "length": false,
+   "width": false,
+   "thickness": false,
+   "holes": false,
+   "hole_d": false,
+   "spacing": false
+  },
+  "missing": [
+   "name",
+   "material",
+   "length",
+   "width",
+   "thickness",
+   "holes",
+   "hole_d",
+   "spacing"
+  ],
+  "stale": []
+ },
+ "turn20_stl": false,
+ "checker": null,
+ "summaries": [
+  {
+   "before_turn": 6,
+   "text": "The original request was for part BRK-17, a 60x40x5mm PETG plate with two 4.5mm holes 36mm apart. Subsequent iterations involved changing the thickness to 3mm, then increasing hole diameter to 6mm, and finally moving the hole spacing to 30mm. The latest design iteration requires a 70x50mm plate.",
+   "recall": {
+    "score": 7,
+    "facts": {
+     "name": true,
+     "material": true,
+     "length": true,
+     "width": true,
+     "thickness": true,
+     "holes": false,
+     "hole_d": true,
+     "spacing": true
+    },
+    "missing": [
+     "holes"
+    ],
+    "stale": [
+     "70",
+     "50",
+     "30"
+    ]
+   }
+  },
+  {
+   "before_turn": 11,
+   "text": "The initial request was for part BRK-17: a 60x40x5mm PETG plate with two 4.5mm holes 36mm apart. Iterations adjusted the thickness to 3mm, increased hole diameter to 6mm, and spaced holes at 30mm. The final geometry is a 70x50mm plate with three 3.2mm holes centered along the width, using PLA (though material definition was a conceptual step).",
+   "recall": {
+    "score": 7,
+    "facts": {
+     "name": true,
+     "material": true,
+     "length": true,
+     "width": true,
+     "thickness": true,
+     "holes": false,
+     "hole_d": true,
+     "spacing": true
+    },
+    "missing": [
+     "holes"
+    ],
+    "stale": [
+     "PLA",
+     "70",
+     "50",
+     "3.2",
+     "30"
+    ]
+   }
+  },
+  {
+   "before_turn": 16,
+   "text": "The original request was for part BRK-17: a 60x40x5mm PETG plate with two 4.5mm holes 36mm apart. Iterations refined this to a 70x50mm plate with three 3.2mm holes.\n\nThe current variant is an 80x45mm plate, 4mm thick, featuring two 5.5mm holes positioned along the center width (Y=22.5mm) at X=10mm and X=70mm.<channel|>",
+   "recall": {
+    "score": 7,
+    "facts": {
+     "name": true,
+     "material": true,
+     "length": true,
+     "width": true,
+     "thickness": true,
+     "holes": false,
+     "hole_d": true,
+     "spacing": true
+    },
+    "missing": [
+     "holes"
+    ],
+    "stale": [
+     "70",
+     "50",
+     "80",
+     "45",
+     "3.2",
+     "5.5"
+    ]
+   }
+  }
+ ]
+}

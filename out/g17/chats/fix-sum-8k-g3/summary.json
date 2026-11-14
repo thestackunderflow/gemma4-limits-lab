@@ -1,0 +1,190 @@
+{
+ "id": "fix-sum-8k-g3",
+ "provenance": {
+  "tag": "gemma4:e4b-it-q4_K_M",
+  "digest": "dc35e8d9c606",
+  "ollama_version": "0.40.16",
+  "renderer": "gemma4-small",
+  "parser": "gemma4",
+  "num_parallel": "1",
+  "kv_type_env": "f16",
+  "solidcraft": "0.28.0",
+  "t": "2026-11-14T16:45:45Z",
+  "num_ctx": "8192",
+  "fix": "summary",
+  "think": false,
+  "sampling": "google",
+  "options": {
+   "temperature": 1.0,
+   "top_p": 0.95,
+   "top_k": 64,
+   "seed": 3,
+   "num_ctx": 8192
+  },
+  "keep_alive": "5m",
+  "max_iter": 8,
+  "tool_cut": 8000
+ },
+ "n_requests": 48,
+ "minutes": 1.67,
+ "first_message_drop_turn": 1,
+ "first_turn1_gone_turn": 1,
+ "first_runner_cut_turn": null,
+ "all_http_200": true,
+ "done_reasons": [
+  "length",
+  "stop"
+ ],
+ "marker_by_turn": {
+  "1": false,
+  "2": false,
+  "3": false,
+  "4": false,
+  "5": false,
+  "6": false,
+  "7": false,
+  "8": false,
+  "9": false,
+  "10": false,
+  "11": false,
+  "12": false,
+  "13": false,
+  "14": false,
+  "15": false,
+  "16": true,
+  "17": false,
+  "18": false,
+  "19": false,
+  "20": false
+ },
+ "tokens_per_turn": {
+  "1": 48759,
+  "2": 8043,
+  "3": 8060,
+  "4": 8080,
+  "5": 8102,
+  "6": 13873,
+  "7": 4934,
+  "8": 32584,
+  "9": 8134,
+  "10": 8131,
+  "11": 19393,
+  "12": 14641,
+  "13": 22457,
+  "14": 16294,
+  "15": 8188,
+  "16": 17832,
+  "17": 6422,
+  "18": 10984,
+  "19": 11015,
+  "20": 39416
+ },
+ "mean_tokens_per_turn": 15767.1,
+ "max_prompt_eval_count": 8189,
+ "tool_calls": 26,
+ "turn20_text": "The geometry creation failed again because the `solid.extrude` command requires that the entities being extruded (the sketch profiles) be explicitly indexed, which is not always guaranteed in a complex batch sequence when multiple sketch entities are created.\n\nTo ensure success, I will execute the steps individually to guarantee the correct entity IDs are passed to `solid.extrude",
+ "turn20_recall": {
+  "score": 0,
+  "facts": {
+   "name": false,
+   "material": false,
+   "length": false,
+   "width": false,
+   "thickness": false,
+   "holes": false,
+   "hole_d": false,
+   "spacing": false
+  },
+  "missing": [
+   "name",
+   "material",
+   "length",
+   "width",
+   "thickness",
+   "holes",
+   "hole_d",
+   "spacing"
+  ],
+  "stale": []
+ },
+ "turn20_stl": false,
+ "checker": null,
+ "summaries": [
+  {
+   "before_turn": 6,
+   "text": "The original request was for part BRK-17, a 60x40x5mm PETG plate with two 4.5mm holes 36mm apart.\n\nThe current design iteration is for a 70x50mm plate, which has been modified to be 3mm thick, with two 6mm holes centered and separated by 30mm.",
+   "recall": {
+    "score": 8,
+    "facts": {
+     "name": true,
+     "material": true,
+     "length": true,
+     "width": true,
+     "thickness": true,
+     "holes": true,
+     "hole_d": true,
+     "spacing": true
+    },
+    "missing": [],
+    "stale": [
+     "70",
+     "50",
+     "30"
+    ]
+   }
+  },
+  {
+   "before_turn": 11,
+   "text": "The original request was for part BRK-17: a 60x40x5mm PETG plate with two 4.5mm holes 36mm apart.\n\nThe current design iteration is for a 70x50mm plate, 8mm thick, made of PLA, featuring three 3.2mm holes. These holes are centered, with two positioned 15mm apart from the center hole along the X-axis.",
+   "recall": {
+    "score": 7,
+    "facts": {
+     "name": true,
+     "material": true,
+     "length": true,
+     "width": true,
+     "thickness": true,
+     "holes": false,
+     "hole_d": true,
+     "spacing": true
+    },
+    "missing": [
+     "holes"
+    ],
+    "stale": [
+     "PLA",
+     "70",
+     "50",
+     "3.2"
+    ]
+   }
+  },
+  {
+   "before_turn": 16,
+   "text": "The original request was for part BRK-17: a 60x40x5mm PETG plate with two 4.5mm holes 36mm apart.\n\nThe current variant is an 80x45mm plate, 4mm thick (material was not specified for the current iteration, but the previous iteration used PLA), featuring two 5.5mm holes. These holes are positioned 10mm and 70mm from the X-axis edges, respectively.",
+   "recall": {
+    "score": 7,
+    "facts": {
+     "name": true,
+     "material": true,
+     "length": true,
+     "width": true,
+     "thickness": true,
+     "holes": false,
+     "hole_d": true,
+     "spacing": true
+    },
+    "missing": [
+     "holes"
+    ],
+    "stale": [
+     "PLA",
+     "70",
+     "80",
+     "45",
+     "5.5"
+    ]
+   }
+  }
+ ]
+}

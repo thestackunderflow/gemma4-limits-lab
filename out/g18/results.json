@@ -1,0 +1,504 @@
+{
+ "source": "out/g18/runs/*/summary.json",
+ "n_runs": 52,
+ "summary": {
+  "baseline": {
+   "t0": {
+    "right": 3,
+    "n": 5,
+    "minutes": 0.25,
+    "right_per_minute": 12.0,
+    "outcomes": {
+     "right": 3,
+     "wrong": 2,
+     "ran out of room": 0,
+     "error": 0
+    },
+    "label": "3 of 5 jobs",
+    "reps_identical": true
+   }
+  },
+  "ctx_32k": {
+   "t0": {
+    "right": 1,
+    "n": 1,
+    "minutes": 0.037,
+    "right_per_minute": 27.027,
+    "outcomes": {
+     "right": 1,
+     "wrong": 0,
+     "ran out of room": 0,
+     "error": 0
+    },
+    "label": "1 of 1 jobs",
+    "reps_identical": true
+   }
+  },
+  "e2b": {
+   "t0": {
+    "right": 3,
+    "n": 5,
+    "minutes": 0.175,
+    "right_per_minute": 17.143,
+    "outcomes": {
+     "right": 3,
+     "wrong": 2,
+     "ran out of room": 0,
+     "error": 0
+    },
+    "label": "3 of 5 jobs",
+    "reps_identical": false
+   }
+  },
+  "q12_qat": {
+   "t0": {
+    "right": 5,
+    "n": 5,
+    "minutes": 1.524,
+    "right_per_minute": 3.281,
+    "outcomes": {
+     "right": 5,
+     "wrong": 0,
+     "ran out of room": 0,
+     "error": 0
+    },
+    "label": "5 of 5 jobs",
+    "reps_identical": true
+   }
+  },
+  "system3": {
+   "t0": {
+    "right": 4,
+    "n": 5,
+    "minutes": 0.315,
+    "right_per_minute": 12.698,
+    "outcomes": {
+     "right": 4,
+     "wrong": 1,
+     "ran out of room": 0,
+     "error": 0
+    },
+    "label": "4 of 5 jobs",
+    "reps_identical": false
+   }
+  },
+  "think_on": {
+   "t0": {
+    "right": 3,
+    "n": 5,
+    "minutes": 0.796,
+    "right_per_minute": 3.769,
+    "outcomes": {
+     "right": 3,
+     "wrong": 2,
+     "ran out of room": 0,
+     "error": 0
+    },
+    "label": "3 of 5 jobs",
+    "reps_identical": false
+   }
+  }
+ },
+ "winner": {
+  "arm": "e2b",
+  "null": false,
+  "incomplete": [
+   "ctx_32k"
+  ],
+  "right": 3,
+  "right_per_minute": 17.143,
+  "baseline_right": 3,
+  "baseline_right_per_minute": 12.0,
+  "beats_baseline": true
+ },
+ "per_arm": {
+  "baseline": {
+   "settings": {
+    "tag": "gemma4:e4b-it-q4_K_M",
+    "num_ctx": 12288,
+    "think": false,
+    "system": null
+   },
+   "provenance": {
+    "tag": "gemma4:e4b-it-q4_K_M",
+    "digest": "dc35e8d9c606",
+    "ollama_version": "0.40.16",
+    "renderer": "gemma4-small",
+    "parser": "gemma4",
+    "num_parallel": "1",
+    "kv_type_env": "f16",
+    "solidcraft": "0.28.0",
+    "t": "2026-11-14T22:32:42Z",
+    "num_ctx": 12288,
+    "think": false,
+    "system": null,
+    "options": {
+     "temperature": 0,
+     "seed": 42,
+     "num_ctx": 12288
+    },
+    "max_iter": 8,
+    "tool_cut": 8000
+   },
+   "t0_by_job": {
+    "block": "right",
+    "cube": "right",
+    "hole": "wrong",
+    "new": "right",
+    "resize": "wrong"
+   },
+   "mean_job_seconds_t0": 3.0,
+   "mean_load_seconds": 9.86,
+   "mean_write_tps": 138.46,
+   "offload": [
+    [
+     43,
+     43
+    ]
+   ],
+   "api_ps_size_vram_gb": [
+    0.36
+   ],
+   "api_ps_size_gb": [
+    0.36
+   ],
+   "draft_loaded": [
+    true
+   ],
+   "prompt_eval_first": [
+    4492,
+    4493,
+    4501,
+    4513,
+    4521
+   ],
+   "thinking_chars_mean": 0,
+   "warm_model": [
+    false
+   ],
+   "n_runs": 10
+  },
+  "ctx_32k": {
+   "settings": {
+    "tag": "gemma4:e4b-it-q4_K_M",
+    "num_ctx": 32768,
+    "think": false,
+    "system": null
+   },
+   "provenance": {
+    "tag": "gemma4:e4b-it-q4_K_M",
+    "digest": "dc35e8d9c606",
+    "ollama_version": "0.40.16",
+    "renderer": "gemma4-small",
+    "parser": "gemma4",
+    "num_parallel": "1",
+    "kv_type_env": "f16",
+    "solidcraft": "0.28.0",
+    "t": "2026-11-14T23:11:26Z",
+    "num_ctx": 32768,
+    "think": false,
+    "system": null,
+    "options": {
+     "temperature": 0,
+     "seed": 42,
+     "num_ctx": 32768
+    },
+    "max_iter": 8,
+    "tool_cut": 8000
+   },
+   "t0_by_job": {
+    "new": "right"
+   },
+   "mean_job_seconds_t0": 2.22,
+   "mean_load_seconds": 9.14,
+   "mean_write_tps": 174.54,
+   "offload": [
+    [
+     43,
+     43
+    ]
+   ],
+   "api_ps_size_vram_gb": [
+    0.38
+   ],
+   "api_ps_size_gb": [
+    0.38
+   ],
+   "draft_loaded": [
+    true
+   ],
+   "prompt_eval_first": [
+    4492
+   ],
+   "thinking_chars_mean": 0,
+   "warm_model": [
+    false
+   ],
+   "n_runs": 2
+  },
+  "e2b": {
+   "settings": {
+    "tag": "gemma4:e2b-it-q4_K_M",
+    "num_ctx": 12288,
+    "think": false,
+    "system": null
+   },
+   "provenance": {
+    "tag": "gemma4:e2b-it-q4_K_M",
+    "digest": "b37049369adf",
+    "ollama_version": "0.40.16",
+    "renderer": "gemma4-small",
+    "parser": "gemma4",
+    "num_parallel": "1",
+    "kv_type_env": "f16",
+    "solidcraft": "0.28.0",
+    "t": "2026-11-14T22:35:28Z",
+    "num_ctx": 12288,
+    "think": false,
+    "system": null,
+    "options": {
+     "temperature": 0,
+     "seed": 42,
+     "num_ctx": 12288
+    },
+    "max_iter": 8,
+    "tool_cut": 8000
+   },
+   "t0_by_job": {
+    "block": "right",
+    "cube": "right",
+    "hole": "wrong",
+    "new": "right",
+    "resize": "wrong"
+   },
+   "mean_job_seconds_t0": 2.09,
+   "mean_load_seconds": 5.97,
+   "mean_write_tps": 175.6,
+   "offload": [
+    [
+     36,
+     36
+    ]
+   ],
+   "api_ps_size_vram_gb": [
+    0.4
+   ],
+   "api_ps_size_gb": [
+    0.4
+   ],
+   "draft_loaded": [
+    true
+   ],
+   "prompt_eval_first": [
+    4492,
+    4493,
+    4501,
+    4513,
+    4521
+   ],
+   "thinking_chars_mean": 0,
+   "warm_model": [
+    false
+   ],
+   "n_runs": 10
+  },
+  "q12_qat": {
+   "settings": {
+    "tag": "gemma4:12b-it-qat",
+    "num_ctx": 12288,
+    "think": false,
+    "system": null
+   },
+   "provenance": {
+    "tag": "gemma4:12b-it-qat",
+    "digest": "38044be4f923",
+    "ollama_version": "0.40.16",
+    "renderer": "gemma4-large",
+    "parser": "gemma4",
+    "num_parallel": "1",
+    "kv_type_env": "f16",
+    "solidcraft": "0.28.0",
+    "t": "2026-11-14T22:50:47Z",
+    "num_ctx": 12288,
+    "think": false,
+    "system": null,
+    "options": {
+     "temperature": 0,
+     "seed": 42,
+     "num_ctx": 12288
+    },
+    "max_iter": 8,
+    "tool_cut": 8000
+   },
+   "t0_by_job": {
+    "block": "right",
+    "cube": "right",
+    "hole": "right",
+    "new": "right",
+    "resize": "right"
+   },
+   "mean_job_seconds_t0": 18.29,
+   "mean_load_seconds": 1.46,
+   "mean_write_tps": 18.33,
+   "offload": [
+    [
+     37,
+     49
+    ]
+   ],
+   "api_ps_size_vram_gb": [
+    6.01
+   ],
+   "api_ps_size_gb": [
+    6.19
+   ],
+   "draft_loaded": [
+    false
+   ],
+   "prompt_eval_first": [
+    4496,
+    4497,
+    4505,
+    4517,
+    4525
+   ],
+   "thinking_chars_mean": 0,
+   "warm_model": [
+    true
+   ],
+   "n_runs": 10
+  },
+  "system3": {
+   "settings": {
+    "tag": "gemma4:e4b-it-q4_K_M",
+    "num_ctx": 12288,
+    "think": false,
+    "system": "Units are millimetres.\nMake one change per tool call.\nCheck the design with inspect_design before you finish or export."
+   },
+   "provenance": {
+    "tag": "gemma4:e4b-it-q4_K_M",
+    "digest": "dc35e8d9c606",
+    "ollama_version": "0.40.16",
+    "renderer": "gemma4-small",
+    "parser": "gemma4",
+    "num_parallel": "1",
+    "kv_type_env": "f16",
+    "solidcraft": "0.28.0",
+    "t": "2026-11-14T23:09:09Z",
+    "num_ctx": 12288,
+    "think": false,
+    "system": "Units are millimetres.\nMake one change per tool call.\nCheck the design with inspect_design before you finish or export.",
+    "options": {
+     "temperature": 0,
+     "seed": 42,
+     "num_ctx": 12288
+    },
+    "max_iter": 8,
+    "tool_cut": 8000
+   },
+   "t0_by_job": {
+    "block": "right",
+    "cube": "right",
+    "hole": "right",
+    "new": "right",
+    "resize": "wrong"
+   },
+   "mean_job_seconds_t0": 3.77,
+   "mean_load_seconds": 9.33,
+   "mean_write_tps": 136.42,
+   "offload": [
+    [
+     43,
+     43
+    ]
+   ],
+   "api_ps_size_vram_gb": [
+    0.36
+   ],
+   "api_ps_size_gb": [
+    0.36
+   ],
+   "draft_loaded": [
+    true
+   ],
+   "prompt_eval_first": [
+    4520,
+    4521,
+    4529,
+    4541,
+    4549
+   ],
+   "thinking_chars_mean": 0,
+   "warm_model": [
+    false
+   ],
+   "n_runs": 10
+  },
+  "think_on": {
+   "settings": {
+    "tag": "gemma4:e4b-it-q4_K_M",
+    "num_ctx": 12288,
+    "think": true,
+    "system": null
+   },
+   "provenance": {
+    "tag": "gemma4:e4b-it-q4_K_M",
+    "digest": "dc35e8d9c606",
+    "ollama_version": "0.40.16",
+    "renderer": "gemma4-small",
+    "parser": "gemma4",
+    "num_parallel": "1",
+    "kv_type_env": "f16",
+    "solidcraft": "0.28.0",
+    "t": "2026-11-14T23:05:46Z",
+    "num_ctx": 12288,
+    "think": true,
+    "system": null,
+    "options": {
+     "temperature": 0,
+     "seed": 42,
+     "num_ctx": 12288
+    },
+    "max_iter": 8,
+    "tool_cut": 8000
+   },
+   "t0_by_job": {
+    "block": "right",
+    "cube": "right",
+    "hole": "wrong",
+    "new": "right",
+    "resize": "wrong"
+   },
+   "mean_job_seconds_t0": 9.55,
+   "mean_load_seconds": 8.81,
+   "mean_write_tps": 127.06,
+   "offload": [
+    [
+     43,
+     43
+    ]
+   ],
+   "api_ps_size_vram_gb": [
+    0.36
+   ],
+   "api_ps_size_gb": [
+    0.36
+   ],
+   "draft_loaded": [
+    true
+   ],
+   "prompt_eval_first": [
+    4494,
+    4495,
+    4503,
+    4515,
+    4523
+   ],
+   "thinking_chars_mean": 2693.3,
+   "warm_model": [
+    false
+   ],
+   "n_runs": 10
+  }
+ }
+}

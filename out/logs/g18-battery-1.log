@@ -1,0 +1,134 @@
+17:30:56 job baseline-new-t0-r1 baseline new t0 42
+{"id": "baseline-new-t0-r1", "outcome": "right", "job_seconds": 2.14, "load_seconds": 9.05, "write_tps": 178.03, "n_requests": 2}
+17:31:10 job baseline-new-t0-r2 baseline new t0 42
+{"id": "baseline-new-t0-r2", "outcome": "right", "job_seconds": 2.28, "load_seconds": 9.65, "write_tps": 168.12, "n_requests": 2}
+17:31:26 job baseline-cube-t0-r1 baseline cube t0 42
+{"id": "baseline-cube-t0-r1", "outcome": "right", "job_seconds": 2.65, "load_seconds": 9.93, "write_tps": 137.31, "n_requests": 2}
+17:31:41 free RAM 2.38 GB under 3: waiting
+17:32:12 job baseline-cube-t0-r2 baseline cube t0 42
+{"id": "baseline-cube-t0-r2", "outcome": "right", "job_seconds": 2.39, "load_seconds": 9.13, "write_tps": 141.96, "n_requests": 2}
+17:32:27 job baseline-block-t0-r1 baseline block t0 42
+{"id": "baseline-block-t0-r1", "outcome": "right", "job_seconds": 3.02, "load_seconds": 11.14, "write_tps": 140.97, "n_requests": 2}
+17:32:45 free RAM 2.11 GB under 3: waiting
+17:33:16 job baseline-block-t0-r2 baseline block t0 42
+{"id": "baseline-block-t0-r2", "outcome": "right", "job_seconds": 2.26, "load_seconds": 15.11, "write_tps": 140.38, "n_requests": 2}
+17:33:37 job baseline-hole-t0-r1 baseline hole t0 42
+{"id": "baseline-hole-t0-r1", "outcome": "wrong", "job_seconds": 3.6, "load_seconds": 8.32, "write_tps": 119.39, "n_requests": 2}
+17:33:52 job baseline-hole-t0-r2 baseline hole t0 42
+{"id": "baseline-hole-t0-r2", "outcome": "wrong", "job_seconds": 3.69, "load_seconds": 8.42, "write_tps": 120.1, "n_requests": 2}
+17:34:07 job baseline-resize-t0-r1 baseline resize t0 42
+{"id": "baseline-resize-t0-r1", "outcome": "wrong", "job_seconds": 3.6, "load_seconds": 9.0, "write_tps": 118.24, "n_requests": 3}
+17:34:22 job baseline-resize-t0-r2 baseline resize t0 42
+{"id": "baseline-resize-t0-r2", "outcome": "wrong", "job_seconds": 3.49, "load_seconds": 8.84, "write_tps": 120.12, "n_requests": 3}
+17:34:37 job e2b-new-t0-r1 e2b new t0 42
+{"id": "e2b-new-t0-r1", "outcome": "right", "job_seconds": 1.59, "load_seconds": 6.16, "write_tps": 142.94, "n_requests": 2}
+17:34:48 job e2b-new-t0-r2 e2b new t0 42
+{"id": "e2b-new-t0-r2", "outcome": "right", "job_seconds": 1.58, "load_seconds": 5.94, "write_tps": 144.11, "n_requests": 2}
+17:34:58 job e2b-cube-t0-r1 e2b cube t0 42
+{"id": "e2b-cube-t0-r1", "outcome": "right", "job_seconds": 1.78, "load_seconds": 5.99, "write_tps": 184.74, "n_requests": 2}
+17:35:09 job e2b-cube-t0-r2 e2b cube t0 42
+{"id": "e2b-cube-t0-r2", "outcome": "right", "job_seconds": 1.8, "load_seconds": 6.04, "write_tps": 189.24, "n_requests": 2}
+17:35:20 job e2b-block-t0-r1 e2b block t0 42
+{"id": "e2b-block-t0-r1", "outcome": "right", "job_seconds": 1.71, "load_seconds": 5.9, "write_tps": 201.84, "n_requests": 2}
+17:35:30 job e2b-block-t0-r2 e2b block t0 42
+{"id": "e2b-block-t0-r2", "outcome": "right", "job_seconds": 1.79, "load_seconds": 5.94, "write_tps": 200.12, "n_requests": 2}
+17:35:41 job e2b-hole-t0-r1 e2b hole t0 42
+{"id": "e2b-hole-t0-r1", "outcome": "wrong", "job_seconds": 3.57, "load_seconds": 6.11, "write_tps": 165.54, "n_requests": 2}
+17:35:53 job e2b-hole-t0-r2 e2b hole t0 42
+{"id": "e2b-hole-t0-r2", "outcome": "wrong", "job_seconds": 6.68, "load_seconds": 6.01, "write_tps": 180.98, "n_requests": 4}
+17:36:09 job e2b-resize-t0-r1 e2b resize t0 42
+{"id": "e2b-resize-t0-r1", "outcome": "wrong", "job_seconds": 1.82, "load_seconds": 5.8, "write_tps": 162.79, "n_requests": 2}
+17:36:19 job e2b-resize-t0-r2 e2b resize t0 42
+{"id": "e2b-resize-t0-r2", "outcome": "wrong", "job_seconds": 1.84, "load_seconds": 5.85, "write_tps": 183.73, "n_requests": 2}
+17:36:30 job q12_qat-new-t0-r1 q12_qat new t0 42
+{"id": "q12_qat-new-t0-r1", "outcome": "right", "job_seconds": 9.01, "load_seconds": 11.34, "write_tps": 18.46, "n_requests": 2}
+17:36:56 free RAM 1.53 GB under 3: waiting
+17:37:27 job q12_qat-new-t0-r2 q12_qat new t0 42
+{"id": "q12_qat-new-t0-r2", "outcome": "right", "job_seconds": 8.37, "load_seconds": 8.7, "write_tps": 19.1, "n_requests": 2}
+17:37:46 free RAM 1.16 GB under 3: waiting
+17:38:17 STOP: C: under 8 GB
+17:38:17 G17-DONE battery-1
+17:39:11 skip baseline-new-t0-r1 (done)
+17:39:11 skip baseline-new-t0-r2 (done)
+17:39:11 skip baseline-cube-t0-r1 (done)
+17:39:11 skip baseline-cube-t0-r2 (done)
+17:39:11 skip baseline-block-t0-r1 (done)
+17:39:11 skip baseline-block-t0-r2 (done)
+17:39:11 skip baseline-hole-t0-r1 (done)
+17:39:11 skip baseline-hole-t0-r2 (done)
+17:39:11 skip baseline-resize-t0-r1 (done)
+17:39:11 skip baseline-resize-t0-r2 (done)
+17:39:11 skip e2b-new-t0-r1 (done)
+17:39:11 skip e2b-new-t0-r2 (done)
+17:39:11 skip e2b-cube-t0-r1 (done)
+17:39:11 skip e2b-cube-t0-r2 (done)
+17:39:11 skip e2b-block-t0-r1 (done)
+17:39:11 skip e2b-block-t0-r2 (done)
+17:39:11 skip e2b-hole-t0-r1 (done)
+17:39:11 skip e2b-hole-t0-r2 (done)
+17:39:11 skip e2b-resize-t0-r1 (done)
+17:39:11 skip e2b-resize-t0-r2 (done)
+17:39:13 job q12_qat-new-t0-r1 q12_qat new t0 42
+{"id": "q12_qat-new-t0-r1", "outcome": "right", "job_seconds": 8.32, "load_seconds": 8.44, "write_tps": 19.08, "n_requests": 2}
+17:39:32 free RAM 1.92 GB under 3: waiting
+17:40:03 C: 5 GB under 8: waiting
+17:40:33 C: 5 GB under 8: waiting
+17:41:03 C: 5 GB under 8: waiting
+17:41:33 C: 5 GB under 8: waiting
+17:42:03 C: 5 GB under 8: waiting
+17:42:33 C: 5 GB under 8: waiting
+17:43:04 C: 5 GB under 8: waiting
+17:43:34 C: 5 GB under 8: waiting
+17:44:04 C: 5 GB under 8: waiting
+17:44:34 C: 5 GB under 8: waiting
+17:45:04 C: 5 GB under 8: waiting
+17:45:34 C: 5 GB under 8: waiting
+17:46:04 C: 5 GB under 8: waiting
+17:46:34 C: 5 GB under 8: waiting
+17:47:04 C: 5 GB under 8: waiting
+17:47:35 C: 5 GB under 8: waiting
+17:48:05 C: 5 GB under 8: waiting
+17:48:35 C: 5 GB under 8: waiting
+17:49:05 C: 5 GB under 8: waiting
+17:49:35 C: 5 GB under 8: waiting
+17:50:05 job q12_qat-new-t0-r2 q12_qat new t0 42
+{"id": "q12_qat-new-t0-r2", "outcome": "right", "job_seconds": 8.16, "load_seconds": 6.12, "write_tps": 19.67, "n_requests": 2}
+17:50:22 job q12_qat-cube-t0-r1 q12_qat cube t0 42
+{"id": "q12_qat-cube-t0-r1", "outcome": "right", "job_seconds": 6.43, "load_seconds": 0.0, "write_tps": 17.63, "n_requests": 2}
+17:50:32 job q12_qat-cube-t0-r2 q12_qat cube t0 42
+{"id": "q12_qat-cube-t0-r2", "outcome": "right", "job_seconds": 5.73, "load_seconds": 0.0, "write_tps": 17.59, "n_requests": 2}
+17:50:40 job q12_qat-block-t0-r1 q12_qat block t0 42
+{"id": "q12_qat-block-t0-r1", "outcome": "right", "job_seconds": 6.18, "load_seconds": 0.0, "write_tps": 18.6, "n_requests": 2}
+17:50:49 job q12_qat-block-t0-r2 q12_qat block t0 42
+{"id": "q12_qat-block-t0-r2", "outcome": "right", "job_seconds": 5.75, "load_seconds": 0.0, "write_tps": 18.48, "n_requests": 2}
+17:50:58 job q12_qat-hole-t0-r1 q12_qat hole t0 42
+{"id": "q12_qat-hole-t0-r1", "outcome": "right", "job_seconds": 47.44, "load_seconds": 0.01, "write_tps": 18.26, "n_requests": 5}
+17:51:49 job q12_qat-hole-t0-r2 q12_qat hole t0 42
+{"id": "q12_qat-hole-t0-r2", "outcome": "right", "job_seconds": 46.62, "load_seconds": 0.01, "write_tps": 18.11, "n_requests": 5}
+17:52:38 job q12_qat-resize-t0-r1 q12_qat resize t0 42
+{"id": "q12_qat-resize-t0-r1", "outcome": "right", "job_seconds": 23.06, "load_seconds": 0.01, "write_tps": 18.04, "n_requests": 5}
+17:53:04 job q12_qat-resize-t0-r2 q12_qat resize t0 42
+{"id": "q12_qat-resize-t0-r2", "outcome": "right", "job_seconds": 21.12, "load_seconds": 0.01, "write_tps": 17.8, "n_requests": 5}
+17:53:28 job q12_q4km-new-t0-r1 q12_q4km new t0 42
+{"id": "q12_q4km-new-t0-r1", "outcome": "right", "job_seconds": 13.03, "load_seconds": 15.68, "write_tps": 30.75, "n_requests": 2}
+17:54:08 C: 4 GB under 8: waiting
+17:54:38 C: 4 GB under 8: waiting
+17:55:08 C: 4 GB under 8: waiting
+17:55:39 C: 4 GB under 8: waiting
+17:56:09 C: 4 GB under 8: waiting
+17:56:39 C: 4 GB under 8: waiting
+17:57:09 C: 4 GB under 8: waiting
+17:57:39 C: 4 GB under 8: waiting
+17:58:09 C: 4 GB under 8: waiting
+17:58:39 C: 4 GB under 8: waiting
+17:59:09 C: 4 GB under 8: waiting
+17:59:39 C: 4 GB under 8: waiting
+18:00:09 C: 4 GB under 8: waiting
+18:00:40 C: 4 GB under 8: waiting
+18:01:10 C: 4 GB under 8: waiting
+18:01:40 C: 4 GB under 8: waiting
+18:02:10 C: 4 GB under 8: waiting
+18:02:40 job q12_q4km-new-t0-r2 q12_q4km new t0 42
+{"id": "q12_q4km-new-t0-r2", "outcome": "right", "job_seconds": 11.69, "load_seconds": 6.66, "write_tps": 32.51, "n_requests": 2}
+18:02:59 out/STOP: stopped
+18:02:59 G18-DONE battery-1

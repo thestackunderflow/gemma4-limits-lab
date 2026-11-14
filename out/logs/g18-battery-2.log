@@ -1,0 +1,84 @@
+18:03:21 skip baseline-new-t0-r1 (done)
+18:03:21 skip baseline-new-t0-r2 (done)
+18:03:21 skip baseline-cube-t0-r1 (done)
+18:03:21 skip baseline-cube-t0-r2 (done)
+18:03:21 skip baseline-block-t0-r1 (done)
+18:03:21 skip baseline-block-t0-r2 (done)
+18:03:21 skip baseline-hole-t0-r1 (done)
+18:03:21 skip baseline-hole-t0-r2 (done)
+18:03:21 skip baseline-resize-t0-r1 (done)
+18:03:21 skip baseline-resize-t0-r2 (done)
+18:03:21 skip e2b-new-t0-r1 (done)
+18:03:21 skip e2b-new-t0-r2 (done)
+18:03:21 skip e2b-cube-t0-r1 (done)
+18:03:21 skip e2b-cube-t0-r2 (done)
+18:03:21 skip e2b-block-t0-r1 (done)
+18:03:21 skip e2b-block-t0-r2 (done)
+18:03:21 skip e2b-hole-t0-r1 (done)
+18:03:21 skip e2b-hole-t0-r2 (done)
+18:03:21 skip e2b-resize-t0-r1 (done)
+18:03:21 skip e2b-resize-t0-r2 (done)
+18:03:21 skip q12_qat-new-t0-r1 (done)
+18:03:21 skip q12_qat-new-t0-r2 (done)
+18:03:21 skip q12_qat-cube-t0-r1 (done)
+18:03:21 skip q12_qat-cube-t0-r2 (done)
+18:03:21 skip q12_qat-block-t0-r1 (done)
+18:03:21 skip q12_qat-block-t0-r2 (done)
+18:03:21 skip q12_qat-hole-t0-r1 (done)
+18:03:21 skip q12_qat-hole-t0-r2 (done)
+18:03:21 skip q12_qat-resize-t0-r1 (done)
+18:03:21 skip q12_qat-resize-t0-r2 (done)
+18:03:22 free RAM 2.17 GB under 3: waiting
+18:03:53 job think_on-new-t0-r1 think_on new t0 42
+{"id": "think_on-new-t0-r1", "outcome": "right", "job_seconds": 4.32, "load_seconds": 8.65, "write_tps": 124.86, "n_requests": 2}
+18:04:08 free RAM 1.5 GB under 3: waiting
+18:04:39 job think_on-new-t0-r2 think_on new t0 42
+{"id": "think_on-new-t0-r2", "outcome": "right", "job_seconds": 4.29, "load_seconds": 8.49, "write_tps": 124.72, "n_requests": 2}
+18:04:55 job think_on-cube-t0-r1 think_on cube t0 42
+{"id": "think_on-cube-t0-r1", "outcome": "right", "job_seconds": 5.2, "load_seconds": 8.64, "write_tps": 128.79, "n_requests": 2}
+18:05:12 job think_on-cube-t0-r2 think_on cube t0 42
+{"id": "think_on-cube-t0-r2", "outcome": "right", "job_seconds": 5.5, "load_seconds": 8.5, "write_tps": 125.13, "n_requests": 2}
+18:05:29 job think_on-block-t0-r1 think_on block t0 42
+{"id": "think_on-block-t0-r1", "outcome": "right", "job_seconds": 6.61, "load_seconds": 9.04, "write_tps": 130.95, "n_requests": 2}
+18:05:48 job think_on-block-t0-r2 think_on block t0 42
+{"id": "think_on-block-t0-r2", "outcome": "right", "job_seconds": 6.6, "load_seconds": 8.77, "write_tps": 129.8, "n_requests": 2}
+18:06:06 job think_on-hole-t0-r1 think_on hole t0 42
+{"id": "think_on-hole-t0-r1", "outcome": "wrong", "job_seconds": 24.39, "load_seconds": 9.01, "write_tps": 129.33, "n_requests": 5}
+18:06:42 job think_on-hole-t0-r2 think_on hole t0 42
+{"id": "think_on-hole-t0-r2", "outcome": "wrong", "job_seconds": 23.79, "load_seconds": 8.79, "write_tps": 129.96, "n_requests": 6}
+18:07:18 job think_on-resize-t0-r1 think_on resize t0 42
+{"id": "think_on-resize-t0-r1", "outcome": "wrong", "job_seconds": 7.24, "load_seconds": 9.0, "write_tps": 122.63, "n_requests": 2}
+18:07:37 job think_on-resize-t0-r2 think_on resize t0 42
+{"id": "think_on-resize-t0-r2", "outcome": "wrong", "job_seconds": 7.19, "load_seconds": 9.23, "write_tps": 124.43, "n_requests": 2}
+18:07:56 job system3-new-t0-r1 system3 new t0 42
+{"id": "system3-new-t0-r1", "outcome": "right", "job_seconds": 2.17, "load_seconds": 8.99, "write_tps": 167.41, "n_requests": 2}
+18:08:10 job system3-new-t0-r2 system3 new t0 42
+{"id": "system3-new-t0-r2", "outcome": "right", "job_seconds": 2.28, "load_seconds": 8.96, "write_tps": 167.45, "n_requests": 2}
+18:08:25 job system3-cube-t0-r1 system3 cube t0 42
+{"id": "system3-cube-t0-r1", "outcome": "right", "job_seconds": 3.39, "load_seconds": 9.21, "write_tps": 142.85, "n_requests": 3}
+18:08:40 job system3-cube-t0-r2 system3 cube t0 42
+{"id": "system3-cube-t0-r2", "outcome": "right", "job_seconds": 3.29, "load_seconds": 10.06, "write_tps": 133.16, "n_requests": 3}
+18:08:57 job system3-block-t0-r1 system3 block t0 42
+{"id": "system3-block-t0-r1", "outcome": "right", "job_seconds": 2.41, "load_seconds": 8.69, "write_tps": 137.3, "n_requests": 2}
+18:09:11 job system3-block-t0-r2 system3 block t0 42
+{"id": "system3-block-t0-r2", "outcome": "right", "job_seconds": 2.54, "load_seconds": 12.23, "write_tps": 139.24, "n_requests": 2}
+18:09:29 free RAM 2.28 GB under 3: waiting
+18:10:00 job system3-hole-t0-r1 system3 hole t0 42
+{"id": "system3-hole-t0-r1", "outcome": "right", "job_seconds": 6.38, "load_seconds": 8.8, "write_tps": 132.14, "n_requests": 7}
+18:10:18 job system3-hole-t0-r2 system3 hole t0 42
+{"id": "system3-hole-t0-r2", "outcome": "right", "job_seconds": 6.53, "load_seconds": 9.0, "write_tps": 131.2, "n_requests": 7}
+18:10:38 job system3-resize-t0-r1 system3 resize t0 42
+{"id": "system3-resize-t0-r1", "outcome": "wrong", "job_seconds": 4.52, "load_seconds": 8.55, "write_tps": 108.74, "n_requests": 3}
+18:10:54 job system3-resize-t0-r2 system3 resize t0 42
+{"id": "system3-resize-t0-r2", "outcome": "wrong", "job_seconds": 8.26, "load_seconds": 8.76, "write_tps": 104.74, "n_requests": 5}
+18:11:14 job ctx_32k-new-t0-r1 ctx_32k new t0 42
+{"id": "ctx_32k-new-t0-r1", "outcome": "right", "job_seconds": 2.22, "load_seconds": 9.07, "write_tps": 180.31, "n_requests": 2}
+18:11:29 job ctx_32k-new-t0-r2 ctx_32k new t0 42
+{"id": "ctx_32k-new-t0-r2", "outcome": "right", "job_seconds": 2.3, "load_seconds": 9.22, "write_tps": 168.77, "n_requests": 2}
+18:11:43 C: 3 GB under 8: waiting
+18:12:13 C: 3 GB under 8: waiting
+18:12:43 job ctx_32k-cube-t0-r1 ctx_32k cube t0 42
+{"id": "ctx_32k-cube-t0-r1", "outcome": "right", "job_seconds": 2.37, "load_seconds": 8.33, "write_tps": 138.57, "n_requests": 2}
+18:12:55 out/STOP: stopped
+rmdir: failed to remove 'out/g18/LOCK': No such file or directory
+18:12:55 G18-DONE battery-2

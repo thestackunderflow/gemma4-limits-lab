@@ -1,0 +1,243 @@
+{
+ "setup": {
+  "new_design": {
+   "name": "Untitled"
+  },
+  "inspect": {
+   "active_sketch": null,
+   "bodies": [],
+   "dirty": false,
+   "hidden_origin": [],
+   "marker": 0,
+   "metadata": {},
+   "name": "Untitled",
+   "params": [],
+   "path": null,
+   "redo": 0,
+   "revision": 2,
+   "selection": [],
+   "sketches": [],
+   "timeline": [],
+   "undo": 0,
+   "units": "mm"
+  }
+ },
+ "check": {
+  "size": [
+   30.0,
+   20.0,
+   10.0
+  ],
+  "size_ok": true,
+  "watertight": true,
+  "volume": 5950.992,
+  "holes": [],
+  "volume_expected": null,
+  "volume_ok": false,
+  "pass": false,
+  "bodies": 1
+ },
+ "export": {
+  "bytes": 17584,
+  "format": "StlBinary",
+  "path": "/lab/out/check.stl"
+ },
+ "inspect": {
+  "active_sketch": null,
+  "bodies": [
+   {
+    "area_mm2": 2179.4524300905437,
+    "bbox": {
+     "max": [
+      30.0,
+      20.0,
+      10.000000000000004
+     ],
+     "min": [
+      -6.896375503161139e-17,
+      0.0,
+      0.0
+     ]
+    },
+    "center_of_mass": [
+     15.114958471326918,
+     10.073722342642327,
+     5.0000000001641265
+    ],
+    "closed": true,
+    "edges": 15,
+    "face_types": {
+     "cylinder": 1,
+     "plane": 6
+    },
+    "faces": 7,
+    "kernel": {
+     "edges": 15,
+     "faces": 7,
+     "shells": 1,
+     "vertices": 10
+    },
+    "name": "Body1",
+    "vertices": 10,
+    "visible": true,
+    "volume_mm3": 5950.921406741648
+   }
+  ],
+  "dirty": true,
+  "hidden_origin": [],
+  "marker": 3,
+  "metadata": {},
+  "name": "Untitled",
+  "params": [],
+  "path": null,
+  "redo": 0,
+  "revision": 14,
+  "selection": [],
+  "sketches": [
+   {
+    "constraints": [
+     {
+      "id": "k1",
+      "name": "Coincident",
+      "p": 0,
+      "q": 1,
+      "type": "coincident"
+     }
+    ],
+    "curves": [
+     {
+      "center": "c1.center",
+      "center_at": [
+       0.0,
+       0.0
+      ],
+      "construction": false,
+      "fixed": false,
+      "fully_constrained": false,
+      "id": "c1",
+      "radius": 2.5,
+      "type": "circle"
+     }
+    ],
+    "dof": 1,
+    "failing": [],
+    "fully_constrained": false,
+    "id": 2,
+    "links": [],
+    "name": "Sketch1",
+    "plane": {
+     "origin": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "x_dir": [
+      1.0,
+      0.0,
+      0.0
+     ],
+     "y_dir": [
+      0.0,
+      1.0,
+      0.0
+     ]
+    },
+    "points": [
+     {
+      "at": [
+       0.0,
+       0.0
+      ],
+      "fixed": true,
+      "fully_constrained": true,
+      "id": "origin",
+      "link": null,
+      "world": [
+       0.0,
+       0.0,
+       0.0
+      ]
+     },
+     {
+      "at": [
+       0.0,
+       0.0
+      ],
+      "fixed": false,
+      "fully_constrained": true,
+      "id": "c1.center",
+      "link": null,
+      "world": [
+       0.0,
+       0.0,
+       0.0
+      ]
+     }
+    ],
+    "profiles": [
+     {
+      "area_mm2": 19.634954084936208,
+      "centroid_sketch": [
+       -2.4514907723089187e-17,
+       1.8562970992243012e-16
+      ],
+      "curves": [
+       "c1"
+      ],
+      "holes": [],
+      "index": 0
+     }
+    ],
+    "status": "solved",
+    "visible": false,
+    "wires": []
+   }
+  ],
+  "timeline": [
+   {
+    "boolean_diagnostics": {
+     "events": [],
+     "truncated": false
+    },
+    "error": null,
+    "id": 1,
+    "ms": 10.048661000000001,
+    "name": "Box1",
+    "rolled_back": false,
+    "suppressed": false,
+    "type": "BoxFeature",
+    "warning": null
+   },
+   {
+    "boolean_diagnostics": {
+     "events": [],
+     "truncated": false
+    },
+    "error": null,
+    "id": 2,
+    "ms": 0.09501,
+    "name": "Sketch1",
+    "rolled_back": false,
+    "suppressed": false,
+    "type": "Sketch",
+    "warning": null
+   },
+   {
+    "boolean_diagnostics": {
+     "events": [],
+     "truncated": false
+    },
+    "error": null,
+    "id": 3,
+    "ms": 23.765496,
+    "name": "Extrude1",
+    "rolled_back": false,
+    "suppressed": false,
+    "type": "ExtrudeFeature",
+    "warning": null
+   }
+  ],
+  "undo": 4,
+  "units": "mm"
+ }
+}

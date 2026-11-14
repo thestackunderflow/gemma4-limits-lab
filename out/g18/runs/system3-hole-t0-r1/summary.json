@@ -1,0 +1,83 @@
+{
+ "id": "system3-hole-t0-r1",
+ "arm": "system3",
+ "job": "hole",
+ "sampling": "t0",
+ "seed": 42,
+ "rep": 1,
+ "provenance": {
+  "tag": "gemma4:e4b-it-q4_K_M",
+  "digest": "dc35e8d9c606",
+  "ollama_version": "0.40.16",
+  "renderer": "gemma4-small",
+  "parser": "gemma4",
+  "num_parallel": "1",
+  "kv_type_env": "f16",
+  "solidcraft": "0.28.0",
+  "t": "2026-11-14T23:10:16Z",
+  "num_ctx": 12288,
+  "think": false,
+  "system": "Units are millimetres.\nMake one change per tool call.\nCheck the design with inspect_design before you finish or export.",
+  "options": {
+   "temperature": 0,
+   "seed": 42,
+   "num_ctx": 12288
+  },
+  "max_iter": 8,
+  "tool_cut": 8000
+ },
+ "warm_model": false,
+ "loaded_before": [],
+ "n_requests": 7,
+ "wall_seconds": 15.18,
+ "job_seconds": 6.38,
+ "load_seconds": 8.8,
+ "write_tps": 132.14,
+ "prompt_eval_first": 4549,
+ "max_prompt_eval": 6772,
+ "done_reasons": [
+  "stop"
+ ],
+ "statuses": [
+  200
+ ],
+ "cuts": [],
+ "offload": [
+  43,
+  43
+ ],
+ "draft_loaded": true,
+ "api_ps": [
+  {
+   "name": "gemma4:e4b-it-q4_K_M",
+   "model": "gemma4:e4b-it-q4_K_M",
+   "size": 357847530,
+   "digest": "dc35e8d9c6061baa6f0fa870975ab6932e2542b579b13ea0f199fa4bb7300c9c",
+   "details": {
+    "parent_model": "",
+    "format": "gguf",
+    "family": "gemma4",
+    "families": [
+     "gemma4"
+    ],
+    "parameter_size": "7.5B",
+    "quantization_level": "Q4_K_M"
+   },
+   "expires_at": "2026-11-14T23:15:11.590409406Z",
+   "size_vram": 357847530,
+   "context_length": 12288,
+   "runner": "llamacpp"
+  }
+ ],
+ "thinking_chars": 0,
+ "call_names": [
+  "execute",
+  "execute",
+  "execute",
+  "execute",
+  "execute",
+  "inspect_design"
+ ],
+ "pass": true,
+ "outcome": "right"
+}

@@ -1,0 +1,14 @@
+...........F                                                             [100%]
+=================================== FAILURES ===================================
+_____________________ test_winner_ignores_incomplete_arms ______________________
+
+    def test_winner_ignores_incomplete_arms():
+        rows = [_row("baseline", jb, "t0", 42, "right", 30) for jb in j.JOBS] + [_row("ctx_32k", "new", "t0", 42, "right", 2)]
+        w = j.winner(j.summarize(rows))
+>       assert w["arm"] is None and w["incomplete"] == ["ctx_32k"]
+E       AssertionError: assert ('ctx_32k' is None)
+
+tests/test_g18.py:113: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_g18.py::test_winner_ignores_incomplete_arms - AssertionErro...
+1 failed, 11 passed in 0.14s

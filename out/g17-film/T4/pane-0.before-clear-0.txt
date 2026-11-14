@@ -1,0 +1,21 @@
+$ jq -c '.filmed_fresh_runs["film-v1b-8k"].stale_values' ../results.json
+["BRK-19","65","42","5.5"]
+$ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

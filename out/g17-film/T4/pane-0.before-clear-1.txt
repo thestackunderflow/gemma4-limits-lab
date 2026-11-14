@@ -1,0 +1,20 @@
+$ jq .checker.spacing film-v2-32k/summary.json
+34.5
+$ jq .checker.spacing film-v3-sum16k/summary.json
+24.0
+$ jq -r .turn20_text film-v3-sum16k/summary.json | grep -o '24mm spacing[^.]*36mm' | fold -s -w 44
+24mm spacing between hole centers, not the 
+requested 36mm
+$ 
+
+
+
+
+
+
+
+
+
+
+
+

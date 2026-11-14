@@ -1,0 +1,10 @@
+{"t": 0.033, "event": "recording started"}
+{"t": 2.845, "event": "pane 0: jq -c '.filmed_fresh_runs[\"film-v1b-8k\"].stale_values' ../results.json", "text": "jq -c '.filmed_fresh_runs[\"film-v1b-8k\"].stale_values' ../results.json"}
+{"t": 7.496, "event": "pane 0: clear", "text": "clear"}
+{"t": 10.647, "event": "pane 0: jq .checker.spacing film-v2-32k/summary.json", "text": "jq .checker.spacing film-v2-32k/summary.json"}
+{"t": 14.697, "event": "pane 0: jq .checker.spacing film-v3-sum16k/summary.json", "text": "jq .checker.spacing film-v3-sum16k/summary.json"}
+{"t": 18.815, "event": "pane 0: jq -r .turn20_text film-v3-sum16k/summary.json | grep -o '24mm spacing[^.]*36mm' | fold -s -w 44", "text": "jq -r .turn20_text film-v3-sum16k/summary.json | grep -o '24mm spacing[^.]*36mm' | fold -s -w 44"}
+{"t": 24.065, "event": "pane 0: clear", "text": "clear"}
+{"t": 27.211, "event": "pane 0: jq -c .fix.b_ctx_32k.reps_turn1_gone ../results.json", "text": "jq -c .fix.b_ctx_32k.reps_turn1_gone ../results.json"}
+{"t": 31.447, "event": "pane 0: jq -c '.fix.a_pin_16k|[.right_total,.recall8_chats]' ../results.json", "text": "jq -c '.fix.a_pin_16k|[.right_total,.recall8_chats]' ../results.json"}
+{"t": 36.053, "event": "pane 0: jq -c '.fix.c_summary_16k|[.right_total,.recall8_chats]' ../results.json", "text": "jq -c '.fix.c_summary_16k|[.right_total,.recall8_chats]' ../results.json"}

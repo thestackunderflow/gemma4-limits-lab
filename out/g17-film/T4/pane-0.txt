@@ -1,0 +1,21 @@
+$ jq -c .fix.b_ctx_32k.reps_turn1_gone ../results.json
+[20,18,5,20,15]
+$ jq -c '.fix.a_pin_16k|[.right_total,.recall8_chats]' ../results.json
+[0,2]
+$ jq -c '.fix.c_summary_16k|[.right_total,.recall8_chats]' ../results.json
+[0,3]
+$ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+

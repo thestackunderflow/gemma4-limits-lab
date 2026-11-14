@@ -23,6 +23,7 @@ Terminal takes (`scripts/film17/run.sh`, `film13:1` + `scripts/film13/lib.sh`, x
 | T1 | F1, F2, F5 | nvidia-smi one line; turn 2 sent alone (live, lab body `turn2-alone.json`), reply asks what to change; menu tokens with / without tools | fe05479d980f1d1f | 37.7 |
 | T2 | F4, F6 | turn 2 inside the 16K chat (tool call on the plate); reuse %; sent vs reused per request; 8K first drop + status/done_reason counts | 20119711811fcc39 | 36.9 |
 | T3 | F9, F10, F11 | fix lines from results.json (8K arms + 32K; written before the 16K arms existed), winner arm, the 15-line check script in 5-line chunks, run live on E4B | e1e0e0761b1a05e1 | 82.1 |
+| T4 | F0, F9, F10, F12, F13, F14, Short S3/S4 | pickup (14 Nov, render agent): jq lines on lab files only, no model call; V1b stale values, V2/V3 hole spacing 34.5 / 24.0, V3 reply line (grep `[^.]*` + `fold -s -w 44`: the handover's `.*` and `fold -w 44` printed past the sentence and split "requested"; re-filmed), 32K reps, pin/summary 16K `[right, 8/8]`; all 8 lines checked against HANDOVER §1.2 | d028a084516b09f5 | 42.7 |
 
 Known limits: `check/g17_reuse.py` lines 2-4 and 7-14 are wider than 44 columns (cut on screen in T3); T3 does not show
 the 16K fix arms; fresh GUI runs differ from the lab rows (GUI app vs headless MCP, see RESULTS-g17.md last section).

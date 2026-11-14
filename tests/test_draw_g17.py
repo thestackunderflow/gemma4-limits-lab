@@ -56,6 +56,8 @@ def test_no_problems(mod):
 
 def test_44_columns_safe_area_and_7_lines(mod):
     for n, items in mod.TEXTS.items():
+        if n.startswith('short-'):        # the Short's own 2160 x 1920 frame: checked in the cut 2 tests
+            continue
         lines = [t for t in items if t['kind'] == 'line']
         assert len(lines) <= 7, (n, len(lines))
         for t in items:
@@ -186,3 +188,48 @@ def test_scoreboard_has_no_green_and_says_none(mod):
 
 def test_only_the_penpal_is_illustrated(mod):
     assert mod.ART == {'card-penpal-1', 'card-penpal-2', 'card-penpal-3', 'card-penpal-recap'}
+
+
+# --- cut 2 (WATCH-g17-c1) ------------------------------------------------------------------------------------------
+def test_pin_results_build_one_line_per_spoken_count(mod):
+    """Long fix 2: the pin counts card builds as each count is spoken; the last build says what card-pin-2 says."""
+    builds = ['card-pin-res-%d' % k for k in (1, 2, 3, 4)]
+    final = [t['s'] for t in mod.TEXTS['card-pin-2'] if t['kind'] == 'line']
+    prev = []
+    for n in builds:
+        assert os.path.exists(os.path.join(mod.OUT, n + '.png')), n
+        ls = [t['s'] for t in mod.TEXTS[n] if t['kind'] == 'line']
+        assert ls[:len(prev)] == prev and len(ls) > len(prev), (n, ls)
+        prev = ls
+    assert prev == final
+
+
+def test_short_tearout_fills_the_panel_with_big_labels(mod):
+    """Short fix 2: the tear-out at the panel's full width, labels at least twice cut 1's 56 px (2160 x 1920 frame)."""
+    from PIL import Image
+    im = Image.open(os.path.join(mod.OUT, 'short-tearout.png'))
+    assert im.size == (2160, 1920)
+    items = mod.TEXTS['short-tearout']
+    assert items and min(t['size'] for t in items) >= 112
+    assert min(t['bbox'][0] for t in items) >= 60 and max(t['bbox'][2] for t in items) <= 2100
+    for s in ('instructions', 'turn 1: the spec', 'newest'):
+        assert any(s in t['s'] for t in items), s
+    x0 = min(b[0] for b in mod.SHAPES['short-tearout'])
+    x1 = max(b[2] for b in mod.SHAPES['short-tearout'])
+    assert x1 - x0 >= 0.9 * 2160
+
+
+def test_short_scoreboard_says_none_from_results(mod, res):
+    """Short fix 1: the end card is the scoreboard: 3 fixes, 30 chats, none met the rule; numbers from results.json."""
+    from PIL import Image
+    im = Image.open(os.path.join(mod.OUT, 'short-scoreboard.png'))
+    assert im.size == (2160, 1920)
+    s = ' | '.join(t['s'] for t in mod.TEXTS['short-scoreboard'])
+    f = res['fix']
+    n_chats = sum(1 + len(f[k]['reps']) for k in ('a_pin_8k', 'a_pin_16k', 'b_ctx_32k', 'c_summary_8k', 'c_summary_16k'))
+    assert f'3 fixes · {n_chats} chats' in s and 'met my rule: none' in s
+    assert f"32K: {f['b_ctx_32k']['right_total']} of 6" in s
+    assert f"pin: {f['a_pin_8k']['right_total'] + f['a_pin_16k']['right_total']} of 12" in s
+    assert f"summary: {f['c_summary_8k']['right_total'] + f['c_summary_16k']['right_total']} of 12" in s
+    assert mod.GREEN_USED.get('short-scoreboard', 0) == 0
+    assert min(t['size'] for t in mod.TEXTS['short-scoreboard']) >= 96

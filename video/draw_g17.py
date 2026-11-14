@@ -10,6 +10,8 @@ tools.jsonl) here, never typed; tests/test_draw_g17.py loads the files on its ow
   card-test-1..2       F9: the turn-20 test (no result numbers); right part + the rule
   card-32k-1..3        F10: the lab temp-0 chat; 5 sampled chats; tokens per turn
   card-pin-1..2        F12: the spec pinned on the instructions page; the counts
+  card-pin-res-1..4    F12 cut 2: the counts built one spoken sentence at a time (last = card-pin-2's lines)
+  short-tearout, short-scoreboard  the Short's S1 tear-out (cut 2: full panel, 112 px) and S4 scoreboard (cut 2)
   card-summary-1..3    F14: 8/8 summary vs pin; right parts; tokens per turn
   card-scoreboard-1..2 F15 (replacing): the five rows + "met by: none"; the two problems + the build counts
   card-penpal-recap    F16: the pen pal grey + the three checks
@@ -300,9 +302,15 @@ def card_32k():
 # --- pin (F12) -----------------------------------------------------------------------------------------------------
 def card_pin():
     a8, a16 = F['a_pin_8k'], F['a_pin_16k']
-    for step in (1, 2):
-        im, d = start(f'card-pin-{step}', 'Fix two: pin the spec')
-        g = step == 2
+    right = a8['right_total'] + a16['right_total']
+    res = [[f"8K: {a8['recall8_chats']} of 6 with 8/8"], [f"{a8['length_stops']} replies stopped short", '(6 chats)'],
+           [f"16K: {a16['recall8_chats']} of 6 with 8/8"], [f'right parts: {right} of 12']]
+    # cut 2 (WATCH-g17-c1 long fix 2): card-pin-res-1..4 build the counts one spoken sentence at a time; card-pin-2 is
+    # the whole card (kept for the tests and any earlier use)
+    for name, g, ls, cur in ([('card-pin-1', False, None, None), ('card-pin-2', True, sum(res, []), None)] +
+                             [(f'card-pin-res-{k}', True, sum(res[:k], []), len(sum(res[:k - 1], [])))
+                              for k in (1, 2, 3, 4)]):
+        im, d = start(name, 'Fix two: pin the spec')
         x, y = (160, 260) if g else (700, 260)
         d.rectangle([x, y, x + 1060, y + 640], fill=(DONEFILL if g else PAPER), outline=(DONE if g else INK), width=6)
         t(d, (x + 40, y + 90), 'system instructions', 60, fill=(DONE if g else INK), kind='tag')
@@ -311,13 +319,10 @@ def card_pin():
         d.ellipse([x + 520, y + 170, x + 560, y + 210], fill=(DONE if g else RED))
         t(d, (x + 160, y + 310), 'spec: BRK-17 · PETG', 54, fill=(DONE if g else INK), kind='tag')
         t(d, (x + 160, y + 410), '60 x 40 x 5 · 2 holes', 54, fill=(DONE if g else INK), kind='tag')
-        if step == 1:
+        if not g:
             lines(d, ['the spec, pinned on the instructions page'], y=1060)
         else:
-            right = a8['right_total'] + a16['right_total']
-            lines(d, [f"8K: {a8['recall8_chats']} of 6 with 8/8", f"{a8['length_stops']} replies stopped short",
-                      '(6 chats)', f"16K: {a16['recall8_chats']} of 6 with 8/8", f'right parts: {right} of 12'],
-                  x=1320, y=330, step=120, size=60)
+            lines(d, ls, x=1320, y=330, step=120, size=60, cur=cur)
         save(im)
 
 
@@ -399,34 +404,76 @@ def ov_sub():
     im.save(os.path.join(OUT, 'ov-sub.png'))
 
 
-def short_tearout():
-    """Short S1: the tear-out at the Short's view aspect (1.125; 2160 x 1920, shown at 1080 x 960): the notepad's
-    strips on the left, the two oldest torn out whole on the right, two lines. No numbers."""
-    _t2 = lambda d_, xy, s_, size, fill=INK, anchor='la': d_.text(xy, s_, font=d13.font(B, size), fill=fill, anchor=anchor)  # noqa: E731,E501  (its own 2160 x 1920 frame)
+SHAPES = {}
+
+
+def _short(name):
+    """A Short card (2160 x 1920, shown at the Short's 1080 x 960 view): its own frame, its texts recorded with size."""
+    _cur[0] = name
+    TEXTS[name], HIGHLIGHTS[name], SHAPES[name] = [], [], []
     im = Image.new('RGB', (2160, 1920), BG)
-    d = ImageDraw.Draw(im)
-    _cur[0] = 'short-tearout'
-    TEXTS['short-tearout'], HIGHLIGHTS['short-tearout'] = [], []
-    d.rounded_rectangle([60, 120, 1160, 1020], 18, fill=PAPER, outline=INK, width=8)
+    return im, ImageDraw.Draw(im)
+
+
+def _ts(d, xy, s_, size, fill=INK, anchor='la'):
+    f = d13.font(B, size)                    # not d13.text: its frame check is the 2560 x 1440 one
+    d.text(xy, s_, font=f, fill=fill, anchor=anchor)
+    bb = d.textbbox(xy, s_, font=f, anchor=anchor)
+    TEXTS[_cur[0]].append({'s': s_, 'bbox': bb, 'kind': 'tag', 'size': size})
+    if bb[0] < 60 or bb[1] < 60 or bb[2] > 2100 or bb[3] > 1860:
+        PROBLEMS.append(f'{_cur[0]} {s_!r}: outside the Short frame {bb}')
+    return bb
+
+
+def _box(d, b, fill, outline, width=6):
+    d.rectangle(b, fill=fill, outline=outline, width=width)
+    SHAPES[_cur[0]].append(b)
+
+
+def short_tearout():
+    """Short S1 (cut 2, WATCH-g17-c1 Short fix 2): the tear-out across the whole panel (2160 x 1920, shown at
+    1080 x 960), labels 112 px (twice cut 1's): six strips, the two oldest torn out whole (shifted right, grey, ragged
+    edge, "torn out"), the instructions page and the newest kept (outlined). No numbers."""
+    im, d = _short('short-tearout')
     for k, s_ in enumerate(STRIPS):
         torn = k in (1, 2)
-        x, y = (1220 if torn else 100), 160 + k * 140
-        d.rectangle([x, y, x + 880 if torn else x + 1020, y + 116], fill=(DONEFILL if torn else (255, 255, 255)),
-                    outline=(DONE if torn else INK), width=6)
+        y = 70 + k * 200
+        x0, x1 = (300, 2100) if torn else (60, 1860)
+        _box(d, [x0, y, x1, y + 170], (DONEFILL if torn else (255, 255, 255)), (DONE if torn else INK))
         if torn:
-            d.line([(x + j * 880 / 10, y + 116 + (12 if j % 2 else -8)) for j in range(11)], fill=DONE, width=6)
-        _t2(d, (x + 30, y + 84), s_, 56, fill=(DONE if torn else INK), anchor='ls')
-    arrow(d, (1130, 440), (1210, 440), ORANGE)
-    _t2(d, (1080, 1300), 'oldest whole messages torn out', 84, anchor='ms')
-    _t2(d, (1080, 1440), 'instructions + newest kept', 84, fill=GREY, anchor='ms')
+            d.line([(x0 + j * (x1 - x0) / 14, y + 170 + (14 if j % 2 else -8)) for j in range(15)], fill=DONE, width=8)
+        if k in (0, 5):
+            hl(d, [x0 - 10, y - 10, x1 + 10, y + 180], width=5)
+        _ts(d, (x0 + 40, y + 128), s_, 112, fill=(DONE if torn else INK), anchor='ls')
+    arrow(d, (130, 330), (130, 560), ORANGE, w=10)
+    _ts(d, (1080, 1420), 'oldest messages: torn out', 112, anchor='ms')
+    _ts(d, (1080, 1600), 'instructions + newest: kept', 112, fill=GREY, anchor='ms')
     os.makedirs(OUT, exist_ok=True)
     im.save(os.path.join(OUT, 'short-tearout.png'))
+
+
+def short_scoreboard():
+    """Short S4 (cut 2, WATCH-g17-c1 Short fix 1): the series line as the scoreboard: 3 fixes, the chat count, right
+    parts per fix (from results.json), "met my rule: none". No green, no tick."""
+    im, d = _short('short-scoreboard')
+    _ts(d, (100, 210), f"3 fixes · {D['n_chats']} chats", 128)
+    _ts(d, (100, 380), 'right parts, judged at turn 20', 96, fill=GREY)
+    rows = [f"32K: {F['b_ctx_32k']['right_total']} of 6",
+            f"pin: {F['a_pin_8k']['right_total'] + F['a_pin_16k']['right_total']} of 12",
+            f"summary: {F['c_summary_8k']['right_total'] + F['c_summary_16k']['right_total']} of 12"]
+    for k, r_ in enumerate(rows):
+        y = 540 + k * 250
+        _box(d, [80, y, 2080, y + 200], (255, 255, 255), DONE, 5)
+        _ts(d, (140, y + 140), r_, 112, anchor='ls')
+    _ts(d, (100, 1430), 'met my rule: none', 128)
+    os.makedirs(OUT, exist_ok=True)
+    im.save(os.path.join(OUT, 'short-scoreboard.png'))
 
 
 def build_all():
     card_penpal(); card_notepad(); card_tearout(); card_ranges(); card_test(); card_32k(); card_pin()
     card_summary(); card_scoreboard(); card_penpal_recap(); card_yourturn(); card_end(); ov_sub()
-    short_tearout()
+    short_tearout(); short_scoreboard()
 
 
 if __name__ == '__main__':

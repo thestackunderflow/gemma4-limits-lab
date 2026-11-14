@@ -1,0 +1,8 @@
+{"t": 0.044, "event": "recording started"}
+{"t": 2.856, "event": "pane 0: nvidia-smi --query-gpu=memory.used,memory.total --format=csv,noheader", "text": "nvidia-smi --query-gpu=memory.used,memory.total --format=csv,noheader"}
+{"t": 7.495, "event": "pane 0: jq -r '.messages[1].content' /film/turn2-alone.json", "text": "jq -r '.messages[1].content' /film/turn2-alone.json"}
+{"t": 11.703, "event": "pane 0: curl -s $OLLAMA_HOST/api/chat -d @/film/turn2-alone.json | tee /tmp/o.json | jq -r .message.content | head -4 | cut -c1-44", "text": "curl -s $OLLAMA_HOST/api/chat -d @/film/turn2-alone.json | tee /tmp/o.json | jq -r .message.content | head -4 | cut -c1-44"}
+{"t": 21.078, "event": "pane 0: clear", "text": "clear"}
+{"t": 24.225, "event": "pane 0: jq .size.cube_no_tools results.json", "text": "jq .size.cube_no_tools results.json"}
+{"t": 28.066, "event": "pane 0: jq .size.cube_with_tools results.json", "text": "jq .size.cube_with_tools results.json"}
+{"t": 31.955, "event": "pane 0: jq .size.menu_tokens results.json", "text": "jq .size.menu_tokens results.json"}

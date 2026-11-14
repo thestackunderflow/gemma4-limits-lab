@@ -1,0 +1,21 @@
+$ sed -n 11,15p g17_reuse.py | cut -c1-44
+    r = json.load(urllib.request.urlopen(req
+    msgs.append(r["message"])
+    sent, reused = r["prompt_eval_count"], r
+    print(f"turn {n}: sent {sent}, reused {r
+print(msgs[-1]["content"][:200])
+$ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+

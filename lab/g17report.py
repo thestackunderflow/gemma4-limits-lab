@@ -151,7 +151,12 @@ def md(r):
     w = r["winner"]
     L += ["", "**Winner:** %s (%s right, %s tokens per turn)%s." % (w["arm"], w["right"], w["mean_tokens_per_turn"],
                                                                  "; " + w["flag"] if w["flag"] else ""),
-          "Most chats with all 8 facts at turn 20: %s (%s)." % (w["best_recall_arm"], w["best_recall_8of8"]), ""]
+          "Most chats with all 8 facts at turn 20: %s (%s)." % (w["best_recall_arm"], w["best_recall_8of8"]), "",
+          "## Filmed fresh runs (GUI takes, SolidCraft window open, temp 0)"]
+    for k, b in r["filmed_fresh_runs"].items():
+        L.append("- %s (%s, fix %s): turn 1 gone at turn %s, recall %s/8, STL %s, checker %s, size %s." % (
+            k, b["num_ctx"], b["fix"], b["turn1_gone_turn"], b["recall"], b["stl"], b["checker_pass"], b["checker_size"]))
+    L.append("")
     return "\n".join(L)
 
 
@@ -199,6 +204,8 @@ def main():
                   "b_ctx_32k": arm("fix-ctx32k", "drop-32k-t0"), "c_summary_8k": arm("fix-sum-8k", "fix-sum-8k-t0"),
                   "baseline_16k": arm("base-16k", "drop-16k-t0"), "a_pin_16k": arm("fix-pin-16k", "fix-pin-16k-t0"),
                   "c_summary_16k": arm("fix-sum-16k", "fix-sum-16k-t0")}
+    res["filmed_fresh_runs"] = {c: brief(c) for c in sorted(os.listdir(os.path.join(OUT, "chats"))) if c.startswith("film-")
+                                and chat(c)}
     fx = {k: v for k, v in res["fix"].items() if not k.startswith("baseline")}
     elig = [k for k, v in fx.items() if v["t0"] and v["t0"]["right"] and v["reps_right"] >= 4]
     if elig:

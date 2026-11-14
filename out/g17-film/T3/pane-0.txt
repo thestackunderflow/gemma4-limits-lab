@@ -1,0 +1,21 @@
+$ python3 g17_reuse.py | head -3
+turn 1: sent 31, reused 0
+turn 2: sent 227, reused 26
+turn 3: sent 437, reused 222
+$ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

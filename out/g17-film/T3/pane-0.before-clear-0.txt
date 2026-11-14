@@ -1,0 +1,18 @@
+$ jq -c '.fix.a_pin_8k|[.right_total,.chats,.mean_tokens_per_turn_all]' results.json
+[0,6,15424.0]
+$ jq -c '.fix.b_ctx_32k|[.right_total,.chats,.mean_tokens_per_turn_all]' results.json
+[1,6,68259.0]
+$ jq -c '.fix.c_summary_8k|[.right_total,.chats,.mean_tokens_per_turn_all]' results.json
+[0,6,18605.3]
+$ jq -r .winner.arm results.json
+b_ctx_32k
+$ 
+
+
+
+
+
+
+
+
+

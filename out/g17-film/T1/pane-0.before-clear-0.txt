@@ -1,0 +1,20 @@
+$ nvidia-smi --query-gpu=memory.used,memory.total --format=csv,noheader
+6937 MiB, 8188 MiB
+$ jq -r '.messages[1].content' /film/turn2-alone.json
+Try a version 3 mm thick instead.
+$ curl -s $OLLAMA_HOST/api/chat -d @/film/turn2-alone.json | tee /tmp/o.json | jq -r .message.content | head -4 | cut -c1-44
+I need more context to fulfill this request.
+
+1.  A specific feature or part in the curren
+2.  A parameter that I should change?
+$ 
+
+
+
+
+
+
+
+
+
+

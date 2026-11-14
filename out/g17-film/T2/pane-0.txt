@@ -1,0 +1,20 @@
+$ jq '.drop["8k"].turn1_gone_turn' ../results.json
+5
+$ jq -c 'select(.cuts!=[])|[.turn,.cuts[0].kind]' drop-8k-t0/requests.jsonl | head -1
+[5,"messages_dropped"]
+$ jq -c '[.status,.done_reason]' drop-8k-t0/requests.jsonl | sort | uniq -c
+      7 [200,"length"]
+     42 [200,"stop"]
+$ 
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,13 @@
+$ jq .turn20_recall.score out/g17/chats/film-v1-8k/summary.json
+bash: jq: command not found
+$ jq -c .checker.size out/g17/chats/film-v1-8k/summary.json
+bash: jq: command not found
+$ jq .checker.pass out/g17/chats/film-v1-8k/summary.json
+bash: jq: command not found
+$ 
+
+
+
+
+
+

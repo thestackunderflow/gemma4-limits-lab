@@ -1,0 +1,18 @@
+$ jq -c 'select(.turn==2)|.tool_calls[0].arguments' drop-16k-t0/requests.jsonl | head -1
+{"commands":[{"command":"set_parameter","params":{"name":"distance","value":3}}]}
+$ jq -r '.reuse["drop-16k-t0"].all.reused_pct' ../results.json
+96.1
+$ jq -c 'select(.turn<=4)|[.turn,.prompt_eval_count,.prompt_eval_cached_count]' drop-16k-t0/requests.jsonl | tail -4
+[3,7515,7407]
+[4,7575,7555]
+[4,7877,7636]
+[4,8005,7897]
+$ 
+
+
+
+
+
+
+
+

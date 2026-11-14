@@ -1,0 +1,5 @@
+17:46:18.8  recording started: full window (SolidCraft + terminal), hold 3 s
+17:46:21.8  chat starts: film-v3-sum16k num_ctx 16384 fix summary
+17:48:08.5  chat done
+17:48:17.2  results shown, hold 4 s
+17:48:23.2  recording stopped

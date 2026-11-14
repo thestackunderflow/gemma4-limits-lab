@@ -1,0 +1,21 @@
+$ sed -n 6,10p g17_reuse.py | cut -c1-44
+for n, text in enumerate(TURNS, 1):
+    msgs.append({"role": "user", "content": 
+    body = {"model": MODEL, "messages": msgs
+            "keep_alive": "5m", "options": {
+    req = urllib.request.Request(URL, json.d
+$ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+

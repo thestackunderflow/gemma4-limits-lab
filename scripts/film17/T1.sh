@@ -3,7 +3,8 @@
 . /lab/scripts/film15/ff.sh
 f_gpu
 f_start
-cd /lab/out/g17
+f_run 0 "cd /lab/out/g17"
+f_run 0 "clear"
 f_rec
 r <<'X'
 nvidia-smi --query-gpu=memory.used,memory.total --format=csv,noheader

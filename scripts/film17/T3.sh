@@ -3,7 +3,8 @@
 . /lab/scripts/film13/lib.sh
 . /lab/scripts/film15/ff.sh
 f_start
-cd /lab/out/g17
+f_run 0 "cd /lab/out/g17"
+f_run 0 "clear"
 f_rec
 for a in a_pin_8k b_ctx_32k c_summary_8k; do
 r <<X
@@ -14,7 +15,9 @@ r <<'X'
 jq -r .winner.arm results.json
 X
 f_clear 0
+r <<'X'
 cd /lab/check
+X
 r <<'X'
 sed -n 1,5p g17_reuse.py
 X

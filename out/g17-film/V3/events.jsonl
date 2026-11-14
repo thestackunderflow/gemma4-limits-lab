@@ -1,0 +1,4 @@
+{"t": 0.509, "event": "recording started: full window (SolidCraft + terminal), hold 3 s"}
+{"t": 3.518, "event": "chat starts: film-v3-sum16k num_ctx 16384 fix summary"}
+{"t": 110.279, "event": "chat done"}
+{"t": 118.900, "event": "results shown, hold 4 s"}

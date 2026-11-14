@@ -1,0 +1,8 @@
+{"t": 0.064, "event": "recording started"}
+{"t": 2.878, "event": "pane 0: jq -c 'select(.turn==2)|.tool_calls[0].arguments' drop-16k-t0/requests.jsonl | head -1", "text": "jq -c 'select(.turn==2)|.tool_calls[0].arguments' drop-16k-t0/requests.jsonl | head -1"}
+{"t": 7.909, "event": "pane 0: jq -r '.reuse[\"drop-16k-t0\"].all.reused_pct' ../results.json", "text": "jq -r '.reuse[\"drop-16k-t0\"].all.reused_pct' ../results.json"}
+{"t": 12.33, "event": "pane 0: jq -c 'select(.turn<=4)|[.turn,.prompt_eval_count,.prompt_eval_cached_count]' drop-16k-t0/requests.jsonl | tail -4", "text": "jq -c 'select(.turn<=4)|[.turn,.prompt_eval_count,.prompt_eval_cached_count]' drop-16k-t0/requests.jsonl | tail -4"}
+{"t": 18.002, "event": "pane 0: clear", "text": "clear"}
+{"t": 21.149, "event": "pane 0: jq '.drop[\"8k\"].turn1_gone_turn' ../results.json", "text": "jq '.drop[\"8k\"].turn1_gone_turn' ../results.json"}
+{"t": 25.293, "event": "pane 0: jq -c 'select(.cuts!=[])|[.turn,.cuts[0].kind]' drop-8k-t0/requests.jsonl | head -1", "text": "jq -c 'select(.cuts!=[])|[.turn,.cuts[0].kind]' drop-8k-t0/requests.jsonl | head -1"}
+{"t": 30.245, "event": "pane 0: jq -c '[.status,.done_reason]' drop-8k-t0/requests.jsonl | sort | uniq -c", "text": "jq -c '[.status,.done_reason]' drop-8k-t0/requests.jsonl | sort | uniq -c"}

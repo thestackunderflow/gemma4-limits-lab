@@ -1,0 +1,32 @@
+time=2026-11-14T17:51:48.370Z level=DEBUG source=sched.go:1417 msg="evaluating already loaded" model=/root/.ollama/models/blobs/sha256-370c2879f17648d337b0ab4e208fdce348e24d1060064e93d7645daafd56d39c
+time=2026-11-14T17:51:48.383Z level=DEBUG source=llama_server.go:1668 msg="llama-server completion request" media=0 prompt_len=18504
+srv  server_strea: conv_id= (empty=1)
+slot get_availabl: id  0 | task -1 |  - checking sim = 1.000 (4528/4528) > 0.100
+slot get_availabl: id  0 | task -1 | selected slot by LCP similarity, f_sim_best = 1.000 (> 0.100 thold), f_keep = 0.981
+slot launch_slot_: id  0 | task -1 | sampler chain: logits -> ?penalties -> ?dry -> ?top-n-sigma -> top-k -> ?typical -> top-p -> ?min-p -> ?xtc -> temp-ext -> greedy 
+slot launch_slot_: id  0 | task -1 | sampler params: 
+	repeat_last_n = 64, repeat_penalty = 1.000, frequency_penalty = 0.000, presence_penalty = 0.000
+	dry_multiplier = 0.000, dry_base = 1.750, dry_allowed_length = 2, dry_penalty_last_n = 64
+	top_k = 64, top_p = 0.950, min_p = 0.000, xtc_probability = 0.000, xtc_threshold = 0.100, typical_p = 1.000, top_n_sigma = -1.000, temp = 0.000
+	mirostat = 0, mirostat_lr = 0.100, mirostat_ent = 5.000, adaptive_target = -1.000, adaptive_decay = 0.900
+slot launch_slot_: id  0 | task 2178 | processing task, is_child = 0
+slot   operator(): id  0 | task 2178 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4528
+slot   operator(): id  0 | task 2178 | need to evaluate at least 1 token for each active slot (n_past = 4528, task.n_tokens() = 4528)
+slot   operator(): id  0 | task 2178 | n_past was set to 4527
+slot   operator(): id  0 | task 2178 | cached n_tokens = 4527, memory_seq_rm [4527, end)
+slot init_sampler: id  0 | task 2178 | init sampler, took 0.55 ms, tokens: text = 4528, total = 4528
+slot create_check: id  0 | task 2178 | created context checkpoint 4 of 32 (pos_min = 3590, pos_max = 4526, n_tokens = 4527, size = 20.016 MiB)
+slot print_timing: id  0 | task 2178 | prompt eval time =     265.90 ms /     1 tokens (  265.90 ms per token,     3.76 tokens per second)
+slot print_timing: id  0 | task 2178 |        eval time =     742.49 ms /    87 tokens (    8.63 ms per token,   115.83 tokens per second)
+slot print_timing: id  0 | task 2178 |       total time =    1008.38 ms /    88 tokens
+slot print_timing: id  0 | task 2178 |    graphs reused =       1798
+slot print_timing: id  0 | task 2178 |   graph reallocs =          0    /     0        (same size) / (changed size)
+slot print_timing: id  0 | task 2178 | draft acceptance = 0.56250 (   54 accepted /    96 generated), mean len =  2.69
+slot print_timing: id  0 | task 2178 |      acc per pos = (0.781, 0.531, 0.375)
+spec common_specu: statistics        draft-mtp: #calls(b,g,a) =   64   1886   1886, #gen drafts =   1886, #acc drafts =  1495, #gen tokens =   5658, #acc tokens =  3744, #mean acc len = 2.99, #acc rate/pos = (0.793, 0.646, 0.547), dur(b,g,a) = 0.709, 6532.164, 3.516 ms
+slot      release: id  0 | task 2178 | stop processing: n_tokens = 4614, truncated = 0
+srv  update_slots: all slots are idle
+[GIN] 2026/11/14 - 17:51:49 | 200 |    1.04s |   192.168.192.3 | POST     "/api/chat"
+time=2026-11-14T17:51:49.418Z level=DEBUG source=sched.go:532 msg="context for request finished" runner.name=registry.ollama.ai/library/gemma4:e4b-it-q4_K_M runner.inference="[{ID:0 Library:CUDA}]" runner.pid=11965 runner.num_ctx=16384 runner.size="257.2 MiB" runner.vram="257.2 MiB" runner.parallel=1 runner.model=/root/.ollama/models/blobs/sha256-370c2879f17648d337b0ab4e208fdce348e24d1060064e93d7645daafd56d39c
+time=2026-11-14T17:51:49.418Z level=DEBUG source=sched.go:437 msg="runner with non-zero duration has gone idle, adding timer" runner.size="257.2 MiB" runner.vram="257.2 MiB" runner.parallel=1 runner.model=/root/.ollama/models/blobs/sha256-370c2879f17648d337b0ab4e208fdce348e24d1060064e93d7645daafd56d39c duration=5m0s
+time=2026-11-14T17:51:49.418Z level=DEBUG source=sched.go:455 msg="after processing request finished event" runner.size="257.2 MiB" runner.vram="257.2 MiB" runner.parallel=1 runner.model=/root/.ollama/models/blobs/sha256-370c2879f17648d337b0ab4e208fdce348e24d1060064e93d7645daafd56d39c refCount=0

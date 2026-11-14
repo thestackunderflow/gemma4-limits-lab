@@ -3113,6 +3113,165 @@
    ]
   }
  },
+ "filmed_fresh_runs": {
+  "film-v1-8k": {
+   "id": "film-v1-8k",
+   "num_ctx": "8192",
+   "fix": "none",
+   "sampling": "t0",
+   "seed": 42,
+   "turn1_gone_turn": 4,
+   "message_drop_turn": 4,
+   "runner_cut_turn": null,
+   "all_http_200": true,
+   "done_reasons": [
+    "length",
+    "stop"
+   ],
+   "length_stops": 9,
+   "marker_kept_turns": 9,
+   "recall": 0,
+   "recall_missing": [
+    "name",
+    "material",
+    "length",
+    "width",
+    "thickness",
+    "holes",
+    "hole_d",
+    "spacing"
+   ],
+   "stale_values": [],
+   "stl": false,
+   "checker_pass": null,
+   "checker_size": null,
+   "right": false,
+   "mean_tokens_per_turn": 19040.7,
+   "seconds_per_turn": 2.31,
+   "requests": 50,
+   "tool_calls": 31,
+   "minutes": 1.14,
+   "summaries_recall": []
+  },
+  "film-v1b-8k": {
+   "id": "film-v1b-8k",
+   "num_ctx": "8192",
+   "fix": "none",
+   "sampling": "t0",
+   "seed": 42,
+   "turn1_gone_turn": 4,
+   "message_drop_turn": 4,
+   "runner_cut_turn": null,
+   "all_http_200": true,
+   "done_reasons": [
+    "length",
+    "stop"
+   ],
+   "length_stops": 7,
+   "marker_kept_turns": 13,
+   "recall": 0,
+   "recall_missing": [
+    "name",
+    "material",
+    "length",
+    "width",
+    "thickness",
+    "holes",
+    "hole_d",
+    "spacing"
+   ],
+   "stale_values": [
+    "BRK-19",
+    "65",
+    "42",
+    "5.5"
+   ],
+   "stl": false,
+   "checker_pass": null,
+   "checker_size": null,
+   "right": false,
+   "mean_tokens_per_turn": 19470.9,
+   "seconds_per_turn": 3.6,
+   "requests": 53,
+   "tool_calls": 33,
+   "minutes": 1.59,
+   "summaries_recall": []
+  },
+  "film-v2-32k": {
+   "id": "film-v2-32k",
+   "num_ctx": "32768",
+   "fix": "none",
+   "sampling": "t0",
+   "seed": 42,
+   "turn1_gone_turn": null,
+   "message_drop_turn": null,
+   "runner_cut_turn": null,
+   "all_http_200": true,
+   "done_reasons": [
+    "stop"
+   ],
+   "length_stops": 0,
+   "marker_kept_turns": 18,
+   "recall": 7,
+   "recall_missing": [
+    "material"
+   ],
+   "stale_values": [],
+   "stl": true,
+   "checker_pass": false,
+   "checker_size": [
+    60.0,
+    40.0,
+    5.0
+   ],
+   "right": false,
+   "mean_tokens_per_turn": 32017.9,
+   "seconds_per_turn": 1.91,
+   "requests": 61,
+   "tool_calls": 41,
+   "minutes": 1.09,
+   "summaries_recall": []
+  },
+  "film-v3-sum16k": {
+   "id": "film-v3-sum16k",
+   "num_ctx": "16384",
+   "fix": "summary",
+   "sampling": "t0",
+   "seed": 42,
+   "turn1_gone_turn": 6,
+   "message_drop_turn": null,
+   "runner_cut_turn": null,
+   "all_http_200": true,
+   "done_reasons": [
+    "stop"
+   ],
+   "length_stops": 0,
+   "marker_kept_turns": 16,
+   "recall": 8,
+   "recall_missing": [],
+   "stale_values": [
+    "42"
+   ],
+   "stl": true,
+   "checker_pass": false,
+   "checker_size": [
+    60.0,
+    40.0,
+    5.0
+   ],
+   "right": false,
+   "mean_tokens_per_turn": 22551.2,
+   "seconds_per_turn": 3.54,
+   "requests": 62,
+   "tool_calls": 39,
+   "minutes": 1.65,
+   "summaries_recall": [
+    7,
+    7,
+    7
+   ]
+  }
+ },
  "winner": {
   "arm": "b_ctx_32k",
   "eligible": [],

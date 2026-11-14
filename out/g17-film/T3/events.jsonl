@@ -1,0 +1,14 @@
+{"t": 0.056, "event": "recording started"}
+{"t": 2.869, "event": "pane 0: jq -c '.fix.a_pin_8k|[.right_total,.chats,.mean_tokens_per_turn_all]' results.json", "text": "jq -c '.fix.a_pin_8k|[.right_total,.chats,.mean_tokens_per_turn_all]' results.json"}
+{"t": 7.813, "event": "pane 0: jq -c '.fix.b_ctx_32k|[.right_total,.chats,.mean_tokens_per_turn_all]' results.json", "text": "jq -c '.fix.b_ctx_32k|[.right_total,.chats,.mean_tokens_per_turn_all]' results.json"}
+{"t": 12.762, "event": "pane 0: jq -c '.fix.c_summary_8k|[.right_total,.chats,.mean_tokens_per_turn_all]' results.json", "text": "jq -c '.fix.c_summary_8k|[.right_total,.chats,.mean_tokens_per_turn_all]' results.json"}
+{"t": 17.783, "event": "pane 0: jq -r .winner.arm results.json", "text": "jq -r .winner.arm results.json"}
+{"t": 21.519, "event": "pane 0: clear", "text": "clear"}
+{"t": 24.669, "event": "pane 0: cd /lab/check", "text": "cd /lab/check"}
+{"t": 28.003, "event": "pane 0: sed -n 1,5p g17_reuse.py", "text": "sed -n 1,5p g17_reuse.py"}
+{"t": 34.597, "event": "pane 0: clear", "text": "clear"}
+{"t": 37.744, "event": "pane 0: sed -n 6,10p g17_reuse.py | cut -c1-44", "text": "sed -n 6,10p g17_reuse.py | cut -c1-44"}
+{"t": 44.66, "event": "pane 0: clear", "text": "clear"}
+{"t": 47.81, "event": "pane 0: sed -n 11,15p g17_reuse.py | cut -c1-44", "text": "sed -n 11,15p g17_reuse.py | cut -c1-44"}
+{"t": 54.749, "event": "pane 0: clear", "text": "clear"}
+{"t": 57.895, "event": "pane 0: python3 g17_reuse.py | head -3", "text": "python3 g17_reuse.py | head -3"}

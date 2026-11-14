@@ -1,0 +1,13 @@
+$ python3 scripts/film17/show.py film-v1b-8k
+turn 1 gone at turn: 4
+turn-20 facts recalled: 0 of 8
+plate.stl exported: False
+checker size: None  pass: None
+$ 
+
+
+
+
+
+
+

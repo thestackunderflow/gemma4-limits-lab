@@ -1,0 +1,21 @@
+$ jq .size.cube_no_tools results.json
+16
+$ jq .size.cube_with_tools results.json
+4485
+$ jq .size.menu_tokens results.json
+4469
+$ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+

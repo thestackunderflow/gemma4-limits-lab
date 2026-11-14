@@ -39,3 +39,9 @@ Model gemma4:e4b-it-q4_K_M (dc35e8d9c606), Ollama 0.40.16, renderer gemma4-small
 
 **Winner:** b_ctx_32k (1 of 6 right, 68259.0 tokens per turn); no arm met the rule; named by right chats.
 Most chats with all 8 facts at turn 20: c_summary_16k (3 of 6).
+
+## Filmed fresh runs (GUI takes, SolidCraft window open, temp 0)
+- film-v1-8k (8192, fix none): turn 1 gone at turn 4, recall 0/8, STL False, checker None, size None.
+- film-v1b-8k (8192, fix none): turn 1 gone at turn 4, recall 0/8, STL False, checker None, size None.
+- film-v2-32k (32768, fix none): turn 1 gone at turn None, recall 7/8, STL True, checker False, size [60.0, 40.0, 5.0].
+- film-v3-sum16k (16384, fix summary): turn 1 gone at turn 6, recall 8/8, STL True, checker False, size [60.0, 40.0, 5.0].

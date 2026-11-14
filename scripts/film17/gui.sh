@@ -35,9 +35,7 @@ tt "python3 -m lab.g17run chat $CID $CTX $FIX false t0 42 5m | cut -c1-44"
 ev "chat done"
 nap 2.0; cp_shot after-chat
 tt "clear"
-tt "jq .turn20_recall.score out/g17/chats/$CID/summary.json"
-tt "jq -c .checker.size out/g17/chats/$CID/summary.json"
-tt "jq .checker.pass out/g17/chats/$CID/summary.json"
+tt "python3 scripts/film17/show.py $CID"
 ev "results shown, hold 4 s"; nap 4.0; cp_shot results
 pane
 rec_stop

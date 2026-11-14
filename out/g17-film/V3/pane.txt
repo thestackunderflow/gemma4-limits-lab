@@ -1,0 +1,13 @@
+$ python3 scripts/film17/show.py film-v3-sum16k
+turn 1 gone at turn: 6
+turn-20 facts recalled: 8 of 8
+plate.stl exported: True
+checker size: [60.0, 40.0, 5.0]  pass: False
+$ 
+
+
+
+
+
+
+

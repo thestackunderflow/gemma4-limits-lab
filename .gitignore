@@ -15,3 +15,9 @@ out/p14-film/**/*.png
 # Part 15 film takes: videos/images stay local (sha256 in TAKES.md)
 out/p15-film/**/*.mp4
 out/p15-film/**/*.png
+# g17 film takes: videos/images stay local (sha256 in TAKES-g17.md); SolidCraft files saved by the chats too
+out/g17-film/**/*.mp4
+out/g17-film/**/*.png
+out/g17/chats/*/files/
+out/g17/*/files/
+out/g17/LOCK/

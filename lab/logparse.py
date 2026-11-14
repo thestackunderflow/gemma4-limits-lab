@@ -60,3 +60,20 @@ def errors(log):
 
 def offload_all(log):
     return [(int(a), int(b)) for a, b in re.findall(r"offloaded (\d+)/(\d+) layers to GPU", log)]
+
+
+def cuts(log):
+    """g17: the three cut signals of 0.40.16, each with its real meaning (PLAN rev 2 §4, ACCURACY C6/C8).
+    messages_dropped: prompt.go:77, `truncated` = number of messages KEPT (system messages from the dropped part are
+    added back). native_messages_dropped: routes.go native path, `truncated` = index of the first kept message.
+    runner_token_cut: llama_server.go WARN (P13's cut of tokens from the middle of one rendered prompt)."""
+    out = []
+    for line in log.splitlines():
+        if 'msg="truncating input messages which exceed context length"' in line:
+            out.append({"kind": "messages_dropped", "kept": int(_kv(line)["truncated"])})
+        elif 'msg="truncating native chat messages' in line:
+            out.append({"kind": "native_messages_dropped", "first_kept_index": int(_kv(line)["truncated"])})
+        elif 'msg="truncating input prompt"' in line:
+            d = _kv(line)
+            out.append({"kind": "runner_token_cut", **{k: int(d[k]) for k in ("limit", "prompt", "keep", "new") if k in d}})
+    return out

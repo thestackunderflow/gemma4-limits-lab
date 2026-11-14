@@ -1,0 +1,4 @@
+time=2026-11-11T04:09:34.670Z level=WARN source=llama_server.go:344 msg="truncating input prompt" limit=2051 prompt=9644 keep=5 new=2051
+time=2026-11-14T15:45:57.379Z level=DEBUG source=prompt.go:77 msg="truncating input messages which exceed context length" truncated=8
+time=2026-11-14T15:45:57.379Z level=DEBUG source=routes.go:3606 msg="truncating native chat messages which exceed context length" truncated=3
+slot      release: id  0 | task 0 | stop processing: n_tokens = 1705, truncated = 0

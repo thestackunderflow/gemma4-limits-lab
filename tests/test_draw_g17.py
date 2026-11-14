@@ -233,3 +233,24 @@ def test_short_scoreboard_says_none_from_results(mod, res):
     assert f"summary: {f['c_summary_8k']['right_total'] + f['c_summary_16k']['right_total']} of 12" in s
     assert mod.GREEN_USED.get('short-scoreboard', 0) == 0
     assert min(t['size'] for t in mod.TEXTS['short-scoreboard']) >= 96
+
+
+def test_sumfix_builds_the_mechanism_in_three_steps(mod):
+    """Cut 3 (WATCH-g17-c2 long fix 1): fix three's mechanism drawn like fix two's card: turns 1-5 as letters, then
+    Gemma writes a short spec, then that spec replaces the old letters on the notepad. Lines build cumulatively."""
+    from PIL import Image
+    prev = []
+    for k in (1, 2, 3):
+        n = f'card-sumfix-{k}'
+        im = Image.open(os.path.join(mod.OUT, n + '.png'))
+        assert im.size == (2560, 1440)
+        items = mod.TEXTS[n]
+        assert any(t['kind'] == 'title' and t['s'] == 'Fix three: a summary every 5 turns' for t in items)
+        ls = [t['s'] for t in items if t['kind'] == 'line']
+        assert ls[:len(prev)] == prev and len(ls) > len(prev), (n, ls)
+        prev = ls
+    tags = lambda n: ' | '.join(t['s'] for t in mod.TEXTS[n] if t['kind'] == 'tag')  # noqa: E731
+    assert 'turn 5' in tags('card-sumfix-1') and 'short spec' not in tags('card-sumfix-1')
+    assert 'short spec' in tags('card-sumfix-2')
+    assert 'turn 3' not in tags('card-sumfix-3').split('not sent')[0] and 'short spec' in tags('card-sumfix-3')
+    assert mod.HIGHLIGHTS['card-sumfix-3'], 'the spec on the notepad is outlined'

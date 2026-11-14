@@ -13,6 +13,7 @@ tools.jsonl) here, never typed; tests/test_draw_g17.py loads the files on its ow
   card-pin-res-1..4    F12 cut 2: the counts built one spoken sentence at a time (last = card-pin-2's lines)
   short-tearout, short-scoreboard  the Short's S1 tear-out (cut 2: full panel, 112 px) and S4 scoreboard (cut 2)
   card-summary-1..3    F14: 8/8 summary vs pin; right parts; tokens per turn
+  card-sumfix-1..3     F13 cut 3: fix three's mechanism (turns 1-5, Gemma's short spec, the spec replaces the letters)
   card-scoreboard-1..2 F15 (replacing): the five rows + "met by: none"; the two problems + the build counts
   card-penpal-recap    F16: the pen pal grey + the three checks
   card-yourturn        F17: the question (no answer anywhere)
@@ -342,6 +343,42 @@ def card_summary():
         save(im)
 
 
+# --- fix three's mechanism (F13, cut 3: WATCH-g17-c2 long fix 1), drawn like fix two's card ------------------------
+def card_sumfix():
+    """card-sumfix-1..3: turns 1-5 as letters on the notepad; every 5 turns Gemma writes a short spec; that spec is sent
+    instead of the old letters. No numbers (the spec's contents are Gemma's own, shown on the filmed run after)."""
+    letters = ['instructions page (system)'] + [f'turn {k}' + (': the spec' if k == 1 else '') for k in range(1, 6)]
+    after = ['instructions page (system)', 'short spec so far', 'newest message']
+    labs = {1: ['turns 1-5: the old letters'], 2: ['every 5 turns: Gemma writes a short spec'],
+            3: ['the spec is sent, not the old letters']}
+    for step in (1, 2, 3):
+        im, d = start(f'card-sumfix-{step}', 'Fix three: a summary every 5 turns')
+        d.rounded_rectangle([160, 230, 1260, 1000], 18, fill=PAPER, outline=INK, width=6)
+        strips = after if step == 3 else letters
+        for k, s in enumerate(strips):
+            y = 260 + k * 122
+            spec = step == 3 and k == 1
+            d.rectangle([210, y, 1210, y + 100], fill=(BLUEFILL if spec else (255, 255, 255)), outline=INK, width=5)
+            t(d, (240, y + 72), s, 54, anchor='ls', kind='tag')
+            if spec:
+                hl(d, [202, y - 8, 1218, y + 108])
+        if step >= 2:
+            d.rounded_rectangle([1460, 380, 2400, 700], 18, fill=(255, 255, 255), outline=BLUE, width=6)
+            t(d, (1500, 500), 'Gemma writes:', 54, fill=BLUE, anchor='ls', kind='tag')
+            t(d, (1500, 620), 'a short spec so far', 54, anchor='ls', kind='tag')
+            if step == 2:                                              # the old letters go to Gemma
+                arrow(d, (1240, 540), (1440, 540), ORANGE)
+        if step == 3:
+            arrow(d, (1440, 540), (1240, 432), ORANGE)                # its spec goes onto the notepad
+            d.rectangle([1460, 800, 2400, 900], fill=DONEFILL, outline=DONE, width=5)
+            pts = [(1460 + j * 940 / 12, 900 + (10 if j % 2 else -6)) for j in range(13)]
+            d.line(pts, fill=DONE, width=5)
+            t(d, (1490, 872), 'turns 1-5: not sent', 54, fill=DONE, anchor='ls', kind='tag')
+        ls = labs[1] + (labs[2] if step >= 2 else []) + (labs[3] if step >= 3 else [])
+        lines(d, ls, y=1040, step=80, cur=len(ls) - len(labs[step]))
+        save(im)
+
+
 # --- scoreboard (F15, replacing builds) ----------------------------------------------------------------------------
 ROWS = [('pin, 8K', 'a_pin_8k'), ('pin, 16K', 'a_pin_16k'), ('bigger window, 32K', 'b_ctx_32k'),
         ('summary, 8K', 'c_summary_8k'), ('summary, 16K', 'c_summary_16k')]
@@ -472,7 +509,7 @@ def short_scoreboard():
 
 def build_all():
     card_penpal(); card_notepad(); card_tearout(); card_ranges(); card_test(); card_32k(); card_pin()
-    card_summary(); card_scoreboard(); card_penpal_recap(); card_yourturn(); card_end(); ov_sub()
+    card_summary(); card_sumfix(); card_scoreboard(); card_penpal_recap(); card_yourturn(); card_end(); ov_sub()
     short_tearout(); short_scoreboard()
 
 

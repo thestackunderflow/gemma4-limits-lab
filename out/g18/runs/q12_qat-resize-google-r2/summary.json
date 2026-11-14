@@ -1,0 +1,79 @@
+{
+ "id": "q12_qat-resize-google-r2",
+ "arm": "q12_qat",
+ "job": "resize",
+ "sampling": "google",
+ "seed": 2,
+ "rep": 2,
+ "provenance": {
+  "tag": "gemma4:12b-it-qat",
+  "digest": "38044be4f923",
+  "ollama_version": "0.40.16",
+  "renderer": "gemma4-large",
+  "parser": "gemma4",
+  "num_parallel": "1",
+  "kv_type_env": "f16",
+  "solidcraft": "0.28.0",
+  "t": "2026-11-14T23:41:11Z",
+  "num_ctx": 12288,
+  "think": false,
+  "system": null,
+  "options": {
+   "temperature": 1.0,
+   "top_p": 0.95,
+   "top_k": 64,
+   "seed": 2,
+   "num_ctx": 12288
+  },
+  "max_iter": 8,
+  "tool_cut": 8000
+ },
+ "warm_model": true,
+ "loaded_before": [
+  "gemma4:12b-it-qat"
+ ],
+ "n_requests": 2,
+ "wall_seconds": 9.79,
+ "job_seconds": 9.79,
+ "load_seconds": 0.0,
+ "write_tps": 18.2,
+ "prompt_eval_first": 4517,
+ "max_prompt_eval": 5061,
+ "done_reasons": [
+  "stop"
+ ],
+ "statuses": [
+  200
+ ],
+ "cuts": [],
+ "offload": null,
+ "draft_loaded": false,
+ "api_ps": [
+  {
+   "name": "gemma4:12b-it-qat",
+   "model": "gemma4:12b-it-qat",
+   "size": 6194588546,
+   "digest": "38044be4f923e5a55264ed7df4eaac2676651a905f735197c504045140c02bd3",
+   "details": {
+    "parent_model": "",
+    "format": "gguf",
+    "family": "gemma4",
+    "families": [
+     "gemma4"
+    ],
+    "parameter_size": "11.9B",
+    "quantization_level": "Q4_0"
+   },
+   "expires_at": "2026-11-14T23:51:03.269045831Z",
+   "size_vram": 6014359304,
+   "context_length": 12288,
+   "runner": "llamacpp"
+  }
+ ],
+ "thinking_chars": 0,
+ "call_names": [
+  "inspect_design"
+ ],
+ "pass": false,
+ "outcome": "wrong"
+}

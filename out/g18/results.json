@@ -1,6 +1,6 @@
 {
  "source": "out/g18/runs/*/summary.json",
- "n_runs": 52,
+ "n_runs": 135,
  "summary": {
   "baseline": {
    "t0": {
@@ -16,21 +16,41 @@
     },
     "label": "3 of 5 jobs",
     "reps_identical": true
+   },
+   "google": {
+    "right": 15,
+    "n": 25,
+    "minutes": 1.869,
+    "right_per_minute": 8.026,
+    "outcomes": {
+     "right": 15,
+     "wrong": 10,
+     "ran out of room": 0,
+     "error": 0
+    },
+    "label": "15 of 25",
+    "per_rep": [
+     3,
+     3,
+     3,
+     3,
+     3
+    ]
    }
   },
   "ctx_32k": {
    "t0": {
-    "right": 1,
-    "n": 1,
-    "minutes": 0.037,
-    "right_per_minute": 27.027,
+    "right": 3,
+    "n": 5,
+    "minutes": 0.232,
+    "right_per_minute": 12.931,
     "outcomes": {
-     "right": 1,
-     "wrong": 0,
+     "right": 3,
+     "wrong": 2,
      "ran out of room": 0,
      "error": 0
     },
-    "label": "1 of 1 jobs",
+    "label": "3 of 5 jobs",
     "reps_identical": true
    }
   },
@@ -64,6 +84,26 @@
     },
     "label": "5 of 5 jobs",
     "reps_identical": true
+   },
+   "google": {
+    "right": 19,
+    "n": 25,
+    "minutes": 6.427,
+    "right_per_minute": 2.956,
+    "outcomes": {
+     "right": 19,
+     "wrong": 6,
+     "ran out of room": 0,
+     "error": 0
+    },
+    "label": "19 of 25",
+    "per_rep": [
+     3,
+     4,
+     4,
+     4,
+     4
+    ]
    }
   },
   "system3": {
@@ -80,6 +120,26 @@
     },
     "label": "4 of 5 jobs",
     "reps_identical": false
+   },
+   "google": {
+    "right": 15,
+    "n": 25,
+    "minutes": 1.847,
+    "right_per_minute": 8.121,
+    "outcomes": {
+     "right": 15,
+     "wrong": 10,
+     "ran out of room": 0,
+     "error": 0
+    },
+    "label": "15 of 25",
+    "per_rep": [
+     2,
+     3,
+     4,
+     3,
+     3
+    ]
    }
   },
   "think_on": {
@@ -102,9 +162,7 @@
  "winner": {
   "arm": "e2b",
   "null": false,
-  "incomplete": [
-   "ctx_32k"
-  ],
+  "incomplete": [],
   "right": 3,
   "right_per_minute": 17.143,
   "baseline_right": 3,
@@ -128,13 +186,15 @@
     "num_parallel": "1",
     "kv_type_env": "f16",
     "solidcraft": "0.28.0",
-    "t": "2026-11-14T22:32:42Z",
+    "t": "2026-11-14T23:22:50Z",
     "num_ctx": 12288,
     "think": false,
     "system": null,
     "options": {
-     "temperature": 0,
-     "seed": 42,
+     "temperature": 1.0,
+     "top_p": 0.95,
+     "top_k": 64,
+     "seed": 1,
      "num_ctx": 12288
     },
     "max_iter": 8,
@@ -148,8 +208,8 @@
     "resize": "wrong"
    },
    "mean_job_seconds_t0": 3.0,
-   "mean_load_seconds": 9.86,
-   "mean_write_tps": 138.46,
+   "mean_load_seconds": 9.15,
+   "mean_write_tps": 134.09,
    "offload": [
     [
      43,
@@ -176,7 +236,7 @@
    "warm_model": [
     false
    ],
-   "n_runs": 10
+   "n_runs": 35
   },
   "ctx_32k": {
    "settings": {
@@ -194,7 +254,7 @@
     "num_parallel": "1",
     "kv_type_env": "f16",
     "solidcraft": "0.28.0",
-    "t": "2026-11-14T23:11:26Z",
+    "t": "2026-11-14T23:15:19Z",
     "num_ctx": 32768,
     "think": false,
     "system": null,
@@ -207,11 +267,15 @@
     "tool_cut": 8000
    },
    "t0_by_job": {
-    "new": "right"
+    "block": "right",
+    "cube": "right",
+    "hole": "wrong",
+    "new": "right",
+    "resize": "wrong"
    },
-   "mean_job_seconds_t0": 2.22,
-   "mean_load_seconds": 9.14,
-   "mean_write_tps": 174.54,
+   "mean_job_seconds_t0": 2.79,
+   "mean_load_seconds": 9.21,
+   "mean_write_tps": 139.93,
    "offload": [
     [
      43,
@@ -228,13 +292,17 @@
     true
    ],
    "prompt_eval_first": [
-    4492
+    4492,
+    4493,
+    4501,
+    4513,
+    4521
    ],
    "thinking_chars_mean": 0,
    "warm_model": [
     false
    ],
-   "n_runs": 2
+   "n_runs": 10
   },
   "e2b": {
    "settings": {
@@ -318,13 +386,15 @@
     "num_parallel": "1",
     "kv_type_env": "f16",
     "solidcraft": "0.28.0",
-    "t": "2026-11-14T22:50:47Z",
+    "t": "2026-11-14T23:36:30Z",
     "num_ctx": 12288,
     "think": false,
     "system": null,
     "options": {
-     "temperature": 0,
-     "seed": 42,
+     "temperature": 1.0,
+     "top_p": 0.95,
+     "top_k": 64,
+     "seed": 1,
      "num_ctx": 12288
     },
     "max_iter": 8,
@@ -338,8 +408,8 @@
     "resize": "right"
    },
    "mean_job_seconds_t0": 18.29,
-   "mean_load_seconds": 1.46,
-   "mean_write_tps": 18.33,
+   "mean_load_seconds": 0.67,
+   "mean_write_tps": 18.19,
    "offload": [
     [
      37,
@@ -366,7 +436,7 @@
    "warm_model": [
     true
    ],
-   "n_runs": 10
+   "n_runs": 35
   },
   "system3": {
    "settings": {
@@ -384,13 +454,15 @@
     "num_parallel": "1",
     "kv_type_env": "f16",
     "solidcraft": "0.28.0",
-    "t": "2026-11-14T23:09:09Z",
+    "t": "2026-11-14T23:30:27Z",
     "num_ctx": 12288,
     "think": false,
     "system": "Units are millimetres.\nMake one change per tool call.\nCheck the design with inspect_design before you finish or export.",
     "options": {
-     "temperature": 0,
-     "seed": 42,
+     "temperature": 1.0,
+     "top_p": 0.95,
+     "top_k": 64,
+     "seed": 1,
      "num_ctx": 12288
     },
     "max_iter": 8,
@@ -404,8 +476,8 @@
     "resize": "wrong"
    },
    "mean_job_seconds_t0": 3.77,
-   "mean_load_seconds": 9.33,
-   "mean_write_tps": 136.42,
+   "mean_load_seconds": 9.58,
+   "mean_write_tps": 134.73,
    "offload": [
     [
      43,
@@ -432,7 +504,7 @@
    "warm_model": [
     false
    ],
-   "n_runs": 10
+   "n_runs": 35
   },
   "think_on": {
    "settings": {

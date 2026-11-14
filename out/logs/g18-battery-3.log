@@ -1,0 +1,177 @@
+18:14:15 skip ctx_32k-new-t0-r1 (done)
+18:14:15 skip ctx_32k-new-t0-r2 (done)
+18:14:15 skip ctx_32k-cube-t0-r1 (done)
+18:14:17 job ctx_32k-cube-t0-r2 ctx_32k cube t0 42
+{"id": "ctx_32k-cube-t0-r2", "outcome": "right", "job_seconds": 3.03, "load_seconds": 12.97, "write_tps": 139.25, "n_requests": 2}
+18:14:37 free RAM 2.2 GB under 3: waiting
+18:15:08 job ctx_32k-block-t0-r1 ctx_32k block t0 42
+{"id": "ctx_32k-block-t0-r1", "outcome": "right", "job_seconds": 2.36, "load_seconds": 8.59, "write_tps": 137.36, "n_requests": 2}
+18:15:21 job ctx_32k-block-t0-r2 ctx_32k block t0 42
+{"id": "ctx_32k-block-t0-r2", "outcome": "right", "job_seconds": 2.47, "load_seconds": 8.73, "write_tps": 142.19, "n_requests": 2}
+18:15:35 job ctx_32k-hole-t0-r1 ctx_32k hole t0 42
+{"id": "ctx_32k-hole-t0-r1", "outcome": "wrong", "job_seconds": 3.55, "load_seconds": 8.95, "write_tps": 121.93, "n_requests": 2}
+18:15:51 C: 4 GB under 8: waiting
+18:16:21 job ctx_32k-hole-t0-r2 ctx_32k hole t0 42
+{"id": "ctx_32k-hole-t0-r2", "outcome": "wrong", "job_seconds": 3.61, "load_seconds": 8.52, "write_tps": 117.38, "n_requests": 2}
+18:16:36 job ctx_32k-resize-t0-r1 ctx_32k resize t0 42
+{"id": "ctx_32k-resize-t0-r1", "outcome": "wrong", "job_seconds": 3.44, "load_seconds": 8.89, "write_tps": 133.62, "n_requests": 3}
+18:16:51 job ctx_32k-resize-t0-r2 ctx_32k resize t0 42
+{"id": "ctx_32k-resize-t0-r2", "outcome": "wrong", "job_seconds": 3.57, "load_seconds": 8.88, "write_tps": 119.95, "n_requests": 3}
+18:17:07 free RAM 2.91 GB under 3: waiting
+18:17:38 job baseline-new-google-r1 baseline new google 1
+{"id": "baseline-new-google-r1", "outcome": "right", "job_seconds": 2.31, "load_seconds": 8.57, "write_tps": 127.13, "n_requests": 2}
+18:17:52 job baseline-new-google-r2 baseline new google 2
+{"id": "baseline-new-google-r2", "outcome": "right", "job_seconds": 2.53, "load_seconds": 9.94, "write_tps": 156.06, "n_requests": 2}
+18:18:08 free RAM 2.31 GB under 3: waiting
+18:18:39 job baseline-new-google-r3 baseline new google 3
+{"id": "baseline-new-google-r3", "outcome": "right", "job_seconds": 2.22, "load_seconds": 8.4, "write_tps": 173.53, "n_requests": 2}
+18:18:52 job baseline-new-google-r4 baseline new google 4
+{"id": "baseline-new-google-r4", "outcome": "right", "job_seconds": 2.29, "load_seconds": 8.76, "write_tps": 133.57, "n_requests": 2}
+18:19:06 job baseline-new-google-r5 baseline new google 5
+{"id": "baseline-new-google-r5", "outcome": "right", "job_seconds": 2.3, "load_seconds": 8.86, "write_tps": 152.52, "n_requests": 2}
+18:19:20 C: 4 GB under 8: waiting
+18:19:50 C: 4 GB under 8: waiting
+18:20:21 job baseline-cube-google-r1 baseline cube google 1
+{"id": "baseline-cube-google-r1", "outcome": "right", "job_seconds": 6.21, "load_seconds": 8.52, "write_tps": 130.08, "n_requests": 4}
+18:20:38 job baseline-cube-google-r2 baseline cube google 2
+{"id": "baseline-cube-google-r2", "outcome": "right", "job_seconds": 2.39, "load_seconds": 8.95, "write_tps": 135.97, "n_requests": 2}
+18:20:52 C: 7 GB under 8: waiting
+18:21:22 C: 7 GB under 8: waiting
+18:21:53 job baseline-cube-google-r3 baseline cube google 3
+{"id": "baseline-cube-google-r3", "outcome": "right", "job_seconds": 2.36, "load_seconds": 8.5, "write_tps": 139.06, "n_requests": 2}
+18:22:06 job baseline-cube-google-r4 baseline cube google 4
+{"id": "baseline-cube-google-r4", "outcome": "right", "job_seconds": 4.67, "load_seconds": 8.83, "write_tps": 139.27, "n_requests": 4}
+18:22:23 job baseline-cube-google-r5 baseline cube google 5
+{"id": "baseline-cube-google-r5", "outcome": "right", "job_seconds": 3.01, "load_seconds": 8.86, "write_tps": 139.64, "n_requests": 2}
+18:22:37 job baseline-block-google-r1 baseline block google 1
+{"id": "baseline-block-google-r1", "outcome": "right", "job_seconds": 2.41, "load_seconds": 8.74, "write_tps": 143.54, "n_requests": 2}
+18:22:52 job baseline-block-google-r2 baseline block google 2
+{"id": "baseline-block-google-r2", "outcome": "right", "job_seconds": 2.55, "load_seconds": 8.71, "write_tps": 139.84, "n_requests": 2}
+18:23:06 job baseline-block-google-r3 baseline block google 3
+{"id": "baseline-block-google-r3", "outcome": "right", "job_seconds": 2.44, "load_seconds": 9.18, "write_tps": 141.07, "n_requests": 2}
+18:23:20 job baseline-block-google-r4 baseline block google 4
+{"id": "baseline-block-google-r4", "outcome": "right", "job_seconds": 2.65, "load_seconds": 8.87, "write_tps": 133.67, "n_requests": 2}
+18:23:35 job baseline-block-google-r5 baseline block google 5
+{"id": "baseline-block-google-r5", "outcome": "right", "job_seconds": 2.38, "load_seconds": 8.97, "write_tps": 139.56, "n_requests": 2}
+18:23:49 job baseline-hole-google-r1 baseline hole google 1
+{"id": "baseline-hole-google-r1", "outcome": "wrong", "job_seconds": 2.52, "load_seconds": 8.98, "write_tps": 123.17, "n_requests": 2}
+18:24:04 job baseline-hole-google-r2 baseline hole google 2
+{"id": "baseline-hole-google-r2", "outcome": "wrong", "job_seconds": 12.34, "load_seconds": 8.9, "write_tps": 102.46, "n_requests": 5}
+18:24:28 job baseline-hole-google-r3 baseline hole google 3
+{"id": "baseline-hole-google-r3", "outcome": "wrong", "job_seconds": 13.23, "load_seconds": 8.87, "write_tps": 125.79, "n_requests": 5}
+18:24:53 job baseline-hole-google-r4 baseline hole google 4
+{"id": "baseline-hole-google-r4", "outcome": "wrong", "job_seconds": 13.25, "load_seconds": 8.87, "write_tps": 115.17, "n_requests": 5}
+18:25:18 job baseline-hole-google-r5 baseline hole google 5
+{"id": "baseline-hole-google-r5", "outcome": "wrong", "job_seconds": 12.67, "load_seconds": 9.23, "write_tps": 101.66, "n_requests": 4}
+18:25:43 job baseline-resize-google-r1 baseline resize google 1
+{"id": "baseline-resize-google-r1", "outcome": "wrong", "job_seconds": 2.46, "load_seconds": 8.94, "write_tps": 134.6, "n_requests": 2}
+18:25:57 job baseline-resize-google-r2 baseline resize google 2
+{"id": "baseline-resize-google-r2", "outcome": "wrong", "job_seconds": 3.37, "load_seconds": 8.77, "write_tps": 123.04, "n_requests": 3}
+18:26:12 job baseline-resize-google-r3 baseline resize google 3
+{"id": "baseline-resize-google-r3", "outcome": "wrong", "job_seconds": 4.52, "load_seconds": 8.85, "write_tps": 108.57, "n_requests": 3}
+18:26:29 job baseline-resize-google-r4 baseline resize google 4
+{"id": "baseline-resize-google-r4", "outcome": "wrong", "job_seconds": 2.55, "load_seconds": 8.83, "write_tps": 103.73, "n_requests": 2}
+18:26:43 job baseline-resize-google-r5 baseline resize google 5
+{"id": "baseline-resize-google-r5", "outcome": "wrong", "job_seconds": 2.52, "load_seconds": 8.93, "write_tps": 145.78, "n_requests": 2}
+18:26:57 job system3-new-google-r1 system3 new google 1
+{"id": "system3-new-google-r1", "outcome": "right", "job_seconds": 2.44, "load_seconds": 8.84, "write_tps": 126.09, "n_requests": 2}
+18:27:12 job system3-new-google-r2 system3 new google 2
+{"id": "system3-new-google-r2", "outcome": "right", "job_seconds": 4.24, "load_seconds": 23.26, "write_tps": 160.69, "n_requests": 2}
+18:28:12 job system3-new-google-r3 system3 new google 3
+{"id": "system3-new-google-r3", "outcome": "right", "job_seconds": 2.2, "load_seconds": 8.93, "write_tps": 177.02, "n_requests": 2}
+18:28:32 job system3-new-google-r4 system3 new google 4
+{"id": "system3-new-google-r4", "outcome": "right", "job_seconds": 2.52, "load_seconds": 8.91, "write_tps": 120.38, "n_requests": 2}
+18:28:46 job system3-new-google-r5 system3 new google 5
+{"id": "system3-new-google-r5", "outcome": "right", "job_seconds": 2.2, "load_seconds": 8.84, "write_tps": 169.6, "n_requests": 2}
+18:29:00 job system3-cube-google-r1 system3 cube google 1
+{"id": "system3-cube-google-r1", "outcome": "wrong", "job_seconds": 2.89, "load_seconds": 8.23, "write_tps": 124.46, "n_requests": 2}
+18:29:14 job system3-cube-google-r2 system3 cube google 2
+{"id": "system3-cube-google-r2", "outcome": "right", "job_seconds": 3.46, "load_seconds": 9.3, "write_tps": 137.31, "n_requests": 3}
+18:29:30 job system3-cube-google-r3 system3 cube google 3
+{"id": "system3-cube-google-r3", "outcome": "right", "job_seconds": 3.24, "load_seconds": 8.54, "write_tps": 144.64, "n_requests": 3}
+18:29:45 job system3-cube-google-r4 system3 cube google 4
+{"id": "system3-cube-google-r4", "outcome": "right", "job_seconds": 2.35, "load_seconds": 8.73, "write_tps": 137.76, "n_requests": 2}
+18:29:59 job system3-cube-google-r5 system3 cube google 5
+{"id": "system3-cube-google-r5", "outcome": "right", "job_seconds": 4.13, "load_seconds": 8.48, "write_tps": 129.66, "n_requests": 3}
+18:30:14 job system3-block-google-r1 system3 block google 1
+{"id": "system3-block-google-r1", "outcome": "right", "job_seconds": 2.86, "load_seconds": 8.91, "write_tps": 115.83, "n_requests": 2}
+18:30:29 job system3-block-google-r2 system3 block google 2
+{"id": "system3-block-google-r2", "outcome": "right", "job_seconds": 2.4, "load_seconds": 8.73, "write_tps": 138.1, "n_requests": 2}
+18:30:43 job system3-block-google-r3 system3 block google 3
+{"id": "system3-block-google-r3", "outcome": "right", "job_seconds": 2.34, "load_seconds": 9.02, "write_tps": 144.24, "n_requests": 2}
+18:30:57 job system3-block-google-r4 system3 block google 4
+{"id": "system3-block-google-r4", "outcome": "right", "job_seconds": 3.25, "load_seconds": 8.49, "write_tps": 130.62, "n_requests": 3}
+18:31:12 job system3-block-google-r5 system3 block google 5
+{"id": "system3-block-google-r5", "outcome": "right", "job_seconds": 2.37, "load_seconds": 8.87, "write_tps": 140.42, "n_requests": 2}
+18:31:26 job system3-hole-google-r1 system3 hole google 1
+{"id": "system3-hole-google-r1", "outcome": "wrong", "job_seconds": 11.39, "load_seconds": 9.05, "write_tps": 107.85, "n_requests": 8}
+18:31:49 job system3-hole-google-r2 system3 hole google 2
+{"id": "system3-hole-google-r2", "outcome": "wrong", "job_seconds": 5.49, "load_seconds": 8.87, "write_tps": 137.39, "n_requests": 6}
+18:32:07 job system3-hole-google-r3 system3 hole google 3
+{"id": "system3-hole-google-r3", "outcome": "right", "job_seconds": 7.86, "load_seconds": 8.88, "write_tps": 123.45, "n_requests": 7}
+18:32:26 job system3-hole-google-r4 system3 hole google 4
+{"id": "system3-hole-google-r4", "outcome": "wrong", "job_seconds": 5.26, "load_seconds": 9.5, "write_tps": 139.06, "n_requests": 6}
+18:32:45 job system3-hole-google-r5 system3 hole google 5
+{"id": "system3-hole-google-r5", "outcome": "wrong", "job_seconds": 10.33, "load_seconds": 10.58, "write_tps": 111.66, "n_requests": 8}
+18:33:11 job system3-resize-google-r1 system3 resize google 1
+{"id": "system3-resize-google-r1", "outcome": "wrong", "job_seconds": 3.27, "load_seconds": 10.45, "write_tps": 139.8, "n_requests": 2}
+18:33:30 job system3-resize-google-r2 system3 resize google 2
+{"id": "system3-resize-google-r2", "outcome": "wrong", "job_seconds": 7.84, "load_seconds": 11.07, "write_tps": 109.81, "n_requests": 6}
+18:33:53 job system3-resize-google-r3 system3 resize google 3
+{"id": "system3-resize-google-r3", "outcome": "wrong", "job_seconds": 7.01, "load_seconds": 9.3, "write_tps": 112.42, "n_requests": 5}
+18:34:12 job system3-resize-google-r4 system3 resize google 4
+{"id": "system3-resize-google-r4", "outcome": "wrong", "job_seconds": 3.42, "load_seconds": 9.16, "write_tps": 154.97, "n_requests": 3}
+18:34:28 job system3-resize-google-r5 system3 resize google 5
+{"id": "system3-resize-google-r5", "outcome": "wrong", "job_seconds": 6.06, "load_seconds": 9.17, "write_tps": 118.04, "n_requests": 4}
+18:34:47 job q12_qat-new-google-r1 q12_qat new google 1
+{"id": "q12_qat-new-google-r1", "outcome": "right", "job_seconds": 8.8, "load_seconds": 8.67, "write_tps": 19.55, "n_requests": 2}
+18:35:07 job q12_qat-new-google-r2 q12_qat new google 2
+{"id": "q12_qat-new-google-r2", "outcome": "right", "job_seconds": 4.14, "load_seconds": 0.01, "write_tps": 17.48, "n_requests": 2}
+18:35:15 job q12_qat-new-google-r3 q12_qat new google 3
+{"id": "q12_qat-new-google-r3", "outcome": "right", "job_seconds": 4.18, "load_seconds": 0.0, "write_tps": 16.62, "n_requests": 2}
+18:35:22 job q12_qat-new-google-r4 q12_qat new google 4
+{"id": "q12_qat-new-google-r4", "outcome": "right", "job_seconds": 5.8, "load_seconds": 0.0, "write_tps": 18.09, "n_requests": 2}
+18:35:32 job q12_qat-new-google-r5 q12_qat new google 5
+{"id": "q12_qat-new-google-r5", "outcome": "right", "job_seconds": 4.09, "load_seconds": 0.0, "write_tps": 17.2, "n_requests": 2}
+18:35:39 job q12_qat-cube-google-r1 q12_qat cube google 1
+{"id": "q12_qat-cube-google-r1", "outcome": "right", "job_seconds": 5.64, "load_seconds": 0.0, "write_tps": 17.59, "n_requests": 2}
+18:35:48 job q12_qat-cube-google-r2 q12_qat cube google 2
+{"id": "q12_qat-cube-google-r2", "outcome": "right", "job_seconds": 5.39, "load_seconds": 0.0, "write_tps": 17.43, "n_requests": 2}
+18:35:57 job q12_qat-cube-google-r3 q12_qat cube google 3
+{"id": "q12_qat-cube-google-r3", "outcome": "right", "job_seconds": 6.44, "load_seconds": 0.0, "write_tps": 17.75, "n_requests": 2}
+18:36:07 job q12_qat-cube-google-r4 q12_qat cube google 4
+{"id": "q12_qat-cube-google-r4", "outcome": "right", "job_seconds": 5.27, "load_seconds": 0.0, "write_tps": 18.77, "n_requests": 2}
+18:36:15 job q12_qat-cube-google-r5 q12_qat cube google 5
+{"id": "q12_qat-cube-google-r5", "outcome": "right", "job_seconds": 5.39, "load_seconds": 0.0, "write_tps": 17.35, "n_requests": 2}
+18:36:24 job q12_qat-block-google-r1 q12_qat block google 1
+{"id": "q12_qat-block-google-r1", "outcome": "right", "job_seconds": 5.42, "load_seconds": 0.0, "write_tps": 18.86, "n_requests": 2}
+18:36:32 job q12_qat-block-google-r2 q12_qat block google 2
+{"id": "q12_qat-block-google-r2", "outcome": "right", "job_seconds": 25.94, "load_seconds": 0.01, "write_tps": 18.45, "n_requests": 4}
+18:37:01 job q12_qat-block-google-r3 q12_qat block google 3
+{"id": "q12_qat-block-google-r3", "outcome": "right", "job_seconds": 5.58, "load_seconds": 0.0, "write_tps": 17.42, "n_requests": 2}
+18:37:10 job q12_qat-block-google-r4 q12_qat block google 4
+{"id": "q12_qat-block-google-r4", "outcome": "right", "job_seconds": 5.74, "load_seconds": 0.0, "write_tps": 18.54, "n_requests": 2}
+18:37:18 job q12_qat-block-google-r5 q12_qat block google 5
+{"id": "q12_qat-block-google-r5", "outcome": "right", "job_seconds": 5.23, "load_seconds": 0.0, "write_tps": 18.65, "n_requests": 2}
+18:37:27 job q12_qat-hole-google-r1 q12_qat hole google 1
+{"id": "q12_qat-hole-google-r1", "outcome": "wrong", "job_seconds": 42.77, "load_seconds": 0.0, "write_tps": 18.45, "n_requests": 4}
+18:38:12 job q12_qat-hole-google-r2 q12_qat hole google 2
+{"id": "q12_qat-hole-google-r2", "outcome": "right", "job_seconds": 34.72, "load_seconds": 0.01, "write_tps": 18.27, "n_requests": 4}
+18:38:50 job q12_qat-hole-google-r3 q12_qat hole google 3
+{"id": "q12_qat-hole-google-r3", "outcome": "right", "job_seconds": 47.43, "load_seconds": 0.01, "write_tps": 18.38, "n_requests": 5}
+18:39:40 job q12_qat-hole-google-r4 q12_qat hole google 4
+{"id": "q12_qat-hole-google-r4", "outcome": "right", "job_seconds": 38.05, "load_seconds": 0.01, "write_tps": 18.31, "n_requests": 4}
+18:40:21 job q12_qat-hole-google-r5 q12_qat hole google 5
+{"id": "q12_qat-hole-google-r5", "outcome": "wrong", "job_seconds": 7.56, "load_seconds": 0.0, "write_tps": 18.4, "n_requests": 1}
+18:40:32 job q12_qat-resize-google-r1 q12_qat resize google 1
+{"id": "q12_qat-resize-google-r1", "outcome": "wrong", "job_seconds": 25.42, "load_seconds": 0.01, "write_tps": 18.76, "n_requests": 8}
+18:41:00 job q12_qat-resize-google-r2 q12_qat resize google 2
+{"id": "q12_qat-resize-google-r2", "outcome": "wrong", "job_seconds": 9.79, "load_seconds": 0.0, "write_tps": 18.2, "n_requests": 2}
+18:41:13 job q12_qat-resize-google-r3 q12_qat resize google 3
+{"id": "q12_qat-resize-google-r3", "outcome": "wrong", "job_seconds": 29.16, "load_seconds": 0.01, "write_tps": 18.4, "n_requests": 8}
+18:41:45 job q12_qat-resize-google-r4 q12_qat resize google 4
+{"id": "q12_qat-resize-google-r4", "outcome": "wrong", "job_seconds": 25.06, "load_seconds": 0.01, "write_tps": 18.56, "n_requests": 8}
+18:42:13 job q12_qat-resize-google-r5 q12_qat resize google 5
+{"id": "q12_qat-resize-google-r5", "outcome": "right", "job_seconds": 22.6, "load_seconds": 0.01, "write_tps": 17.97, "n_requests": 5}
+18:42:37 BATTERY-DONE out/g18/battery-3.txt
+18:42:37 G18-DONE battery-3
